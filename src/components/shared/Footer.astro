@@ -7,7 +7,7 @@ const currentYear = new Date().getFullYear();
 
 <footer class="bg-gray-100 dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800 transition-theme mt-auto">
   <div class="container mx-auto px-4 py-8">
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
       <!-- About Section -->
       <div>
         <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">vClock</h3>
@@ -19,7 +19,7 @@ const currentYear = new Date().getFullYear();
       <!-- Quick Links -->
       <div>
         <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">
-          {t(locale, 'nav.alarm')}
+          {t(locale, 'nav.tools')}
         </h3>
         <ul class="space-y-2">
           <li>
@@ -52,37 +52,6 @@ const currentYear = new Date().getFullYear();
               class="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 text-sm transition-colors"
             >
               {t(locale, 'nav.clock')}
-            </a>
-          </li>
-        </ul>
-      </div>
-
-      <!-- Legal Links -->
-      <div>
-        <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">Legal</h3>
-        <ul class="space-y-2">
-          <li>
-            <a
-              href={getRoute(locale, 'privacy')}
-              class="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 text-sm transition-colors"
-            >
-              {t(locale, 'nav.privacy')}
-            </a>
-          </li>
-          <li>
-            <a
-              href={getRoute(locale, 'terms')}
-              class="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 text-sm transition-colors"
-            >
-              {t(locale, 'nav.terms')}
-            </a>
-          </li>
-          <li>
-            <a
-              href={getRoute(locale, 'contact')}
-              class="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 text-sm transition-colors"
-            >
-              {t(locale, 'nav.contact')}
             </a>
           </li>
         </ul>
