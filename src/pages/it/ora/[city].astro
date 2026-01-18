@@ -46,6 +46,19 @@ const keywords = `ora a ${cityData.name}, ${cityData.name} ora, ${cityData.count
 
 <BaseLayout title={title} description={description} keywords={keywords}>
   <div class="container mx-auto px-4 py-12">
+    <!-- Torna all'Orologio Mondiale -->
+    <div class="mb-6">
+      <a
+        href="/it/orologio-mondiale"
+        class="inline-flex items-center text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 transition-colors"
+      >
+        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+        </svg>
+        Torna all'Orologio Mondiale
+      </a>
+    </div>
+
     <div class="text-center mb-12">
       <h1 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
         Ora Attuale a {cityData.name}

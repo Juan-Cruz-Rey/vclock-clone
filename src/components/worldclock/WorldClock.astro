@@ -3,9 +3,23 @@
  * World Clock Component
  * Display multiple timezone clocks with city management
  */
+
+import { getRoute, getLocaleFromPath } from '../../scripts/i18n';
+
+const locale = getLocaleFromPath(Astro.url.pathname);
+
+// Helper to get city URL based on locale
+function getCityUrl(cityId: string): string {
+  if (locale === 'es') {
+    return `/es/hora/${cityId}`;
+  } else if (locale === 'it') {
+    return `/it/ora/${cityId}`;
+  }
+  return `/time/${cityId}`;
+}
 ---
 
-<div class="worldclock-container max-w-6xl mx-auto">
+<div class="worldclock-container max-w-6xl mx-auto" data-locale={locale}>
   <!-- Add City Section -->
   <div class="bg-gray-50 dark:bg-gray-800 rounded-lg p-6 mb-8">
     <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-4">
@@ -86,6 +100,20 @@
   const worldClock = new WorldClock();
   let timeFormat: 12 | 24 = 12;
 
+  // Get locale from data attribute
+  const container = document.querySelector('.worldclock-container') as HTMLElement;
+  const locale = container?.getAttribute('data-locale') || 'en';
+
+  // Helper to get city URL based on locale
+  function getCityUrl(cityId: string): string {
+    if (locale === 'es') {
+      return `/es/hora/${cityId}`;
+    } else if (locale === 'it') {
+      return `/it/ora/${cityId}`;
+    }
+    return `/time/${cityId}`;
+  }
+
   function init() {
     renderClocks();
     worldClock.startTicking();
@@ -116,20 +144,29 @@
       const timeOfDay = worldClock.getRelativeTimeDescription(city.timezone, 'en');
       const offset = getTimezoneOffset(city.timezone);
 
+      const cityUrl = getCityUrl(city.id);
+
       return `
         <div
-          class="clock-card bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 transition-transform hover:scale-105"
+          class="clock-card bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 transition-transform hover:scale-105 relative"
           data-user-city-id="${userCity.id}"
           draggable="true"
         >
           <div class="flex justify-between items-start mb-4">
             <div>
-              <h3 class="text-2xl font-bold text-gray-900 dark:text-white">${city.name}</h3>
+              <a href="${cityUrl}" class="group">
+                <h3 class="text-2xl font-bold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                  ${city.name}
+                  <svg class="inline-block w-5 h-5 ml-1 opacity-0 group-hover:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  </svg>
+                </h3>
+              </a>
               <p class="text-sm text-gray-600 dark:text-gray-400">${city.country}</p>
             </div>
             <div class="flex gap-2">
               <button
-                class="remove-city-btn text-red-600 dark:text-red-400 hover:text-red-800 dark:hover:text-red-300"
+                class="remove-city-btn text-red-600 dark:text-red-400 hover:text-red-800 dark:hover:text-red-300 z-10 relative"
                 data-user-city-id="${userCity.id}"
                 title="Remove city"
               >
