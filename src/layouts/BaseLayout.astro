@@ -1,0 +1,141 @@
+---
+import Header from '../components/shared/Header.astro';
+import Footer from '../components/shared/Footer.astro';
+import { getLocaleFromPath } from '../scripts/i18n';
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+  keywords?: string;
+  ogImage?: string;
+  noindex?: boolean;
+  structuredData?: object;
+}
+
+const { title, description, keywords, ogImage, noindex = false, structuredData } = Astro.props;
+const locale = getLocaleFromPath(Astro.url.pathname);
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const siteUrl = Astro.site || 'https://24-clock.com';
+
+// Default structured data (Website)
+const defaultStructuredData = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "vClock - Free Online Time Tools",
+  "url": siteUrl,
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": `${siteUrl}/search?q={search_term_string}`,
+    "query-input": "required name=search_term_string"
+  },
+  "inLanguage": [locale]
+};
+---
+
+<!doctype html>
+<html lang={locale} class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+
+    <!-- Primary Meta Tags -->
+    <title>{title}</title>
+    {description && <meta name="description" content={description} />}
+    {keywords && <meta name="keywords" content={keywords} />}
+    {noindex && <meta name="robots" content="noindex, nofollow" />}
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href={canonicalURL} />
+
+    <!-- Alternate Languages -->
+    <link rel="alternate" hreflang="en" href={`${siteUrl}/`} />
+    <link rel="alternate" hreflang="es" href={`${siteUrl}/es/`} />
+    <link rel="alternate" hreflang="it" href={`${siteUrl}/it/`} />
+    <link rel="alternate" hreflang="x-default" href={`${siteUrl}/`} />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content={title} />
+    {description && <meta property="og:description" content={description} />}
+    <meta property="og:image" content={ogImage || `${siteUrl}/og-image.png`} />
+    <meta property="og:locale" content={locale === 'en' ? 'en_US' : locale === 'es' ? 'es_ES' : 'it_IT'} />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content={canonicalURL} />
+    <meta name="twitter:title" content={title} />
+    {description && <meta name="twitter:description" content={description} />}
+    <meta name="twitter:image" content={ogImage || `${siteUrl}/og-image.png`} />
+
+    <!-- Additional SEO tags -->
+    <meta name="author" content="vClock" />
+    <meta name="theme-color" content="#3b82f6" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="format-detection" content="telephone=no" />
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json" set:html={JSON.stringify(structuredData || defaultStructuredData)} />
+
+    <!-- Preconnect to external resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+
+    <!-- Verification Tags (placeholders for when DNS identifiers are added) -->
+    <!-- Google Search Console -->
+    <!-- <meta name="google-site-verification" content="YOUR_VERIFICATION_CODE" /> -->
+
+    <!-- Yandex Webmaster -->
+    <!-- <meta name="yandex-verification" content="YOUR_VERIFICATION_CODE" /> -->
+
+    <!-- Bing Webmaster -->
+    <!-- <meta name="msvalidate.01" content="YOUR_VERIFICATION_CODE" /> -->
+
+    <!-- Google Analytics (GA4) -->
+    <!-- TODO: Replace with actual GA4 ID when ready -->
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script> -->
+    <!-- <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script> -->
+
+    <!-- Initialize Theme Manager before page renders to avoid flash -->
+    <script is:inline>
+      // Inline script para evitar flash de contenido sin estilo (FOUC)
+      (function() {
+        const STORAGE_KEY = 'dark-theme';
+        const DARK_CLASS = 'dark';
+
+        const savedTheme = localStorage.getItem(STORAGE_KEY);
+
+        if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+          document.documentElement.classList.add(DARK_CLASS);
+        }
+      })();
+    </script>
+  </head>
+  <body class="flex flex-col min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-200">
+    <Header />
+
+    <main class="flex-1">
+      <slot />
+    </main>
+
+    <Footer />
+
+    <!-- Initialize Theme Manager (full functionality) -->
+    <script>
+      import { ThemeManager } from '../scripts/theme-manager';
+      // ThemeManager se auto-inicializa al importarse
+    </script>
+  </body>
+</html>

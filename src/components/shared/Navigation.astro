@@ -1,0 +1,41 @@
+---
+import { t, getRoute, getLocaleFromPath } from '../../scripts/i18n';
+
+const locale = getLocaleFromPath(Astro.url.pathname);
+const currentPath = Astro.url.pathname;
+
+// Helper para determinar si una ruta está activa
+function isActive(route: string): boolean {
+  if (route === '/' || route === '/es/' || route === '/it/') {
+    return currentPath === route;
+  }
+  return currentPath.startsWith(route);
+}
+
+const navItems = [
+  { label: t(locale, 'nav.alarm'), route: getRoute(locale, 'home') },
+  { label: t(locale, 'nav.timer'), route: getRoute(locale, 'timer') },
+  { label: t(locale, 'nav.stopwatch'), route: getRoute(locale, 'stopwatch') },
+  { label: t(locale, 'nav.clock'), route: getRoute(locale, 'clock') },
+];
+---
+
+<ul class="flex flex-col md:flex-row md:space-x-6 space-y-2 md:space-y-0">
+  {navItems.map(({ label, route }) => (
+    <li>
+      <a
+        href={route}
+        class={`
+          block px-3 py-2 rounded-lg text-sm font-medium transition-colors
+          ${
+            isActive(route)
+              ? 'bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300'
+              : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800'
+          }
+        `}
+      >
+        {label}
+      </a>
+    </li>
+  ))}
+</ul>

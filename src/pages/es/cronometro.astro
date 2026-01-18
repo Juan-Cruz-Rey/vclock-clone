@@ -1,0 +1,85 @@
+---
+/**
+ * Stopwatch Page (Spanish)
+ * Cronómetro en línea gratuito con contador de vueltas
+ */
+
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Stopwatch from '../../components/stopwatch/Stopwatch.astro';
+
+const title = 'Cronómetro en Línea - Contador de Vueltas Gratis con Precisión';
+const description = 'Cronómetro en línea gratuito con contador de vueltas. Medición precisa con exactitud de milisegundos, registro de vueltas y estadísticas. Perfecto para deportes, entrenamientos y seguimiento de tiempo.';
+const keywords = 'cronómetro online, contador vueltas, cronómetro en línea, cronómetro gratis, temporizador preciso, contador de vueltas, cronómetro deportivo';
+---
+
+<BaseLayout title={title} description={description} keywords={keywords}>
+  <div class="container mx-auto px-4 py-12">
+    <div class="text-center mb-12">
+      <h1 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+        Cronómetro en Línea
+      </h1>
+      <p class="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+        Cronómetro de precisión con contador de vueltas. Mide tu tiempo con precisión de milisegundos, registra vueltas y analiza tu rendimiento.
+      </p>
+    </div>
+
+    <Stopwatch />
+
+    <div class="max-w-4xl mx-auto mt-12 prose dark:prose-invert">
+      <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+        Cómo Usar el Cronómetro en Línea
+      </h2>
+
+      <div class="space-y-4 text-gray-600 dark:text-gray-400">
+        <p>
+          Nuestro cronómetro en línea gratuito proporciona medición precisa del tiempo para cualquier actividad. Ya sea que estés midiendo
+          entrenamientos, carreras, cocina o cualquier otra actividad, este cronómetro te brinda mediciones precisas
+          con capacidades de registro de vueltas.
+        </p>
+
+        <h3 class="text-xl font-semibold text-gray-900 dark:text-white mt-6 mb-3">
+          Características:
+        </h3>
+        <ul class="list-disc list-inside space-y-2">
+          <li><strong>Opciones de Precisión</strong> - Elige entre segundos, centésimas o milisegundos</li>
+          <li><strong>Contador de Vueltas</strong> - Registra vueltas ilimitadas con tiempos individuales y totales</li>
+          <li><strong>Estadísticas de Vueltas</strong> - Ve los tiempos de vueltas más rápidos, más lentos y promedio</li>
+          <li><strong>Indicadores Visuales</strong> - Mejores y peores vueltas destacadas automáticamente</li>
+          <li><strong>Exportar a CSV</strong> - Descarga tus datos de vueltas para análisis adicional</li>
+          <li><strong>Atajos de Teclado</strong> - Espacio para iniciar/pausar, L para vuelta, R para reiniciar</li>
+          <li><strong>Pausar y Reanudar</strong> - Toma descansos sin perder tu tiempo</li>
+          <li><strong>Almacenamiento Persistente</strong> - Tu tiempo se guarda incluso si cierras la pestaña</li>
+        </ul>
+
+        <h3 class="text-xl font-semibold text-gray-900 dark:text-white mt-6 mb-3">
+          Atajos de Teclado:
+        </h3>
+        <ul class="list-disc list-inside space-y-2">
+          <li><kbd class="px-2 py-1 bg-gray-200 dark:bg-gray-700 rounded text-sm">Espacio</kbd> - Iniciar/Pausar</li>
+          <li><kbd class="px-2 py-1 bg-gray-200 dark:bg-gray-700 rounded text-sm">L</kbd> - Registrar Vuelta (mientras corre)</li>
+          <li><kbd class="px-2 py-1 bg-gray-200 dark:bg-gray-700 rounded text-sm">R</kbd> - Reiniciar (mientras está detenido)</li>
+        </ul>
+
+        <h3 class="text-xl font-semibold text-gray-900 dark:text-white mt-6 mb-3">
+          Casos de Uso Populares:
+        </h3>
+        <ul class="list-disc list-inside space-y-2">
+          <li><strong>Carrera y Atletismo</strong> - Rastrea tiempos de vueltas y analiza tu rendimiento</li>
+          <li><strong>Natación</strong> - Cronometra tus vueltas y monitorea tu mejora</li>
+          <li><strong>Entrenamientos</strong> - Rastrea la duración del ejercicio y períodos de descanso</li>
+          <li><strong>Cocina</strong> - Cronometra múltiples pasos de cocina con precisión</li>
+          <li><strong>Gaming</strong> - Speedrunning y cronometraje de desafíos</li>
+          <li><strong>Estudio</strong> - Rastrea sesiones de trabajo enfocado</li>
+          <li><strong>Presentaciones</strong> - Practica el tiempo para discursos y presentaciones</li>
+        </ul>
+
+        <div class="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4 mt-6">
+          <p class="text-sm text-blue-900 dark:text-blue-100 mb-0">
+            <strong>💡 Consejo:</strong> El cronómetro continúa funcionando en segundo plano incluso si cambias de pestaña.
+            Tus tiempos de vuelta se guardan automáticamente en tu navegador, por lo que no perderás datos si cierras accidentalmente la pestaña.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</BaseLayout>

@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+/* Tailwind v4 - Dark mode configuration */
+@variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  /* Estilos base */
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-200;
+  }
+
+  /* Digital font - usar monospace como fallback */
+  /* La fuente digital se puede agregar después si es necesaria */
+}
+
+@layer components {
+  /* Botones personalizados */
+  .btn-primary {
+    @apply bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200 shadow-md hover:shadow-lg disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .btn-secondary {
+    @apply bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-800 dark:text-gray-200 px-6 py-3 rounded-lg transition-colors duration-200;
+  }
+
+  .btn-danger {
+    @apply bg-red-600 hover:bg-red-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200;
+  }
+
+  /* Digital Display */
+  .digital-display {
+    @apply font-mono text-6xl md:text-8xl text-blue-600 dark:text-blue-400 bg-gray-100 dark:bg-gray-800 rounded-lg p-8 shadow-lg transition-colors duration-200;
+    font-family: 'Roboto Mono', monospace;
+  }
+
+  /* Input Selectors */
+  .select-input {
+    @apply bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg px-4 py-2 text-gray-800 dark:text-gray-200 focus:ring-2 focus:ring-blue-500 focus:outline-none transition-colors duration-200;
+  }
+
+  .text-input {
+    @apply bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg px-4 py-2 text-gray-800 dark:text-gray-200 focus:ring-2 focus:ring-blue-500 focus:outline-none transition-colors duration-200 w-full;
+  }
+}
+
+@layer utilities {
+  /* Utilidades personalizadas */
+  .transition-theme {
+    @apply transition-colors duration-200;
+  }
+}

@@ -1,0 +1,90 @@
+---
+/**
+ * World Clock Page (English)
+ * Display time in multiple cities worldwide
+ */
+
+import BaseLayout from '../layouts/BaseLayout.astro';
+import WorldClock from '../components/worldclock/WorldClock.astro';
+
+const title = 'World Clock - Time in Major Cities Worldwide';
+const description = 'View current time in major cities around the world. Track multiple timezones, compare times, and manage your world clock with cities from all continents.';
+const keywords = 'world clock, time zones, international time, global time, time in different countries, timezone converter';
+---
+
+<BaseLayout title={title} description={description} keywords={keywords}>
+  <div class="container mx-auto px-4 py-12">
+    <div class="text-center mb-12">
+      <h1 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+        World Clock
+      </h1>
+      <p class="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+        View current time in major cities worldwide. Track multiple timezones and never miss a meeting or call across continents.
+      </p>
+    </div>
+
+    <WorldClock />
+
+    <div class="max-w-4xl mx-auto mt-12 prose dark:prose-invert">
+      <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+        About World Clock
+      </h2>
+
+      <div class="space-y-4 text-gray-600 dark:text-gray-400">
+        <p>
+          Our world clock displays the current time in major cities across all continents. Perfect for
+          coordinating with international teams, scheduling global meetings, or simply staying in touch
+          with friends and family around the world.
+        </p>
+
+        <h3 class="text-xl font-semibold text-gray-900 dark:text-white mt-6 mb-3">
+          Features:
+        </h3>
+        <ul class="list-disc list-inside space-y-2">
+          <li><strong>50+ Major Cities</strong> - Access times for cities across all continents</li>
+          <li><strong>Search & Filter</strong> - Quickly find cities by name, country, or continent</li>
+          <li><strong>Customizable</strong> - Add or remove cities to create your personal world clock</li>
+          <li><strong>Drag & Drop</strong> - Reorder cities by dragging them into your preferred order</li>
+          <li><strong>Time of Day Indicator</strong> - See at a glance whether it's day or night in each city</li>
+          <li><strong>UTC Offset Display</strong> - View the timezone offset for each city</li>
+          <li><strong>Live Updates</strong> - All clocks update in real-time</li>
+          <li><strong>Persistent Storage</strong> - Your city selection is saved automatically</li>
+        </ul>
+
+        <h3 class="text-xl font-semibold text-gray-900 dark:text-white mt-6 mb-3">
+          Popular Use Cases:
+        </h3>
+        <ul class="list-disc list-inside space-y-2">
+          <li><strong>Remote Work</strong> - Coordinate with distributed teams across timezones</li>
+          <li><strong>Travel Planning</strong> - Check local times before booking flights or hotels</li>
+          <li><strong>International Business</strong> - Schedule meetings at convenient times for all parties</li>
+          <li><strong>Family & Friends</strong> - Know the best time to call loved ones abroad</li>
+          <li><strong>Event Broadcasting</strong> - Plan live events for global audiences</li>
+          <li><strong>Stock Trading</strong> - Track market hours across international exchanges</li>
+        </ul>
+
+        <h3 class="text-xl font-semibold text-gray-900 dark:text-white mt-6 mb-3">
+          Covered Cities:
+        </h3>
+        <p>
+          Our world clock includes major cities from:
+        </p>
+        <ul class="list-disc list-inside space-y-1">
+          <li><strong>North America</strong> - New York, Los Angeles, Chicago, Toronto, Vancouver, Mexico City</li>
+          <li><strong>South America</strong> - São Paulo, Buenos Aires, Rio de Janeiro, Lima, Bogotá, Santiago</li>
+          <li><strong>Europe</strong> - London, Paris, Madrid, Rome, Berlin, Amsterdam, Moscow, Lisbon</li>
+          <li><strong>Asia</strong> - Tokyo, Hong Kong, Singapore, Shanghai, Beijing, Dubai, Mumbai, Delhi</li>
+          <li><strong>Oceania</strong> - Sydney, Melbourne, Auckland</li>
+          <li><strong>Africa</strong> - Cairo, Johannesburg, Lagos, Nairobi</li>
+        </ul>
+
+        <div class="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4 mt-6">
+          <p class="text-sm text-blue-900 dark:text-blue-100 mb-0">
+            <strong>💡 Tip:</strong> All times are automatically adjusted for Daylight Saving Time (DST) where applicable.
+            Drag and drop cities to reorder them according to your preference.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</BaseLayout>

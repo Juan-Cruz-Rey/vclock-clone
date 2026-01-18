@@ -1,0 +1,90 @@
+---
+/**
+ * World Clock Page (Spanish)
+ * Reloj mundial - Hora en principales ciudades del mundo
+ */
+
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import WorldClock from '../../components/worldclock/WorldClock.astro';
+
+const title = 'Reloj Mundial - Hora en Principales Ciudades del Mundo';
+const description = 'Ve la hora actual en las principales ciudades del mundo. Rastrea múltiples zonas horarias, compara horas y gestiona tu reloj mundial con ciudades de todos los continentes.';
+const keywords = 'reloj mundial, zonas horarias, hora internacional, hora global, hora en diferentes países, conversor de zona horaria';
+---
+
+<BaseLayout title={title} description={description} keywords={keywords}>
+  <div class="container mx-auto px-4 py-12">
+    <div class="text-center mb-12">
+      <h1 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+        Reloj Mundial
+      </h1>
+      <p class="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+        Ve la hora actual en las principales ciudades del mundo. Rastrea múltiples zonas horarias y nunca te pierdas una reunión o llamada a través de continentes.
+      </p>
+    </div>
+
+    <WorldClock />
+
+    <div class="max-w-4xl mx-auto mt-12 prose dark:prose-invert">
+      <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+        Acerca del Reloj Mundial
+      </h2>
+
+      <div class="space-y-4 text-gray-600 dark:text-gray-400">
+        <p>
+          Nuestro reloj mundial muestra la hora actual en las principales ciudades de todos los continentes. Perfecto para
+          coordinar con equipos internacionales, programar reuniones globales o simplemente mantenerse en contacto
+          con amigos y familiares en todo el mundo.
+        </p>
+
+        <h3 class="text-xl font-semibold text-gray-900 dark:text-white mt-6 mb-3">
+          Características:
+        </h3>
+        <ul class="list-disc list-inside space-y-2">
+          <li><strong>Más de 50 Ciudades Principales</strong> - Accede a las horas de ciudades en todos los continentes</li>
+          <li><strong>Buscar y Filtrar</strong> - Encuentra rápidamente ciudades por nombre, país o continente</li>
+          <li><strong>Personalizable</strong> - Agrega o elimina ciudades para crear tu reloj mundial personal</li>
+          <li><strong>Arrastrar y Soltar</strong> - Reordena las ciudades arrastrándolas en tu orden preferido</li>
+          <li><strong>Indicador de Hora del Día</strong> - Ve de un vistazo si es de día o de noche en cada ciudad</li>
+          <li><strong>Visualización de Diferencia UTC</strong> - Ve la diferencia de zona horaria para cada ciudad</li>
+          <li><strong>Actualizaciones en Vivo</strong> - Todos los relojes se actualizan en tiempo real</li>
+          <li><strong>Almacenamiento Persistente</strong> - Tu selección de ciudades se guarda automáticamente</li>
+        </ul>
+
+        <h3 class="text-xl font-semibold text-gray-900 dark:text-white mt-6 mb-3">
+          Casos de Uso Populares:
+        </h3>
+        <ul class="list-disc list-inside space-y-2">
+          <li><strong>Trabajo Remoto</strong> - Coordina con equipos distribuidos en diferentes zonas horarias</li>
+          <li><strong>Planificación de Viajes</strong> - Verifica las horas locales antes de reservar vuelos u hoteles</li>
+          <li><strong>Negocios Internacionales</strong> - Programa reuniones en horarios convenientes para todas las partes</li>
+          <li><strong>Familia y Amigos</strong> - Conoce el mejor momento para llamar a seres queridos en el extranjero</li>
+          <li><strong>Transmisión de Eventos</strong> - Planifica eventos en vivo para audiencias globales</li>
+          <li><strong>Trading de Acciones</strong> - Rastrea horarios de mercado en bolsas internacionales</li>
+        </ul>
+
+        <h3 class="text-xl font-semibold text-gray-900 dark:text-white mt-6 mb-3">
+          Ciudades Incluidas:
+        </h3>
+        <p>
+          Nuestro reloj mundial incluye ciudades principales de:
+        </p>
+        <ul class="list-disc list-inside space-y-1">
+          <li><strong>América del Norte</strong> - Nueva York, Los Ángeles, Chicago, Toronto, Vancouver, Ciudad de México</li>
+          <li><strong>América del Sur</strong> - São Paulo, Buenos Aires, Río de Janeiro, Lima, Bogotá, Santiago</li>
+          <li><strong>Europa</strong> - Londres, París, Madrid, Roma, Berlín, Ámsterdam, Moscú, Lisboa</li>
+          <li><strong>Asia</strong> - Tokio, Hong Kong, Singapur, Shanghái, Beijing, Dubái, Bombay, Delhi</li>
+          <li><strong>Oceanía</strong> - Sídney, Melbourne, Auckland</li>
+          <li><strong>África</strong> - El Cairo, Johannesburgo, Lagos, Nairobi</li>
+        </ul>
+
+        <div class="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4 mt-6">
+          <p class="text-sm text-blue-900 dark:text-blue-100 mb-0">
+            <strong>💡 Consejo:</strong> Todas las horas se ajustan automáticamente al Horario de Verano (DST) cuando corresponde.
+            Arrastra y suelta las ciudades para reordenarlas según tu preferencia.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</BaseLayout>

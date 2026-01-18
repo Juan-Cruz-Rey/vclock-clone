@@ -1,0 +1,84 @@
+---
+/**
+ * Sound Selector Component
+ * Selector de sonido de alarma con preview
+ */
+
+import { t, getLocaleFromPath } from '../../scripts/i18n';
+
+interface Props {
+  id?: string;
+  selectedSound?: string;
+  onTestSound?: string; // ID del elemento para triggerar test
+}
+
+const locale = getLocaleFromPath(Astro.url.pathname);
+const { id = 'sound-selector', selectedSound = 'alarm-1.mp3', onTestSound } = Astro.props;
+
+// Lista de sonidos disponibles
+const sounds = [
+  { id: 'alarm-1', name: 'Classic Alarm', file: 'alarm-1.mp3' },
+  { id: 'alarm-2', name: 'Beep Beep', file: 'alarm-2.mp3' },
+  { id: 'alarm-3', name: 'Rooster', file: 'alarm-3.mp3' },
+  { id: 'alarm-4', name: 'Bell', file: 'alarm-4.mp3' },
+  { id: 'alarm-5', name: 'Chime', file: 'alarm-5.mp3' },
+  { id: 'alarm-6', name: 'Digital', file: 'alarm-6.mp3' },
+];
+---
+
+<div class="flex flex-col space-y-2">
+  <label for={id} class="text-sm font-medium text-gray-700 dark:text-gray-300">
+    {t(locale, 'alarm.sound')}
+  </label>
+
+  <div class="flex space-x-2">
+    <select
+      id={id}
+      name="sound"
+      class="select-input flex-1"
+      data-sound-selector
+    >
+      {sounds.map((sound) => (
+        <option value={sound.file} selected={sound.file === selectedSound}>
+          {sound.name}
+        </option>
+      ))}
+    </select>
+
+    <button
+      type="button"
+      id={onTestSound || `${id}-test`}
+      class="btn-secondary px-4 whitespace-nowrap"
+      data-test-sound
+      aria-label={t(locale, 'alarm.testSound')}
+    >
+      <div class="flex items-center space-x-2">
+        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.984 5.984 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.983 3.983 0 00-1.172-2.828 1 1 0 010-1.415z" clip-rule="evenodd"></path>
+        </svg>
+        <span class="hidden sm:inline">{t(locale, 'common.test')}</span>
+      </div>
+    </button>
+  </div>
+</div>
+
+<script>
+  import { getAudioManager } from '../../scripts/audio-manager';
+
+  const soundSelector = document.querySelector('[data-sound-selector]') as HTMLSelectElement;
+  const testButton = document.querySelector('[data-test-sound]') as HTMLButtonElement;
+
+  // Test sound cuando se hace click
+  testButton?.addEventListener('click', () => {
+    const selectedSound = soundSelector?.value || 'alarm-1.mp3';
+    const audioManager = getAudioManager();
+    audioManager.test(selectedSound, 3000);
+  });
+
+  // También permitir test al cambiar de sonido
+  soundSelector?.addEventListener('change', () => {
+    // Auto-test cuando cambia (opcional, comentar si no se desea)
+    // const audioManager = getAudioManager();
+    // audioManager.test(soundSelector.value, 2000);
+  });
+</script>

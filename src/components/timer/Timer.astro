@@ -1,0 +1,508 @@
+---
+/**
+ * Timer Component
+ * Main countdown timer with duration and date modes
+ */
+
+interface Props {
+  presetDuration?: number; // in seconds
+}
+
+const { presetDuration } = Astro.props;
+---
+
+<div class="timer-container max-w-4xl mx-auto">
+  <!-- Timer Display -->
+  <div class="digital-display text-center mb-8" id="timer-display">
+    00:00
+  </div>
+
+  <!-- Progress Bar -->
+  <div class="mb-8">
+    <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-3 overflow-hidden">
+      <div
+        id="timer-progress"
+        class="bg-blue-600 dark:bg-blue-400 h-full transition-all duration-300 ease-linear"
+        style="width: 0%"
+      ></div>
+    </div>
+  </div>
+
+  <!-- Mode Selector -->
+  <div class="flex justify-center gap-4 mb-8">
+    <button
+      id="mode-duration-btn"
+      class="btn-secondary active:bg-blue-600 active:text-white"
+      data-mode="duration"
+    >
+      Duration Mode
+    </button>
+    <button
+      id="mode-date-btn"
+      class="btn-secondary"
+      data-mode="date"
+    >
+      Countdown to Date
+    </button>
+  </div>
+
+  <!-- Duration Mode Controls -->
+  <div id="duration-controls" class="mb-8">
+    <div class="grid grid-cols-3 gap-4 max-w-md mx-auto mb-6">
+      <div>
+        <label for="timer-hours" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+          Hours
+        </label>
+        <input
+          type="number"
+          id="timer-hours"
+          min="0"
+          max="23"
+          value="0"
+          class="text-input text-center text-2xl font-semibold"
+        />
+      </div>
+      <div>
+        <label for="timer-minutes" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+          Minutes
+        </label>
+        <input
+          type="number"
+          id="timer-minutes"
+          min="0"
+          max="59"
+          value="5"
+          class="text-input text-center text-2xl font-semibold"
+        />
+      </div>
+      <div>
+        <label for="timer-seconds" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+          Seconds
+        </label>
+        <input
+          type="number"
+          id="timer-seconds"
+          min="0"
+          max="59"
+          value="0"
+          class="text-input text-center text-2xl font-semibold"
+        />
+      </div>
+    </div>
+  </div>
+
+  <!-- Date Mode Controls -->
+  <div id="date-controls" class="mb-8 hidden">
+    <div class="max-w-md mx-auto">
+      <label for="target-date" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+        Target Date & Time
+      </label>
+      <input
+        type="datetime-local"
+        id="target-date"
+        class="text-input text-center"
+      />
+    </div>
+  </div>
+
+  <!-- Settings -->
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-2xl mx-auto mb-8">
+    <div>
+      <label for="timer-title" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+        Timer Title (Optional)
+      </label>
+      <input
+        type="text"
+        id="timer-title"
+        placeholder="e.g., Workout Timer"
+        maxlength="50"
+        class="text-input"
+      />
+    </div>
+    <div>
+      <label for="timer-sound" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+        Sound
+      </label>
+      <div class="flex gap-2">
+        <select id="timer-sound" class="select-input flex-1">
+          <option value="classic-bell.mp3">Classic Bell</option>
+          <option value="digital-alarm.mp3">Digital Alarm</option>
+          <option value="gentle-chimes.mp3">Gentle Chimes</option>
+          <option value="rooster.mp3">Rooster</option>
+          <option value="marimba.mp3">Marimba</option>
+          <option value="radar.mp3">Radar</option>
+        </select>
+        <button
+          id="test-sound-btn"
+          class="btn-secondary px-4"
+          title="Test Sound"
+        >
+          🔊
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Control Buttons -->
+  <div class="flex flex-wrap justify-center gap-4 mb-8">
+    <button id="start-btn" class="btn-primary min-w-[120px]">
+      Start
+    </button>
+    <button id="pause-btn" class="btn-secondary min-w-[120px] hidden">
+      Pause
+    </button>
+    <button id="resume-btn" class="btn-primary min-w-[120px] hidden">
+      Resume
+    </button>
+    <button id="stop-btn" class="btn-secondary min-w-[120px]">
+      Reset
+    </button>
+    <button id="add-time-btn" class="btn-secondary" title="Add 1 minute">
+      +1:00
+    </button>
+  </div>
+
+  <!-- Timer Presets -->
+  <div class="border-t border-gray-200 dark:border-gray-700 pt-8">
+    <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4 text-center">
+      Quick Presets
+    </h3>
+    <div class="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3 max-w-4xl mx-auto">
+      <button class="preset-btn btn-secondary" data-seconds="60">1 min</button>
+      <button class="preset-btn btn-secondary" data-seconds="180">3 min</button>
+      <button class="preset-btn btn-secondary" data-seconds="300">5 min</button>
+      <button class="preset-btn btn-secondary" data-seconds="600">10 min</button>
+      <button class="preset-btn btn-secondary" data-seconds="900">15 min</button>
+      <button class="preset-btn btn-secondary" data-seconds="1200">20 min</button>
+      <button class="preset-btn btn-secondary" data-seconds="1800">30 min</button>
+      <button class="preset-btn btn-secondary" data-seconds="2700">45 min</button>
+      <button class="preset-btn btn-secondary" data-seconds="3600">1 hour</button>
+      <button class="preset-btn btn-secondary" data-seconds="7200">2 hours</button>
+      <button class="preset-btn btn-secondary" data-seconds="10800">3 hours</button>
+      <button class="preset-btn btn-secondary" data-seconds="14400">4 hours</button>
+    </div>
+  </div>
+
+  <!-- Recent Timers -->
+  <div class="border-t border-gray-200 dark:border-gray-700 pt-8 mt-8">
+    <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4 text-center">
+      Recent Timers
+    </h3>
+    <div id="recent-timers" class="flex flex-wrap justify-center gap-3">
+      <p class="text-gray-500 dark:text-gray-400 text-sm">No recent timers</p>
+    </div>
+  </div>
+</div>
+
+<script>
+  import { Timer, formatTimerDisplay } from '../../scripts/timer-logic';
+  import { Storage } from '../../scripts/storage';
+  import { getAudioManager } from '../../scripts/audio-manager';
+
+  // DOM Elements
+  const displayEl = document.getElementById('timer-display') as HTMLDivElement;
+  const progressEl = document.getElementById('timer-progress') as HTMLDivElement;
+
+  const modeDurationBtn = document.getElementById('mode-duration-btn') as HTMLButtonElement;
+  const modeDateBtn = document.getElementById('mode-date-btn') as HTMLButtonElement;
+
+  const durationControls = document.getElementById('duration-controls') as HTMLDivElement;
+  const dateControls = document.getElementById('date-controls') as HTMLDivElement;
+
+  const hoursInput = document.getElementById('timer-hours') as HTMLInputElement;
+  const minutesInput = document.getElementById('timer-minutes') as HTMLInputElement;
+  const secondsInput = document.getElementById('timer-seconds') as HTMLInputElement;
+  const targetDateInput = document.getElementById('target-date') as HTMLInputElement;
+
+  const titleInput = document.getElementById('timer-title') as HTMLInputElement;
+  const soundSelect = document.getElementById('timer-sound') as HTMLSelectElement;
+  const testSoundBtn = document.getElementById('test-sound-btn') as HTMLButtonElement;
+
+  const startBtn = document.getElementById('start-btn') as HTMLButtonElement;
+  const pauseBtn = document.getElementById('pause-btn') as HTMLButtonElement;
+  const resumeBtn = document.getElementById('resume-btn') as HTMLButtonElement;
+  const stopBtn = document.getElementById('stop-btn') as HTMLButtonElement;
+  const addTimeBtn = document.getElementById('add-time-btn') as HTMLButtonElement;
+
+  const presetBtns = document.querySelectorAll('.preset-btn') as NodeListOf<HTMLButtonElement>;
+  const recentTimersEl = document.getElementById('recent-timers') as HTMLDivElement;
+
+  // Initialize Timer
+  let timer: Timer;
+  let currentMode: 'duration' | 'date' = 'duration';
+
+  function initTimer() {
+    const savedSettings = Storage.getTimerSettings();
+
+    timer = new Timer(savedSettings);
+
+    // Load saved settings into UI
+    currentMode = savedSettings.mode;
+    hoursInput.value = savedSettings.hours.toString();
+    minutesInput.value = savedSettings.minutes.toString();
+    secondsInput.value = savedSettings.seconds.toString();
+    titleInput.value = savedSettings.title;
+    soundSelect.value = savedSettings.sound;
+
+    if (savedSettings.mode === 'date' && savedSettings.targetDate) {
+      const date = new Date(savedSettings.targetDate);
+      targetDateInput.value = formatDateForInput(date);
+    }
+
+    updateModeUI();
+    updateDisplay(timer.getRemainingMs());
+    updateProgress();
+    updateButtonStates(timer.getState());
+    loadRecentTimers();
+
+    // Callbacks
+    timer.onTick((remainingMs) => {
+      updateDisplay(remainingMs);
+      updateProgress();
+    });
+
+    timer.onStateChange((state) => {
+      updateButtonStates(state);
+      if (state === 'finished') {
+        setTimeout(() => {
+          if (confirm('Timer finished! Start again?')) {
+            timer.reset();
+            timer.start();
+          }
+        }, 1000);
+      }
+    });
+
+    timer.onFinish(() => {
+      saveToRecent();
+    });
+  }
+
+  function updateDisplay(ms: number) {
+    displayEl.textContent = formatTimerDisplay(ms);
+  }
+
+  function updateProgress() {
+    const progress = timer.getProgress();
+    progressEl.style.width = `${progress}%`;
+  }
+
+  function updateButtonStates(state: 'idle' | 'running' | 'paused' | 'finished') {
+    startBtn.classList.toggle('hidden', state !== 'idle');
+    pauseBtn.classList.toggle('hidden', state !== 'running');
+    resumeBtn.classList.toggle('hidden', state !== 'paused');
+
+    if (state === 'finished') {
+      startBtn.classList.remove('hidden');
+      startBtn.textContent = 'Restart';
+    } else {
+      startBtn.textContent = 'Start';
+    }
+  }
+
+  function updateModeUI() {
+    if (currentMode === 'duration') {
+      durationControls.classList.remove('hidden');
+      dateControls.classList.add('hidden');
+      modeDurationBtn.classList.add('bg-blue-600', 'text-white');
+      modeDateBtn.classList.remove('bg-blue-600', 'text-white');
+    } else {
+      durationControls.classList.add('hidden');
+      dateControls.classList.remove('hidden');
+      modeDateBtn.classList.add('bg-blue-600', 'text-white');
+      modeDurationBtn.classList.remove('bg-blue-600', 'text-white');
+    }
+  }
+
+  function formatDateForInput(date: Date): string {
+    const pad = (n: number) => n.toString().padStart(2, '0');
+    return `${date.getFullYear()}-${pad(date.getMonth() + 1)}-${pad(date.getDate())}T${pad(date.getHours())}:${pad(date.getMinutes())}`;
+  }
+
+  function saveToRecent() {
+    const settings = timer.getSettings();
+    Storage.addRecentItem('recentTimers', {
+      mode: settings.mode,
+      hours: settings.hours,
+      minutes: settings.minutes,
+      seconds: settings.seconds,
+      title: settings.title,
+      timestamp: Date.now(),
+    });
+    loadRecentTimers();
+  }
+
+  function loadRecentTimers() {
+    const recent = Storage.getRecentTimers();
+
+    if (recent.length === 0) {
+      recentTimersEl.innerHTML = '<p class="text-gray-500 dark:text-gray-400 text-sm">No recent timers</p>';
+      return;
+    }
+
+    recentTimersEl.innerHTML = recent.map((item, index) => {
+      const data = item.data;
+      const duration = data.hours * 3600 + data.minutes * 60 + data.seconds;
+      const label = formatTimerDisplay(duration * 1000);
+      const title = data.title || 'Unnamed Timer';
+
+      return `
+        <button
+          class="btn-secondary text-sm px-4 py-2"
+          data-recent-index="${index}"
+        >
+          ${label}${data.title ? ` - ${title}` : ''}
+        </button>
+      `;
+    }).join('');
+
+    // Add event listeners
+    recentTimersEl.querySelectorAll('[data-recent-index]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const index = parseInt(btn.getAttribute('data-recent-index') || '0');
+        const item = recent[index];
+        loadTimerFromRecent(item.data);
+      });
+    });
+  }
+
+  function loadTimerFromRecent(data: any) {
+    hoursInput.value = data.hours.toString();
+    minutesInput.value = data.minutes.toString();
+    secondsInput.value = data.seconds.toString();
+    titleInput.value = data.title || '';
+
+    timer.setDuration(data.hours, data.minutes, data.seconds);
+    timer.updateSettings({ title: data.title });
+  }
+
+  // Event Listeners
+  modeDurationBtn.addEventListener('click', () => {
+    currentMode = 'duration';
+    updateModeUI();
+    const hours = parseInt(hoursInput.value) || 0;
+    const minutes = parseInt(minutesInput.value) || 0;
+    const seconds = parseInt(secondsInput.value) || 0;
+    timer.setDuration(hours, minutes, seconds);
+    timer.updateSettings({ mode: 'duration' });
+  });
+
+  modeDateBtn.addEventListener('click', () => {
+    currentMode = 'date';
+    updateModeUI();
+    if (targetDateInput.value) {
+      const date = new Date(targetDateInput.value);
+      timer.setTargetDate(date);
+      timer.updateSettings({ mode: 'date' });
+    }
+  });
+
+  hoursInput.addEventListener('change', () => {
+    const hours = Math.max(0, Math.min(23, parseInt(hoursInput.value) || 0));
+    hoursInput.value = hours.toString();
+    const minutes = parseInt(minutesInput.value) || 0;
+    const seconds = parseInt(secondsInput.value) || 0;
+    timer.setDuration(hours, minutes, seconds);
+  });
+
+  minutesInput.addEventListener('change', () => {
+    const minutes = Math.max(0, Math.min(59, parseInt(minutesInput.value) || 0));
+    minutesInput.value = minutes.toString();
+    const hours = parseInt(hoursInput.value) || 0;
+    const seconds = parseInt(secondsInput.value) || 0;
+    timer.setDuration(hours, minutes, seconds);
+  });
+
+  secondsInput.addEventListener('change', () => {
+    const seconds = Math.max(0, Math.min(59, parseInt(secondsInput.value) || 0));
+    secondsInput.value = seconds.toString();
+    const hours = parseInt(hoursInput.value) || 0;
+    const minutes = parseInt(minutesInput.value) || 0;
+    timer.setDuration(hours, minutes, seconds);
+  });
+
+  targetDateInput.addEventListener('change', () => {
+    if (targetDateInput.value) {
+      const date = new Date(targetDateInput.value);
+      timer.setTargetDate(date);
+      timer.updateSettings({ targetDate: date });
+    }
+  });
+
+  titleInput.addEventListener('input', () => {
+    timer.updateSettings({ title: titleInput.value });
+  });
+
+  soundSelect.addEventListener('change', () => {
+    timer.updateSettings({ sound: soundSelect.value });
+  });
+
+  testSoundBtn.addEventListener('click', () => {
+    getAudioManager().test(soundSelect.value, 2000);
+  });
+
+  startBtn.addEventListener('click', () => {
+    timer.start();
+  });
+
+  pauseBtn.addEventListener('click', () => {
+    timer.pause();
+  });
+
+  resumeBtn.addEventListener('click', () => {
+    timer.resume();
+  });
+
+  stopBtn.addEventListener('click', () => {
+    timer.reset();
+  });
+
+  addTimeBtn.addEventListener('click', () => {
+    timer.addTime(60); // Add 1 minute
+  });
+
+  presetBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const seconds = parseInt(btn.getAttribute('data-seconds') || '0');
+      const hours = Math.floor(seconds / 3600);
+      const minutes = Math.floor((seconds % 3600) / 60);
+      const secs = seconds % 60;
+
+      hoursInput.value = hours.toString();
+      minutesInput.value = minutes.toString();
+      secondsInput.value = secs.toString();
+
+      timer.setDuration(hours, minutes, secs);
+    });
+  });
+
+  // Initialize on load
+  initTimer();
+
+  // Cleanup on page unload
+  window.addEventListener('beforeunload', () => {
+    timer.destroy();
+  });
+</script>
+
+<style>
+  .timer-container {
+    animation: fadeIn 0.3s ease-in;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    opacity: 1;
+  }
+</style>

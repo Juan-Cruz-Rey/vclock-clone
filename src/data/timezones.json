@@ -1,0 +1,434 @@
+[
+  {
+    "id": "new-york",
+    "name": "New York",
+    "country": "United States",
+    "timezone": "America/New_York",
+    "utcOffset": "-05:00",
+    "continent": "North America"
+  },
+  {
+    "id": "los-angeles",
+    "name": "Los Angeles",
+    "country": "United States",
+    "timezone": "America/Los_Angeles",
+    "utcOffset": "-08:00",
+    "continent": "North America"
+  },
+  {
+    "id": "chicago",
+    "name": "Chicago",
+    "country": "United States",
+    "timezone": "America/Chicago",
+    "utcOffset": "-06:00",
+    "continent": "North America"
+  },
+  {
+    "id": "london",
+    "name": "London",
+    "country": "United Kingdom",
+    "timezone": "Europe/London",
+    "utcOffset": "+00:00",
+    "continent": "Europe"
+  },
+  {
+    "id": "paris",
+    "name": "Paris",
+    "country": "France",
+    "timezone": "Europe/Paris",
+    "utcOffset": "+01:00",
+    "continent": "Europe"
+  },
+  {
+    "id": "madrid",
+    "name": "Madrid",
+    "country": "Spain",
+    "timezone": "Europe/Madrid",
+    "utcOffset": "+01:00",
+    "continent": "Europe"
+  },
+  {
+    "id": "rome",
+    "name": "Rome",
+    "country": "Italy",
+    "timezone": "Europe/Rome",
+    "utcOffset": "+01:00",
+    "continent": "Europe"
+  },
+  {
+    "id": "berlin",
+    "name": "Berlin",
+    "country": "Germany",
+    "timezone": "Europe/Berlin",
+    "utcOffset": "+01:00",
+    "continent": "Europe"
+  },
+  {
+    "id": "amsterdam",
+    "name": "Amsterdam",
+    "country": "Netherlands",
+    "timezone": "Europe/Amsterdam",
+    "utcOffset": "+01:00",
+    "continent": "Europe"
+  },
+  {
+    "id": "brussels",
+    "name": "Brussels",
+    "country": "Belgium",
+    "timezone": "Europe/Brussels",
+    "utcOffset": "+01:00",
+    "continent": "Europe"
+  },
+  {
+    "id": "lisbon",
+    "name": "Lisbon",
+    "country": "Portugal",
+    "timezone": "Europe/Lisbon",
+    "utcOffset": "+00:00",
+    "continent": "Europe"
+  },
+  {
+    "id": "moscow",
+    "name": "Moscow",
+    "country": "Russia",
+    "timezone": "Europe/Moscow",
+    "utcOffset": "+03:00",
+    "continent": "Europe"
+  },
+  {
+    "id": "dubai",
+    "name": "Dubai",
+    "country": "United Arab Emirates",
+    "timezone": "Asia/Dubai",
+    "utcOffset": "+04:00",
+    "continent": "Asia"
+  },
+  {
+    "id": "tokyo",
+    "name": "Tokyo",
+    "country": "Japan",
+    "timezone": "Asia/Tokyo",
+    "utcOffset": "+09:00",
+    "continent": "Asia"
+  },
+  {
+    "id": "hong-kong",
+    "name": "Hong Kong",
+    "country": "Hong Kong",
+    "timezone": "Asia/Hong_Kong",
+    "utcOffset": "+08:00",
+    "continent": "Asia"
+  },
+  {
+    "id": "singapore",
+    "name": "Singapore",
+    "country": "Singapore",
+    "timezone": "Asia/Singapore",
+    "utcOffset": "+08:00",
+    "continent": "Asia"
+  },
+  {
+    "id": "shanghai",
+    "name": "Shanghai",
+    "country": "China",
+    "timezone": "Asia/Shanghai",
+    "utcOffset": "+08:00",
+    "continent": "Asia"
+  },
+  {
+    "id": "beijing",
+    "name": "Beijing",
+    "country": "China",
+    "timezone": "Asia/Shanghai",
+    "utcOffset": "+08:00",
+    "continent": "Asia"
+  },
+  {
+    "id": "mumbai",
+    "name": "Mumbai",
+    "country": "India",
+    "timezone": "Asia/Kolkata",
+    "utcOffset": "+05:30",
+    "continent": "Asia"
+  },
+  {
+    "id": "delhi",
+    "name": "Delhi",
+    "country": "India",
+    "timezone": "Asia/Kolkata",
+    "utcOffset": "+05:30",
+    "continent": "Asia"
+  },
+  {
+    "id": "bangkok",
+    "name": "Bangkok",
+    "country": "Thailand",
+    "timezone": "Asia/Bangkok",
+    "utcOffset": "+07:00",
+    "continent": "Asia"
+  },
+  {
+    "id": "seoul",
+    "name": "Seoul",
+    "country": "South Korea",
+    "timezone": "Asia/Seoul",
+    "utcOffset": "+09:00",
+    "continent": "Asia"
+  },
+  {
+    "id": "jakarta",
+    "name": "Jakarta",
+    "country": "Indonesia",
+    "timezone": "Asia/Jakarta",
+    "utcOffset": "+07:00",
+    "continent": "Asia"
+  },
+  {
+    "id": "istanbul",
+    "name": "Istanbul",
+    "country": "Turkey",
+    "timezone": "Europe/Istanbul",
+    "utcOffset": "+03:00",
+    "continent": "Asia"
+  },
+  {
+    "id": "sydney",
+    "name": "Sydney",
+    "country": "Australia",
+    "timezone": "Australia/Sydney",
+    "utcOffset": "+10:00",
+    "continent": "Oceania"
+  },
+  {
+    "id": "melbourne",
+    "name": "Melbourne",
+    "country": "Australia",
+    "timezone": "Australia/Melbourne",
+    "utcOffset": "+10:00",
+    "continent": "Oceania"
+  },
+  {
+    "id": "auckland",
+    "name": "Auckland",
+    "country": "New Zealand",
+    "timezone": "Pacific/Auckland",
+    "utcOffset": "+12:00",
+    "continent": "Oceania"
+  },
+  {
+    "id": "mexico-city",
+    "name": "Mexico City",
+    "country": "Mexico",
+    "timezone": "America/Mexico_City",
+    "utcOffset": "-06:00",
+    "continent": "North America"
+  },
+  {
+    "id": "toronto",
+    "name": "Toronto",
+    "country": "Canada",
+    "timezone": "America/Toronto",
+    "utcOffset": "-05:00",
+    "continent": "North America"
+  },
+  {
+    "id": "vancouver",
+    "name": "Vancouver",
+    "country": "Canada",
+    "timezone": "America/Vancouver",
+    "utcOffset": "-08:00",
+    "continent": "North America"
+  },
+  {
+    "id": "sao-paulo",
+    "name": "São Paulo",
+    "country": "Brazil",
+    "timezone": "America/Sao_Paulo",
+    "utcOffset": "-03:00",
+    "continent": "South America"
+  },
+  {
+    "id": "buenos-aires",
+    "name": "Buenos Aires",
+    "country": "Argentina",
+    "timezone": "America/Argentina/Buenos_Aires",
+    "utcOffset": "-03:00",
+    "continent": "South America"
+  },
+  {
+    "id": "rio-de-janeiro",
+    "name": "Rio de Janeiro",
+    "country": "Brazil",
+    "timezone": "America/Sao_Paulo",
+    "utcOffset": "-03:00",
+    "continent": "South America"
+  },
+  {
+    "id": "lima",
+    "name": "Lima",
+    "country": "Peru",
+    "timezone": "America/Lima",
+    "utcOffset": "-05:00",
+    "continent": "South America"
+  },
+  {
+    "id": "bogota",
+    "name": "Bogotá",
+    "country": "Colombia",
+    "timezone": "America/Bogota",
+    "utcOffset": "-05:00",
+    "continent": "South America"
+  },
+  {
+    "id": "santiago",
+    "name": "Santiago",
+    "country": "Chile",
+    "timezone": "America/Santiago",
+    "utcOffset": "-03:00",
+    "continent": "South America"
+  },
+  {
+    "id": "cairo",
+    "name": "Cairo",
+    "country": "Egypt",
+    "timezone": "Africa/Cairo",
+    "utcOffset": "+02:00",
+    "continent": "Africa"
+  },
+  {
+    "id": "johannesburg",
+    "name": "Johannesburg",
+    "country": "South Africa",
+    "timezone": "Africa/Johannesburg",
+    "utcOffset": "+02:00",
+    "continent": "Africa"
+  },
+  {
+    "id": "lagos",
+    "name": "Lagos",
+    "country": "Nigeria",
+    "timezone": "Africa/Lagos",
+    "utcOffset": "+01:00",
+    "continent": "Africa"
+  },
+  {
+    "id": "nairobi",
+    "name": "Nairobi",
+    "country": "Kenya",
+    "timezone": "Africa/Nairobi",
+    "utcOffset": "+03:00",
+    "continent": "Africa"
+  },
+  {
+    "id": "zurich",
+    "name": "Zurich",
+    "country": "Switzerland",
+    "timezone": "Europe/Zurich",
+    "utcOffset": "+01:00",
+    "continent": "Europe"
+  },
+  {
+    "id": "vienna",
+    "name": "Vienna",
+    "country": "Austria",
+    "timezone": "Europe/Vienna",
+    "utcOffset": "+01:00",
+    "continent": "Europe"
+  },
+  {
+    "id": "stockholm",
+    "name": "Stockholm",
+    "country": "Sweden",
+    "timezone": "Europe/Stockholm",
+    "utcOffset": "+01:00",
+    "continent": "Europe"
+  },
+  {
+    "id": "copenhagen",
+    "name": "Copenhagen",
+    "country": "Denmark",
+    "timezone": "Europe/Copenhagen",
+    "utcOffset": "+01:00",
+    "continent": "Europe"
+  },
+  {
+    "id": "oslo",
+    "name": "Oslo",
+    "country": "Norway",
+    "timezone": "Europe/Oslo",
+    "utcOffset": "+01:00",
+    "continent": "Europe"
+  },
+  {
+    "id": "helsinki",
+    "name": "Helsinki",
+    "country": "Finland",
+    "timezone": "Europe/Helsinki",
+    "utcOffset": "+02:00",
+    "continent": "Europe"
+  },
+  {
+    "id": "athens",
+    "name": "Athens",
+    "country": "Greece",
+    "timezone": "Europe/Athens",
+    "utcOffset": "+02:00",
+    "continent": "Europe"
+  },
+  {
+    "id": "warsaw",
+    "name": "Warsaw",
+    "country": "Poland",
+    "timezone": "Europe/Warsaw",
+    "utcOffset": "+01:00",
+    "continent": "Europe"
+  },
+  {
+    "id": "prague",
+    "name": "Prague",
+    "country": "Czech Republic",
+    "timezone": "Europe/Prague",
+    "utcOffset": "+01:00",
+    "continent": "Europe"
+  },
+  {
+    "id": "budapest",
+    "name": "Budapest",
+    "country": "Hungary",
+    "timezone": "Europe/Budapest",
+    "utcOffset": "+01:00",
+    "continent": "Europe"
+  },
+  {
+    "id": "manila",
+    "name": "Manila",
+    "country": "Philippines",
+    "timezone": "Asia/Manila",
+    "utcOffset": "+08:00",
+    "continent": "Asia"
+  },
+  {
+    "id": "kuala-lumpur",
+    "name": "Kuala Lumpur",
+    "country": "Malaysia",
+    "timezone": "Asia/Kuala_Lumpur",
+    "utcOffset": "+08:00",
+    "continent": "Asia"
+  },
+  {
+    "id": "tel-aviv",
+    "name": "Tel Aviv",
+    "country": "Israel",
+    "timezone": "Asia/Jerusalem",
+    "utcOffset": "+02:00",
+    "continent": "Asia"
+  },
+  {
+    "id": "riyadh",
+    "name": "Riyadh",
+    "country": "Saudi Arabia",
+    "timezone": "Asia/Riyadh",
+    "utcOffset": "+03:00",
+    "continent": "Asia"
+  }
+]

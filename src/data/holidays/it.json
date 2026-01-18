@@ -1,0 +1,154 @@
+[
+  {
+    "id": "new-year",
+    "name": "Capodanno",
+    "date": "2026-01-01",
+    "description": "Primo giorno dell'anno nel calendario gregoriano",
+    "recurring": true,
+    "type": "public"
+  },
+  {
+    "id": "epiphany",
+    "name": "Epifania",
+    "date": "2026-01-06",
+    "description": "Celebrazione della venuta dei Re Magi",
+    "recurring": true,
+    "type": "religious"
+  },
+  {
+    "id": "valentine",
+    "name": "San Valentino",
+    "date": "2026-02-14",
+    "description": "Celebrazione dell'amore e dell'affetto",
+    "recurring": true,
+    "type": "celebration"
+  },
+  {
+    "id": "women-day",
+    "name": "Festa della Donna",
+    "date": "2026-03-08",
+    "description": "Giornata internazionale della donna",
+    "recurring": true,
+    "type": "awareness"
+  },
+  {
+    "id": "easter",
+    "name": "Pasqua",
+    "date": "2026-04-05",
+    "description": "Celebrazione cristiana della risurrezione di Gesù",
+    "recurring": true,
+    "type": "religious"
+  },
+  {
+    "id": "easter-monday",
+    "name": "Lunedì dell'Angelo",
+    "date": "2026-04-06",
+    "description": "Giorno successivo alla Pasqua",
+    "recurring": true,
+    "type": "public"
+  },
+  {
+    "id": "liberation-day",
+    "name": "Festa della Liberazione",
+    "date": "2026-04-25",
+    "description": "Celebrazione della liberazione dell'Italia dal nazifascismo",
+    "recurring": true,
+    "type": "public"
+  },
+  {
+    "id": "labor-day",
+    "name": "Festa dei Lavoratori",
+    "date": "2026-05-01",
+    "description": "Giornata internazionale dei lavoratori",
+    "recurring": true,
+    "type": "public"
+  },
+  {
+    "id": "mothers-day",
+    "name": "Festa della Mamma",
+    "date": "2026-05-10",
+    "description": "Celebrazione in onore delle madri e della maternità",
+    "recurring": true,
+    "type": "celebration"
+  },
+  {
+    "id": "republic-day",
+    "name": "Festa della Repubblica",
+    "date": "2026-06-02",
+    "description": "Celebrazione della nascita della Repubblica Italiana",
+    "recurring": true,
+    "type": "public"
+  },
+  {
+    "id": "fathers-day",
+    "name": "Festa del Papà",
+    "date": "2026-03-19",
+    "description": "Celebrazione in onore dei padri e della paternità",
+    "recurring": true,
+    "type": "celebration"
+  },
+  {
+    "id": "ferragosto",
+    "name": "Ferragosto",
+    "date": "2026-08-15",
+    "description": "Festa dell'Assunzione di Maria",
+    "recurring": true,
+    "type": "public"
+  },
+  {
+    "id": "halloween",
+    "name": "Halloween",
+    "date": "2026-10-31",
+    "description": "Celebrazione annuale con costumi e dolcetti",
+    "recurring": true,
+    "type": "celebration"
+  },
+  {
+    "id": "all-saints",
+    "name": "Ognissanti",
+    "date": "2026-11-01",
+    "description": "Giorno religioso per onorare tutti i santi",
+    "recurring": true,
+    "type": "religious"
+  },
+  {
+    "id": "immaculate-conception",
+    "name": "Immacolata Concezione",
+    "date": "2026-12-08",
+    "description": "Festa cattolica",
+    "recurring": true,
+    "type": "religious"
+  },
+  {
+    "id": "christmas-eve",
+    "name": "Vigilia di Natale",
+    "date": "2026-12-24",
+    "description": "Sera prima del giorno di Natale",
+    "recurring": true,
+    "type": "celebration"
+  },
+  {
+    "id": "christmas",
+    "name": "Natale",
+    "date": "2026-12-25",
+    "description": "Celebrazione cristiana della nascita di Gesù Cristo",
+    "recurring": true,
+    "type": "public"
+  },
+  {
+    "id": "st-stephen",
+    "name": "Santo Stefano",
+    "date": "2026-12-26",
+    "description": "Giorno successivo al Natale",
+    "recurring": true,
+    "type": "public"
+  },
+  {
+    "id": "new-year-eve",
+    "name": "San Silvestro",
+    "date": "2026-12-31",
+    "description": "Ultimo giorno dell'anno",
+    "recurring": true,
+    "type": "celebration"
+  }
+]

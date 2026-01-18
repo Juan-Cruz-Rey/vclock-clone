@@ -1,0 +1,83 @@
+---
+/**
+ * Timer Page (English)
+ * Free online countdown timer with presets
+ */
+
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Timer from '../components/timer/Timer.astro';
+
+const title = 'Online Timer - Free Countdown Timer';
+const description = 'Free online countdown timer with presets. Set a timer for any duration or countdown to a specific date. Browser-based, no download required.';
+const keywords = 'online timer, countdown timer, timer online, free timer, countdown clock, timer with sound';
+---
+
+<BaseLayout title={title} description={description} keywords={keywords}>
+  <div class="container mx-auto px-4 py-12">
+    <div class="text-center mb-12">
+      <h1 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+        Online Timer
+      </h1>
+      <p class="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+        Set a countdown timer for any duration or count down to a specific date. Perfect for workouts, cooking, studying, and more.
+      </p>
+    </div>
+
+    <Timer />
+
+    <div class="max-w-4xl mx-auto mt-12 prose dark:prose-invert">
+      <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+        How to Use the Online Timer
+      </h2>
+
+      <div class="space-y-4 text-gray-600 dark:text-gray-400">
+        <p>
+          Our free online timer is perfect for any activity that requires precise time tracking. Whether you're
+          working out, cooking, studying, or taking a break, this timer helps you stay on schedule.
+        </p>
+
+        <h3 class="text-xl font-semibold text-gray-900 dark:text-white mt-6 mb-3">
+          Two Timer Modes:
+        </h3>
+        <ul class="list-disc list-inside space-y-2">
+          <li><strong>Duration Mode</strong> - Set a timer for a specific number of hours, minutes, and seconds</li>
+          <li><strong>Countdown to Date</strong> - Count down to a specific date and time (perfect for events, deadlines, etc.)</li>
+        </ul>
+
+        <h3 class="text-xl font-semibold text-gray-900 dark:text-white mt-6 mb-3">
+          Features:
+        </h3>
+        <ul class="list-disc list-inside space-y-2">
+          <li>Quick presets (1 min, 5 min, 10 min, 30 min, 1 hour, and more)</li>
+          <li>Customizable alarm sounds</li>
+          <li>Visual progress bar</li>
+          <li>Add time on the fly (+1 minute button)</li>
+          <li>Browser notifications when timer finishes</li>
+          <li>Recent timers for quick access</li>
+          <li>Custom timer titles</li>
+          <li>Pause and resume functionality</li>
+        </ul>
+
+        <h3 class="text-xl font-semibold text-gray-900 dark:text-white mt-6 mb-3">
+          Popular Timer Durations:
+        </h3>
+        <ul class="list-disc list-inside space-y-2">
+          <li><strong>1 minute</strong> - Quick tasks, micro-breaks</li>
+          <li><strong>5 minutes</strong> - Plank exercises, tea steeping, quick meditation</li>
+          <li><strong>10 minutes</strong> - Power naps, writing sprints</li>
+          <li><strong>15 minutes</strong> - Study sessions (Pomodoro break)</li>
+          <li><strong>25 minutes</strong> - Pomodoro technique work session</li>
+          <li><strong>30 minutes</strong> - Workout sessions, cooking</li>
+          <li><strong>1 hour</strong> - Deep work sessions, meetings</li>
+        </ul>
+
+        <div class="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4 mt-6">
+          <p class="text-sm text-blue-900 dark:text-blue-100 mb-0">
+            <strong>💡 Tip:</strong> Keep this tab open and your computer on for the timer to work properly.
+            You can also enable browser notifications to get alerted when your timer finishes, even if the tab is in the background.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</BaseLayout>

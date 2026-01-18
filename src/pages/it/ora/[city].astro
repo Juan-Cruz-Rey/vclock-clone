@@ -1,0 +1,157 @@
+---
+/**
+ * SEO Pages for City Time (Italian)
+ * Generates static pages for each city
+ * Example: /it/ora/tokyo/, /it/ora/london/, /it/ora/new-york/
+ */
+
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import timezonesData from '../../../data/timezones.json';
+
+// Generate all possible city pages
+export async function getStaticPaths() {
+  return timezonesData.map(city => ({
+    params: { city: city.id },
+  }));
+}
+
+const { city: cityId } = Astro.params;
+
+const cityData = timezonesData.find(tz => tz.id === cityId);
+
+if (!cityData) {
+  return Astro.redirect('/it/orologio-mondiale/');
+}
+
+// Calculate current time in this timezone
+const currentTime = new Date().toLocaleString('it-IT', {
+  timeZone: cityData.timezone,
+  hour: 'numeric',
+  minute: '2-digit',
+  hour12: false,
+});
+
+const currentDate = new Date().toLocaleString('it-IT', {
+  timeZone: cityData.timezone,
+  weekday: 'long',
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+});
+
+const title = `Ora Attuale a ${cityData.name}, ${cityData.country} - Orologio Mondiale`;
+const description = `Che ora è a ${cityData.name}? Controlla l'ora locale attuale a ${cityData.name}, ${cityData.country}. Visualizza il fuso orario, l'offset UTC e la differenza di orario dalla tua posizione.`;
+const keywords = `ora a ${cityData.name}, ${cityData.name} ora, ${cityData.country} ora, ${cityData.name} fuso orario, ora attuale ${cityData.name}`;
+---
+
+<BaseLayout title={title} description={description} keywords={keywords}>
+  <div class="container mx-auto px-4 py-12">
+    <div class="text-center mb-12">
+      <h1 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+        Ora Attuale a {cityData.name}
+      </h1>
+      <p class="text-lg text-gray-600 dark:text-gray-400">
+        {cityData.country}
+      </p>
+    </div>
+
+    <!-- Live Clock -->
+    <div class="max-w-2xl mx-auto mb-12">
+      <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8">
+        <div class="text-center mb-6">
+          <div id="live-time" class="text-6xl md:text-7xl font-mono font-bold text-blue-600 dark:text-blue-400 mb-2">
+            {currentTime}
+          </div>
+          <div id="live-date" class="text-lg text-gray-600 dark:text-gray-400">
+            {currentDate}
+          </div>
+        </div>
+
+        <div class="grid grid-cols-2 gap-4 text-center border-t border-gray-200 dark:border-gray-700 pt-6">
+          <div>
+            <div class="text-sm text-gray-600 dark:text-gray-400 mb-1">Fuso Orario</div>
+            <div class="font-semibold text-gray-900 dark:text-white">{cityData.timezone}</div>
+          </div>
+          <div>
+            <div class="text-sm text-gray-600 dark:text-gray-400 mb-1">Offset UTC</div>
+            <div class="font-semibold text-gray-900 dark:text-white">{cityData.utcOffset}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Information -->
+    <div class="max-w-4xl mx-auto prose dark:prose-invert">
+      <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+        Informazioni sull'Ora a {cityData.name}
+      </h2>
+
+      <div class="space-y-4 text-gray-600 dark:text-gray-400">
+        <p>
+          L'ora attuale a <strong>{cityData.name}, {cityData.country}</strong> è visualizzata sopra.
+          {cityData.name} si trova nel fuso orario {cityData.timezone} con un offset UTC di {cityData.utcOffset}.
+        </p>
+
+        <h3 class="text-xl font-semibold text-gray-900 dark:text-white mt-6 mb-3">
+          Informazioni sul Fuso Orario
+        </h3>
+        <ul class="list-disc list-inside space-y-2">
+          <li><strong>Città:</strong> {cityData.name}</li>
+          <li><strong>Paese:</strong> {cityData.country}</li>
+          <li><strong>Continente:</strong> {cityData.continent}</li>
+          <li><strong>Fuso Orario:</strong> {cityData.timezone}</li>
+          <li><strong>Offset UTC:</strong> {cityData.utcOffset}</li>
+        </ul>
+
+        <h3 class="text-xl font-semibold text-gray-900 dark:text-white mt-6 mb-3">
+          Quando Chiamare {cityData.name}
+        </h3>
+        <p>
+          Se devi programmare una chiamata o riunione con qualcuno a {cityData.name}, assicurati di verificare
+          la differenza di orario attuale tra la tua posizione e {cityData.name}. Il momento migliore per chiamare è
+          tipicamente durante le ore lavorative normali (9:00 - 17:00) nel fuso orario locale.
+        </p>
+
+        <div class="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4 mt-6">
+          <p class="text-sm text-blue-900 dark:text-blue-100 mb-0">
+            <strong>💡 Suggerimento:</strong> Questa pagina mostra l'ora in tempo reale a {cityData.name}. L'orologio si aggiorna automaticamente
+            ogni secondo. Aggiungi questa pagina ai preferiti per accesso rapido all'ora di {cityData.name}.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</BaseLayout>
+
+<script define:vars={{ timezone: cityData.timezone }}>
+  // Update time every second
+  function updateTime() {
+    const now = new Date();
+
+    const timeString = now.toLocaleString('it-IT', {
+      timeZone: timezone,
+      hour: 'numeric',
+      minute: '2-digit',
+      second: '2-digit',
+      hour12: false,
+    });
+
+    const dateString = now.toLocaleString('it-IT', {
+      timeZone: timezone,
+      weekday: 'long',
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric',
+    });
+
+    const timeEl = document.getElementById('live-time');
+    const dateEl = document.getElementById('live-date');
+
+    if (timeEl) timeEl.textContent = timeString;
+    if (dateEl) dateEl.textContent = dateString;
+  }
+
+  // Update immediately and then every second
+  updateTime();
+  setInterval(updateTime, 1000);
+</script>

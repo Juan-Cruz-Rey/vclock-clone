@@ -1,0 +1,138 @@
+[
+  {
+    "id": "new-year",
+    "name": "New Year's Day",
+    "date": "2026-01-01",
+    "description": "The first day of the year in the Gregorian calendar",
+    "recurring": true,
+    "type": "public"
+  },
+  {
+    "id": "valentine",
+    "name": "Valentine's Day",
+    "date": "2026-02-14",
+    "description": "Celebration of love and affection",
+    "recurring": true,
+    "type": "celebration"
+  },
+  {
+    "id": "st-patrick",
+    "name": "St. Patrick's Day",
+    "date": "2026-03-17",
+    "description": "Irish cultural and religious celebration",
+    "recurring": true,
+    "type": "cultural"
+  },
+  {
+    "id": "easter",
+    "name": "Easter Sunday",
+    "date": "2026-04-05",
+    "description": "Christian celebration of the resurrection of Jesus",
+    "recurring": true,
+    "type": "religious"
+  },
+  {
+    "id": "earth-day",
+    "name": "Earth Day",
+    "date": "2026-04-22",
+    "description": "Annual event demonstrating support for environmental protection",
+    "recurring": true,
+    "type": "awareness"
+  },
+  {
+    "id": "mothers-day",
+    "name": "Mother's Day",
+    "date": "2026-05-10",
+    "description": "Celebration honoring mothers and motherhood",
+    "recurring": true,
+    "type": "celebration"
+  },
+  {
+    "id": "memorial-day",
+    "name": "Memorial Day",
+    "date": "2026-05-25",
+    "description": "US federal holiday honoring military personnel who died in service",
+    "recurring": true,
+    "type": "public"
+  },
+  {
+    "id": "fathers-day",
+    "name": "Father's Day",
+    "date": "2026-06-21",
+    "description": "Celebration honoring fathers and fatherhood",
+    "recurring": true,
+    "type": "celebration"
+  },
+  {
+    "id": "independence-day-us",
+    "name": "Independence Day (US)",
+    "date": "2026-07-04",
+    "description": "US federal holiday commemorating the Declaration of Independence",
+    "recurring": true,
+    "type": "public"
+  },
+  {
+    "id": "labor-day-us",
+    "name": "Labor Day (US)",
+    "date": "2026-09-07",
+    "description": "US federal holiday celebrating the American labor movement",
+    "recurring": true,
+    "type": "public"
+  },
+  {
+    "id": "halloween",
+    "name": "Halloween",
+    "date": "2026-10-31",
+    "description": "Annual celebration with costumes and trick-or-treating",
+    "recurring": true,
+    "type": "celebration"
+  },
+  {
+    "id": "thanksgiving",
+    "name": "Thanksgiving",
+    "date": "2026-11-26",
+    "description": "US holiday celebrating the harvest and blessings of the past year",
+    "recurring": true,
+    "type": "public"
+  },
+  {
+    "id": "black-friday",
+    "name": "Black Friday",
+    "date": "2026-11-27",
+    "description": "Major shopping day following Thanksgiving",
+    "recurring": true,
+    "type": "commercial"
+  },
+  {
+    "id": "cyber-monday",
+    "name": "Cyber Monday",
+    "date": "2026-11-30",
+    "description": "Online shopping day following Thanksgiving weekend",
+    "recurring": true,
+    "type": "commercial"
+  },
+  {
+    "id": "christmas-eve",
+    "name": "Christmas Eve",
+    "date": "2026-12-24",
+    "description": "Evening before Christmas Day",
+    "recurring": true,
+    "type": "celebration"
+  },
+  {
+    "id": "christmas",
+    "name": "Christmas Day",
+    "date": "2026-12-25",
+    "description": "Christian celebration of the birth of Jesus Christ",
+    "recurring": true,
+    "type": "public"
+  },
+  {
+    "id": "new-year-eve",
+    "name": "New Year's Eve",
+    "date": "2026-12-31",
+    "description": "Last day of the year",
+    "recurring": true,
+    "type": "celebration"
+  }
+]

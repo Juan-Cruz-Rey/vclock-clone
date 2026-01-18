@@ -1,0 +1,303 @@
+---
+/**
+ * Alarm Clock Component
+ * Componente principal del reloj despertador
+ */
+
+import DigitalDisplay from '../shared/DigitalDisplay.astro';
+import SoundSelector from './SoundSelector.astro';
+import RecentAlarms from './RecentAlarms.astro';
+import AlarmPresets from './AlarmPresets.astro';
+import { t, getLocaleFromPath } from '../../scripts/i18n';
+
+const locale = getLocaleFromPath(Astro.url.pathname);
+
+interface Props {
+  presetHour?: number;
+  presetMinute?: number;
+  presetMeridian?: 'AM' | 'PM';
+}
+
+const { presetHour, presetMinute, presetMeridian } = Astro.props;
+---
+
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+  <!-- Main Alarm Section (col-span-2 en desktop) -->
+  <div class="lg:col-span-2 space-y-6">
+    <!-- Current Time Display -->
+    <div class="bg-white dark:bg-gray-900 rounded-lg p-6 shadow-lg">
+      <DigitalDisplay
+        id="current-time-display"
+        time="12:00:00 AM"
+        size="lg"
+        showDate={true}
+        date="Monday, January 17, 2026"
+      />
+    </div>
+
+    <!-- Alarm Configuration -->
+    <div class="bg-gray-100 dark:bg-gray-800 rounded-lg p-6 shadow">
+      <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-6">
+        {t(locale, 'alarm.setAlarm')}
+      </h2>
+
+      <form id="alarm-form" class="space-y-4">
+        <!-- Time Selectors -->
+        <div class="grid grid-cols-3 gap-4">
+          <!-- Hour -->
+          <div>
+            <label for="alarm-hour" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+              {t(locale, 'alarm.hour')}
+            </label>
+            <select id="alarm-hour" name="hour" class="select-input">
+              {Array.from({ length: 12 }, (_, i) => i + 1).map((hour) => (
+                <option value={hour} selected={hour === (presetHour || 7)}>
+                  {hour}
+                </option>
+              ))}
+            </select>
+          </div>
+
+          <!-- Minute -->
+          <div>
+            <label for="alarm-minute" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+              {t(locale, 'alarm.minute')}
+            </label>
+            <select id="alarm-minute" name="minute" class="select-input">
+              {Array.from({ length: 12 }, (_, i) => i * 5).map((minute) => (
+                <option value={minute} selected={minute === (presetMinute || 0)}>
+                  {minute.toString().padStart(2, '0')}
+                </option>
+              ))}
+            </select>
+          </div>
+
+          <!-- AM/PM -->
+          <div>
+            <label for="alarm-meridian" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+              AM/PM
+            </label>
+            <select id="alarm-meridian" name="meridian" class="select-input">
+              <option value="AM" selected={presetMeridian === 'AM' || !presetMeridian}>AM</option>
+              <option value="PM" selected={presetMeridian === 'PM'}>PM</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Sound Selector -->
+        <SoundSelector id="alarm-sound" />
+
+        <!-- Repeat Checkbox -->
+        <div class="flex items-center">
+          <input
+            type="checkbox"
+            id="alarm-repeat"
+            name="repeat"
+            class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+          />
+          <label for="alarm-repeat" class="ml-2 text-sm font-medium text-gray-700 dark:text-gray-300">
+            {t(locale, 'alarm.repeat')}
+          </label>
+        </div>
+
+        <!-- Custom Title -->
+        <div>
+          <label for="alarm-title" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+            {t(locale, 'alarm.customTitle')}
+          </label>
+          <input
+            type="text"
+            id="alarm-title"
+            name="title"
+            placeholder="Wake up!"
+            class="text-input"
+            maxlength="50"
+          />
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="flex flex-col sm:flex-row gap-3">
+          <button
+            type="submit"
+            id="set-alarm-btn"
+            class="btn-primary flex-1"
+          >
+            {t(locale, 'alarm.setAlarm')}
+          </button>
+
+          <button
+            type="button"
+            id="stop-alarm-btn"
+            class="btn-danger flex-1 hidden"
+          >
+            {t(locale, 'alarm.stopAlarm')}
+          </button>
+        </div>
+
+        <!-- Alarm Status -->
+        <div id="alarm-status" class="hidden p-4 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg">
+          <div class="flex items-center space-x-2">
+            <svg class="w-5 h-5 text-blue-600 dark:text-blue-400 animate-pulse" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M10 2a6 6 0 00-6 6v3.586l-.707.707A1 1 0 004 14h12a1 1 0 00.707-1.707L16 11.586V8a6 6 0 00-6-6zM10 18a3 3 0 01-3-3h6a3 3 0 01-3 3z"></path>
+            </svg>
+            <div class="flex-1">
+              <p class="text-sm font-medium text-blue-900 dark:text-blue-100">
+                {t(locale, 'alarm.alarmActive')}
+              </p>
+              <p id="alarm-time-text" class="text-xs text-blue-700 dark:text-blue-300"></p>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Sidebar -->
+  <div class="lg:col-span-1 space-y-6">
+    <AlarmPresets />
+    <RecentAlarms />
+  </div>
+</div>
+
+<script>
+  import { getAlarmClock } from '../../scripts/alarm-logic';
+  import { Storage } from '../../scripts/storage';
+  import { formatDate } from '../../scripts/utils';
+
+  const alarmClock = getAlarmClock();
+
+  // Elementos del DOM
+  const currentTimeDisplay = document.getElementById('current-time-display');
+  const alarmForm = document.getElementById('alarm-form') as HTMLFormElement;
+  const hourSelect = document.getElementById('alarm-hour') as HTMLSelectElement;
+  const minuteSelect = document.getElementById('alarm-minute') as HTMLSelectElement;
+  const meridianSelect = document.getElementById('alarm-meridian') as HTMLSelectElement;
+  const soundSelect = document.getElementById('alarm-sound') as HTMLSelectElement;
+  const repeatCheckbox = document.getElementById('alarm-repeat') as HTMLInputElement;
+  const titleInput = document.getElementById('alarm-title') as HTMLInputElement;
+  const setAlarmBtn = document.getElementById('set-alarm-btn') as HTMLButtonElement;
+  const stopAlarmBtn = document.getElementById('stop-alarm-btn') as HTMLButtonElement;
+  const alarmStatus = document.getElementById('alarm-status');
+  const alarmTimeText = document.getElementById('alarm-time-text');
+
+  // Actualizar reloj cada segundo
+  function updateCurrentTime() {
+    if (!currentTimeDisplay) return;
+
+    const timeString = alarmClock.getCurrentTimeString();
+    const now = new Date();
+    const dateString = formatDate(now, 'en');
+
+    const timeElement = currentTimeDisplay.querySelector('.tabular-nums');
+    const dateElement = currentTimeDisplay.querySelector('.text-sm');
+
+    if (timeElement) timeElement.textContent = timeString;
+    if (dateElement) dateElement.textContent = dateString;
+  }
+
+  // Actualizar cada segundo
+  setInterval(updateCurrentTime, 1000);
+  updateCurrentTime();
+
+  // Cargar configuración guardada
+  function loadSavedSettings() {
+    const settings = alarmClock.getSettings();
+    hourSelect.value = settings.hour.toString();
+    minuteSelect.value = settings.minute.toString();
+    meridianSelect.value = settings.meridian;
+    soundSelect.value = settings.sound;
+    repeatCheckbox.checked = settings.repeat;
+    titleInput.value = settings.title;
+
+    if (settings.isActive) {
+      showAlarmActive();
+    }
+  }
+
+  loadSavedSettings();
+
+  // Manejar submit del formulario
+  alarmForm?.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const hour = parseInt(hourSelect.value);
+    const minute = parseInt(minuteSelect.value);
+    const meridian = meridianSelect.value as 'AM' | 'PM';
+    const sound = soundSelect.value;
+    const repeat = repeatCheckbox.checked;
+    const title = titleInput.value;
+
+    // Configurar y activar alarma
+    alarmClock.setAlarm(hour, minute, meridian, { sound, repeat, title });
+    alarmClock.start();
+
+    showAlarmActive();
+
+    // Disparar evento para actualizar recent alarms
+    window.dispatchEvent(new Event('alarmSet'));
+  });
+
+  // Manejar stop alarm
+  stopAlarmBtn?.addEventListener('click', () => {
+    alarmClock.stop();
+    hideAlarmActive();
+  });
+
+  // Mostrar estado de alarma activa
+  function showAlarmActive() {
+    setAlarmBtn?.classList.add('hidden');
+    stopAlarmBtn?.classList.remove('hidden');
+    alarmStatus?.classList.remove('hidden');
+
+    updateAlarmTimeText();
+  }
+
+  // Ocultar estado de alarma activa
+  function hideAlarmActive() {
+    setAlarmBtn?.classList.remove('hidden');
+    stopAlarmBtn?.classList.add('hidden');
+    alarmStatus?.classList.add('hidden');
+  }
+
+  // Actualizar texto de tiempo hasta alarma
+  function updateAlarmTimeText() {
+    if (!alarmTimeText) return;
+
+    const timeUntil = alarmClock.getTimeUntilAlarm();
+    if (timeUntil) {
+      const settings = alarmClock.getSettings();
+      const alarmTime = `${settings.hour}:${settings.minute.toString().padStart(2, '0')} ${settings.meridian}`;
+      alarmTimeText.textContent = `Alarm set for ${alarmTime} (in ${timeUntil.hours}h ${timeUntil.minutes}m)`;
+    }
+  }
+
+  // Actualizar cada minuto el tiempo hasta la alarma
+  setInterval(() => {
+    if (alarmClock.isActive()) {
+      updateAlarmTimeText();
+    }
+  }, 60000);
+
+  // Manejar evento de alarma sonando
+  alarmClock.onAlarm(() => {
+    // Mostrar notificación visual adicional si es necesario
+    console.log('Alarm triggered!');
+  });
+
+  // Cargar preset desde botones de preset
+  window.addEventListener('loadPresetAlarm', ((e: CustomEvent) => {
+    const { hour, minute, meridian } = e.detail;
+    hourSelect.value = hour.toString();
+    minuteSelect.value = minute.toString();
+    meridianSelect.value = meridian;
+  }) as EventListener);
+
+  // Cargar desde recent alarms
+  window.addEventListener('loadRecentAlarm', ((e: CustomEvent) => {
+    const { hour, minute, meridian, title } = e.detail;
+    hourSelect.value = hour.toString();
+    minuteSelect.value = minute.toString();
+    meridianSelect.value = meridian;
+    titleInput.value = title || '';
+  }) as EventListener);
+</script>

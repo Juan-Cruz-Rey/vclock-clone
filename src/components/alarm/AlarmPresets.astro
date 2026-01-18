@@ -1,0 +1,67 @@
+---
+/**
+ * Alarm Presets Component
+ * Enlaces rápidos a horas comunes de alarma
+ */
+
+import { t, getRoute, getLocaleFromPath } from '../../scripts/i18n';
+
+const locale = getLocaleFromPath(Astro.url.pathname);
+
+// Horas comunes para alarmas
+const presets = [
+  { hour: 4, minute: 0, meridian: 'AM' as const, label: '4:00 AM' },
+  { hour: 5, minute: 0, meridian: 'AM' as const, label: '5:00 AM' },
+  { hour: 6, minute: 0, meridian: 'AM' as const, label: '6:00 AM' },
+  { hour: 7, minute: 0, meridian: 'AM' as const, label: '7:00 AM' },
+  { hour: 8, minute: 0, meridian: 'AM' as const, label: '8:00 AM' },
+  { hour: 9, minute: 0, meridian: 'AM' as const, label: '9:00 AM' },
+  { hour: 12, minute: 0, meridian: 'PM' as const, label: '12:00 PM' },
+  { hour: 1, minute: 0, meridian: 'PM' as const, label: '1:00 PM' },
+  { hour: 2, minute: 0, meridian: 'PM' as const, label: '2:00 PM' },
+];
+---
+
+<div class="bg-white dark:bg-gray-800 rounded-lg p-4 shadow">
+  <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">
+    {t(locale, 'alarm.presets')}
+  </h3>
+
+  <div class="grid grid-cols-3 gap-2">
+    {presets.map((preset) => (
+      <button
+        class="px-3 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 bg-gray-100 dark:bg-gray-700 hover:bg-blue-100 dark:hover:bg-blue-900 hover:text-blue-700 dark:hover:text-blue-300 rounded-lg transition-colors"
+        data-preset-alarm
+        data-hour={preset.hour}
+        data-minute={preset.minute}
+        data-meridian={preset.meridian}
+      >
+        {preset.label}
+      </button>
+    ))}
+  </div>
+
+  <!-- Nota informativa -->
+  <p class="mt-3 text-xs text-gray-500 dark:text-gray-400">
+    Click to quickly set an alarm for these common times
+  </p>
+</div>
+
+<script>
+  // Manejar clicks en presets
+  const presetButtons = document.querySelectorAll('[data-preset-alarm]');
+
+  presetButtons.forEach(button => {
+    button.addEventListener('click', (e) => {
+      const target = e.currentTarget as HTMLElement;
+      const hour = parseInt(target.dataset.hour || '0');
+      const minute = parseInt(target.dataset.minute || '0');
+      const meridian = target.dataset.meridian as 'AM' | 'PM';
+
+      // Disparar evento personalizado para cargar el preset
+      window.dispatchEvent(new CustomEvent('loadPresetAlarm', {
+        detail: { hour, minute, meridian }
+      }));
+    });
+  });
+</script>

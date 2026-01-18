@@ -1,0 +1,83 @@
+---
+/**
+ * Timer Page (Italian)
+ * Timer online gratuito con preset
+ */
+
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Timer from '../../components/timer/Timer.astro';
+
+const title = 'Timer Online - Timer per Conto alla Rovescia Gratuito';
+const description = 'Timer per conto alla rovescia online gratuito con preset. Imposta un timer per qualsiasi durata o conta alla rovescia fino a una data specifica. Funziona nel browser, nessun download richiesto.';
+const keywords = 'timer online, timer conto alla rovescia, timer gratis, orologio conto alla rovescia, timer con suono';
+---
+
+<BaseLayout title={title} description={description} keywords={keywords}>
+  <div class="container mx-auto px-4 py-12">
+    <div class="text-center mb-12">
+      <h1 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+        Timer Online
+      </h1>
+      <p class="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+        Imposta un timer per conto alla rovescia per qualsiasi durata o conta alla rovescia fino a una data specifica. Perfetto per allenamenti, cucina, studio e altro.
+      </p>
+    </div>
+
+    <Timer />
+
+    <div class="max-w-4xl mx-auto mt-12 prose dark:prose-invert">
+      <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+        Come Usare il Timer Online
+      </h2>
+
+      <div class="space-y-4 text-gray-600 dark:text-gray-400">
+        <p>
+          Il nostro timer online gratuito è perfetto per qualsiasi attività che richiede un monitoraggio preciso del tempo. Che tu
+          stia allenando, cucinando, studiando o facendo una pausa, questo timer ti aiuta a rispettare gli orari.
+        </p>
+
+        <h3 class="text-xl font-semibold text-gray-900 dark:text-white mt-6 mb-3">
+          Due Modalità Timer:
+        </h3>
+        <ul class="list-disc list-inside space-y-2">
+          <li><strong>Modalità Durata</strong> - Imposta un timer per un numero specifico di ore, minuti e secondi</li>
+          <li><strong>Conto alla Rovescia fino a Data</strong> - Conta alla rovescia fino a una data e ora specifica (perfetto per eventi, scadenze, ecc.)</li>
+        </ul>
+
+        <h3 class="text-xl font-semibold text-gray-900 dark:text-white mt-6 mb-3">
+          Caratteristiche:
+        </h3>
+        <ul class="list-disc list-inside space-y-2">
+          <li>Preset rapidi (1 min, 5 min, 10 min, 30 min, 1 ora e altro)</li>
+          <li>Suoni di allarme personalizzabili</li>
+          <li>Barra di progresso visiva</li>
+          <li>Aggiungi tempo al volo (pulsante +1 minuto)</li>
+          <li>Notifiche del browser quando il timer finisce</li>
+          <li>Timer recenti per accesso rapido</li>
+          <li>Titoli personalizzati per timer</li>
+          <li>Funzionalità di pausa e ripresa</li>
+        </ul>
+
+        <h3 class="text-xl font-semibold text-gray-900 dark:text-white mt-6 mb-3">
+          Durate Popolari del Timer:
+        </h3>
+        <ul class="list-disc list-inside space-y-2">
+          <li><strong>1 minuto</strong> - Compiti rapidi, micro-pause</li>
+          <li><strong>5 minuti</strong> - Esercizi plank, preparazione tè, meditazione rapida</li>
+          <li><strong>10 minuti</strong> - Sonnellini, sessioni di scrittura</li>
+          <li><strong>15 minuti</strong> - Sessioni di studio (pausa Pomodoro)</li>
+          <li><strong>25 minuti</strong> - Sessione di lavoro tecnica Pomodoro</li>
+          <li><strong>30 minuti</strong> - Sessioni di allenamento, cucina</li>
+          <li><strong>1 ora</strong> - Sessioni di lavoro profondo, riunioni</li>
+        </ul>
+
+        <div class="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4 mt-6">
+          <p class="text-sm text-blue-900 dark:text-blue-100 mb-0">
+            <strong>💡 Suggerimento:</strong> Mantieni questa scheda aperta e il tuo computer acceso affinché il timer funzioni correttamente.
+            Puoi anche abilitare le notifiche del browser per ricevere avvisi quando il timer finisce, anche se la scheda è in background.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</BaseLayout>

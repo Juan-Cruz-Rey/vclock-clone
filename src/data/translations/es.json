@@ -1,0 +1,153 @@
+{
+  "site": {
+    "name": "vClock",
+    "description": "Herramientas gratuitas en línea para gestión del tiempo"
+  },
+  "nav": {
+    "alarm": "Reloj Despertador",
+    "timer": "Temporizador",
+    "stopwatch": "Cronómetro",
+    "clock": "Reloj Mundial",
+    "holidays": "Días Festivos",
+    "privacy": "Privacidad",
+    "terms": "Términos",
+    "contact": "Contacto"
+  },
+  "common": {
+    "start": "Iniciar",
+    "stop": "Detener",
+    "pause": "Pausar",
+    "resume": "Reanudar",
+    "reset": "Reiniciar",
+    "edit": "Editar",
+    "save": "Guardar",
+    "cancel": "Cancelar",
+    "delete": "Eliminar",
+    "add": "Agregar",
+    "test": "Probar",
+    "close": "Cerrar",
+    "settings": "Configuración",
+    "darkMode": "Modo Oscuro",
+    "lightMode": "Modo Claro",
+    "language": "Idioma"
+  },
+  "alarm": {
+    "title": "Reloj Despertador en Línea",
+    "description": "Reloj despertador gratis en línea. Configura alarma para cualquier hora con sonidos personalizables. Sin registro requerido.",
+    "setAlarm": "Poner Alarma",
+    "stopAlarm": "Detener Alarma",
+    "testSound": "Probar Sonido",
+    "hour": "Hora",
+    "minute": "Minuto",
+    "sound": "Sonido",
+    "repeat": "Repetir alarma",
+    "customTitle": "Título personalizado (opcional)",
+    "recentlyUsed": "Usados Recientemente",
+    "presets": "Configuración Rápida",
+    "alarmSet": "Alarma configurada para {time}",
+    "alarmStopped": "Alarma detenida",
+    "alarmActive": "La alarma está activa",
+    "setAlarmFor": "Poner Alarma para {time}"
+  },
+  "timer": {
+    "title": "Temporizador en Línea",
+    "description": "Temporizador de cuenta regresiva gratis. Configura temporizador para cualquier duración. Perfecto para cocinar, ejercicios y productividad.",
+    "hours": "Horas",
+    "minutes": "Minutos",
+    "seconds": "Segundos",
+    "actionOnComplete": "Acción al finalizar el temporizador",
+    "stopTimer": "Detener temporizador",
+    "restartTimer": "Reiniciar automáticamente",
+    "convertToStopwatch": "Convertir a cronómetro",
+    "countdownTo": "Cuenta regresiva hasta",
+    "presets": "Temporizadores Rápidos",
+    "timerFinished": "¡Temporizador finalizado!",
+    "customTitle": "Título personalizado (opcional)"
+  },
+  "stopwatch": {
+    "title": "Cronómetro en Línea",
+    "description": "Cronómetro gratis en línea con registro de vueltas. Preciso hasta milisegundos. Perfecto para deportes, ejercicios y medición precisa.",
+    "lap": "Vuelta",
+    "lapNumber": "Vuelta #",
+    "lapTime": "Tiempo de Vuelta",
+    "totalTime": "Tiempo Total",
+    "precision": "Precisión",
+    "laps": "Vueltas",
+    "noLaps": "No hay vueltas registradas aún"
+  },
+  "clock": {
+    "title": "Reloj Mundial",
+    "description": "Consulta la hora actual en cualquier ciudad del mundo. Múltiples zonas horarias, reloj mundial preciso.",
+    "addCity": "Agregar Ciudad",
+    "removeCity": "Eliminar",
+    "moveUp": "Subir",
+    "moveDown": "Bajar",
+    "searchCity": "Buscar una ciudad",
+    "noCities": "No hay ciudades agregadas aún",
+    "whatTimeIn": "¿Qué hora es en {city} ahora?",
+    "timeIn": "Hora en {city}",
+    "timezone": "Zona Horaria",
+    "offset": "Diferencia UTC"
+  },
+  "holidays": {
+    "title": "Calendario de Días Festivos",
+    "description": "Calendario completo de días festivos con temporizadores de cuenta regresiva. Rastrea días hasta Navidad, Año Nuevo y todas las festividades importantes.",
+    "daysUntil": "{days} días hasta {holiday}",
+    "today": "Hoy",
+    "tomorrow": "Mañana",
+    "countdownTo": "Cuenta regresiva hasta {holiday}",
+    "viewAll": "Ver Todos los Festivos"
+  },
+  "settings": {
+    "title": "Configuración",
+    "visual": "Configuración Visual",
+    "fontFamily": "Familia de Fuente",
+    "textColor": "Color de Texto",
+    "fontSize": "Tamaño de Fuente",
+    "timeFormat": "Formato de Hora",
+    "format12h": "12 horas (AM/PM)",
+    "format24h": "24 horas",
+    "showDate": "Mostrar Fecha",
+    "theme": "Tema",
+    "language": "Idioma",
+    "sound": "Sonido",
+    "volume": "Volumen",
+    "exportData": "Exportar Datos",
+    "importData": "Importar Datos",
+    "clearData": "Borrar Todos los Datos"
+  },
+  "embed": {
+    "title": "Código para Insertar",
+    "description": "Copia este código para insertar la herramienta en tu sitio web",
+    "width": "Ancho",
+    "height": "Alto",
+    "copy": "Copiar Código",
+    "copied": "¡Copiado!"
+  },
+  "footer": {
+    "copyright": "© 2026 vClock. Todos los derechos reservados.",
+    "madeWith": "Hecho con ❤️ para la productividad"
+  },
+  "meta": {
+    "home": {
+      "title": "Reloj Despertador en Línea - vClock",
+      "description": "Reloj despertador gratis en línea. Configura alarma para cualquier hora con sonidos personalizables. Despierta a tiempo, siempre."
+    },
+    "timer": {
+      "title": "Temporizador en Línea - Cuenta Regresiva - vClock",
+      "description": "Temporizador de cuenta regresiva gratis. Configura temporizador para cualquier duración. Perfecto para cocinar, ejercicios, técnica Pomodoro y productividad."
+    },
+    "stopwatch": {
+      "title": "Cronómetro en Línea - vClock",
+      "description": "Cronómetro gratis en línea con registro de vueltas. Preciso hasta milisegundos. Perfecto para deportes, ejercicios y medición precisa."
+    },
+    "clock": {
+      "title": "Reloj Mundial - Hora Actual en Cualquier Zona Horaria - vClock",
+      "description": "Consulta la hora actual en cualquier ciudad del mundo. Múltiples zonas horarias, convertidor de zonas, reloj mundial preciso."
+    },
+    "holidays": {
+      "title": "Calendario de Festivos 2026-2027 - España, México, Argentina - vClock",
+      "description": "Calendario completo de días festivos con temporizadores de cuenta regresiva. Rastrea días hasta Navidad, Año Nuevo, Reyes y todas las festividades importantes."
+    }
+  }
+}

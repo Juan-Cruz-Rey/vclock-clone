@@ -1,0 +1,85 @@
+---
+/**
+ * Stopwatch Page (English)
+ * Free online stopwatch with lap timer
+ */
+
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Stopwatch from '../components/stopwatch/Stopwatch.astro';
+
+const title = 'Online Stopwatch - Free Lap Timer with Precision';
+const description = 'Free online stopwatch with lap timer. Precision timing with millisecond accuracy, lap recording, and statistics. Perfect for sports, workouts, and time tracking.';
+const keywords = 'online stopwatch, lap timer, stopwatch online, free stopwatch, precision timer, lap counter, sports timer';
+---
+
+<BaseLayout title={title} description={description} keywords={keywords}>
+  <div class="container mx-auto px-4 py-12">
+    <div class="text-center mb-12">
+      <h1 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+        Online Stopwatch
+      </h1>
+      <p class="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+        Precision stopwatch with lap timer. Track your time with millisecond accuracy, record laps, and analyze your performance.
+      </p>
+    </div>
+
+    <Stopwatch />
+
+    <div class="max-w-4xl mx-auto mt-12 prose dark:prose-invert">
+      <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+        How to Use the Online Stopwatch
+      </h2>
+
+      <div class="space-y-4 text-gray-600 dark:text-gray-400">
+        <p>
+          Our free online stopwatch provides precision timing for any activity. Whether you're timing
+          workouts, races, cooking, or any other activity, this stopwatch gives you accurate measurements
+          with lap recording capabilities.
+        </p>
+
+        <h3 class="text-xl font-semibold text-gray-900 dark:text-white mt-6 mb-3">
+          Features:
+        </h3>
+        <ul class="list-disc list-inside space-y-2">
+          <li><strong>Precision Options</strong> - Choose from seconds, centiseconds, or milliseconds</li>
+          <li><strong>Lap Timer</strong> - Record unlimited laps with individual and total times</li>
+          <li><strong>Lap Statistics</strong> - View fastest, slowest, and average lap times</li>
+          <li><strong>Visual Indicators</strong> - Best and worst laps highlighted automatically</li>
+          <li><strong>Export to CSV</strong> - Download your lap data for further analysis</li>
+          <li><strong>Keyboard Shortcuts</strong> - Space to start/pause, L for lap, R for reset</li>
+          <li><strong>Pause & Resume</strong> - Take breaks without losing your time</li>
+          <li><strong>Persistent Storage</strong> - Your time is saved even if you close the tab</li>
+        </ul>
+
+        <h3 class="text-xl font-semibold text-gray-900 dark:text-white mt-6 mb-3">
+          Keyboard Shortcuts:
+        </h3>
+        <ul class="list-disc list-inside space-y-2">
+          <li><kbd class="px-2 py-1 bg-gray-200 dark:bg-gray-700 rounded text-sm">Space</kbd> - Start/Pause</li>
+          <li><kbd class="px-2 py-1 bg-gray-200 dark:bg-gray-700 rounded text-sm">L</kbd> - Record Lap (while running)</li>
+          <li><kbd class="px-2 py-1 bg-gray-200 dark:bg-gray-700 rounded text-sm">R</kbd> - Reset (while stopped)</li>
+        </ul>
+
+        <h3 class="text-xl font-semibold text-gray-900 dark:text-white mt-6 mb-3">
+          Popular Use Cases:
+        </h3>
+        <ul class="list-disc list-inside space-y-2">
+          <li><strong>Running & Athletics</strong> - Track lap times and analyze your performance</li>
+          <li><strong>Swimming</strong> - Time your laps and monitor improvement</li>
+          <li><strong>Workouts</strong> - Track exercise duration and rest periods</li>
+          <li><strong>Cooking</strong> - Time multiple cooking steps precisely</li>
+          <li><strong>Gaming</strong> - Speedrunning and challenge timing</li>
+          <li><strong>Studying</strong> - Track focused work sessions</li>
+          <li><strong>Presentations</strong> - Practice timing for speeches and presentations</li>
+        </ul>
+
+        <div class="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4 mt-6">
+          <p class="text-sm text-blue-900 dark:text-blue-100 mb-0">
+            <strong>💡 Tip:</strong> The stopwatch continues running in the background even if you switch tabs.
+            Your lap times are automatically saved to your browser, so you won't lose data if you accidentally close the tab.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</BaseLayout>

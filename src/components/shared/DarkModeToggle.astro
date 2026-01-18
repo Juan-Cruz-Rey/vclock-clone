@@ -1,0 +1,84 @@
+---
+// Dark Mode Toggle Component
+---
+
+<button
+  id="dark-mode-toggle"
+  class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500"
+  aria-label="Toggle dark mode"
+  title="Toggle dark mode"
+  data-theme-toggle
+>
+  <!-- Sun Icon (shown in dark mode) -->
+  <svg
+    id="sun-icon"
+    class="w-5 h-5 text-gray-700 dark:text-yellow-400 hidden dark:block"
+    fill="currentColor"
+    viewBox="0 0 20 20"
+  >
+    <path
+      fill-rule="evenodd"
+      d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+      clip-rule="evenodd"
+    ></path>
+  </svg>
+
+  <!-- Moon Icon (shown in light mode) -->
+  <svg
+    id="moon-icon"
+    class="w-5 h-5 text-gray-700 dark:text-gray-300 block dark:hidden"
+    fill="currentColor"
+    viewBox="0 0 20 20"
+  >
+    <path
+      d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"
+    ></path>
+  </svg>
+</button>
+
+<script is:inline>
+  // Usar script inline para que se ejecute inmediatamente
+  (function() {
+    function attachDarkModeToggle() {
+      const STORAGE_KEY = 'dark-theme';
+      const DARK_CLASS = 'dark';
+      const toggleButton = document.getElementById('dark-mode-toggle');
+
+      if (!toggleButton) {
+        console.error('[DarkModeToggle] Button NOT found!');
+        return;
+      }
+
+      console.log('[DarkModeToggle] Button found, attaching listener');
+
+      toggleButton.addEventListener('click', function() {
+        console.log('[DarkModeToggle] Button clicked, toggling theme');
+
+        const html = document.documentElement;
+        const isDark = html.classList.contains(DARK_CLASS);
+
+        if (isDark) {
+          html.classList.remove(DARK_CLASS);
+          localStorage.setItem(STORAGE_KEY, 'light');
+          console.log('[DarkModeToggle] Changed to LIGHT mode');
+        } else {
+          html.classList.add(DARK_CLASS);
+          localStorage.setItem(STORAGE_KEY, 'dark');
+          console.log('[DarkModeToggle] Changed to DARK mode');
+        }
+
+        // Disparar evento personalizado
+        window.dispatchEvent(new CustomEvent('themechange', {
+          detail: { theme: isDark ? 'light' : 'dark' }
+        }));
+      });
+    }
+
+    // Ejecutar cuando el DOM esté listo
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', attachDarkModeToggle);
+    } else {
+      attachDarkModeToggle();
+    }
+  })();
+</script>

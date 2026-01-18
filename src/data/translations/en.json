@@ -1,0 +1,153 @@
+{
+  "site": {
+    "name": "vClock",
+    "description": "Free online tools for time management"
+  },
+  "nav": {
+    "alarm": "Alarm Clock",
+    "timer": "Timer",
+    "stopwatch": "Stopwatch",
+    "clock": "World Clock",
+    "holidays": "Holidays",
+    "privacy": "Privacy",
+    "terms": "Terms",
+    "contact": "Contact"
+  },
+  "common": {
+    "start": "Start",
+    "stop": "Stop",
+    "pause": "Pause",
+    "resume": "Resume",
+    "reset": "Reset",
+    "edit": "Edit",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "add": "Add",
+    "test": "Test",
+    "close": "Close",
+    "settings": "Settings",
+    "darkMode": "Dark Mode",
+    "lightMode": "Light Mode",
+    "language": "Language"
+  },
+  "alarm": {
+    "title": "Online Alarm Clock",
+    "description": "Free online alarm clock. Set alarm for any time with customizable sounds. No registration required.",
+    "setAlarm": "Set Alarm",
+    "stopAlarm": "Stop Alarm",
+    "testSound": "Test Sound",
+    "hour": "Hour",
+    "minute": "Minute",
+    "sound": "Sound",
+    "repeat": "Repeat alarm",
+    "customTitle": "Custom title (optional)",
+    "recentlyUsed": "Recently Used",
+    "presets": "Quick Set",
+    "alarmSet": "Alarm set for {time}",
+    "alarmStopped": "Alarm stopped",
+    "alarmActive": "Alarm is active",
+    "setAlarmFor": "Set Alarm for {time}"
+  },
+  "timer": {
+    "title": "Online Timer",
+    "description": "Free online countdown timer. Set timer for any duration. Perfect for cooking, workouts, and productivity.",
+    "hours": "Hours",
+    "minutes": "Minutes",
+    "seconds": "Seconds",
+    "actionOnComplete": "Action when timer ends",
+    "stopTimer": "Stop timer",
+    "restartTimer": "Restart automatically",
+    "convertToStopwatch": "Convert to stopwatch",
+    "countdownTo": "Countdown to",
+    "presets": "Quick Timers",
+    "timerFinished": "Timer finished!",
+    "customTitle": "Custom title (optional)"
+  },
+  "stopwatch": {
+    "title": "Online Stopwatch",
+    "description": "Free online stopwatch with lap timer. Precise to milliseconds. Perfect for sports, workouts, and timing.",
+    "lap": "Lap",
+    "lapNumber": "Lap #",
+    "lapTime": "Lap Time",
+    "totalTime": "Total Time",
+    "precision": "Precision",
+    "laps": "Laps",
+    "noLaps": "No laps recorded yet"
+  },
+  "clock": {
+    "title": "World Clock",
+    "description": "Check current time in any city worldwide. Multiple time zones, accurate world clock.",
+    "addCity": "Add City",
+    "removeCity": "Remove",
+    "moveUp": "Move Up",
+    "moveDown": "Move Down",
+    "searchCity": "Search for a city",
+    "noCities": "No cities added yet",
+    "whatTimeIn": "What time is it in {city} right now?",
+    "timeIn": "Time in {city}",
+    "timezone": "Timezone",
+    "offset": "UTC Offset"
+  },
+  "holidays": {
+    "title": "Holidays Calendar",
+    "description": "Complete holidays calendar with countdown timers. Track days until Christmas, New Year, and all major holidays.",
+    "daysUntil": "{days} days until {holiday}",
+    "today": "Today",
+    "tomorrow": "Tomorrow",
+    "countdownTo": "Countdown to {holiday}",
+    "viewAll": "View All Holidays"
+  },
+  "settings": {
+    "title": "Settings",
+    "visual": "Visual Settings",
+    "fontFamily": "Font Family",
+    "textColor": "Text Color",
+    "fontSize": "Font Size",
+    "timeFormat": "Time Format",
+    "format12h": "12-hour (AM/PM)",
+    "format24h": "24-hour",
+    "showDate": "Show Date",
+    "theme": "Theme",
+    "language": "Language",
+    "sound": "Sound",
+    "volume": "Volume",
+    "exportData": "Export Data",
+    "importData": "Import Data",
+    "clearData": "Clear All Data"
+  },
+  "embed": {
+    "title": "Embed Code",
+    "description": "Copy this code to embed the tool on your website",
+    "width": "Width",
+    "height": "Height",
+    "copy": "Copy Code",
+    "copied": "Copied!"
+  },
+  "footer": {
+    "copyright": "© 2026 vClock. All rights reserved.",
+    "madeWith": "Made with ❤️ for productivity"
+  },
+  "meta": {
+    "home": {
+      "title": "Online Alarm Clock - vClock",
+      "description": "Free online alarm clock. Set alarm for any time with customizable sounds. Wake up on time, every time."
+    },
+    "timer": {
+      "title": "Online Timer - Countdown - vClock",
+      "description": "Free online countdown timer. Set timer for any duration. Perfect for cooking, workouts, Pomodoro technique, and productivity."
+    },
+    "stopwatch": {
+      "title": "Online Stopwatch - vClock",
+      "description": "Free online stopwatch with lap timer. Precise to milliseconds. Perfect for sports, workouts, and accurate timing."
+    },
+    "clock": {
+      "title": "World Clock - Current Time in Any Time Zone - vClock",
+      "description": "Check current time in any city worldwide. Multiple time zones, timezone converter, accurate world clock."
+    },
+    "holidays": {
+      "title": "Holidays Calendar 2026-2027 - USA, UK, Australia, Canada - vClock",
+      "description": "Complete holidays calendar with countdown timers. Track days until Christmas, New Year, Easter, and all major holidays."
+    }
+  }
+}

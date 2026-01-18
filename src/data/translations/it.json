@@ -1,0 +1,153 @@
+{
+  "site": {
+    "name": "vClock",
+    "description": "Strumenti gratuiti online per la gestione del tempo"
+  },
+  "nav": {
+    "alarm": "Sveglia",
+    "timer": "Timer",
+    "stopwatch": "Cronometro",
+    "clock": "Orologio Mondiale",
+    "holidays": "Festività",
+    "privacy": "Privacy",
+    "terms": "Termini",
+    "contact": "Contatto"
+  },
+  "common": {
+    "start": "Avvia",
+    "stop": "Ferma",
+    "pause": "Pausa",
+    "resume": "Riprendi",
+    "reset": "Azzera",
+    "edit": "Modifica",
+    "save": "Salva",
+    "cancel": "Annulla",
+    "delete": "Elimina",
+    "add": "Aggiungi",
+    "test": "Prova",
+    "close": "Chiudi",
+    "settings": "Impostazioni",
+    "darkMode": "Modalità Scura",
+    "lightMode": "Modalità Chiara",
+    "language": "Lingua"
+  },
+  "alarm": {
+    "title": "Sveglia Online",
+    "description": "Sveglia online gratuita. Imposta la sveglia per qualsiasi orario con suoni personalizzabili. Nessuna registrazione richiesta.",
+    "setAlarm": "Imposta Sveglia",
+    "stopAlarm": "Ferma Sveglia",
+    "testSound": "Prova Suono",
+    "hour": "Ora",
+    "minute": "Minuto",
+    "sound": "Suono",
+    "repeat": "Ripeti sveglia",
+    "customTitle": "Titolo personalizzato (opzionale)",
+    "recentlyUsed": "Usati di Recente",
+    "presets": "Impostazione Rapida",
+    "alarmSet": "Sveglia impostata per {time}",
+    "alarmStopped": "Sveglia fermata",
+    "alarmActive": "La sveglia è attiva",
+    "setAlarmFor": "Imposta Sveglia per {time}"
+  },
+  "timer": {
+    "title": "Timer Online",
+    "description": "Timer conto alla rovescia gratuito. Imposta timer per qualsiasi durata. Perfetto per cucinare, esercizi e produttività.",
+    "hours": "Ore",
+    "minutes": "Minuti",
+    "seconds": "Secondi",
+    "actionOnComplete": "Azione al termine del timer",
+    "stopTimer": "Ferma timer",
+    "restartTimer": "Riavvia automaticamente",
+    "convertToStopwatch": "Converti in cronometro",
+    "countdownTo": "Conto alla rovescia fino a",
+    "presets": "Timer Rapidi",
+    "timerFinished": "Timer terminato!",
+    "customTitle": "Titolo personalizzato (opzionale)"
+  },
+  "stopwatch": {
+    "title": "Cronometro Online",
+    "description": "Cronometro gratuito online con registro dei giri. Preciso fino ai millisecondi. Perfetto per sport, esercizi e misurazione precisa.",
+    "lap": "Giro",
+    "lapNumber": "Giro #",
+    "lapTime": "Tempo Giro",
+    "totalTime": "Tempo Totale",
+    "precision": "Precisione",
+    "laps": "Giri",
+    "noLaps": "Nessun giro registrato ancora"
+  },
+  "clock": {
+    "title": "Orologio Mondiale",
+    "description": "Controlla l'ora attuale in qualsiasi città del mondo. Fusi orari multipli, orologio mondiale preciso.",
+    "addCity": "Aggiungi Città",
+    "removeCity": "Rimuovi",
+    "moveUp": "Sposta Su",
+    "moveDown": "Sposta Giù",
+    "searchCity": "Cerca una città",
+    "noCities": "Nessuna città aggiunta ancora",
+    "whatTimeIn": "Che ore sono a {city} adesso?",
+    "timeIn": "Ora a {city}",
+    "timezone": "Fuso Orario",
+    "offset": "Differenza UTC"
+  },
+  "holidays": {
+    "title": "Calendario delle Festività",
+    "description": "Calendario completo delle festività con timer di conto alla rovescia. Traccia i giorni fino a Natale, Capodanno e tutte le festività importanti.",
+    "daysUntil": "{days} giorni fino a {holiday}",
+    "today": "Oggi",
+    "tomorrow": "Domani",
+    "countdownTo": "Conto alla rovescia fino a {holiday}",
+    "viewAll": "Vedi Tutte le Festività"
+  },
+  "settings": {
+    "title": "Impostazioni",
+    "visual": "Impostazioni Visive",
+    "fontFamily": "Famiglia di Font",
+    "textColor": "Colore del Testo",
+    "fontSize": "Dimensione Font",
+    "timeFormat": "Formato Ora",
+    "format12h": "12 ore (AM/PM)",
+    "format24h": "24 ore",
+    "showDate": "Mostra Data",
+    "theme": "Tema",
+    "language": "Lingua",
+    "sound": "Suono",
+    "volume": "Volume",
+    "exportData": "Esporta Dati",
+    "importData": "Importa Dati",
+    "clearData": "Cancella Tutti i Dati"
+  },
+  "embed": {
+    "title": "Codice di Incorporamento",
+    "description": "Copia questo codice per incorporare lo strumento nel tuo sito web",
+    "width": "Larghezza",
+    "height": "Altezza",
+    "copy": "Copia Codice",
+    "copied": "Copiato!"
+  },
+  "footer": {
+    "copyright": "© 2026 vClock. Tutti i diritti riservati.",
+    "madeWith": "Fatto con ❤️ per la produttività"
+  },
+  "meta": {
+    "home": {
+      "title": "Sveglia Online - vClock",
+      "description": "Sveglia online gratuita. Imposta la sveglia per qualsiasi orario con suoni personalizzabili. Svegliati in orario, sempre."
+    },
+    "timer": {
+      "title": "Timer Online - Conto alla Rovescia - vClock",
+      "description": "Timer conto alla rovescia gratuito. Imposta timer per qualsiasi durata. Perfetto per cucinare, esercizi, tecnica Pomodoro e produttività."
+    },
+    "stopwatch": {
+      "title": "Cronometro Online - vClock",
+      "description": "Cronometro gratuito online con registro dei giri. Preciso fino ai millisecondi. Perfetto per sport, esercizi e misurazione precisa."
+    },
+    "clock": {
+      "title": "Orologio Mondiale - Ora Attuale in Qualsiasi Fuso Orario - vClock",
+      "description": "Controlla l'ora attuale in qualsiasi città del mondo. Fusi orari multipli, convertitore di fusi, orologio mondiale preciso."
+    },
+    "holidays": {
+      "title": "Calendario Festività 2026-2027 - Italia - vClock",
+      "description": "Calendario completo delle festività con timer di conto alla rovescia. Traccia i giorni fino a Natale, Capodanno, Pasqua e tutte le festività importanti."
+    }
+  }
+}

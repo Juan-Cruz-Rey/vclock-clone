@@ -1,0 +1,58 @@
+---
+/**
+ * Digital Display Component
+ * Display digital estilo reloj usado en todas las herramientas
+ */
+
+interface Props {
+  id?: string;
+  time: string;
+  size?: 'sm' | 'md' | 'lg' | 'xl';
+  showDate?: boolean;
+  date?: string;
+  class?: string;
+}
+
+const {
+  id = 'digital-display',
+  time,
+  size = 'lg',
+  showDate = false,
+  date,
+  class: className = ''
+} = Astro.props;
+
+const sizeClasses = {
+  sm: 'text-3xl md:text-4xl',
+  md: 'text-4xl md:text-6xl',
+  lg: 'text-6xl md:text-8xl',
+  xl: 'text-7xl md:text-9xl'
+};
+---
+
+<div
+  id={id}
+  class={`digital-display ${sizeClasses[size]} ${className}`}
+  data-time={time}
+>
+  <div class="flex flex-col items-center">
+    <!-- Main Time Display -->
+    <div class="tabular-nums tracking-wider">
+      {time}
+    </div>
+
+    <!-- Optional Date Display -->
+    {showDate && date && (
+      <div class="text-sm md:text-lg mt-2 font-mono text-gray-500 dark:text-gray-400">
+        {date}
+      </div>
+    )}
+  </div>
+</div>
+
+<style>
+  /* Asegurar que los números tengan ancho fijo */
+  .tabular-nums {
+    font-variant-numeric: tabular-nums;
+  }
+</style>

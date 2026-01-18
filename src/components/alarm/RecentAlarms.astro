@@ -1,0 +1,94 @@
+---
+/**
+ * Recent Alarms Component
+ * Muestra las alarmas usadas recientemente para acceso rápido
+ */
+
+import { t, getLocaleFromPath } from '../../scripts/i18n';
+
+const locale = getLocaleFromPath(Astro.url.pathname);
+---
+
+<div class="bg-white dark:bg-gray-800 rounded-lg p-4 shadow">
+  <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">
+    {t(locale, 'alarm.recentlyUsed')}
+  </h3>
+
+  <div id="recent-alarms-list" class="space-y-2">
+    <!-- Se llena dinámicamente con JavaScript -->
+    <div class="text-sm text-gray-500 dark:text-gray-400 text-center py-4">
+      No recent alarms
+    </div>
+  </div>
+</div>
+
+<script>
+  import { Storage, type RecentItem } from '../../scripts/storage';
+
+  function renderRecentAlarms() {
+    const container = document.getElementById('recent-alarms-list');
+    if (!container) return;
+
+    const recentAlarms = Storage.getRecentAlarms();
+
+    if (recentAlarms.length === 0) {
+      container.innerHTML = `
+        <div class="text-sm text-gray-500 dark:text-gray-400 text-center py-4">
+          No recent alarms
+        </div>
+      `;
+      return;
+    }
+
+    container.innerHTML = recentAlarms.map((item: RecentItem) => {
+      const { hour, minute, meridian, title } = item.data;
+      const timeStr = `${hour}:${minute.toString().padStart(2, '0')} ${meridian}`;
+
+      return `
+        <button
+          class="w-full text-left px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors flex justify-between items-center group"
+          data-recent-alarm
+          data-hour="${hour}"
+          data-minute="${minute}"
+          data-meridian="${meridian}"
+          data-title="${title || ''}"
+        >
+          <div class="flex-1">
+            <div class="text-sm font-medium text-gray-900 dark:text-white">
+              ${timeStr}
+            </div>
+            ${title ? `<div class="text-xs text-gray-500 dark:text-gray-400">${title}</div>` : ''}
+          </div>
+          <svg class="w-5 h-5 text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+          </svg>
+        </button>
+      `;
+    }).join('');
+
+    // Agregar event listeners a los botones
+    const buttons = container.querySelectorAll('[data-recent-alarm]');
+    buttons.forEach(button => {
+      button.addEventListener('click', (e) => {
+        const target = e.currentTarget as HTMLElement;
+        const hour = parseInt(target.dataset.hour || '0');
+        const minute = parseInt(target.dataset.minute || '0');
+        const meridian = target.dataset.meridian as 'AM' | 'PM';
+        const title = target.dataset.title || '';
+
+        // Disparar evento personalizado
+        window.dispatchEvent(new CustomEvent('loadRecentAlarm', {
+          detail: { hour, minute, meridian, title }
+        }));
+      });
+    });
+  }
+
+  // Renderizar al cargar
+  renderRecentAlarms();
+
+  // Re-renderizar cuando se actualiza
+  window.addEventListener('alarmSet', () => {
+    renderRecentAlarms();
+  });
+</script>

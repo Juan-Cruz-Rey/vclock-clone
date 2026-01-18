@@ -1,0 +1,107 @@
+---
+/**
+ * SEO Pages for Alarm Clock (Italian)
+ * Generates static pages for each hour/minute/meridian combination
+ * Example: /it/imposta-sveglia-per-7-00-am/
+ */
+
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import AlarmClock from '../../components/alarm/AlarmClock.astro';
+import { t } from '../../scripts/i18n';
+
+// Generate all possible alarm time combinations
+export async function getStaticPaths() {
+  const paths = [];
+  const hours = Array.from({ length: 12 }, (_, i) => i + 1);
+  const minutes = [0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55];
+  const meridians = ['am', 'pm'] as const;
+
+  for (const hour of hours) {
+    for (const minute of minutes) {
+      for (const meridian of meridians) {
+        paths.push({
+          params: {
+            hour: hour.toString(),
+            minute: minute.toString().padStart(2, '0'),
+            meridian: meridian,
+          },
+        });
+      }
+    }
+  }
+
+  return paths;
+}
+
+const { hour, minute, meridian } = Astro.params;
+const locale = 'it';
+
+const hourNum = parseInt(hour || '7');
+const minuteNum = parseInt(minute || '0');
+const meridianUpper = (meridian || 'am').toUpperCase() as 'AM' | 'PM';
+
+const timeString = `${hour}:${minute} ${meridianUpper}`;
+const title = `Imposta Sveglia per ${timeString} - Sveglia Online`;
+const description = `Imposta una sveglia gratuita per ${timeString}. Svegliati in orario con la nostra sveglia affidabile. Nessuna registrazione richiesta, funziona nel tuo browser.`;
+const keywords = `imposta sveglia per ${timeString}, sveglia ${hour}${meridian}, svegliarsi alle ${timeString}, sveglia online ${timeString}`;
+---
+
+<BaseLayout title={title} description={description} keywords={keywords}>
+  <div class="container mx-auto px-4 py-12">
+    <div class="text-center mb-12">
+      <h1 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+        Imposta Sveglia per {timeString}
+      </h1>
+      <p class="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+        {description}
+      </p>
+    </div>
+
+    <AlarmClock
+      presetHour={hourNum}
+      presetMinute={minuteNum}
+      presetMeridian={meridianUpper}
+    />
+
+    <div class="max-w-4xl mx-auto mt-12 prose dark:prose-invert">
+      <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+        Come Impostare una Sveglia per {timeString}
+      </h2>
+
+      <div class="space-y-4 text-gray-600 dark:text-gray-400">
+        <p>
+          Impostare una sveglia per <strong>{timeString}</strong> è facile con la nostra sveglia online gratuita.
+          Basta fare clic sul pulsante "Imposta Sveglia" sopra, e la tua sveglia sarà pronta a svegliarti esattamente alle {timeString}.
+        </p>
+
+        <h3 class="text-xl font-semibold text-gray-900 dark:text-white mt-6 mb-3">
+          Caratteristiche:
+        </h3>
+        <ul class="list-disc list-inside space-y-2">
+          <li>Suoni di sveglia personalizzabili</li>
+          <li>Opzione di ripetizione per sveglie quotidiane</li>
+          <li>Funziona nel tuo browser - nessun download richiesto</li>
+          <li>Temporizzazione affidabile e precisa</li>
+          <li>Notifiche del browser quando suona la sveglia</li>
+          <li>Titoli ed etichette personalizzate per sveglie</li>
+        </ul>
+
+        <h3 class="text-xl font-semibold text-gray-900 dark:text-white mt-6 mb-3">
+          Perché Usare una Sveglia Online?
+        </h3>
+        <p>
+          La nostra sveglia online è perfetta quando hai bisogno di un risveglio affidabile. Che tu stia
+          facendo un pisolino, debba svegliarti per lavoro, o abbia un incontro importante, impostare una sveglia per le {timeString}
+          assicura che non dormirai troppo.
+        </p>
+
+        <div class="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4 mt-6">
+          <p class="text-sm text-blue-900 dark:text-blue-100 mb-0">
+            <strong>💡 Suggerimento:</strong> Mantieni questa scheda aperta e il tuo computer acceso affinché la sveglia funzioni correttamente.
+            Puoi anche aggiungere questa pagina ai preferiti per impostare rapidamente una sveglia per le {timeString} in qualsiasi momento.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</BaseLayout>

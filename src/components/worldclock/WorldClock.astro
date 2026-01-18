@@ -1,0 +1,354 @@
+---
+/**
+ * World Clock Component
+ * Display multiple timezone clocks with city management
+ */
+---
+
+<div class="worldclock-container max-w-6xl mx-auto">
+  <!-- Add City Section -->
+  <div class="bg-gray-50 dark:bg-gray-800 rounded-lg p-6 mb-8">
+    <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-4">
+      Add City
+    </h3>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <!-- Search -->
+      <div>
+        <label for="city-search" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+          Search by City or Country
+        </label>
+        <input
+          type="text"
+          id="city-search"
+          placeholder="e.g., Tokyo, Paris, New York..."
+          class="text-input"
+        />
+      </div>
+
+      <!-- Continent Filter -->
+      <div>
+        <label for="continent-filter" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+          Filter by Continent
+        </label>
+        <select id="continent-filter" class="select-input">
+          <option value="">All Continents</option>
+          <option value="Africa">Africa</option>
+          <option value="Asia">Asia</option>
+          <option value="Europe">Europe</option>
+          <option value="North America">North America</option>
+          <option value="Oceania">Oceania</option>
+          <option value="South America">South America</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Search Results -->
+    <div id="search-results" class="mt-4 max-h-60 overflow-y-auto hidden">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
+        <!-- Results will be populated here -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Clock Grid -->
+  <div id="clock-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <!-- Clocks will be populated here -->
+  </div>
+
+  <!-- Empty State -->
+  <div id="empty-state" class="hidden text-center py-12">
+    <div class="text-gray-400 dark:text-gray-600 mb-4">
+      <svg class="mx-auto h-24 w-24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+      </svg>
+    </div>
+    <h3 class="text-xl font-semibold text-gray-700 dark:text-gray-400 mb-2">
+      No cities added yet
+    </h3>
+    <p class="text-gray-600 dark:text-gray-500">
+      Search and add cities above to see their current time
+    </p>
+  </div>
+</div>
+
+<script>
+  import { WorldClock, formatTime, formatDate, getTimezoneOffset, type City } from '../../scripts/worldclock-logic';
+
+  // DOM Elements
+  const searchInput = document.getElementById('city-search') as HTMLInputElement;
+  const continentFilter = document.getElementById('continent-filter') as HTMLSelectElement;
+  const searchResults = document.getElementById('search-results') as HTMLDivElement;
+  const clockGrid = document.getElementById('clock-grid') as HTMLDivElement;
+  const emptyState = document.getElementById('empty-state') as HTMLDivElement;
+
+  // Initialize World Clock
+  const worldClock = new WorldClock();
+  let timeFormat: 12 | 24 = 12;
+
+  function init() {
+    renderClocks();
+    worldClock.startTicking();
+
+    worldClock.onTick(() => {
+      updateAllClocks();
+    });
+  }
+
+  function renderClocks() {
+    const userCities = worldClock.getUserCities();
+
+    if (userCities.length === 0) {
+      clockGrid.classList.add('hidden');
+      emptyState.classList.remove('hidden');
+      return;
+    }
+
+    clockGrid.classList.remove('hidden');
+    emptyState.classList.add('hidden');
+
+    clockGrid.innerHTML = userCities.map(userCity => {
+      const city = worldClock.getCityData(userCity.cityId);
+      if (!city) return '';
+
+      const currentTime = worldClock.getTimeInTimezone(city.timezone);
+      const isDaytime = worldClock.isDaytime(city.timezone);
+      const timeOfDay = worldClock.getRelativeTimeDescription(city.timezone, 'en');
+      const offset = getTimezoneOffset(city.timezone);
+
+      return `
+        <div
+          class="clock-card bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 transition-transform hover:scale-105"
+          data-user-city-id="${userCity.id}"
+          draggable="true"
+        >
+          <div class="flex justify-between items-start mb-4">
+            <div>
+              <h3 class="text-2xl font-bold text-gray-900 dark:text-white">${city.name}</h3>
+              <p class="text-sm text-gray-600 dark:text-gray-400">${city.country}</p>
+            </div>
+            <div class="flex gap-2">
+              <button
+                class="remove-city-btn text-red-600 dark:text-red-400 hover:text-red-800 dark:hover:text-red-300"
+                data-user-city-id="${userCity.id}"
+                title="Remove city"
+              >
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="mb-4">
+            <div class="text-5xl font-mono font-bold text-blue-600 dark:text-blue-400" data-time="${userCity.id}">
+              ${formatTime(currentTime, timeFormat)}
+            </div>
+            <div class="text-sm text-gray-600 dark:text-gray-400 mt-1" data-date="${userCity.id}">
+              ${formatDate(currentTime, 'en')}
+            </div>
+          </div>
+
+          <div class="flex items-center justify-between text-sm">
+            <div class="flex items-center gap-2">
+              <span class="text-2xl">${isDaytime ? '☀️' : '🌙'}</span>
+              <span class="text-gray-700 dark:text-gray-300">${timeOfDay}</span>
+            </div>
+            <div class="text-gray-600 dark:text-gray-400 font-mono text-xs">
+              ${offset}
+            </div>
+          </div>
+        </div>
+      `;
+    }).join('');
+
+    // Add event listeners
+    attachClockEventListeners();
+  }
+
+  function updateAllClocks() {
+    const userCities = worldClock.getUserCities();
+
+    for (const userCity of userCities) {
+      const city = worldClock.getCityData(userCity.cityId);
+      if (!city) continue;
+
+      const currentTime = worldClock.getTimeInTimezone(city.timezone);
+
+      const timeEl = document.querySelector(`[data-time="${userCity.id}"]`) as HTMLDivElement;
+      const dateEl = document.querySelector(`[data-date="${userCity.id}"]`) as HTMLDivElement;
+
+      if (timeEl) {
+        timeEl.textContent = formatTime(currentTime, timeFormat);
+      }
+
+      if (dateEl) {
+        dateEl.textContent = formatDate(currentTime, 'en');
+      }
+    }
+  }
+
+  function attachClockEventListeners() {
+    // Remove city buttons
+    document.querySelectorAll('.remove-city-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        const userCityId = (e.currentTarget as HTMLButtonElement).getAttribute('data-user-city-id');
+        if (userCityId && confirm('Remove this city from your world clock?')) {
+          worldClock.removeCity(userCityId);
+          renderClocks();
+        }
+      });
+    });
+
+    // Drag and drop for reordering
+    document.querySelectorAll('.clock-card').forEach(card => {
+      card.addEventListener('dragstart', handleDragStart);
+      card.addEventListener('dragover', handleDragOver);
+      card.addEventListener('drop', handleDrop);
+      card.addEventListener('dragend', handleDragEnd);
+    });
+  }
+
+  // Search functionality
+  function performSearch() {
+    const query = searchInput.value.trim();
+    const continent = continentFilter.value;
+
+    let cities: City[] = [];
+
+    if (query.length > 0) {
+      cities = worldClock.searchCities(query);
+    } else if (continent) {
+      cities = worldClock.getCitiesByContinent(continent);
+    } else {
+      searchResults.classList.add('hidden');
+      return;
+    }
+
+    // Filter by continent if selected
+    if (continent) {
+      cities = cities.filter(city => city.continent === continent);
+    }
+
+    // Remove already added cities
+    const userCities = worldClock.getUserCities();
+    const addedCityIds = new Set(userCities.map(uc => uc.cityId));
+    cities = cities.filter(city => !addedCityIds.has(city.id));
+
+    if (cities.length === 0) {
+      searchResults.innerHTML = '<p class="text-gray-500 dark:text-gray-400 text-center py-4">No cities found</p>';
+      searchResults.classList.remove('hidden');
+      return;
+    }
+
+    searchResults.innerHTML = cities.slice(0, 12).map(city => `
+      <button
+        class="add-city-result-btn text-left p-3 bg-white dark:bg-gray-700 rounded-lg hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-colors border border-gray-200 dark:border-gray-600"
+        data-city-id="${city.id}"
+      >
+        <div class="font-semibold text-gray-900 dark:text-white">${city.name}</div>
+        <div class="text-sm text-gray-600 dark:text-gray-400">${city.country}</div>
+        <div class="text-xs text-gray-500 dark:text-gray-500 font-mono mt-1">${getTimezoneOffset(city.timezone)}</div>
+      </button>
+    `).join('');
+
+    searchResults.classList.remove('hidden');
+
+    // Add event listeners
+    document.querySelectorAll('.add-city-result-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const cityId = btn.getAttribute('data-city-id');
+        if (cityId) {
+          worldClock.addCity(cityId);
+          renderClocks();
+          searchInput.value = '';
+          searchResults.classList.add('hidden');
+        }
+      });
+    });
+  }
+
+  searchInput.addEventListener('input', performSearch);
+  continentFilter.addEventListener('change', performSearch);
+
+  // Drag and drop handlers
+  let draggedElement: HTMLElement | null = null;
+
+  function handleDragStart(this: HTMLElement, e: DragEvent) {
+    draggedElement = this;
+    this.classList.add('opacity-50');
+    if (e.dataTransfer) {
+      e.dataTransfer.effectAllowed = 'move';
+    }
+  }
+
+  function handleDragOver(this: HTMLElement, e: DragEvent) {
+    if (e.preventDefault) {
+      e.preventDefault();
+    }
+    if (e.dataTransfer) {
+      e.dataTransfer.dropEffect = 'move';
+    }
+    return false;
+  }
+
+  function handleDrop(this: HTMLElement, e: DragEvent) {
+    if (e.stopPropagation) {
+      e.stopPropagation();
+    }
+
+    if (draggedElement && draggedElement !== this) {
+      const draggedId = draggedElement.getAttribute('data-user-city-id');
+      const targetId = this.getAttribute('data-user-city-id');
+
+      if (draggedId && targetId) {
+        const userCities = worldClock.getUserCities();
+        const targetIndex = userCities.findIndex(uc => uc.id === targetId);
+
+        if (targetIndex !== -1) {
+          worldClock.moveCity(draggedId, targetIndex);
+          renderClocks();
+        }
+      }
+    }
+
+    return false;
+  }
+
+  function handleDragEnd(this: HTMLElement) {
+    this.classList.remove('opacity-50');
+  }
+
+  // Initialize
+  init();
+
+  // Cleanup
+  window.addEventListener('beforeunload', () => {
+    worldClock.destroy();
+  });
+</script>
+
+<style>
+  .worldclock-container {
+    animation: fadeIn 0.3s ease-in;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .clock-card {
+    cursor: grab;
+  }
+
+  .clock-card:active {
+    cursor: grabbing;
+  }
+</style>

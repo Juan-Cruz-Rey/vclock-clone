@@ -1,0 +1,83 @@
+---
+/**
+ * Timer Page (Spanish)
+ * Temporizador en línea gratuito con preajustes
+ */
+
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Timer from '../../components/timer/Timer.astro';
+
+const title = 'Temporizador en Línea - Temporizador de Cuenta Regresiva Gratis';
+const description = 'Temporizador de cuenta regresiva en línea gratuito con preajustes. Configura un temporizador para cualquier duración o cuenta regresiva hasta una fecha específica. Funciona en tu navegador, sin descarga requerida.';
+const keywords = 'temporizador online, temporizador cuenta regresiva, temporizador en línea, temporizador gratis, reloj cuenta regresiva, temporizador con sonido';
+---
+
+<BaseLayout title={title} description={description} keywords={keywords}>
+  <div class="container mx-auto px-4 py-12">
+    <div class="text-center mb-12">
+      <h1 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+        Temporizador en Línea
+      </h1>
+      <p class="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+        Configura un temporizador de cuenta regresiva para cualquier duración o cuenta regresiva hasta una fecha específica. Perfecto para entrenamientos, cocina, estudio y más.
+      </p>
+    </div>
+
+    <Timer />
+
+    <div class="max-w-4xl mx-auto mt-12 prose dark:prose-invert">
+      <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+        Cómo Usar el Temporizador en Línea
+      </h2>
+
+      <div class="space-y-4 text-gray-600 dark:text-gray-400">
+        <p>
+          Nuestro temporizador en línea gratuito es perfecto para cualquier actividad que requiera seguimiento preciso del tiempo. Ya sea que
+          estés entrenando, cocinando, estudiando o tomando un descanso, este temporizador te ayuda a mantener el horario.
+        </p>
+
+        <h3 class="text-xl font-semibold text-gray-900 dark:text-white mt-6 mb-3">
+          Dos Modos de Temporizador:
+        </h3>
+        <ul class="list-disc list-inside space-y-2">
+          <li><strong>Modo Duración</strong> - Configura un temporizador para un número específico de horas, minutos y segundos</li>
+          <li><strong>Cuenta Regresiva hasta Fecha</strong> - Cuenta regresiva hasta una fecha y hora específica (perfecto para eventos, plazos, etc.)</li>
+        </ul>
+
+        <h3 class="text-xl font-semibold text-gray-900 dark:text-white mt-6 mb-3">
+          Características:
+        </h3>
+        <ul class="list-disc list-inside space-y-2">
+          <li>Preajustes rápidos (1 min, 5 min, 10 min, 30 min, 1 hora y más)</li>
+          <li>Sonidos de alarma personalizables</li>
+          <li>Barra de progreso visual</li>
+          <li>Agregar tiempo sobre la marcha (botón +1 minuto)</li>
+          <li>Notificaciones del navegador cuando termina el temporizador</li>
+          <li>Temporizadores recientes para acceso rápido</li>
+          <li>Títulos personalizados para temporizadores</li>
+          <li>Funcionalidad de pausa y reanudación</li>
+        </ul>
+
+        <h3 class="text-xl font-semibold text-gray-900 dark:text-white mt-6 mb-3">
+          Duraciones Populares de Temporizador:
+        </h3>
+        <ul class="list-disc list-inside space-y-2">
+          <li><strong>1 minuto</strong> - Tareas rápidas, micro-descansos</li>
+          <li><strong>5 minutos</strong> - Ejercicios de plancha, preparar té, meditación rápida</li>
+          <li><strong>10 minutos</strong> - Siestas cortas, sesiones de escritura</li>
+          <li><strong>15 minutos</strong> - Sesiones de estudio (descanso Pomodoro)</li>
+          <li><strong>25 minutos</strong> - Sesión de trabajo técnica Pomodoro</li>
+          <li><strong>30 minutos</strong> - Sesiones de entrenamiento, cocina</li>
+          <li><strong>1 hora</strong> - Sesiones de trabajo profundo, reuniones</li>
+        </ul>
+
+        <div class="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4 mt-6">
+          <p class="text-sm text-blue-900 dark:text-blue-100 mb-0">
+            <strong>💡 Consejo:</strong> Mantén esta pestaña abierta y tu computadora encendida para que el temporizador funcione correctamente.
+            También puedes habilitar las notificaciones del navegador para recibir alertas cuando tu temporizador termine, incluso si la pestaña está en segundo plano.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</BaseLayout>

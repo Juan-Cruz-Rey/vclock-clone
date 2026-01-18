@@ -1,0 +1,85 @@
+---
+/**
+ * Stopwatch Page (Italian)
+ * Cronometro online gratuito con contatore giri
+ */
+
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Stopwatch from '../../components/stopwatch/Stopwatch.astro';
+
+const title = 'Cronometro Online - Contatore Giri Gratuito con Precisione';
+const description = 'Cronometro online gratuito con contatore giri. Misurazione precisa con accuratezza al millisecondo, registrazione giri e statistiche. Perfetto per sport, allenamenti e monitoraggio del tempo.';
+const keywords = 'cronometro online, contatore giri, cronometro gratis, timer preciso, cronometro sportivo';
+---
+
+<BaseLayout title={title} description={description} keywords={keywords}>
+  <div class="container mx-auto px-4 py-12">
+    <div class="text-center mb-12">
+      <h1 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+        Cronometro Online
+      </h1>
+      <p class="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+        Cronometro di precisione con contatore giri. Misura il tuo tempo con precisione al millisecondo, registra i giri e analizza le tue prestazioni.
+      </p>
+    </div>
+
+    <Stopwatch />
+
+    <div class="max-w-4xl mx-auto mt-12 prose dark:prose-invert">
+      <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+        Come Usare il Cronometro Online
+      </h2>
+
+      <div class="space-y-4 text-gray-600 dark:text-gray-400">
+        <p>
+          Il nostro cronometro online gratuito fornisce misurazione precisa del tempo per qualsiasi attività. Che tu stia misurando
+          allenamenti, gare, cucina o qualsiasi altra attività, questo cronometro ti fornisce misurazioni accurate
+          con capacità di registrazione giri.
+        </p>
+
+        <h3 class="text-xl font-semibold text-gray-900 dark:text-white mt-6 mb-3">
+          Caratteristiche:
+        </h3>
+        <ul class="list-disc list-inside space-y-2">
+          <li><strong>Opzioni di Precisione</strong> - Scegli tra secondi, centesimi o millisecondi</li>
+          <li><strong>Contatore Giri</strong> - Registra giri illimitati con tempi individuali e totali</li>
+          <li><strong>Statistiche Giri</strong> - Visualizza i tempi dei giri più veloci, più lenti e medi</li>
+          <li><strong>Indicatori Visivi</strong> - Migliori e peggiori giri evidenziati automaticamente</li>
+          <li><strong>Esporta in CSV</strong> - Scarica i dati dei tuoi giri per ulteriori analisi</li>
+          <li><strong>Scorciatoie da Tastiera</strong> - Spazio per avviare/pausa, L per giro, R per reset</li>
+          <li><strong>Pausa e Riprendi</strong> - Fai pause senza perdere il tuo tempo</li>
+          <li><strong>Archiviazione Persistente</strong> - Il tuo tempo viene salvato anche se chiudi la scheda</li>
+        </ul>
+
+        <h3 class="text-xl font-semibold text-gray-900 dark:text-white mt-6 mb-3">
+          Scorciatoie da Tastiera:
+        </h3>
+        <ul class="list-disc list-inside space-y-2">
+          <li><kbd class="px-2 py-1 bg-gray-200 dark:bg-gray-700 rounded text-sm">Spazio</kbd> - Avvia/Pausa</li>
+          <li><kbd class="px-2 py-1 bg-gray-200 dark:bg-gray-700 rounded text-sm">L</kbd> - Registra Giro (mentre è in esecuzione)</li>
+          <li><kbd class="px-2 py-1 bg-gray-200 dark:bg-gray-700 rounded text-sm">R</kbd> - Reset (mentre è fermo)</li>
+        </ul>
+
+        <h3 class="text-xl font-semibold text-gray-900 dark:text-white mt-6 mb-3">
+          Casi d'Uso Popolari:
+        </h3>
+        <ul class="list-disc list-inside space-y-2">
+          <li><strong>Corsa e Atletica</strong> - Traccia i tempi dei giri e analizza le tue prestazioni</li>
+          <li><strong>Nuoto</strong> - Cronometra i tuoi giri e monitora i miglioramenti</li>
+          <li><strong>Allenamenti</strong> - Traccia la durata dell'esercizio e i periodi di riposo</li>
+          <li><strong>Cucina</strong> - Cronometra più passaggi di cucina con precisione</li>
+          <li><strong>Gaming</strong> - Speedrunning e cronometraggio delle sfide</li>
+          <li><strong>Studio</strong> - Traccia le sessioni di lavoro concentrato</li>
+          <li><strong>Presentazioni</strong> - Pratica il tempo per discorsi e presentazioni</li>
+        </ul>
+
+        <div class="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4 mt-6">
+          <p class="text-sm text-blue-900 dark:text-blue-100 mb-0">
+            <strong>💡 Suggerimento:</strong> Il cronometro continua a funzionare in background anche se cambi scheda.
+            I tuoi tempi dei giri vengono salvati automaticamente nel tuo browser, quindi non perderai dati se chiudi accidentalmente la scheda.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</BaseLayout>

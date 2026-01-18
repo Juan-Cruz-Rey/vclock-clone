@@ -1,0 +1,138 @@
+[
+  {
+    "id": "new-year",
+    "name": "Año Nuevo",
+    "date": "2026-01-01",
+    "description": "Primer día del año en el calendario gregoriano",
+    "recurring": true,
+    "type": "public"
+  },
+  {
+    "id": "reyes",
+    "name": "Día de Reyes",
+    "date": "2026-01-06",
+    "description": "Celebración de la llegada de los Reyes Magos",
+    "recurring": true,
+    "type": "religious"
+  },
+  {
+    "id": "valentine",
+    "name": "Día de San Valentín",
+    "date": "2026-02-14",
+    "description": "Celebración del amor y el afecto",
+    "recurring": true,
+    "type": "celebration"
+  },
+  {
+    "id": "women-day",
+    "name": "Día Internacional de la Mujer",
+    "date": "2026-03-08",
+    "description": "Celebración de los derechos de la mujer",
+    "recurring": true,
+    "type": "awareness"
+  },
+  {
+    "id": "easter",
+    "name": "Domingo de Pascua",
+    "date": "2026-04-05",
+    "description": "Celebración cristiana de la resurrección de Jesús",
+    "recurring": true,
+    "type": "religious"
+  },
+  {
+    "id": "earth-day",
+    "name": "Día de la Tierra",
+    "date": "2026-04-22",
+    "description": "Evento anual demostrando apoyo a la protección ambiental",
+    "recurring": true,
+    "type": "awareness"
+  },
+  {
+    "id": "labor-day",
+    "name": "Día del Trabajo",
+    "date": "2026-05-01",
+    "description": "Celebración internacional de los trabajadores",
+    "recurring": true,
+    "type": "public"
+  },
+  {
+    "id": "mothers-day",
+    "name": "Día de la Madre",
+    "date": "2026-05-03",
+    "description": "Celebración honrando a las madres y la maternidad",
+    "recurring": true,
+    "type": "celebration"
+  },
+  {
+    "id": "fathers-day",
+    "name": "Día del Padre",
+    "date": "2026-06-21",
+    "description": "Celebración honrando a los padres y la paternidad",
+    "recurring": true,
+    "type": "celebration"
+  },
+  {
+    "id": "hispanic-day",
+    "name": "Día de la Hispanidad",
+    "date": "2026-10-12",
+    "description": "Fiesta nacional de España y celebración en países hispanohablantes",
+    "recurring": true,
+    "type": "public"
+  },
+  {
+    "id": "halloween",
+    "name": "Halloween",
+    "date": "2026-10-31",
+    "description": "Celebración anual con disfraces y dulces",
+    "recurring": true,
+    "type": "celebration"
+  },
+  {
+    "id": "all-saints",
+    "name": "Día de Todos los Santos",
+    "date": "2026-11-01",
+    "description": "Día religioso para honrar a todos los santos",
+    "recurring": true,
+    "type": "religious"
+  },
+  {
+    "id": "constitution-day-spain",
+    "name": "Día de la Constitución (España)",
+    "date": "2026-12-06",
+    "description": "Conmemoración de la Constitución Española",
+    "recurring": true,
+    "type": "public"
+  },
+  {
+    "id": "immaculate-conception",
+    "name": "Inmaculada Concepción",
+    "date": "2026-12-08",
+    "description": "Festividad católica",
+    "recurring": true,
+    "type": "religious"
+  },
+  {
+    "id": "christmas-eve",
+    "name": "Nochebuena",
+    "date": "2026-12-24",
+    "description": "Noche antes del día de Navidad",
+    "recurring": true,
+    "type": "celebration"
+  },
+  {
+    "id": "christmas",
+    "name": "Navidad",
+    "date": "2026-12-25",
+    "description": "Celebración cristiana del nacimiento de Jesucristo",
+    "recurring": true,
+    "type": "public"
+  },
+  {
+    "id": "new-year-eve",
+    "name": "Nochevieja",
+    "date": "2026-12-31",
+    "description": "Último día del año",
+    "recurring": true,
+    "type": "celebration"
+  }
+]
