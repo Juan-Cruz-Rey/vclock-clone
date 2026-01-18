@@ -50,7 +50,22 @@
     "alarmSet": "Budzik ustawiony na {time}",
     "alarmStopped": "Budzik zatrzymany",
     "alarmActive": "Budzik jest aktywny",
-    "setAlarmFor": "Ustaw budzik na {time}"
+    "setAlarmFor": "Ustaw budzik na {time}",
+    "placeholderTitle": "Obudź się!",
+    "alarmRinging": "Alarm!",
+    "timesUp": "Czas minął!",
+    "dismissAlarm": "Wyłącz Alarm",
+    "alarmSetFor": "Alarm ustawiony na {time} (za {hours}godz {minutes}min)",
+    "in": "za",
+    "alarmTitle": "ALARM!",
+    "sounds": {
+      "classicAlarm": "Klasyczny Alarm",
+      "beepBeep": "Bip Bip",
+      "rooster": "Kogut",
+      "bell": "Dzwonek",
+      "chime": "Dzwon",
+      "digital": "Cyfrowy"
+    }
   },
   "timer": {
     "title": "Timer online",
@@ -65,7 +80,9 @@
     "countdownTo": "Odliczanie do",
     "presets": "Szybkie timery",
     "timerFinished": "Timer zakończony!",
-    "customTitle": "Własny tytuł (opcjonalnie)"
+    "customTitle": "Własny tytuł (opcjonalnie)",
+    "durationMode": "Tryb Czasu Trwania",
+    "countdownMode": "Odliczanie do Daty"
   },
   "stopwatch": {
     "title": "Stoper online",

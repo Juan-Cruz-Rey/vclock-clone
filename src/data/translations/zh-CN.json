@@ -50,7 +50,22 @@
     "alarmSet": "闹钟已设置为{time}",
     "alarmStopped": "闹钟已停止",
     "alarmActive": "闹钟已激活",
-    "setAlarmFor": "设置{time}的闹钟"
+    "setAlarmFor": "设置{time}的闹钟",
+    "placeholderTitle": "起床了！",
+    "alarmRinging": "闹钟！",
+    "timesUp": "时间到！",
+    "dismissAlarm": "关闭闹钟",
+    "alarmSetFor": "闹钟设置为{time}（{hours}小时{minutes}分钟后）",
+    "in": "后",
+    "alarmTitle": "闹钟！",
+    "sounds": {
+      "classicAlarm": "经典闹钟",
+      "beepBeep": "哔哔声",
+      "rooster": "公鸡",
+      "bell": "铃声",
+      "chime": "钟声",
+      "digital": "数字"
+    }
   },
   "timer": {
     "title": "在线计时器",
@@ -65,7 +80,9 @@
     "countdownTo": "倒计时到",
     "presets": "快速计时器",
     "timerFinished": "计时器完成！",
-    "customTitle": "自定义标题（可选）"
+    "customTitle": "自定义标题（可选）",
+    "durationMode": "持续时间模式",
+    "countdownMode": "倒计时到日期"
   },
   "stopwatch": {
     "title": "在线秒表",

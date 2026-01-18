@@ -1,11 +1,137 @@
 {
-  "site":{"name":"vClock","description":"Instrumente online gratuite pentru managementul timpului"},
-  "nav":{"alarm":"Alarmă","timer":"Temporizator","stopwatch":"Cronometru","clock":"Ceas mondial","holidays":"Sărbători","tools":"Instrumente","privacy":"Confidențialitate","terms":"Termeni","contact":"Contact"},
-  "common":{"start":"Start","stop":"Stop","pause":"Pauză","resume":"Reia","reset":"Resetare","edit":"Editare","save":"Salvare","cancel":"Anulare","delete":"Ștergere","add":"Adăugare","test":"Test","close":"Închidere","confirm":"Confirmare","yes":"Da","no":"Nu","loading":"Se încarcă...","error":"Eroare","success":"Succes"},
-  "alarm":{"title":"Alarmă online","description":"Ceas deșteptător online gratuit. Setați alarma pentru orice oră cu sunete personalizabile. Nu este necesară înregistrarea.","setAlarm":"Setează alarma","stopAlarm":"Oprește alarma","testSound":"Testează sunetul","hour":"Oră","minute":"Minut","sound":"Sunet","repeat":"Repetă alarma","customTitle":"Titlu personalizat (opțional)","recentlyUsed":"Folosite recent","presets":"Setări rapide","alarmSet":"Alarma setată pentru {time}","alarmStopped":"Alarma oprită","alarmActive":"Alarma este activă","setAlarmFor":"Setează alarma pentru {time}"},
-  "timer":{"title":"Temporizator online","description":"Temporizator online gratuit. Setați temporizatorul pentru orice durată. Perfect pentru gătit, antrenament și productivitate.","hours":"Ore","minutes":"Minute","seconds":"Secunde","actionOnComplete":"Acțiune la finalizarea temporizatorului","stopTimer":"Oprește temporizatorul","restartTimer":"Repornește automat","convertToStopwatch":"Convertește în cronometru","countdownTo":"Numărătoare inversă","presets":"Temporizatoare rapide","timerFinished":"Temporizatorul s-a încheiat!","customTitle":"Titlu personalizat (opțional)"},
-  "stopwatch":{"title":"Cronometru online","description":"Cronometru online gratuit cu temporizator de tururi. Precizie la milisecundă. Perfect pentru sport, antrenament și măsurarea timpului.","lap":"Tură","lapNumber":"Tură #","lapTime":"Timp tură","totalTime":"Timp total","precision":"Precizie","laps":"Tururi","noLaps":"Nicio tură înregistrată încă"},
-  "clock":{"title":"Ceas mondial","description":"Afișați ora în mai multe orașe din întreaga lume. Urmăriți mai multe fusuri orare simultan.","currentTime":"Ora curentă","timezone":"Fus orar","offset":"Decalaj UTC","dayNight":"Zi/Noapte","searchCities":"Căutați orașe...","addCity":"Adaugă oraș","removeCity":"Elimină oraș","noCitiesAdded":"Niciun oraș adăugat încă","addFirstCity":"Adăugați primul oraș pentru a începe urmărirea fusurilor orare"},
-  "footer":{"copyright":"© 2026 vClock. Toate drepturile rezervate.","madeWith":"Creat cu ❤️ pentru productivitate"},
-  "meta":{"home":{"title":"⏰ Alarmă online gratuită | Alarmă web simplă și de încredere","description":"Ceas deșteptător online 100% gratuit. ⏰ Setați alarma în câteva secunde. ⏱️ Include temporizator, cronometru și ceas mondial. Nu necesită descărcare!"},"timer":{"title":"⏱️ Temporizator online | Numărătoare inversă și Pomodoro gratuit","description":"⚡ Temporizator gratuit cu presetări de 1, 5, 25 minute (Pomodoro). Perfect pentru gătit 🍳, antrenament 💪, studiu 📚 Fără descărcare!"},"stopwatch":{"title":"⏲️ Cronometru online cu tururi | Precizie la milisecundă","description":"🎯 Cronometru profesional cu înregistrare nelimitată de tururi! Precizie la milisecundă. Perfect pentru alergare 🏃, înot 🏊, sport 💪, gaming 🎮"},"clock":{"title":"🌍 Ceas mondial | Ora în direct în 50+ orașe","description":"✨ Verificați ora curentă în 50+ orașe! Comparați fusurile orare: București 🇷🇴, New York 🗽, Paris 🇫🇷 Perfect pentru muncă la distanță 💼, călătorii ✈️"},"holidays":{"title":"Calendar sărbători 2026-2027 - România - vClock","description":"Calendar complet al sărbătorilor cu numărătoare inversă. Urmăriți zilele până la Crăciun, Anul Nou, Paște și toate sărbătorile importante."}}
+  "site": {
+    "name": "vClock",
+    "description": "Instrumente online gratuite pentru managementul timpului"
+  },
+  "nav": {
+    "alarm": "Alarmă",
+    "timer": "Temporizator",
+    "stopwatch": "Cronometru",
+    "clock": "Ceas mondial",
+    "holidays": "Sărbători",
+    "tools": "Instrumente",
+    "privacy": "Confidențialitate",
+    "terms": "Termeni",
+    "contact": "Contact"
+  },
+  "common": {
+    "start": "Start",
+    "stop": "Stop",
+    "pause": "Pauză",
+    "resume": "Reia",
+    "reset": "Resetare",
+    "edit": "Editare",
+    "save": "Salvare",
+    "cancel": "Anulare",
+    "delete": "Ștergere",
+    "add": "Adăugare",
+    "test": "Test",
+    "close": "Închidere",
+    "confirm": "Confirmare",
+    "yes": "Da",
+    "no": "Nu",
+    "loading": "Se încarcă...",
+    "error": "Eroare",
+    "success": "Succes"
+  },
+  "alarm": {
+    "title": "Alarmă online",
+    "description": "Ceas deșteptător online gratuit. Setați alarma pentru orice oră cu sunete personalizabile. Nu este necesară înregistrarea.",
+    "setAlarm": "Setează alarma",
+    "stopAlarm": "Oprește alarma",
+    "testSound": "Testează sunetul",
+    "hour": "Oră",
+    "minute": "Minut",
+    "sound": "Sunet",
+    "repeat": "Repetă alarma",
+    "customTitle": "Titlu personalizat (opțional)",
+    "recentlyUsed": "Folosite recent",
+    "presets": "Setări rapide",
+    "alarmSet": "Alarma setată pentru {time}",
+    "alarmStopped": "Alarma oprită",
+    "alarmActive": "Alarma este activă",
+    "setAlarmFor": "Setează alarma pentru {time}",
+    "placeholderTitle": "Trezește-te!",
+    "alarmRinging": "Alarmă!",
+    "timesUp": "Timpul a expirat!",
+    "dismissAlarm": "Închide Alarma",
+    "alarmSetFor": "Alarmă setată pentru {time} (peste {hours}o {minutes}m)",
+    "in": "peste",
+    "alarmTitle": "ALARMĂ!",
+    "sounds": {
+      "classicAlarm": "Alarmă Clasică",
+      "beepBeep": "Bip Bip",
+      "rooster": "Cocoș",
+      "bell": "Clopot",
+      "chime": "Dangăt",
+      "digital": "Digital"
+    }
+  },
+  "timer": {
+    "title": "Temporizator online",
+    "description": "Temporizator online gratuit. Setați temporizatorul pentru orice durată. Perfect pentru gătit, antrenament și productivitate.",
+    "hours": "Ore",
+    "minutes": "Minute",
+    "seconds": "Secunde",
+    "actionOnComplete": "Acțiune la finalizarea temporizatorului",
+    "stopTimer": "Oprește temporizatorul",
+    "restartTimer": "Repornește automat",
+    "convertToStopwatch": "Convertește în cronometru",
+    "countdownTo": "Numărătoare inversă",
+    "presets": "Temporizatoare rapide",
+    "timerFinished": "Temporizatorul s-a încheiat!",
+    "customTitle": "Titlu personalizat (opțional)",
+    "durationMode": "Mod Durată",
+    "countdownMode": "Numărătoare Inversă până la Dată"
+  },
+  "stopwatch": {
+    "title": "Cronometru online",
+    "description": "Cronometru online gratuit cu temporizator de tururi. Precizie la milisecundă. Perfect pentru sport, antrenament și măsurarea timpului.",
+    "lap": "Tură",
+    "lapNumber": "Tură #",
+    "lapTime": "Timp tură",
+    "totalTime": "Timp total",
+    "precision": "Precizie",
+    "laps": "Tururi",
+    "noLaps": "Nicio tură înregistrată încă"
+  },
+  "clock": {
+    "title": "Ceas mondial",
+    "description": "Afișați ora în mai multe orașe din întreaga lume. Urmăriți mai multe fusuri orare simultan.",
+    "currentTime": "Ora curentă",
+    "timezone": "Fus orar",
+    "offset": "Decalaj UTC",
+    "dayNight": "Zi/Noapte",
+    "searchCities": "Căutați orașe...",
+    "addCity": "Adaugă oraș",
+    "removeCity": "Elimină oraș",
+    "noCitiesAdded": "Niciun oraș adăugat încă",
+    "addFirstCity": "Adăugați primul oraș pentru a începe urmărirea fusurilor orare"
+  },
+  "footer": {
+    "copyright": "© 2026 vClock. Toate drepturile rezervate.",
+    "madeWith": "Creat cu ❤️ pentru productivitate"
+  },
+  "meta": {
+    "home": {
+      "title": "⏰ Alarmă online gratuită | Alarmă web simplă și de încredere",
+      "description": "Ceas deșteptător online 100% gratuit. ⏰ Setați alarma în câteva secunde. ⏱️ Include temporizator, cronometru și ceas mondial. Nu necesită descărcare!"
+    },
+    "timer": {
+      "title": "⏱️ Temporizator online | Numărătoare inversă și Pomodoro gratuit",
+      "description": "⚡ Temporizator gratuit cu presetări de 1, 5, 25 minute (Pomodoro). Perfect pentru gătit 🍳, antrenament 💪, studiu 📚 Fără descărcare!"
+    },
+    "stopwatch": {
+      "title": "⏲️ Cronometru online cu tururi | Precizie la milisecundă",
+      "description": "🎯 Cronometru profesional cu înregistrare nelimitată de tururi! Precizie la milisecundă. Perfect pentru alergare 🏃, înot 🏊, sport 💪, gaming 🎮"
+    },
+    "clock": {
+      "title": "🌍 Ceas mondial | Ora în direct în 50+ orașe",
+      "description": "✨ Verificați ora curentă în 50+ orașe! Comparați fusurile orare: București 🇷🇴, New York 🗽, Paris 🇫🇷 Perfect pentru muncă la distanță 💼, călătorii ✈️"
+    },
+    "holidays": {
+      "title": "Calendar sărbători 2026-2027 - România - vClock",
+      "description": "Calendar complet al sărbătorilor cu numărătoare inversă. Urmăriți zilele până la Crăciun, Anul Nou, Paște și toate sărbătorile importante."
+    }
+  }
 }

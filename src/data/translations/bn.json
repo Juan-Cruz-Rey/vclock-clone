@@ -50,7 +50,22 @@
     "alarmSet": "{time} এর জন্য অ্যালার্ম সেট করা হয়েছে",
     "alarmStopped": "অ্যালার্ম বন্ধ হয়েছে",
     "alarmActive": "অ্যালার্ম সক্রিয় আছে",
-    "setAlarmFor": "{time} এর জন্য অ্যালার্ম সেট করুন"
+    "setAlarmFor": "{time} এর জন্য অ্যালার্ম সেট করুন",
+    "placeholderTitle": "জেগে ওঠো!",
+    "alarmRinging": "অ্যালার্ম!",
+    "timesUp": "সময় শেষ!",
+    "dismissAlarm": "অ্যালার্ম বন্ধ করুন",
+    "alarmSetFor": "{time} এর জন্য অ্যালার্ম সেট করা হয়েছে ({hours}ঘ {minutes}মি পরে)",
+    "in": "পরে",
+    "alarmTitle": "অ্যালার্ম!",
+    "sounds": {
+      "classicAlarm": "ক্লাসিক অ্যালার্ম",
+      "beepBeep": "বীপ বীপ",
+      "rooster": "মোরগ",
+      "bell": "ঘণ্টা",
+      "chime": "ঝংকার",
+      "digital": "ডিজিটাল"
+    }
   },
   "timer": {
     "title": "অনলাইন টাইমার",
@@ -65,7 +80,9 @@
     "countdownTo": "কাউন্টডাউন",
     "presets": "দ্রুত টাইমার",
     "timerFinished": "টাইমার শেষ!",
-    "customTitle": "কাস্টম শিরোনাম (ঐচ্ছিক)"
+    "customTitle": "কাস্টম শিরোনাম (ঐচ্ছিক)",
+    "durationMode": "সময়কাল মোড",
+    "countdownMode": "তারিখ পর্যন্ত কাউন্টডাউন"
   },
   "stopwatch": {
     "title": "অনলাইন স্টপওয়াচ",

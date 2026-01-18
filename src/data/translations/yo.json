@@ -1,11 +1,137 @@
 {
-  "site":{"name":"vClock","description":"Awọn irinṣẹ lori ayelujara ọfẹ fun iṣakoso akoko"},
-  "nav":{"alarm":"Afọwọkọ","timer":"Aṣakoko","stopwatch":"Agogo ọwọ","clock":"Agogo agbaye","holidays":"Awọn isinmi","tools":"Awọn irinṣẹ","privacy":"Aṣiri","terms":"Awọn ofin","contact":"Kan si wa"},
-  "common":{"start":"Bẹrẹ","stop":"Duro","pause":"Duro diẹ","resume":"Tẹsiwaju","reset":"Tun ṣeto","edit":"Ṣatunkọ","save":"Fipamọ","cancel":"Fagilee","delete":"Paarẹ","add":"Fikun","test":"Danwo","close":"Tiipa","confirm":"Jẹrisi","yes":"Bẹẹni","no":"Rara","loading":"N ṣiṣẹ...","error":"Aṣiṣe","success":"Aṣeyọri"},
-  "alarm":{"title":"Afọwọkọ lori ayelujara","description":"Agogo afọwọkọ lori ayelujara ọfẹ. Ṣeto afọwọkọ rẹ fun eyikeyi akoko pẹlu awọn ohun ti o le ṣatunkọ. Ko nilo iforukọsilẹ.","setAlarm":"Ṣeto afọwọkọ","stopAlarm":"Duro afọwọkọ","testSound":"Danwo ohun","hour":"Wakati","minute":"Iṣẹju","sound":"Ohun","repeat":"Tun afọwọkọ ṣe","customTitle":"Akọle aṣa (aṣayan)","recentlyUsed":"Ti a lo laipe","presets":"Awọn eto iyara","alarmSet":"Afọwọkọ ṣeto fun {time}","alarmStopped":"Afọwọkọ duro","alarmActive":"Afọwọkọ nṣiṣẹ","setAlarmFor":"Ṣeto afọwọkọ fun {time}"},
-  "timer":{"title":"Aṣakoko lori ayelujara","description":"Aṣakoko lori ayelujara ọfẹ. Ṣeto aṣakoko fun eyikeyi iye akoko. O dara fun sise ounjẹ, idaraya ati iṣelọpọ.","hours":"Awọn wakati","minutes":"Awọn iṣẹju","seconds":"Awọn iṣẹju-aaya","actionOnComplete":"Iṣe nigbati aṣakoko ba pari","stopTimer":"Duro aṣakoko","restartTimer":"Tun bẹrẹ laifọwọyi","convertToStopwatch":"Yi pada si agogo ọwọ","countdownTo":"Ika pada","presets":"Awọn aṣakoko iyara","timerFinished":"Aṣakoko ti pari!","customTitle":"Akọle aṣa (aṣayan)"},
-  "stopwatch":{"title":"Agogo ọwọ lori ayelujara","description":"Agogo ọwọ lori ayelujara ọfẹ pẹlu aṣakoko yika. Deede si millisecond. O dara fun ere-idaraya, ikẹkọ ati wiwọn akoko.","lap":"Yika","lapNumber":"Yika #","lapTime":"Akoko yika","totalTime":"Lapapọ akoko","precision":"Deede","laps":"Awọn yika","noLaps":"Ko si awọn yika ti a ṣe akọsilẹ sibẹsibẹ"},
-  "clock":{"title":"Agogo agbaye","description":"Ṣafihan akoko ni ọpọlọpọ awọn ilu kakiri agbaye. Tọpa ọpọlọpọ awọn agbegbe akoko ni akoko kanna.","currentTime":"Akoko lọwọlọwọ","timezone":"Agbegbe akoko","offset":"Iyatọ UTC","dayNight":"Ọsan/Alẹ","searchCities":"Wa awọn ilu...","addCity":"Fikun ilu","removeCity":"Yọ ilu kuro","noCitiesAdded":"Ko si awọn ilu ti a fikun sibẹsibẹ","addFirstCity":"Fikun ilu akọkọ rẹ lati bẹrẹ titọpa awọn agbegbe akoko"},
-  "footer":{"copyright":"© 2026 vClock. Gbogbo ẹtọ ni a pamọ.","madeWith":"A ṣe pẹlu ❤️ fun iṣelọpọ"},
-  "meta":{"home":{"title":"⏰ Afọwọkọ lori ayelujara ọfẹ | Afọwọkọ wẹẹbu ti o rọrun & ti o gbẹkẹle","description":"Agogo afọwọkọ lori ayelujara 100% ọfẹ. ⏰ Ṣeto afọwọkọ rẹ ni awọn iṣẹju-aaya. ⏱️ Pẹlu aṣakoko, agogo ọwọ ati agogo agbaye. Ko nilo igbasilẹ!"},"timer":{"title":"⏱️ Aṣakoko lori ayelujara | Ika pada & Pomodoro ọfẹ","description":"⚡ Aṣakoko ọfẹ pẹlu awọn eto ti 1, 5, 25 iṣẹju (Pomodoro). O dara fun sise ounjẹ 🍳, idaraya 💪, ikẹkọ 📚 Ko nilo igbasilẹ!"},"stopwatch":{"title":"⏲️ Agogo ọwọ lori ayelujara pẹlu awọn yika | Deede millisecond","description":"🎯 Agogo ọwọ alamọdaju pẹlu gbigbasilẹ yika ailopin! Deede si millisecond. O dara fun sare 🏃, odo 🏊, ere-idaraya 💪, ere 🎮"},"clock":{"title":"🌍 Agogo agbaye | Akoko laaye ni awọn ilu 50+","description":"✨ Ṣayẹwo akoko lọwọlọwọ ni awọn ilu 50+! Ṣe afiwe awọn agbegbe akoko: Lagos 🇳🇬, New York 🗽, Paris 🇫🇷 O dara fun iṣẹ latọna jijin 💼, irin-ajo ✈️"},"holidays":{"title":"Kalẹnda awọn isinmi 2026-2027 - Naijiria - vClock","description":"Kalẹnda pipe awọn isinmi pẹlu ika pada. Tọpa awọn ọjọ si Keresimesi, Ọdun tuntun, Ileya ati gbogbo awọn isinmi pataki."}}
+  "site": {
+    "name": "vClock",
+    "description": "Awọn irinṣẹ lori ayelujara ọfẹ fun iṣakoso akoko"
+  },
+  "nav": {
+    "alarm": "Afọwọkọ",
+    "timer": "Aṣakoko",
+    "stopwatch": "Agogo ọwọ",
+    "clock": "Agogo agbaye",
+    "holidays": "Awọn isinmi",
+    "tools": "Awọn irinṣẹ",
+    "privacy": "Aṣiri",
+    "terms": "Awọn ofin",
+    "contact": "Kan si wa"
+  },
+  "common": {
+    "start": "Bẹrẹ",
+    "stop": "Duro",
+    "pause": "Duro diẹ",
+    "resume": "Tẹsiwaju",
+    "reset": "Tun ṣeto",
+    "edit": "Ṣatunkọ",
+    "save": "Fipamọ",
+    "cancel": "Fagilee",
+    "delete": "Paarẹ",
+    "add": "Fikun",
+    "test": "Danwo",
+    "close": "Tiipa",
+    "confirm": "Jẹrisi",
+    "yes": "Bẹẹni",
+    "no": "Rara",
+    "loading": "N ṣiṣẹ...",
+    "error": "Aṣiṣe",
+    "success": "Aṣeyọri"
+  },
+  "alarm": {
+    "title": "Afọwọkọ lori ayelujara",
+    "description": "Agogo afọwọkọ lori ayelujara ọfẹ. Ṣeto afọwọkọ rẹ fun eyikeyi akoko pẹlu awọn ohun ti o le ṣatunkọ. Ko nilo iforukọsilẹ.",
+    "setAlarm": "Ṣeto afọwọkọ",
+    "stopAlarm": "Duro afọwọkọ",
+    "testSound": "Danwo ohun",
+    "hour": "Wakati",
+    "minute": "Iṣẹju",
+    "sound": "Ohun",
+    "repeat": "Tun afọwọkọ ṣe",
+    "customTitle": "Akọle aṣa (aṣayan)",
+    "recentlyUsed": "Ti a lo laipe",
+    "presets": "Awọn eto iyara",
+    "alarmSet": "Afọwọkọ ṣeto fun {time}",
+    "alarmStopped": "Afọwọkọ duro",
+    "alarmActive": "Afọwọkọ nṣiṣẹ",
+    "setAlarmFor": "Ṣeto afọwọkọ fun {time}",
+    "placeholderTitle": "Ji!",
+    "alarmRinging": "Afọwọkọ!",
+    "timesUp": "Akoko ti pari!",
+    "dismissAlarm": "Pa Afọwọkọ",
+    "alarmSetFor": "Afọwọkọ ti ṣeto fun {time} (ni {hours}w {minutes}i)",
+    "in": "ni",
+    "alarmTitle": "AFỌWỌKỌ!",
+    "sounds": {
+      "classicAlarm": "Afọwọkọ Atọwọdọwọ",
+      "beepBeep": "Biipu Biipu",
+      "rooster": "Akuko",
+      "bell": "Agogo",
+      "chime": "Ohun Agogo",
+      "digital": "Dijitali"
+    }
+  },
+  "timer": {
+    "title": "Aṣakoko lori ayelujara",
+    "description": "Aṣakoko lori ayelujara ọfẹ. Ṣeto aṣakoko fun eyikeyi iye akoko. O dara fun sise ounjẹ, idaraya ati iṣelọpọ.",
+    "hours": "Awọn wakati",
+    "minutes": "Awọn iṣẹju",
+    "seconds": "Awọn iṣẹju-aaya",
+    "actionOnComplete": "Iṣe nigbati aṣakoko ba pari",
+    "stopTimer": "Duro aṣakoko",
+    "restartTimer": "Tun bẹrẹ laifọwọyi",
+    "convertToStopwatch": "Yi pada si agogo ọwọ",
+    "countdownTo": "Ika pada",
+    "presets": "Awọn aṣakoko iyara",
+    "timerFinished": "Aṣakoko ti pari!",
+    "customTitle": "Akọle aṣa (aṣayan)",
+    "durationMode": "Ipo Akoko Gigun",
+    "countdownMode": "Kika si Ojo"
+  },
+  "stopwatch": {
+    "title": "Agogo ọwọ lori ayelujara",
+    "description": "Agogo ọwọ lori ayelujara ọfẹ pẹlu aṣakoko yika. Deede si millisecond. O dara fun ere-idaraya, ikẹkọ ati wiwọn akoko.",
+    "lap": "Yika",
+    "lapNumber": "Yika #",
+    "lapTime": "Akoko yika",
+    "totalTime": "Lapapọ akoko",
+    "precision": "Deede",
+    "laps": "Awọn yika",
+    "noLaps": "Ko si awọn yika ti a ṣe akọsilẹ sibẹsibẹ"
+  },
+  "clock": {
+    "title": "Agogo agbaye",
+    "description": "Ṣafihan akoko ni ọpọlọpọ awọn ilu kakiri agbaye. Tọpa ọpọlọpọ awọn agbegbe akoko ni akoko kanna.",
+    "currentTime": "Akoko lọwọlọwọ",
+    "timezone": "Agbegbe akoko",
+    "offset": "Iyatọ UTC",
+    "dayNight": "Ọsan/Alẹ",
+    "searchCities": "Wa awọn ilu...",
+    "addCity": "Fikun ilu",
+    "removeCity": "Yọ ilu kuro",
+    "noCitiesAdded": "Ko si awọn ilu ti a fikun sibẹsibẹ",
+    "addFirstCity": "Fikun ilu akọkọ rẹ lati bẹrẹ titọpa awọn agbegbe akoko"
+  },
+  "footer": {
+    "copyright": "© 2026 vClock. Gbogbo ẹtọ ni a pamọ.",
+    "madeWith": "A ṣe pẹlu ❤️ fun iṣelọpọ"
+  },
+  "meta": {
+    "home": {
+      "title": "⏰ Afọwọkọ lori ayelujara ọfẹ | Afọwọkọ wẹẹbu ti o rọrun & ti o gbẹkẹle",
+      "description": "Agogo afọwọkọ lori ayelujara 100% ọfẹ. ⏰ Ṣeto afọwọkọ rẹ ni awọn iṣẹju-aaya. ⏱️ Pẹlu aṣakoko, agogo ọwọ ati agogo agbaye. Ko nilo igbasilẹ!"
+    },
+    "timer": {
+      "title": "⏱️ Aṣakoko lori ayelujara | Ika pada & Pomodoro ọfẹ",
+      "description": "⚡ Aṣakoko ọfẹ pẹlu awọn eto ti 1, 5, 25 iṣẹju (Pomodoro). O dara fun sise ounjẹ 🍳, idaraya 💪, ikẹkọ 📚 Ko nilo igbasilẹ!"
+    },
+    "stopwatch": {
+      "title": "⏲️ Agogo ọwọ lori ayelujara pẹlu awọn yika | Deede millisecond",
+      "description": "🎯 Agogo ọwọ alamọdaju pẹlu gbigbasilẹ yika ailopin! Deede si millisecond. O dara fun sare 🏃, odo 🏊, ere-idaraya 💪, ere 🎮"
+    },
+    "clock": {
+      "title": "🌍 Agogo agbaye | Akoko laaye ni awọn ilu 50+",
+      "description": "✨ Ṣayẹwo akoko lọwọlọwọ ni awọn ilu 50+! Ṣe afiwe awọn agbegbe akoko: Lagos 🇳🇬, New York 🗽, Paris 🇫🇷 O dara fun iṣẹ latọna jijin 💼, irin-ajo ✈️"
+    },
+    "holidays": {
+      "title": "Kalẹnda awọn isinmi 2026-2027 - Naijiria - vClock",
+      "description": "Kalẹnda pipe awọn isinmi pẹlu ika pada. Tọpa awọn ọjọ si Keresimesi, Ọdun tuntun, Ileya ati gbogbo awọn isinmi pataki."
+    }
+  }
 }

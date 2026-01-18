@@ -6,10 +6,16 @@ const currentPath = Astro.url.pathname;
 
 // Helper para determinar si una ruta está activa
 function isActive(route: string): boolean {
-  if (route === '/' || route === '/es/' || route === '/it/') {
-    return currentPath === route;
+  // Check if it's a home route (just locale or root)
+  const isHomeRoute = route === '/' || route.match(/^\/[a-z]{2}(-[A-Z]{2})?\/$/);
+
+  if (isHomeRoute) {
+    return currentPath === route || currentPath === route.replace(/\/$/, '');
   }
-  return currentPath.startsWith(route);
+
+  // For other routes, check if current path starts with the route
+  // but make sure it's not just the locale prefix
+  return currentPath.startsWith(route) && currentPath !== route.split('/').slice(0, 2).join('/') + '/';
 }
 
 const navItems = [

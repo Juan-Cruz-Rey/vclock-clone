@@ -15,14 +15,14 @@ interface Props {
 const locale = getLocaleFromPath(Astro.url.pathname);
 const { id = 'sound-selector', selectedSound = 'alarm-1.mp3', onTestSound } = Astro.props;
 
-// Lista de sonidos disponibles
+// Lista de sonidos disponibles (traducidos)
 const sounds = [
-  { id: 'alarm-1', name: 'Classic Alarm', file: 'alarm-1.mp3' },
-  { id: 'alarm-2', name: 'Beep Beep', file: 'alarm-2.mp3' },
-  { id: 'alarm-3', name: 'Rooster', file: 'alarm-3.mp3' },
-  { id: 'alarm-4', name: 'Bell', file: 'alarm-4.mp3' },
-  { id: 'alarm-5', name: 'Chime', file: 'alarm-5.mp3' },
-  { id: 'alarm-6', name: 'Digital', file: 'alarm-6.mp3' },
+  { id: 'alarm-1', name: t(locale, 'alarm.sounds.classicAlarm'), file: 'alarm-1.mp3' },
+  { id: 'alarm-2', name: t(locale, 'alarm.sounds.beepBeep'), file: 'alarm-2.mp3' },
+  { id: 'alarm-3', name: t(locale, 'alarm.sounds.rooster'), file: 'alarm-3.mp3' },
+  { id: 'alarm-4', name: t(locale, 'alarm.sounds.bell'), file: 'alarm-4.mp3' },
+  { id: 'alarm-5', name: t(locale, 'alarm.sounds.chime'), file: 'alarm-5.mp3' },
+  { id: 'alarm-6', name: t(locale, 'alarm.sounds.digital'), file: 'alarm-6.mp3' },
 ];
 ---
 
@@ -62,31 +62,30 @@ const sounds = [
   </div>
 </div>
 
-<script define:vars={{ componentId: id }}>
+<script>
   import { getAudioManager } from '../../scripts/audio-manager';
 
-  // Usar el ID específico del componente para evitar conflictos
-  const soundSelector = document.getElementById(componentId) as HTMLSelectElement;
-  const testButton = document.getElementById(`${componentId}-test`) as HTMLButtonElement;
+  // Wait for DOM to be ready
+  document.addEventListener('DOMContentLoaded', () => {
+    const soundSelectors = document.querySelectorAll('[data-sound-selector]');
 
-  if (soundSelector && testButton) {
-    // Test sound cuando se hace click
-    testButton.addEventListener('click', (e) => {
-      e.preventDefault();
-      e.stopPropagation();
+    soundSelectors.forEach((selector) => {
+      const soundSelect = selector as HTMLSelectElement;
+      const testButton = soundSelect.parentElement?.querySelector('[data-test-sound]') as HTMLButtonElement;
 
-      const selectedSound = soundSelector.value || 'alarm-1.mp3';
-      const audioManager = getAudioManager();
+      if (testButton) {
+        // Test sound cuando se hace click
+        testButton.addEventListener('click', (e) => {
+          e.preventDefault();
+          e.stopPropagation();
 
-      console.log('Testing sound:', selectedSound);
-      audioManager.test(selectedSound, 3000);
+          const selectedSound = soundSelect.value || 'alarm-1.mp3';
+          const audioManager = getAudioManager();
+
+          console.log('Testing sound:', selectedSound);
+          audioManager.test(selectedSound, 3000);
+        });
+      }
     });
-
-    // También permitir test al cambiar de sonido
-    soundSelector.addEventListener('change', () => {
-      // Auto-test cuando cambia (opcional, comentar si no se desea)
-      // const audioManager = getAudioManager();
-      // audioManager.test(soundSelector.value, 2000);
-    });
-  }
+  });
 </script>

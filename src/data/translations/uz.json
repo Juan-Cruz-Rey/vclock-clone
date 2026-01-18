@@ -1,11 +1,137 @@
 {
-  "site":{"name":"vClock","description":"Vaqtni boshqarish uchun bepul onlayn vositalar"},
-  "nav":{"alarm":"Signal","timer":"Taymer","stopwatch":"Sekundomer","clock":"Dunyo soati","holidays":"Bayramlar","tools":"Vositalar","privacy":"Maxfiylik","terms":"Shartlar","contact":"Aloqa"},
-  "common":{"start":"Boshlash","stop":"To'xtatish","pause":"Pauza","resume":"Davom etish","reset":"Qayta o'rnatish","edit":"Tahrirlash","save":"Saqlash","cancel":"Bekor qilish","delete":"O'chirish","add":"Qo'shish","test":"Sinab ko'rish","close":"Yopish","confirm":"Tasdiqlash","yes":"Ha","no":"Yo'q","loading":"Yuklanmoqda...","error":"Xato","success":"Muvaffaqiyat"},
-  "alarm":{"title":"Onlayn signal","description":"Bepul onlayn signal soati. Moslashtirilishi mumkin bo'lgan tovushlar bilan istalgan vaqt uchun signalni o'rnating. Ro'yxatdan o'tish talab qilinmaydi.","setAlarm":"Signalni o'rnatish","stopAlarm":"Signalni to'xtatish","testSound":"Tovushni sinab ko'rish","hour":"Soat","minute":"Daqiqa","sound":"Tovush","repeat":"Signalni takrorlash","customTitle":"Maxsus sarlavha (ixtiyoriy)","recentlyUsed":"Yaqinda ishlatilgan","presets":"Tez sozlamalar","alarmSet":"Signal {time} uchun o'rnatildi","alarmStopped":"Signal to'xtatildi","alarmActive":"Signal faol","setAlarmFor":"{time} uchun signalni o'rnatish"},
-  "timer":{"title":"Onlayn taymer","description":"Bepul onlayn taymer. Istalgan davomiylik uchun taymerni o'rnating. Ovqat pishirish, mashq va samaradorlik uchun mukammal.","hours":"Soatlar","minutes":"Daqiqalar","seconds":"Soniyalar","actionOnComplete":"Taymer tugaganda harakat","stopTimer":"Taymerni to'xtatish","restartTimer":"Avtomatik qayta boshlash","convertToStopwatch":"Sekundomerga aylantirish","countdownTo":"Teskari hisoblash","presets":"Tez taymerlar","timerFinished":"Taymer tugadi!","customTitle":"Maxsus sarlavha (ixtiyoriy)"},
-  "stopwatch":{"title":"Onlayn sekundomer","description":"Aylanish taymeri bilan bepul onlayn sekundomer. Millisoniyagacha aniq. Sport, mashq va vaqtni o'lchash uchun mukammal.","lap":"Aylanish","lapNumber":"Aylanish #","lapTime":"Aylanish vaqti","totalTime":"Umumiy vaqt","precision":"Aniqlik","laps":"Aylanishlar","noLaps":"Hali hech qanday aylanish qayd etilmagan"},
-  "clock":{"title":"Dunyo soati","description":"Butun dunyo bo'ylab bir nechta shaharlarda vaqtni ko'rsatish. Bir vaqtning o'zida bir nechta vaqt mintaqalarini kuzatish.","currentTime":"Joriy vaqt","timezone":"Vaqt mintaqasi","offset":"UTC farqi","dayNight":"Kun/Tun","searchCities":"Shaharlarni qidirish...","addCity":"Shahar qo'shish","removeCity":"Shaharni olib tashlash","noCitiesAdded":"Hali shaharlar qo'shilmagan","addFirstCity":"Vaqt mintaqalarini kuzatishni boshlash uchun birinchi shaharingizni qo'shing"},
-  "footer":{"copyright":"© 2026 vClock. Barcha huquqlar himoyalangan.","madeWith":"Samaradorlik uchun ❤️ bilan yaratildi"},
-  "meta":{"home":{"title":"⏰ Bepul onlayn signal | Oddiy va ishonchli veb signal","description":"100% bepul onlayn signal soati. ⏰ Signalni soniyalarda o'rnating. ⏱️ Taymer, sekundomer va dunyo soatini o'z ichiga oladi. Yuklab olish shart emas!"},"timer":{"title":"⏱️ Onlayn taymer | Bepul teskari hisoblash va Pomodoro","description":"⚡ 1, 5, 25 daqiqali (Pomodoro) oldindan sozlamalar bilan bepul taymer. Ovqat pishirish 🍳, mashq 💪, o'qish 📚 uchun mukammal. Yuklab olish shart emas!"},"stopwatch":{"title":"⏲️ Aylanishlar bilan onlayn sekundomer | Millisoniya aniqligi","description":"🎯 Cheksiz aylanish yozuvi bilan professional sekundomer! Millisoniyagacha aniq. Yugurish 🏃, suzish 🏊, sport 💪, o'yin 🎮 uchun mukammal"},"clock":{"title":"🌍 Dunyo soati | 50+ shaharda jonli vaqt","description":"✨ 50+ shaharda joriy vaqtni tekshiring! Vaqt mintaqalarini solishtiring: Toshkent 🇺🇿, Nyu-York 🗽, Parij 🇫🇷 Masofaviy ish 💼, sayohat ✈️ uchun mukammal"},"holidays":{"title":"Bayramlar taqvimi 2026-2027 - O'zbekiston - vClock","description":"Teskari hisoblash bilan to'liq bayramlar taqvimi. Yangi yil, Navro'z, Ramazon hayiti va barcha muhim bayramlargacha kunlarni kuzatib boring."}}
+  "site": {
+    "name": "vClock",
+    "description": "Vaqtni boshqarish uchun bepul onlayn vositalar"
+  },
+  "nav": {
+    "alarm": "Signal",
+    "timer": "Taymer",
+    "stopwatch": "Sekundomer",
+    "clock": "Dunyo soati",
+    "holidays": "Bayramlar",
+    "tools": "Vositalar",
+    "privacy": "Maxfiylik",
+    "terms": "Shartlar",
+    "contact": "Aloqa"
+  },
+  "common": {
+    "start": "Boshlash",
+    "stop": "To'xtatish",
+    "pause": "Pauza",
+    "resume": "Davom etish",
+    "reset": "Qayta o'rnatish",
+    "edit": "Tahrirlash",
+    "save": "Saqlash",
+    "cancel": "Bekor qilish",
+    "delete": "O'chirish",
+    "add": "Qo'shish",
+    "test": "Sinab ko'rish",
+    "close": "Yopish",
+    "confirm": "Tasdiqlash",
+    "yes": "Ha",
+    "no": "Yo'q",
+    "loading": "Yuklanmoqda...",
+    "error": "Xato",
+    "success": "Muvaffaqiyat"
+  },
+  "alarm": {
+    "title": "Onlayn signal",
+    "description": "Bepul onlayn signal soati. Moslashtirilishi mumkin bo'lgan tovushlar bilan istalgan vaqt uchun signalni o'rnating. Ro'yxatdan o'tish talab qilinmaydi.",
+    "setAlarm": "Signalni o'rnatish",
+    "stopAlarm": "Signalni to'xtatish",
+    "testSound": "Tovushni sinab ko'rish",
+    "hour": "Soat",
+    "minute": "Daqiqa",
+    "sound": "Tovush",
+    "repeat": "Signalni takrorlash",
+    "customTitle": "Maxsus sarlavha (ixtiyoriy)",
+    "recentlyUsed": "Yaqinda ishlatilgan",
+    "presets": "Tez sozlamalar",
+    "alarmSet": "Signal {time} uchun o'rnatildi",
+    "alarmStopped": "Signal to'xtatildi",
+    "alarmActive": "Signal faol",
+    "setAlarmFor": "{time} uchun signalni o'rnatish",
+    "placeholderTitle": "Uyg'on!",
+    "alarmRinging": "Signal!",
+    "timesUp": "Vaqt tugadi!",
+    "dismissAlarm": "Signalni O'chirish",
+    "alarmSetFor": "Signal {time} uchun o'rnatildi ({hours}s {minutes}d ichida)",
+    "in": "ichida",
+    "alarmTitle": "SIGNAL!",
+    "sounds": {
+      "classicAlarm": "Klassik Signal",
+      "beepBeep": "Bip Bip",
+      "rooster": "Xo'roz",
+      "bell": "Qo'ng'iroq",
+      "chime": "Jaranglash",
+      "digital": "Raqamli"
+    }
+  },
+  "timer": {
+    "title": "Onlayn taymer",
+    "description": "Bepul onlayn taymer. Istalgan davomiylik uchun taymerni o'rnating. Ovqat pishirish, mashq va samaradorlik uchun mukammal.",
+    "hours": "Soatlar",
+    "minutes": "Daqiqalar",
+    "seconds": "Soniyalar",
+    "actionOnComplete": "Taymer tugaganda harakat",
+    "stopTimer": "Taymerni to'xtatish",
+    "restartTimer": "Avtomatik qayta boshlash",
+    "convertToStopwatch": "Sekundomerga aylantirish",
+    "countdownTo": "Teskari hisoblash",
+    "presets": "Tez taymerlar",
+    "timerFinished": "Taymer tugadi!",
+    "customTitle": "Maxsus sarlavha (ixtiyoriy)",
+    "durationMode": "Davomiylik Rejimi",
+    "countdownMode": "Sanaga Ortga Hisoblash"
+  },
+  "stopwatch": {
+    "title": "Onlayn sekundomer",
+    "description": "Aylanish taymeri bilan bepul onlayn sekundomer. Millisoniyagacha aniq. Sport, mashq va vaqtni o'lchash uchun mukammal.",
+    "lap": "Aylanish",
+    "lapNumber": "Aylanish #",
+    "lapTime": "Aylanish vaqti",
+    "totalTime": "Umumiy vaqt",
+    "precision": "Aniqlik",
+    "laps": "Aylanishlar",
+    "noLaps": "Hali hech qanday aylanish qayd etilmagan"
+  },
+  "clock": {
+    "title": "Dunyo soati",
+    "description": "Butun dunyo bo'ylab bir nechta shaharlarda vaqtni ko'rsatish. Bir vaqtning o'zida bir nechta vaqt mintaqalarini kuzatish.",
+    "currentTime": "Joriy vaqt",
+    "timezone": "Vaqt mintaqasi",
+    "offset": "UTC farqi",
+    "dayNight": "Kun/Tun",
+    "searchCities": "Shaharlarni qidirish...",
+    "addCity": "Shahar qo'shish",
+    "removeCity": "Shaharni olib tashlash",
+    "noCitiesAdded": "Hali shaharlar qo'shilmagan",
+    "addFirstCity": "Vaqt mintaqalarini kuzatishni boshlash uchun birinchi shaharingizni qo'shing"
+  },
+  "footer": {
+    "copyright": "© 2026 vClock. Barcha huquqlar himoyalangan.",
+    "madeWith": "Samaradorlik uchun ❤️ bilan yaratildi"
+  },
+  "meta": {
+    "home": {
+      "title": "⏰ Bepul onlayn signal | Oddiy va ishonchli veb signal",
+      "description": "100% bepul onlayn signal soati. ⏰ Signalni soniyalarda o'rnating. ⏱️ Taymer, sekundomer va dunyo soatini o'z ichiga oladi. Yuklab olish shart emas!"
+    },
+    "timer": {
+      "title": "⏱️ Onlayn taymer | Bepul teskari hisoblash va Pomodoro",
+      "description": "⚡ 1, 5, 25 daqiqali (Pomodoro) oldindan sozlamalar bilan bepul taymer. Ovqat pishirish 🍳, mashq 💪, o'qish 📚 uchun mukammal. Yuklab olish shart emas!"
+    },
+    "stopwatch": {
+      "title": "⏲️ Aylanishlar bilan onlayn sekundomer | Millisoniya aniqligi",
+      "description": "🎯 Cheksiz aylanish yozuvi bilan professional sekundomer! Millisoniyagacha aniq. Yugurish 🏃, suzish 🏊, sport 💪, o'yin 🎮 uchun mukammal"
+    },
+    "clock": {
+      "title": "🌍 Dunyo soati | 50+ shaharda jonli vaqt",
+      "description": "✨ 50+ shaharda joriy vaqtni tekshiring! Vaqt mintaqalarini solishtiring: Toshkent 🇺🇿, Nyu-York 🗽, Parij 🇫🇷 Masofaviy ish 💼, sayohat ✈️ uchun mukammal"
+    },
+    "holidays": {
+      "title": "Bayramlar taqvimi 2026-2027 - O'zbekiston - vClock",
+      "description": "Teskari hisoblash bilan to'liq bayramlar taqvimi. Yangi yil, Navro'z, Ramazon hayiti va barcha muhim bayramlargacha kunlarni kuzatib boring."
+    }
+  }
 }

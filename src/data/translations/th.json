@@ -50,7 +50,22 @@
     "alarmSet": "ตั้งนาฬิกาปลุกที่ {time}",
     "alarmStopped": "หยุดนาฬิกาปลุกแล้ว",
     "alarmActive": "นาฬิกาปลุกทำงานอยู่",
-    "setAlarmFor": "ตั้งนาฬิกาปลุกสำหรับ {time}"
+    "setAlarmFor": "ตั้งนาฬิกาปลุกสำหรับ {time}",
+    "placeholderTitle": "ตื่นได้แล้ว!",
+    "alarmRinging": "นาฬิกาปลุก!",
+    "timesUp": "หมดเวลา!",
+    "dismissAlarm": "ปิดนาฬิกาปลุก",
+    "alarmSetFor": "ตั้งนาฬิกาปลุกไว้ที่ {time} (ใน {hours}ชม. {minutes}น.)",
+    "in": "ใน",
+    "alarmTitle": "นาฬิกาปลุก!",
+    "sounds": {
+      "classicAlarm": "นาฬิกาปลุกคลาสสิก",
+      "beepBeep": "เสียงบี๊บ",
+      "rooster": "ไก่ขัน",
+      "bell": "กระดิ่ง",
+      "chime": "เสียงระฆัง",
+      "digital": "ดิจิทัล"
+    }
   },
   "timer": {
     "title": "ตั้งเวลาออนไลน์",
@@ -65,7 +80,9 @@
     "countdownTo": "นับถอยหลัง",
     "presets": "ตั้งเวลาด่วน",
     "timerFinished": "หมดเวลา!",
-    "customTitle": "ชื่อกำหนดเอง (ไม่บังคับ)"
+    "customTitle": "ชื่อกำหนดเอง (ไม่บังคับ)",
+    "durationMode": "โหมดระยเวลา",
+    "countdownMode": "นับถอยหลังถึงวันที่"
   },
   "stopwatch": {
     "title": "นาฬิกาจับเวลาออนไลน์",

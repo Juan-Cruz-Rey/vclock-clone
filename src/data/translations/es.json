@@ -48,7 +48,22 @@
     "alarmSet": "Alarma configurada para {time}",
     "alarmStopped": "Alarma detenida",
     "alarmActive": "La alarma está activa",
-    "setAlarmFor": "Poner Alarma para {time}"
+    "setAlarmFor": "Poner Alarma para {time}",
+    "placeholderTitle": "¡Despierta!",
+    "alarmRinging": "¡Alarma!",
+    "timesUp": "¡Se acabó el tiempo!",
+    "dismissAlarm": "Descartar Alarma",
+    "alarmSetFor": "Alarma configurada para {time} (en {hours}h {minutes}m)",
+    "in": "en",
+    "alarmTitle": "¡ALARMA!",
+    "sounds": {
+      "classicAlarm": "Alarma Clásica",
+      "beepBeep": "Bip Bip",
+      "rooster": "Gallo",
+      "bell": "Campana",
+      "chime": "Carillón",
+      "digital": "Digital"
+    }
   },
   "timer": {
     "title": "Temporizador en Línea",
@@ -63,7 +78,9 @@
     "countdownTo": "Cuenta regresiva hasta",
     "presets": "Temporizadores Rápidos",
     "timerFinished": "¡Temporizador finalizado!",
-    "customTitle": "Título personalizado (opcional)"
+    "customTitle": "Título personalizado (opcional)",
+    "durationMode": "Modo de Duración",
+    "countdownMode": "Cuenta Regresiva a Fecha"
   },
   "stopwatch": {
     "title": "Cronómetro en Línea",

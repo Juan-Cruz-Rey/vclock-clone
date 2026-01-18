@@ -50,7 +50,22 @@
     "alarmSet": "{time}에 알람이 설정되었습니다",
     "alarmStopped": "알람이 정지되었습니다",
     "alarmActive": "알람이 활성화되어 있습니다",
-    "setAlarmFor": "{time}에 알람 설정"
+    "setAlarmFor": "{time}에 알람 설정",
+    "placeholderTitle": "일어나세요!",
+    "alarmRinging": "알람!",
+    "timesUp": "시간 종료!",
+    "dismissAlarm": "알람 해제",
+    "alarmSetFor": "{time}에 알람 설정됨 ({hours}시간 {minutes}분 후)",
+    "in": "후",
+    "alarmTitle": "알람!",
+    "sounds": {
+      "classicAlarm": "클래식 알람",
+      "beepBeep": "삐삐",
+      "rooster": "수탉",
+      "bell": "종",
+      "chime": "차임벨",
+      "digital": "디지털"
+    }
   },
   "timer": {
     "title": "온라인 타이머",
@@ -65,7 +80,9 @@
     "countdownTo": "카운트다운",
     "presets": "빠른 타이머",
     "timerFinished": "타이머 종료!",
-    "customTitle": "사용자 정의 제목(선택사항)"
+    "customTitle": "사용자 정의 제목(선택사항)",
+    "durationMode": "기간 모드",
+    "countdownMode": "날짜까지 카운트다운"
   },
   "stopwatch": {
     "title": "온라인 스톱워치",

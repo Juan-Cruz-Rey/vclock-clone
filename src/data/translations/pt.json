@@ -50,7 +50,22 @@
     "alarmSet": "Alarme definido para {time}",
     "alarmStopped": "Alarme parado",
     "alarmActive": "O alarme está ativo",
-    "setAlarmFor": "Definir alarme para {time}"
+    "setAlarmFor": "Definir alarme para {time}",
+    "placeholderTitle": "Acorde!",
+    "alarmRinging": "Alarme!",
+    "timesUp": "Tempo esgotado!",
+    "dismissAlarm": "Dispensar Alarme",
+    "alarmSetFor": "Alarme definido para {time} (em {hours}h {minutes}m)",
+    "in": "em",
+    "alarmTitle": "ALARME!",
+    "sounds": {
+      "classicAlarm": "Alarme Clássico",
+      "beepBeep": "Bip Bip",
+      "rooster": "Galo",
+      "bell": "Sino",
+      "chime": "Carrilhão",
+      "digital": "Digital"
+    }
   },
   "timer": {
     "title": "Temporizador Online",
@@ -65,7 +80,9 @@
     "countdownTo": "Contagem regressiva para",
     "presets": "Temporizadores Rápidos",
     "timerFinished": "Temporizador concluído!",
-    "customTitle": "Título personalizado (opcional)"
+    "customTitle": "Título personalizado (opcional)",
+    "durationMode": "Modo de Duração",
+    "countdownMode": "Contagem Regressiva para Data"
   },
   "stopwatch": {
     "title": "Cronômetro Online",

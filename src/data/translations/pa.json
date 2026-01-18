@@ -50,7 +50,22 @@
     "alarmSet": "{time} ਲਈ ਅਲਾਰਮ ਸੈਟ ਕੀਤਾ ਗਿਆ",
     "alarmStopped": "ਅਲਾਰਮ ਬੰਦ ਹੋ ਗਿਆ",
     "alarmActive": "ਅਲਾਰਮ ਸਰਗਰਮ ਹੈ",
-    "setAlarmFor": "{time} ਲਈ ਅਲਾਰਮ ਸੈਟ ਕਰੋ"
+    "setAlarmFor": "{time} ਲਈ ਅਲਾਰਮ ਸੈਟ ਕਰੋ",
+    "placeholderTitle": "ਜਾਗ ਜਾਓ!",
+    "alarmRinging": "ਅਲਾਰਮ!",
+    "timesUp": "ਸਮਾਂ ਖਤਮ!",
+    "dismissAlarm": "ਅਲਾਰਮ ਬੰਦ ਕਰੋ",
+    "alarmSetFor": "{time} ਲਈ ਅਲਾਰਮ ਸੈੱਟ ਕੀਤਾ ({hours}ਘੰ {minutes}ਮਿੰ ਵਿੱਚ)",
+    "in": "ਵਿੱਚ",
+    "alarmTitle": "ਅਲਾਰਮ!",
+    "sounds": {
+      "classicAlarm": "ਕਲਾਸਿਕ ਅਲਾਰਮ",
+      "beepBeep": "ਬੀਪ ਬੀਪ",
+      "rooster": "ਮੁਰਗਾ",
+      "bell": "ਘੰਟੀ",
+      "chime": "ਝੰਕਾਰ",
+      "digital": "ਡਿਜੀਟਲ"
+    }
   },
   "timer": {
     "title": "ਔਨਲਾਈਨ ਟਾਈਮਰ",
@@ -65,7 +80,9 @@
     "countdownTo": "ਉਲਟੀ ਗਿਣਤੀ",
     "presets": "ਤੇਜ਼ ਟਾਈਮਰ",
     "timerFinished": "ਟਾਈਮਰ ਪੂਰਾ ਹੋਇਆ!",
-    "customTitle": "ਕਸਟਮ ਸਿਰਲੇਖ (ਵਿਕਲਪਿਕ)"
+    "customTitle": "ਕਸਟਮ ਸਿਰਲੇਖ (ਵਿਕਲਪਿਕ)",
+    "durationMode": "ਮਿਆਦ ਮੋਡ",
+    "countdownMode": "ਮਿਤੀ ਤੱਕ ਉਲਟੀ ਗਿਣਤੀ"
   },
   "stopwatch": {
     "title": "ਔਨਲਾਈਨ ਸਟਾਪਵਾਚ",

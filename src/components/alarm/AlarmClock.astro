@@ -109,7 +109,7 @@ const { presetHour, presetMinute, presetMeridian } = Astro.props;
             type="text"
             id="alarm-title"
             name="title"
-            placeholder="Wake up!"
+            placeholder={t(locale, 'alarm.placeholderTitle')}
             class="text-input"
             maxlength="50"
           />
@@ -162,16 +162,16 @@ const { presetHour, presetMinute, presetMeridian } = Astro.props;
           </svg>
         </div>
         <h2 id="alarm-modal-title" class="text-3xl font-bold text-gray-900 dark:text-white mb-2">
-          Alarm!
+          {t(locale, 'alarm.alarmRinging')}
         </h2>
         <p id="alarm-modal-time" class="text-xl text-gray-600 dark:text-gray-400 mb-6">
-          Time's up!
+          {t(locale, 'alarm.timesUp')}
         </p>
         <button
           id="dismiss-alarm-btn"
           class="btn-danger w-full text-lg py-3"
         >
-          Dismiss Alarm
+          {t(locale, 'alarm.dismissAlarm')}
         </button>
       </div>
     </div>
@@ -184,7 +184,14 @@ const { presetHour, presetMinute, presetMeridian } = Astro.props;
   </div>
 </div>
 
-<script>
+<script define:vars={{
+  textAlarmRinging: t(locale, 'alarm.alarmRinging'),
+  textTimesUp: t(locale, 'alarm.timesUp'),
+  textDismissAlarm: t(locale, 'alarm.dismissAlarm'),
+  textAlarmTitle: t(locale, 'alarm.alarmTitle'),
+  textAlarmSetFor: t(locale, 'alarm.alarmSetFor'),
+  textIn: t(locale, 'alarm.in')
+}}>
   import { getAlarmClock } from '../../scripts/alarm-logic';
   import { Storage } from '../../scripts/storage';
   import { formatDate } from '../../scripts/utils';
@@ -249,7 +256,7 @@ const { presetHour, presetMinute, presetMeridian } = Astro.props;
 
   loadSavedSettings();
 
-  // Solicitar permisos de notificación al cargar
+  // Solicitar permisos de notificación (solo cuando el usuario intente configurar una alarma)
   async function requestNotifications() {
     if (typeof Notification !== 'undefined' && Notification.permission === 'default') {
       try {
@@ -259,9 +266,6 @@ const { presetHour, presetMinute, presetMeridian } = Astro.props;
       }
     }
   }
-
-  // Solicitar permisos al cargar la página
-  requestNotifications();
 
   // Manejar submit del formulario
   alarmForm?.addEventListener('submit', async (e) => {
@@ -274,7 +278,7 @@ const { presetHour, presetMinute, presetMeridian } = Astro.props;
     const repeat = repeatCheckbox.checked;
     const title = titleInput.value;
 
-    // Solicitar permisos de notificación si aún no se han otorgado
+    // Solicitar permisos de notificación cuando el usuario configure la alarma
     await requestNotifications();
 
     // Configurar y activar alarma
@@ -318,7 +322,10 @@ const { presetHour, presetMinute, presetMeridian } = Astro.props;
     if (timeUntil) {
       const settings = alarmClock.getSettings();
       const alarmTime = `${settings.hour}:${settings.minute.toString().padStart(2, '0')} ${settings.meridian}`;
-      alarmTimeText.textContent = `Alarm set for ${alarmTime} (in ${timeUntil.hours}h ${timeUntil.minutes}m)`;
+      alarmTimeText.textContent = textAlarmSetFor
+        .replace('{time}', alarmTime)
+        .replace('{hours}', timeUntil.hours.toString())
+        .replace('{minutes}', timeUntil.minutes.toString());
     }
   }
 
@@ -341,7 +348,7 @@ const { presetHour, presetMinute, presetMeridian } = Astro.props;
     const alarmTime = `${settings.hour}:${settings.minute.toString().padStart(2, '0')} ${settings.meridian}`;
 
     if (alarmModalTitle) {
-      alarmModalTitle.textContent = settings.title || 'Alarm!';
+      alarmModalTitle.textContent = settings.title || textAlarmRinging;
     }
     if (alarmModalTime) {
       alarmModalTime.textContent = alarmTime;
@@ -353,7 +360,7 @@ const { presetHour, presetMinute, presetMeridian } = Astro.props;
     let titleFlash = true;
     const originalTitle = document.title;
     const flashInterval = setInterval(() => {
-      document.title = titleFlash ? '🔔 ALARM! 🔔' : originalTitle;
+      document.title = titleFlash ? `🔔 ${textAlarmTitle} 🔔` : originalTitle;
       titleFlash = !titleFlash;
     }, 1000);
 

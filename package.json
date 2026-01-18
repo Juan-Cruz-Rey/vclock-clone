@@ -4,15 +4,20 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build",
+    "build": "astro build && node scripts/indexnow-submit.js",
+    "build:no-indexnow": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "generate:og": "node scripts/generate-og-image.js"
+    "generate:og": "node scripts/generate-og-image.js",
+    "indexnow": "node scripts/indexnow-submit.js"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.0",
     "@tailwindcss/vite": "^4.1.18",
     "astro": "^5.16.11",
     "tailwindcss": "^4.1.18"
+  },
+  "devDependencies": {
+    "glob": "^13.0.0"
   }
 }

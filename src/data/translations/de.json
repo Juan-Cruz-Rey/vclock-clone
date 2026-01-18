@@ -50,7 +50,22 @@
     "alarmSet": "Wecker gestellt für {time}",
     "alarmStopped": "Wecker gestoppt",
     "alarmActive": "Wecker ist aktiv",
-    "setAlarmFor": "Wecker stellen für {time}"
+    "setAlarmFor": "Wecker stellen für {time}",
+    "placeholderTitle": "Aufwachen!",
+    "alarmRinging": "Alarm!",
+    "timesUp": "Zeit ist um!",
+    "dismissAlarm": "Alarm Beenden",
+    "alarmSetFor": "Alarm gestellt für {time} (in {hours}h {minutes}m)",
+    "in": "in",
+    "alarmTitle": "ALARM!",
+    "sounds": {
+      "classicAlarm": "Klassischer Alarm",
+      "beepBeep": "Piep Piep",
+      "rooster": "Hahn",
+      "bell": "Glocke",
+      "chime": "Glockenspiel",
+      "digital": "Digital"
+    }
   },
   "timer": {
     "title": "Online-Timer",
@@ -65,7 +80,9 @@
     "countdownTo": "Countdown bis",
     "presets": "Schnelle Timer",
     "timerFinished": "Timer beendet!",
-    "customTitle": "Benutzerdefinierter Titel (optional)"
+    "customTitle": "Benutzerdefinierter Titel (optional)",
+    "durationMode": "Dauer-Modus",
+    "countdownMode": "Countdown zu Datum"
   },
   "stopwatch": {
     "title": "Online-Stoppuhr",

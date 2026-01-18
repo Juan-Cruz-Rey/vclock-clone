@@ -50,7 +50,22 @@
     "alarmSet": "{time}にアラームを設定しました",
     "alarmStopped": "アラームを停止しました",
     "alarmActive": "アラームが有効です",
-    "setAlarmFor": "{time}のアラームを設定"
+    "setAlarmFor": "{time}のアラームを設定",
+    "placeholderTitle": "起きて!",
+    "alarmRinging": "アラーム!",
+    "timesUp": "時間切れ!",
+    "dismissAlarm": "アラームを解除",
+    "alarmSetFor": "{time}にアラームを設定しました（{hours}時間{minutes}分後）",
+    "in": "後",
+    "alarmTitle": "アラーム!",
+    "sounds": {
+      "classicAlarm": "クラシックアラーム",
+      "beepBeep": "ビープ音",
+      "rooster": "ニワトリ",
+      "bell": "ベル",
+      "chime": "チャイム",
+      "digital": "デジタル"
+    }
   },
   "timer": {
     "title": "オンラインタイマー",
@@ -65,7 +80,9 @@
     "countdownTo": "カウントダウン",
     "presets": "クイックタイマー",
     "timerFinished": "タイマー終了！",
-    "customTitle": "カスタムタイトル（オプション）"
+    "customTitle": "カスタムタイトル（オプション）",
+    "durationMode": "所要時間モード",
+    "countdownMode": "日付までのカウントダウン"
   },
   "stopwatch": {
     "title": "オンラインストップウォッチ",

@@ -50,7 +50,22 @@
     "alarmSet": "تم ضبط المنبه على {time}",
     "alarmStopped": "تم إيقاف المنبه",
     "alarmActive": "المنبه نشط",
-    "setAlarmFor": "ضبط المنبه لـ {time}"
+    "setAlarmFor": "ضبط المنبه لـ {time}",
+    "placeholderTitle": "استيقظ!",
+    "alarmRinging": "منبه!",
+    "timesUp": "انتهى الوقت!",
+    "dismissAlarm": "إيقاف المنبه",
+    "alarmSetFor": "تم ضبط المنبه على {time} (بعد {hours}س {minutes}د)",
+    "in": "بعد",
+    "alarmTitle": "منبه!",
+    "sounds": {
+      "classicAlarm": "منبه كلاسيكي",
+      "beepBeep": "بيب بيب",
+      "rooster": "ديك",
+      "bell": "جرس",
+      "chime": "رنين",
+      "digital": "رقمي"
+    }
   },
   "timer": {
     "title": "مؤقت عبر الإنترنت",
@@ -65,7 +80,9 @@
     "countdownTo": "العد التنازلي إلى",
     "presets": "مؤقتات سريعة",
     "timerFinished": "انتهى المؤقت!",
-    "customTitle": "عنوان مخصص (اختياري)"
+    "customTitle": "عنوان مخصص (اختياري)",
+    "durationMode": "وضع المدة",
+    "countdownMode": "العد التنازلي إلى التاريخ"
   },
   "stopwatch": {
     "title": "ساعة إيقاف عبر الإنترنت",

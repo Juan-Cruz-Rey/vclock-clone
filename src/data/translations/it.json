@@ -48,7 +48,22 @@
     "alarmSet": "Sveglia impostata per {time}",
     "alarmStopped": "Sveglia fermata",
     "alarmActive": "La sveglia è attiva",
-    "setAlarmFor": "Imposta Sveglia per {time}"
+    "setAlarmFor": "Imposta Sveglia per {time}",
+    "placeholderTitle": "Svegliati!",
+    "alarmRinging": "Allarme!",
+    "timesUp": "Tempo scaduto!",
+    "dismissAlarm": "Ignora Allarme",
+    "alarmSetFor": "Allarme impostato per {time} (tra {hours}h {minutes}m)",
+    "in": "tra",
+    "alarmTitle": "ALLARME!",
+    "sounds": {
+      "classicAlarm": "Allarme Classico",
+      "beepBeep": "Bip Bip",
+      "rooster": "Gallo",
+      "bell": "Campana",
+      "chime": "Carillon",
+      "digital": "Digitale"
+    }
   },
   "timer": {
     "title": "Timer Online",
@@ -63,7 +78,9 @@
     "countdownTo": "Conto alla rovescia fino a",
     "presets": "Timer Rapidi",
     "timerFinished": "Timer terminato!",
-    "customTitle": "Titolo personalizzato (opzionale)"
+    "customTitle": "Titolo personalizzato (opzionale)",
+    "durationMode": "Modalità Durata",
+    "countdownMode": "Conto alla Rovescia a Data"
   },
   "stopwatch": {
     "title": "Cronometro Online",

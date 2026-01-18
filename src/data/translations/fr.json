@@ -50,7 +50,22 @@
     "alarmSet": "Réveil programmé pour {time}",
     "alarmStopped": "Réveil arrêté",
     "alarmActive": "Le réveil est actif",
-    "setAlarmFor": "Programmer le réveil pour {time}"
+    "setAlarmFor": "Programmer le réveil pour {time}",
+    "placeholderTitle": "Réveillez-vous !",
+    "alarmRinging": "Alarme !",
+    "timesUp": "Temps écoulé !",
+    "dismissAlarm": "Ignorer l'Alarme",
+    "alarmSetFor": "Alarme réglée pour {time} (dans {hours}h {minutes}m)",
+    "in": "dans",
+    "alarmTitle": "ALARME !",
+    "sounds": {
+      "classicAlarm": "Alarme Classique",
+      "beepBeep": "Bip Bip",
+      "rooster": "Coq",
+      "bell": "Cloche",
+      "chime": "Carillon",
+      "digital": "Numérique"
+    }
   },
   "timer": {
     "title": "Minuteur en Ligne",
@@ -65,7 +80,9 @@
     "countdownTo": "Compte à rebours vers",
     "presets": "Minuteurs Rapides",
     "timerFinished": "Minuteur terminé !",
-    "customTitle": "Titre personnalisé (optionnel)"
+    "customTitle": "Titre personnalisé (optionnel)",
+    "durationMode": "Mode Durée",
+    "countdownMode": "Compte à Rebours vers Date"
   },
   "stopwatch": {
     "title": "Chronomètre en Ligne",

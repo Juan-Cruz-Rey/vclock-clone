@@ -50,7 +50,22 @@
     "alarmSet": "Будильник установлен на {time}",
     "alarmStopped": "Будильник остановлен",
     "alarmActive": "Будильник активен",
-    "setAlarmFor": "Установить будильник на {time}"
+    "setAlarmFor": "Установить будильник на {time}",
+    "placeholderTitle": "Просыпайтесь!",
+    "alarmRinging": "Будильник!",
+    "timesUp": "Время вышло!",
+    "dismissAlarm": "Отключить Будильник",
+    "alarmSetFor": "Будильник установлен на {time} (через {hours}ч {minutes}м)",
+    "in": "через",
+    "alarmTitle": "БУДИЛЬНИК!",
+    "sounds": {
+      "classicAlarm": "Классический Будильник",
+      "beepBeep": "Бип-Бип",
+      "rooster": "Петух",
+      "bell": "Колокол",
+      "chime": "Звон",
+      "digital": "Цифровой"
+    }
   },
   "timer": {
     "title": "Онлайн Таймер",
@@ -65,7 +80,9 @@
     "countdownTo": "Обратный отсчет до",
     "presets": "Быстрые Таймеры",
     "timerFinished": "Таймер завершен!",
-    "customTitle": "Пользовательское название (необязательно)"
+    "customTitle": "Пользовательское название (необязательно)",
+    "durationMode": "Режим Длительности",
+    "countdownMode": "Обратный Отсчет до Даты"
   },
   "stopwatch": {
     "title": "Онлайн Секундомер",

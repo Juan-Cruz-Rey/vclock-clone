@@ -1,11 +1,137 @@
 {
-  "site":{"name":"vClock","description":"Gratis onlineverktyg för tidshantering"},
-  "nav":{"alarm":"Alarm","timer":"Timer","stopwatch":"Stoppur","clock":"Världsklocka","holidays":"Helgdagar","tools":"Verktyg","privacy":"Integritet","terms":"Villkor","contact":"Kontakt"},
-  "common":{"start":"Start","stop":"Stopp","pause":"Paus","resume":"Återuppta","reset":"Återställ","edit":"Redigera","save":"Spara","cancel":"Avbryt","delete":"Radera","add":"Lägg till","test":"Testa","close":"Stäng","confirm":"Bekräfta","yes":"Ja","no":"Nej","loading":"Laddar...","error":"Fel","success":"Framgång"},
-  "alarm":{"title":"Online alarm","description":"Gratis online väckarklocka. Ställ in ditt alarm för vilken tid som helst med anpassningsbara ljud. Ingen registrering krävs.","setAlarm":"Ställ in alarm","stopAlarm":"Stoppa alarm","testSound":"Testa ljud","hour":"Timme","minute":"Minut","sound":"Ljud","repeat":"Upprepa alarm","customTitle":"Anpassad titel (valfritt)","recentlyUsed":"Nyligen använd","presets":"Snabbinställningar","alarmSet":"Alarm inställt för {time}","alarmStopped":"Alarm stoppat","alarmActive":"Alarmet är aktivt","setAlarmFor":"Ställ in alarm för {time}"},
-  "timer":{"title":"Online timer","description":"Gratis online timer. Ställ in timer för vilken varaktighet som helst. Perfekt för matlagning, träning och produktivitet.","hours":"Timmar","minutes":"Minuter","seconds":"Sekunder","actionOnComplete":"Åtgärd vid avslutad timer","stopTimer":"Stoppa timer","restartTimer":"Starta om automatiskt","convertToStopwatch":"Konvertera till stoppur","countdownTo":"Nedräkning","presets":"Snabbtimers","timerFinished":"Timer klar!","customTitle":"Anpassad titel (valfritt)"},
-  "stopwatch":{"title":"Online stoppur","description":"Gratis online stoppur med varvtimer. Exakt till millisekunden. Perfekt för sport, träning och tidtagning.","lap":"Varv","lapNumber":"Varv #","lapTime":"Varvtid","totalTime":"Total tid","precision":"Precision","laps":"Varv","noLaps":"Inga varv inspelade ännu"},
-  "clock":{"title":"Världsklocka","description":"Visa tid i flera städer runt om i världen. Spåra flera tidszoner samtidigt.","currentTime":"Nuvarande tid","timezone":"Tidszon","offset":"UTC-offset","dayNight":"Dag/Natt","searchCities":"Sök städer...","addCity":"Lägg till stad","removeCity":"Ta bort stad","noCitiesAdded":"Inga städer tillagda ännu","addFirstCity":"Lägg till din första stad för att börja spåra tidszoner"},
-  "footer":{"copyright":"© 2026 vClock. Alla rättigheter förbehållna.","madeWith":"Skapad med ❤️ för produktivitet"},
-  "meta":{"home":{"title":"⏰ Gratis online alarm | Enkelt & pålitligt webbalarm","description":"100% gratis online väckarklocka. ⏰ Ställ in ditt alarm på några sekunder. ⏱️ Inkluderar timer, stoppur och världsklocka. Ingen nedladdning behövs!"},"timer":{"title":"⏱️ Online timer | Gratis nedräkning & Pomodoro","description":"⚡ Gratis timer med förinställningar på 1, 5, 25 minuter (Pomodoro). Perfekt för matlagning 🍳, träning 💪, studier 📚 Ingen nedladdning!"},"stopwatch":{"title":"⏲️ Online stoppur med varv | Millisekunds precision","description":"🎯 Professionellt stoppur med obegränsad varvregistrering! Exakt till millisekunden. Perfekt för löpning 🏃, simning 🏊, sport 💪, gaming 🎮"},"clock":{"title":"🌍 Världsklocka | Live tid i 50+ städer","description":"✨ Kolla aktuell tid i 50+ städer! Jämför tidszoner: Stockholm 🇸🇪, New York 🗽, Paris 🇫🇷 Perfekt för distansarbete 💼, resor ✈️"},"holidays":{"title":"Helgdagskalender 2026-2027 - Sverige - vClock","description":"Komplett helgdagskalender med nedräkning. Spåra dagar till jul, nyår, påsk och alla viktiga helgdagar."}}
+  "site": {
+    "name": "vClock",
+    "description": "Gratis onlineverktyg för tidshantering"
+  },
+  "nav": {
+    "alarm": "Alarm",
+    "timer": "Timer",
+    "stopwatch": "Stoppur",
+    "clock": "Världsklocka",
+    "holidays": "Helgdagar",
+    "tools": "Verktyg",
+    "privacy": "Integritet",
+    "terms": "Villkor",
+    "contact": "Kontakt"
+  },
+  "common": {
+    "start": "Start",
+    "stop": "Stopp",
+    "pause": "Paus",
+    "resume": "Återuppta",
+    "reset": "Återställ",
+    "edit": "Redigera",
+    "save": "Spara",
+    "cancel": "Avbryt",
+    "delete": "Radera",
+    "add": "Lägg till",
+    "test": "Testa",
+    "close": "Stäng",
+    "confirm": "Bekräfta",
+    "yes": "Ja",
+    "no": "Nej",
+    "loading": "Laddar...",
+    "error": "Fel",
+    "success": "Framgång"
+  },
+  "alarm": {
+    "title": "Online alarm",
+    "description": "Gratis online väckarklocka. Ställ in ditt alarm för vilken tid som helst med anpassningsbara ljud. Ingen registrering krävs.",
+    "setAlarm": "Ställ in alarm",
+    "stopAlarm": "Stoppa alarm",
+    "testSound": "Testa ljud",
+    "hour": "Timme",
+    "minute": "Minut",
+    "sound": "Ljud",
+    "repeat": "Upprepa alarm",
+    "customTitle": "Anpassad titel (valfritt)",
+    "recentlyUsed": "Nyligen använd",
+    "presets": "Snabbinställningar",
+    "alarmSet": "Alarm inställt för {time}",
+    "alarmStopped": "Alarm stoppat",
+    "alarmActive": "Alarmet är aktivt",
+    "setAlarmFor": "Ställ in alarm för {time}",
+    "placeholderTitle": "Vakna!",
+    "alarmRinging": "Alarm!",
+    "timesUp": "Tiden är ute!",
+    "dismissAlarm": "Stäng av Alarm",
+    "alarmSetFor": "Alarm inställt för {time} (om {hours}t {minutes}m)",
+    "in": "om",
+    "alarmTitle": "ALARM!",
+    "sounds": {
+      "classicAlarm": "Klassiskt Alarm",
+      "beepBeep": "Pip Pip",
+      "rooster": "Tupp",
+      "bell": "Klocka",
+      "chime": "Klockspel",
+      "digital": "Digital"
+    }
+  },
+  "timer": {
+    "title": "Online timer",
+    "description": "Gratis online timer. Ställ in timer för vilken varaktighet som helst. Perfekt för matlagning, träning och produktivitet.",
+    "hours": "Timmar",
+    "minutes": "Minuter",
+    "seconds": "Sekunder",
+    "actionOnComplete": "Åtgärd vid avslutad timer",
+    "stopTimer": "Stoppa timer",
+    "restartTimer": "Starta om automatiskt",
+    "convertToStopwatch": "Konvertera till stoppur",
+    "countdownTo": "Nedräkning",
+    "presets": "Snabbtimers",
+    "timerFinished": "Timer klar!",
+    "customTitle": "Anpassad titel (valfritt)",
+    "durationMode": "Varaktighetsläge",
+    "countdownMode": "Nedräkning till Datum"
+  },
+  "stopwatch": {
+    "title": "Online stoppur",
+    "description": "Gratis online stoppur med varvtimer. Exakt till millisekunden. Perfekt för sport, träning och tidtagning.",
+    "lap": "Varv",
+    "lapNumber": "Varv #",
+    "lapTime": "Varvtid",
+    "totalTime": "Total tid",
+    "precision": "Precision",
+    "laps": "Varv",
+    "noLaps": "Inga varv inspelade ännu"
+  },
+  "clock": {
+    "title": "Världsklocka",
+    "description": "Visa tid i flera städer runt om i världen. Spåra flera tidszoner samtidigt.",
+    "currentTime": "Nuvarande tid",
+    "timezone": "Tidszon",
+    "offset": "UTC-offset",
+    "dayNight": "Dag/Natt",
+    "searchCities": "Sök städer...",
+    "addCity": "Lägg till stad",
+    "removeCity": "Ta bort stad",
+    "noCitiesAdded": "Inga städer tillagda ännu",
+    "addFirstCity": "Lägg till din första stad för att börja spåra tidszoner"
+  },
+  "footer": {
+    "copyright": "© 2026 vClock. Alla rättigheter förbehållna.",
+    "madeWith": "Skapad med ❤️ för produktivitet"
+  },
+  "meta": {
+    "home": {
+      "title": "⏰ Gratis online alarm | Enkelt & pålitligt webbalarm",
+      "description": "100% gratis online väckarklocka. ⏰ Ställ in ditt alarm på några sekunder. ⏱️ Inkluderar timer, stoppur och världsklocka. Ingen nedladdning behövs!"
+    },
+    "timer": {
+      "title": "⏱️ Online timer | Gratis nedräkning & Pomodoro",
+      "description": "⚡ Gratis timer med förinställningar på 1, 5, 25 minuter (Pomodoro). Perfekt för matlagning 🍳, träning 💪, studier 📚 Ingen nedladdning!"
+    },
+    "stopwatch": {
+      "title": "⏲️ Online stoppur med varv | Millisekunds precision",
+      "description": "🎯 Professionellt stoppur med obegränsad varvregistrering! Exakt till millisekunden. Perfekt för löpning 🏃, simning 🏊, sport 💪, gaming 🎮"
+    },
+    "clock": {
+      "title": "🌍 Världsklocka | Live tid i 50+ städer",
+      "description": "✨ Kolla aktuell tid i 50+ städer! Jämför tidszoner: Stockholm 🇸🇪, New York 🗽, Paris 🇫🇷 Perfekt för distansarbete 💼, resor ✈️"
+    },
+    "holidays": {
+      "title": "Helgdagskalender 2026-2027 - Sverige - vClock",
+      "description": "Komplett helgdagskalender med nedräkning. Spåra dagar till jul, nyår, påsk och alla viktiga helgdagar."
+    }
+  }
 }

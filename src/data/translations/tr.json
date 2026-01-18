@@ -50,7 +50,22 @@
     "alarmSet": "Alarm {time} için ayarlandı",
     "alarmStopped": "Alarm durduruldu",
     "alarmActive": "Alarm aktif",
-    "setAlarmFor": "{time} için alarm kur"
+    "setAlarmFor": "{time} için alarm kur",
+    "placeholderTitle": "Uyan!",
+    "alarmRinging": "Alarm!",
+    "timesUp": "Süre doldu!",
+    "dismissAlarm": "Alarmı Kapat",
+    "alarmSetFor": "{time} için alarm kuruldu ({hours}s {minutes}d içinde)",
+    "in": "içinde",
+    "alarmTitle": "ALARM!",
+    "sounds": {
+      "classicAlarm": "Klasik Alarm",
+      "beepBeep": "Bip Bip",
+      "rooster": "Horoz",
+      "bell": "Çan",
+      "chime": "Zil Sesi",
+      "digital": "Dijital"
+    }
   },
   "timer": {
     "title": "Çevrimiçi Zamanlayıcı",
@@ -65,7 +80,9 @@
     "countdownTo": "Geri sayım",
     "presets": "Hızlı Zamanlayıcılar",
     "timerFinished": "Zamanlayıcı bitti!",
-    "customTitle": "Özel başlık (isteğe bağlı)"
+    "customTitle": "Özel başlık (isteğe bağlı)",
+    "durationMode": "Süre Modu",
+    "countdownMode": "Tarihe Geri Sayım"
   },
   "stopwatch": {
     "title": "Çevrimiçi Kronometre",

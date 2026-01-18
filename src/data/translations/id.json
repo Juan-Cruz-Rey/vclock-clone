@@ -50,7 +50,22 @@
     "alarmSet": "Alarm diatur untuk {time}",
     "alarmStopped": "Alarm dihentikan",
     "alarmActive": "Alarm aktif",
-    "setAlarmFor": "Atur alarm untuk {time}"
+    "setAlarmFor": "Atur alarm untuk {time}",
+    "placeholderTitle": "Bangun!",
+    "alarmRinging": "Alarm!",
+    "timesUp": "Waktu habis!",
+    "dismissAlarm": "Matikan Alarm",
+    "alarmSetFor": "Alarm diatur untuk {time} (dalam {hours}j {minutes}m)",
+    "in": "dalam",
+    "alarmTitle": "ALARM!",
+    "sounds": {
+      "classicAlarm": "Alarm Klasik",
+      "beepBeep": "Bip Bip",
+      "rooster": "Ayam Jago",
+      "bell": "Lonceng",
+      "chime": "Dentang",
+      "digital": "Digital"
+    }
   },
   "timer": {
     "title": "Timer Online",
@@ -65,7 +80,9 @@
     "countdownTo": "Hitung mundur ke",
     "presets": "Timer Cepat",
     "timerFinished": "Timer selesai!",
-    "customTitle": "Judul kustom (opsional)"
+    "customTitle": "Judul kustom (opsional)",
+    "durationMode": "Mode Durasi",
+    "countdownMode": "Hitung Mundur ke Tanggal"
   },
   "stopwatch": {
     "title": "Stopwatch Online",

@@ -50,7 +50,22 @@
     "alarmSet": "Báo thức đã đặt cho {time}",
     "alarmStopped": "Báo thức đã dừng",
     "alarmActive": "Báo thức đang hoạt động",
-    "setAlarmFor": "Đặt báo thức cho {time}"
+    "setAlarmFor": "Đặt báo thức cho {time}",
+    "placeholderTitle": "Thức dậy!",
+    "alarmRinging": "Báo thức!",
+    "timesUp": "Hết giờ!",
+    "dismissAlarm": "Tắt Báo thức",
+    "alarmSetFor": "Đã đặt báo thức lúc {time} (sau {hours}g {minutes}p)",
+    "in": "sau",
+    "alarmTitle": "BÁO THỨC!",
+    "sounds": {
+      "classicAlarm": "Báo thức Cổ điển",
+      "beepBeep": "Bíp Bíp",
+      "rooster": "Gà trống",
+      "bell": "Chuông",
+      "chime": "Tiếng chuông",
+      "digital": "Kỹ thuật số"
+    }
   },
   "timer": {
     "title": "Hẹn giờ trực tuyến",
@@ -65,7 +80,9 @@
     "countdownTo": "Đếm ngược đến",
     "presets": "Hẹn giờ nhanh",
     "timerFinished": "Hẹn giờ đã hoàn thành!",
-    "customTitle": "Tiêu đề tùy chỉnh (tùy chọn)"
+    "customTitle": "Tiêu đề tùy chỉnh (tùy chọn)",
+    "durationMode": "Chế độ Thời lượng",
+    "countdownMode": "Đếm ngược đến Ngày"
   },
   "stopwatch": {
     "title": "Bấm giờ trực tuyến",

@@ -50,7 +50,22 @@
     "alarmSet": "{time} साठी अलार्म सेट केला",
     "alarmStopped": "अलार्म बंद केला",
     "alarmActive": "अलार्म सक्रिय आहे",
-    "setAlarmFor": "{time} साठी अलार्म सेट करा"
+    "setAlarmFor": "{time} साठी अलार्म सेट करा",
+    "placeholderTitle": "जागे व्हा!",
+    "alarmRinging": "अलार्म!",
+    "timesUp": "वेळ संपली!",
+    "dismissAlarm": "अलार्म बंद करा",
+    "alarmSetFor": "{time} साठी अलार्म सेट केला ({hours}ता {minutes}मि मध्ये)",
+    "in": "मध्ये",
+    "alarmTitle": "अलार्म!",
+    "sounds": {
+      "classicAlarm": "क्लासिक अलार्म",
+      "beepBeep": "बीप बीप",
+      "rooster": "कोंबडा",
+      "bell": "घंटा",
+      "chime": "नाद",
+      "digital": "डिजिटल"
+    }
   },
   "timer": {
     "title": "ऑनलाइन टाइमर",
@@ -65,7 +80,9 @@
     "countdownTo": "उलट मोजणी",
     "presets": "द्रुत टाइमर",
     "timerFinished": "टाइमर पूर्ण झाला!",
-    "customTitle": "सानुकूल शीर्षक (पर्यायी)"
+    "customTitle": "सानुकूल शीर्षक (पर्यायी)",
+    "durationMode": "कालावधी मोड",
+    "countdownMode": "तारखेपर्यंत उलटी मोजणी"
   },
   "stopwatch": {
     "title": "ऑनलाइन स्टॉपवॉच",

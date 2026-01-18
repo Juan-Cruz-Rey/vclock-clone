@@ -1,11 +1,137 @@
 {
-  "site":{"name":"vClock","description":"Libreng online na mga tool para sa pamamahala ng oras"},
-  "nav":{"alarm":"Alarm","timer":"Timer","stopwatch":"Stopwatch","clock":"Orasan ng Mundo","holidays":"Mga Holiday","tools":"Mga Tool","privacy":"Privacy","terms":"Mga Tuntunin","contact":"Makipag-ugnayan"},
-  "common":{"start":"Simulan","stop":"Ihinto","pause":"I-pause","resume":"Ipagpatuloy","reset":"I-reset","edit":"I-edit","save":"I-save","cancel":"Kanselahin","delete":"Tanggalin","add":"Idagdag","test":"Subukan","close":"Isara","confirm":"Kumpirmahin","yes":"Oo","no":"Hindi","loading":"Naglo-load...","error":"Error","success":"Tagumpay"},
-  "alarm":{"title":"Online na Alarm","description":"Libreng online alarm clock. Itakda ang iyong alarm para sa anumang oras na may mga tunog na maaaring i-customize. Walang kinakailangang pagpaparehistro.","setAlarm":"Itakda ang Alarm","stopAlarm":"Ihinto ang Alarm","testSound":"Subukan ang Tunog","hour":"Oras","minute":"Minuto","sound":"Tunog","repeat":"Ulitin ang alarm","customTitle":"Custom na pamagat (opsyonal)","recentlyUsed":"Kamakailan Ginamit","presets":"Mabilis na Settings","alarmSet":"Alarm ay naitakda para sa {time}","alarmStopped":"Alarm ay hininto","alarmActive":"Alarm ay aktibo","setAlarmFor":"Itakda ang alarm para sa {time}"},
-  "timer":{"title":"Online na Timer","description":"Libreng online timer. Itakda ang timer para sa anumang tagal. Perpekto para sa pagluluto, ehersisyo at produktibidad.","hours":"Mga Oras","minutes":"Mga Minuto","seconds":"Mga Segundo","actionOnComplete":"Aksyon kapag tapos na ang timer","stopTimer":"Ihinto ang timer","restartTimer":"Awtomatikong simulan muli","convertToStopwatch":"I-convert sa stopwatch","countdownTo":"Countdown","presets":"Mabilis na Timers","timerFinished":"Timer ay tapos na!","customTitle":"Custom na pamagat (opsyonal)"},
-  "stopwatch":{"title":"Online na Stopwatch","description":"Libreng online stopwatch na may lap timer. Tumpak hanggang millisecond. Perpekto para sa sports, pagsasanay at pagsukat ng oras.","lap":"Lap","lapNumber":"Lap #","lapTime":"Oras ng Lap","totalTime":"Kabuuang Oras","precision":"Katumpakan","laps":"Mga Lap","noLaps":"Walang naitala pang lap"},
-  "clock":{"title":"Orasan ng Mundo","description":"Ipakita ang oras sa maraming lungsod sa buong mundo. Subaybayan ang maraming time zone nang sabay-sabay.","currentTime":"Kasalukuyang Oras","timezone":"Time Zone","offset":"UTC Offset","dayNight":"Araw/Gabi","searchCities":"Maghanap ng mga lungsod...","addCity":"Magdagdag ng Lungsod","removeCity":"Alisin ang Lungsod","noCitiesAdded":"Walang naidagdag pang lungsod","addFirstCity":"Idagdag ang iyong unang lungsod upang magsimulang subaybayan ang mga time zone"},
-  "footer":{"copyright":"© 2026 vClock. Lahat ng karapatan ay nakalaan.","madeWith":"Ginawa nang may ❤️ para sa produktibidad"},
-  "meta":{"home":{"title":"⏰ Libreng Online Alarm | Simpleng at Maaasahang Web Alarm","description":"100% libreng online alarm clock. ⏰ Itakda ang iyong alarm sa loob ng ilang segundo. ⏱️ Kasama ang timer, stopwatch at orasan ng mundo. Walang download na kailangan!"},"timer":{"title":"⏱️ Online Timer | Libreng Countdown at Pomodoro","description":"⚡ Libreng timer na may 1, 5, 25 minuto (Pomodoro) presets. Perpekto para sa pagluluto 🍳, ehersisyo 💪, pag-aaral 📚 Walang download!"},"stopwatch":{"title":"⏲️ Online Stopwatch na may Laps | Millisecond Precision","description":"🎯 Propesyonal na stopwatch na may walang hanggang lap recording! Tumpak hanggang millisecond. Perpekto para sa pagtakbo 🏃, paglangoy 🏊, sports 💪, gaming 🎮"},"clock":{"title":"🌍 Orasan ng Mundo | Live Time sa 50+ Lungsod","description":"✨ Suriin ang kasalukuyang oras sa 50+ lungsod! Ihambing ang mga time zone: Manila 🇵🇭, New York 🗽, Paris 🇫🇷 Perpekto para sa remote work 💼, paglalakbay ✈️"},"holidays":{"title":"Kalendaryo ng mga Holiday 2026-2027 - Pilipinas - vClock","description":"Kumpletong kalendaryo ng mga holiday na may countdown. Subaybayan ang mga araw hanggang Pasko, Bagong Taon, Semana Santa at lahat ng mahahalagang holiday."}}
+  "site": {
+    "name": "vClock",
+    "description": "Libreng online na mga tool para sa pamamahala ng oras"
+  },
+  "nav": {
+    "alarm": "Alarm",
+    "timer": "Timer",
+    "stopwatch": "Stopwatch",
+    "clock": "Orasan ng Mundo",
+    "holidays": "Mga Holiday",
+    "tools": "Mga Tool",
+    "privacy": "Privacy",
+    "terms": "Mga Tuntunin",
+    "contact": "Makipag-ugnayan"
+  },
+  "common": {
+    "start": "Simulan",
+    "stop": "Ihinto",
+    "pause": "I-pause",
+    "resume": "Ipagpatuloy",
+    "reset": "I-reset",
+    "edit": "I-edit",
+    "save": "I-save",
+    "cancel": "Kanselahin",
+    "delete": "Tanggalin",
+    "add": "Idagdag",
+    "test": "Subukan",
+    "close": "Isara",
+    "confirm": "Kumpirmahin",
+    "yes": "Oo",
+    "no": "Hindi",
+    "loading": "Naglo-load...",
+    "error": "Error",
+    "success": "Tagumpay"
+  },
+  "alarm": {
+    "title": "Online na Alarm",
+    "description": "Libreng online alarm clock. Itakda ang iyong alarm para sa anumang oras na may mga tunog na maaaring i-customize. Walang kinakailangang pagpaparehistro.",
+    "setAlarm": "Itakda ang Alarm",
+    "stopAlarm": "Ihinto ang Alarm",
+    "testSound": "Subukan ang Tunog",
+    "hour": "Oras",
+    "minute": "Minuto",
+    "sound": "Tunog",
+    "repeat": "Ulitin ang alarm",
+    "customTitle": "Custom na pamagat (opsyonal)",
+    "recentlyUsed": "Kamakailan Ginamit",
+    "presets": "Mabilis na Settings",
+    "alarmSet": "Alarm ay naitakda para sa {time}",
+    "alarmStopped": "Alarm ay hininto",
+    "alarmActive": "Alarm ay aktibo",
+    "setAlarmFor": "Itakda ang alarm para sa {time}",
+    "placeholderTitle": "Gising!",
+    "alarmRinging": "Alarm!",
+    "timesUp": "Tapos na ang oras!",
+    "dismissAlarm": "Patayin ang Alarm",
+    "alarmSetFor": "Alarm nakatakda sa {time} (sa loob ng {hours}o {minutes}m)",
+    "in": "sa loob ng",
+    "alarmTitle": "ALARM!",
+    "sounds": {
+      "classicAlarm": "Classic na Alarm",
+      "beepBeep": "Beep Beep",
+      "rooster": "Tandang",
+      "bell": "Kampana",
+      "chime": "Tugtog ng Kampana",
+      "digital": "Digital"
+    }
+  },
+  "timer": {
+    "title": "Online na Timer",
+    "description": "Libreng online timer. Itakda ang timer para sa anumang tagal. Perpekto para sa pagluluto, ehersisyo at produktibidad.",
+    "hours": "Mga Oras",
+    "minutes": "Mga Minuto",
+    "seconds": "Mga Segundo",
+    "actionOnComplete": "Aksyon kapag tapos na ang timer",
+    "stopTimer": "Ihinto ang timer",
+    "restartTimer": "Awtomatikong simulan muli",
+    "convertToStopwatch": "I-convert sa stopwatch",
+    "countdownTo": "Countdown",
+    "presets": "Mabilis na Timers",
+    "timerFinished": "Timer ay tapos na!",
+    "customTitle": "Custom na pamagat (opsyonal)",
+    "durationMode": "Mode ng Tagal",
+    "countdownMode": "Countdown sa Petsa"
+  },
+  "stopwatch": {
+    "title": "Online na Stopwatch",
+    "description": "Libreng online stopwatch na may lap timer. Tumpak hanggang millisecond. Perpekto para sa sports, pagsasanay at pagsukat ng oras.",
+    "lap": "Lap",
+    "lapNumber": "Lap #",
+    "lapTime": "Oras ng Lap",
+    "totalTime": "Kabuuang Oras",
+    "precision": "Katumpakan",
+    "laps": "Mga Lap",
+    "noLaps": "Walang naitala pang lap"
+  },
+  "clock": {
+    "title": "Orasan ng Mundo",
+    "description": "Ipakita ang oras sa maraming lungsod sa buong mundo. Subaybayan ang maraming time zone nang sabay-sabay.",
+    "currentTime": "Kasalukuyang Oras",
+    "timezone": "Time Zone",
+    "offset": "UTC Offset",
+    "dayNight": "Araw/Gabi",
+    "searchCities": "Maghanap ng mga lungsod...",
+    "addCity": "Magdagdag ng Lungsod",
+    "removeCity": "Alisin ang Lungsod",
+    "noCitiesAdded": "Walang naidagdag pang lungsod",
+    "addFirstCity": "Idagdag ang iyong unang lungsod upang magsimulang subaybayan ang mga time zone"
+  },
+  "footer": {
+    "copyright": "© 2026 vClock. Lahat ng karapatan ay nakalaan.",
+    "madeWith": "Ginawa nang may ❤️ para sa produktibidad"
+  },
+  "meta": {
+    "home": {
+      "title": "⏰ Libreng Online Alarm | Simpleng at Maaasahang Web Alarm",
+      "description": "100% libreng online alarm clock. ⏰ Itakda ang iyong alarm sa loob ng ilang segundo. ⏱️ Kasama ang timer, stopwatch at orasan ng mundo. Walang download na kailangan!"
+    },
+    "timer": {
+      "title": "⏱️ Online Timer | Libreng Countdown at Pomodoro",
+      "description": "⚡ Libreng timer na may 1, 5, 25 minuto (Pomodoro) presets. Perpekto para sa pagluluto 🍳, ehersisyo 💪, pag-aaral 📚 Walang download!"
+    },
+    "stopwatch": {
+      "title": "⏲️ Online Stopwatch na may Laps | Millisecond Precision",
+      "description": "🎯 Propesyonal na stopwatch na may walang hanggang lap recording! Tumpak hanggang millisecond. Perpekto para sa pagtakbo 🏃, paglangoy 🏊, sports 💪, gaming 🎮"
+    },
+    "clock": {
+      "title": "🌍 Orasan ng Mundo | Live Time sa 50+ Lungsod",
+      "description": "✨ Suriin ang kasalukuyang oras sa 50+ lungsod! Ihambing ang mga time zone: Manila 🇵🇭, New York 🗽, Paris 🇫🇷 Perpekto para sa remote work 💼, paglalakbay ✈️"
+    },
+    "holidays": {
+      "title": "Kalendaryo ng mga Holiday 2026-2027 - Pilipinas - vClock",
+      "description": "Kumpletong kalendaryo ng mga holiday na may countdown. Subaybayan ang mga araw hanggang Pasko, Bagong Taon, Semana Santa at lahat ng mahahalagang holiday."
+    }
+  }
 }

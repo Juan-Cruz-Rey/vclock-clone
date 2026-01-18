@@ -50,7 +50,22 @@
     "alarmSet": "鬧鐘已設定為{time}",
     "alarmStopped": "鬧鐘已停止",
     "alarmActive": "鬧鐘已啟動",
-    "setAlarmFor": "設定{time}的鬧鐘"
+    "setAlarmFor": "設定{time}的鬧鐘",
+    "placeholderTitle": "起床了！",
+    "alarmRinging": "鬧鐘！",
+    "timesUp": "時間到！",
+    "dismissAlarm": "關閉鬧鐘",
+    "alarmSetFor": "鬧鐘設置為{time}（{hours}小時{minutes}分鐘後）",
+    "in": "後",
+    "alarmTitle": "鬧鐘！",
+    "sounds": {
+      "classicAlarm": "經典鬧鐘",
+      "beepBeep": "嗶嗶聲",
+      "rooster": "公雞",
+      "bell": "鈴聲",
+      "chime": "鐘聲",
+      "digital": "數碼"
+    }
   },
   "timer": {
     "title": "網上計時器",
@@ -65,7 +80,9 @@
     "countdownTo": "倒數至",
     "presets": "快速計時器",
     "timerFinished": "計時器完成！",
-    "customTitle": "自訂標題（可選）"
+    "customTitle": "自訂標題（可選）",
+    "durationMode": "持續時間模式",
+    "countdownMode": "倒數到日期"
   },
   "stopwatch": {
     "title": "網上碼錶",

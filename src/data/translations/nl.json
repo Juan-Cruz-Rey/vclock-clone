@@ -50,7 +50,22 @@
     "alarmSet": "Wekker ingesteld voor {time}",
     "alarmStopped": "Wekker gestopt",
     "alarmActive": "Wekker is actief",
-    "setAlarmFor": "Wekker instellen voor {time}"
+    "setAlarmFor": "Wekker instellen voor {time}",
+    "placeholderTitle": "Wordt wakker!",
+    "alarmRinging": "Alarm!",
+    "timesUp": "Tijd is om!",
+    "dismissAlarm": "Alarm Negeren",
+    "alarmSetFor": "Alarm ingesteld voor {time} (over {hours}u {minutes}m)",
+    "in": "over",
+    "alarmTitle": "ALARM!",
+    "sounds": {
+      "classicAlarm": "Klassiek Alarm",
+      "beepBeep": "Piep Piep",
+      "rooster": "Haan",
+      "bell": "Bel",
+      "chime": "Klokkenspel",
+      "digital": "Digitaal"
+    }
   },
   "timer": {
     "title": "Online timer",
@@ -65,7 +80,9 @@
     "countdownTo": "Aftellen naar",
     "presets": "Snelle timers",
     "timerFinished": "Timer voltooid!",
-    "customTitle": "Aangepaste titel (optioneel)"
+    "customTitle": "Aangepaste titel (optioneel)",
+    "durationMode": "Duurmodus",
+    "countdownMode": "Aftellen naar Datum"
   },
   "stopwatch": {
     "title": "Online stopwatch",
