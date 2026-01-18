@@ -1,0 +1,120 @@
+{
+  "site": {
+    "name": "vClock",
+    "description": "Darmowe narzędzia online do zarządzania czasem"
+  },
+  "nav": {
+    "alarm": "Budzik",
+    "timer": "Timer",
+    "stopwatch": "Stoper",
+    "clock": "Zegar światowy",
+    "holidays": "Święta",
+    "tools": "Narzędzia",
+    "privacy": "Prywatność",
+    "terms": "Warunki",
+    "contact": "Kontakt"
+  },
+  "common": {
+    "start": "Start",
+    "stop": "Stop",
+    "pause": "Pauza",
+    "resume": "Wznów",
+    "reset": "Resetuj",
+    "edit": "Edytuj",
+    "save": "Zapisz",
+    "cancel": "Anuluj",
+    "delete": "Usuń",
+    "add": "Dodaj",
+    "test": "Test",
+    "close": "Zamknij",
+    "confirm": "Potwierdź",
+    "yes": "Tak",
+    "no": "Nie",
+    "loading": "Ładowanie...",
+    "error": "Błąd",
+    "success": "Sukces"
+  },
+  "alarm": {
+    "title": "Budzik online",
+    "description": "Darmowy budzik online. Ustaw budzik na dowolną godzinę z dostosowywanymi dźwiękami. Rejestracja nie jest wymagana.",
+    "setAlarm": "Ustaw budzik",
+    "stopAlarm": "Zatrzymaj budzik",
+    "testSound": "Testuj dźwięk",
+    "hour": "Godzina",
+    "minute": "Minuta",
+    "sound": "Dźwięk",
+    "repeat": "Powtarzaj alarm",
+    "customTitle": "Własny tytuł (opcjonalnie)",
+    "recentlyUsed": "Ostatnio używane",
+    "presets": "Szybkie ustawienia",
+    "alarmSet": "Budzik ustawiony na {time}",
+    "alarmStopped": "Budzik zatrzymany",
+    "alarmActive": "Budzik jest aktywny",
+    "setAlarmFor": "Ustaw budzik na {time}"
+  },
+  "timer": {
+    "title": "Timer online",
+    "description": "Darmowy timer online. Ustaw timer na dowolny czas. Idealny do gotowania, ćwiczeń i produktywności.",
+    "hours": "Godziny",
+    "minutes": "Minuty",
+    "seconds": "Sekundy",
+    "actionOnComplete": "Akcja po zakończeniu timera",
+    "stopTimer": "Zatrzymaj timer",
+    "restartTimer": "Automatycznie uruchom ponownie",
+    "convertToStopwatch": "Zamień na stoper",
+    "countdownTo": "Odliczanie do",
+    "presets": "Szybkie timery",
+    "timerFinished": "Timer zakończony!",
+    "customTitle": "Własny tytuł (opcjonalnie)"
+  },
+  "stopwatch": {
+    "title": "Stoper online",
+    "description": "Darmowy stoper online z timerem okrążeń. Precyzyjny do milisekundy. Idealny do sportu, treningów i pomiaru czasu.",
+    "lap": "Okrążenie",
+    "lapNumber": "Okrążenie #",
+    "lapTime": "Czas okrążenia",
+    "totalTime": "Całkowity czas",
+    "precision": "Precyzja",
+    "laps": "Okrążenia",
+    "noLaps": "Nie zarejestrowano jeszcze żadnych okrążeń"
+  },
+  "clock": {
+    "title": "Zegar światowy",
+    "description": "Wyświetl czas w wielu miastach na całym świecie. Śledź wiele stref czasowych jednocześnie.",
+    "currentTime": "Aktualny czas",
+    "timezone": "Strefa czasowa",
+    "offset": "Przesunięcie UTC",
+    "dayNight": "Dzień/Noc",
+    "searchCities": "Szukaj miast...",
+    "addCity": "Dodaj miasto",
+    "removeCity": "Usuń miasto",
+    "noCitiesAdded": "Nie dodano jeszcze miast",
+    "addFirstCity": "Dodaj swoje pierwsze miasto, aby rozpocząć śledzenie stref czasowych"
+  },
+  "footer": {
+    "copyright": "© 2026 vClock. Wszelkie prawa zastrzeżone.",
+    "madeWith": "Stworzone z ❤️ dla produktywności"
+  },
+  "meta": {
+    "home": {
+      "title": "⏰ Darmowy budzik online | Prosty i niezawodny alarm internetowy",
+      "description": "100% darmowy budzik online. ⏰ Ustaw alarm w kilka sekund. ⏱️ Zawiera timer, stoper i zegar światowy. Bez pobierania!"
+    },
+    "timer": {
+      "title": "⏱️ Timer online | Darmowe odliczanie i Pomodoro",
+      "description": "⚡ Darmowy timer z ustawieniami 1, 5, 25 minut (Pomodoro). Idealny do gotowania 🍳, ćwiczeń 💪, nauki 📚 Bez pobierania!"
+    },
+    "stopwatch": {
+      "title": "⏲️ Stoper online z okrążeniami | Precyzja milisekundy",
+      "description": "🎯 Profesjonalny stoper z nieograniczonym zapisem okrążeń! Precyzyjny do milisekundy. Idealny do biegania 🏃, pływania 🏊, sportu 💪, gier 🎮"
+    },
+    "clock": {
+      "title": "🌍 Zegar światowy | Czas na żywo w 50+ miastach",
+      "description": "✨ Sprawdź aktualny czas w 50+ miastach! Porównaj strefy czasowe: Warszawa 🇵🇱, Nowy Jork 🗽, Paryż 🇫🇷 Idealny do pracy zdalnej 💼, podróży ✈️"
+    },
+    "holidays": {
+      "title": "Kalendarz świąt 2026-2027 - Polska - vClock",
+      "description": "Pełny kalendarz świąt z odliczaniem. Śledź dni do Bożego Narodzenia, Nowego Roku, Wielkanocy i wszystkich ważnych świąt."
+    }
+  }
+}

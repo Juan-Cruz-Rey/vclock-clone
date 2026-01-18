@@ -4,11 +4,22 @@ import { languages, getLocaleFromPath, switchLocale, type Locale } from '../../s
 const currentLocale = getLocaleFromPath(Astro.url.pathname);
 const currentPath = Astro.url.pathname;
 
+// Organize languages by priority (most commonly used first)
+const priorityLanguages: Locale[] = ['en', 'es', 'fr', 'de', 'pt', 'it', 'ru', 'zh-CN', 'ja', 'ar', 'hi'];
+
 const languageList = Object.entries(languages).map(([code, info]) => ({
   code: code as Locale,
   ...info,
   url: switchLocale(currentPath, code as Locale),
+  isPriority: priorityLanguages.includes(code as Locale),
 }));
+
+// Sort: priority languages first, then alphabetically by native name
+languageList.sort((a, b) => {
+  if (a.isPriority && !b.isPriority) return -1;
+  if (!a.isPriority && b.isPriority) return 1;
+  return a.nativeName.localeCompare(b.nativeName);
+});
 ---
 
 <div class="relative inline-block text-left">
@@ -28,31 +39,46 @@ const languageList = Object.entries(languages).map(([code, info]) => ({
     </svg>
   </button>
 
-  <!-- Dropdown Menu -->
+  <!-- Dropdown Menu (Scrollable, 50 languages) -->
   <div
     id="language-selector-menu"
-    class="hidden absolute right-0 mt-2 w-48 rounded-lg shadow-lg bg-white dark:bg-gray-800 ring-1 ring-black ring-opacity-5 z-10"
+    class="hidden absolute right-0 mt-2 w-56 rounded-lg shadow-lg bg-white dark:bg-gray-800 ring-1 ring-black ring-opacity-5 z-50 max-h-96 overflow-y-auto"
     role="menu"
     aria-orientation="vertical"
   >
     <div class="py-1">
-      {languageList.map((lang) => (
-        <a
-          href={lang.url}
-          class={`
-            flex items-center space-x-2 px-4 py-2 text-sm transition-colors
-            ${
-              lang.code === currentLocale
-                ? 'bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300'
-                : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700'
-            }
-          `}
-          role="menuitem"
-        >
-          <span class="text-lg">{lang.flag}</span>
-          <span class="font-medium">{lang.nativeName}</span>
-        </a>
-      ))}
+      {languageList.map((lang, index) => {
+        const prevLang = languageList[index - 1];
+        const showDivider = index > 0 && prevLang?.isPriority && !lang.isPriority;
+
+        return (
+          <>
+            {showDivider && (
+              <div class="border-t border-gray-200 dark:border-gray-700 my-1">
+                <div class="px-4 py-1 text-xs text-gray-500 dark:text-gray-400 font-semibold">
+                  Other Languages
+                </div>
+              </div>
+            )}
+            <a
+              href={lang.url}
+              class={`
+                flex items-center space-x-2 px-4 py-2 text-sm transition-colors
+                ${
+                  lang.code === currentLocale
+                    ? 'bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300'
+                    : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700'
+                }
+              `}
+              role="menuitem"
+              dir={lang.rtl ? 'rtl' : 'ltr'}
+            >
+              <span class="text-lg">{lang.flag}</span>
+              <span class="font-medium">{lang.nativeName}</span>
+            </a>
+          </>
+        );
+      })}
     </div>
   </div>
 </div>

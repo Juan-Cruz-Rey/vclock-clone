@@ -1,0 +1,120 @@
+{
+  "site": {
+    "name": "vClock",
+    "description": "免費網上時間管理工具"
+  },
+  "nav": {
+    "alarm": "鬧鐘",
+    "timer": "計時器",
+    "stopwatch": "碼錶",
+    "clock": "世界時鐘",
+    "holidays": "假期",
+    "tools": "工具",
+    "privacy": "私隱",
+    "terms": "條款",
+    "contact": "聯絡"
+  },
+  "common": {
+    "start": "開始",
+    "stop": "停止",
+    "pause": "暫停",
+    "resume": "繼續",
+    "reset": "重設",
+    "edit": "編輯",
+    "save": "儲存",
+    "cancel": "取消",
+    "delete": "刪除",
+    "add": "新增",
+    "test": "測試",
+    "close": "關閉",
+    "confirm": "確認",
+    "yes": "是",
+    "no": "否",
+    "loading": "載入中...",
+    "error": "錯誤",
+    "success": "成功"
+  },
+  "alarm": {
+    "title": "網上鬧鐘",
+    "description": "免費網上鬧鐘。使用可自訂的聲音為任何時間設定鬧鐘。無需註冊。",
+    "setAlarm": "設定鬧鐘",
+    "stopAlarm": "停止鬧鐘",
+    "testSound": "測試聲音",
+    "hour": "小時",
+    "minute": "分鐘",
+    "sound": "聲音",
+    "repeat": "重複鬧鐘",
+    "customTitle": "自訂標題（可選）",
+    "recentlyUsed": "最近使用",
+    "presets": "快速設定",
+    "alarmSet": "鬧鐘已設定為{time}",
+    "alarmStopped": "鬧鐘已停止",
+    "alarmActive": "鬧鐘已啟動",
+    "setAlarmFor": "設定{time}的鬧鐘"
+  },
+  "timer": {
+    "title": "網上計時器",
+    "description": "免費網上計時器。為任何時長設定計時器。非常適合烹飪、鍛煉和提升效率。",
+    "hours": "小時",
+    "minutes": "分鐘",
+    "seconds": "秒",
+    "actionOnComplete": "計時器完成時的動作",
+    "stopTimer": "停止計時器",
+    "restartTimer": "自動重新開始",
+    "convertToStopwatch": "轉換為碼錶",
+    "countdownTo": "倒數至",
+    "presets": "快速計時器",
+    "timerFinished": "計時器完成！",
+    "customTitle": "自訂標題（可選）"
+  },
+  "stopwatch": {
+    "title": "網上碼錶",
+    "description": "帶圈速計時功能的免費網上碼錶。精確至毫秒。非常適合運動、訓練和計時。",
+    "lap": "圈",
+    "lapNumber": "圈數 #",
+    "lapTime": "圈速",
+    "totalTime": "總時間",
+    "precision": "精度",
+    "laps": "圈數",
+    "noLaps": "尚未記錄任何圈數"
+  },
+  "clock": {
+    "title": "世界時鐘",
+    "description": "顯示全球多個城市的時間。同時追蹤多個時區。",
+    "currentTime": "目前時間",
+    "timezone": "時區",
+    "offset": "UTC 偏移",
+    "dayNight": "日/夜",
+    "searchCities": "搜尋城市...",
+    "addCity": "新增城市",
+    "removeCity": "刪除城市",
+    "noCitiesAdded": "未新增城市",
+    "addFirstCity": "新增您的第一個城市以開始追蹤時區"
+  },
+  "footer": {
+    "copyright": "© 2026 vClock. 版權所有。",
+    "madeWith": "用 ❤️ 為提升效率而製作"
+  },
+  "meta": {
+    "home": {
+      "title": "⏰ 免費網上鬧鐘 | 簡單可靠的網頁鬧鐘",
+      "description": "100%免費網上鬧鐘。⏰ 數秒即可設定鬧鐘。⏱️ 包含計時器、碼錶和世界時鐘。無需下載！"
+    },
+    "timer": {
+      "title": "⏱️ 網上計時器 | 免費倒數和番茄鐘",
+      "description": "⚡ 帶有1分鐘、5分鐘、25分鐘（番茄鐘）預設的免費計時器。非常適合烹飪🍳、鍛煉💪、學習📚。無需下載！"
+    },
+    "stopwatch": {
+      "title": "⏲️ 帶圈速功能的網上碼錶 | 毫秒精度",
+      "description": "🎯 具有無限圈數記錄的專業碼錶！精確至毫秒。非常適合跑步🏃、游泳🏊、運動💪、遊戲🎮"
+    },
+    "clock": {
+      "title": "🌍 世界時鐘 | 50多個城市的即時時間",
+      "description": "✨ 查看50多個城市的目前時間！比較時區：香港🇭🇰、紐約🗽、巴黎🇫🇷 非常適合遙距工作💼、旅行✈️"
+    },
+    "holidays": {
+      "title": "2026-2027年假期日曆 - 香港 - vClock",
+      "description": "帶倒數的完整假期日曆。追蹤距離農曆新年、中秋節、聖誕節和所有重要假期的日數。"
+    }
+  }
+}

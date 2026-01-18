@@ -1,0 +1,120 @@
+{
+  "site": {
+    "name": "vClock",
+    "description": "Zaman yönetimi için ücretsiz çevrimiçi araçlar"
+  },
+  "nav": {
+    "alarm": "Alarm",
+    "timer": "Zamanlayıcı",
+    "stopwatch": "Kronometre",
+    "clock": "Dünya Saati",
+    "holidays": "Tatiller",
+    "tools": "Araçlar",
+    "privacy": "Gizlilik",
+    "terms": "Şartlar",
+    "contact": "İletişim"
+  },
+  "common": {
+    "start": "Başlat",
+    "stop": "Durdur",
+    "pause": "Duraklat",
+    "resume": "Devam Et",
+    "reset": "Sıfırla",
+    "edit": "Düzenle",
+    "save": "Kaydet",
+    "cancel": "İptal",
+    "delete": "Sil",
+    "add": "Ekle",
+    "test": "Test",
+    "close": "Kapat",
+    "confirm": "Onayla",
+    "yes": "Evet",
+    "no": "Hayır",
+    "loading": "Yükleniyor...",
+    "error": "Hata",
+    "success": "Başarılı"
+  },
+  "alarm": {
+    "title": "Çevrimiçi Alarm",
+    "description": "Ücretsiz çevrimiçi alarm saati. Özelleştirilebilir seslerle herhangi bir saat için alarmınızı ayarlayın. Kayıt gerekmez.",
+    "setAlarm": "Alarm Kur",
+    "stopAlarm": "Alarmı Durdur",
+    "testSound": "Sesi Test Et",
+    "hour": "Saat",
+    "minute": "Dakika",
+    "sound": "Ses",
+    "repeat": "Alarmı tekrarla",
+    "customTitle": "Özel başlık (isteğe bağlı)",
+    "recentlyUsed": "Son Kullanılanlar",
+    "presets": "Hızlı Ayarlar",
+    "alarmSet": "Alarm {time} için ayarlandı",
+    "alarmStopped": "Alarm durduruldu",
+    "alarmActive": "Alarm aktif",
+    "setAlarmFor": "{time} için alarm kur"
+  },
+  "timer": {
+    "title": "Çevrimiçi Zamanlayıcı",
+    "description": "Ücretsiz çevrimiçi zamanlayıcı. Herhangi bir süre için zamanlayıcı ayarlayın. Yemek pişirme, egzersiz ve verimlilik için mükemmel.",
+    "hours": "Saat",
+    "minutes": "Dakika",
+    "seconds": "Saniye",
+    "actionOnComplete": "Zamanlayıcı bittiğinde yapılacak işlem",
+    "stopTimer": "Zamanlayıcıyı durdur",
+    "restartTimer": "Otomatik olarak yeniden başlat",
+    "convertToStopwatch": "Kronometreye dönüştür",
+    "countdownTo": "Geri sayım",
+    "presets": "Hızlı Zamanlayıcılar",
+    "timerFinished": "Zamanlayıcı bitti!",
+    "customTitle": "Özel başlık (isteğe bağlı)"
+  },
+  "stopwatch": {
+    "title": "Çevrimiçi Kronometre",
+    "description": "Tur zamanlayıcılı ücretsiz çevrimiçi kronometre. Milisaniyeye kadar doğru. Spor, antrenman ve zaman ölçümü için mükemmel.",
+    "lap": "Tur",
+    "lapNumber": "Tur #",
+    "lapTime": "Tur Süresi",
+    "totalTime": "Toplam Süre",
+    "precision": "Hassasiyet",
+    "laps": "Turlar",
+    "noLaps": "Henüz kayıtlı tur yok"
+  },
+  "clock": {
+    "title": "Dünya Saati",
+    "description": "Dünyanın dört bir yanındaki birden fazla şehirde zamanı görüntüleyin. Birden fazla saat dilimini aynı anda takip edin.",
+    "currentTime": "Şu Anki Zaman",
+    "timezone": "Saat Dilimi",
+    "offset": "UTC Farkı",
+    "dayNight": "Gündüz/Gece",
+    "searchCities": "Şehir ara...",
+    "addCity": "Şehir Ekle",
+    "removeCity": "Şehri Kaldır",
+    "noCitiesAdded": "Henüz şehir eklenmedi",
+    "addFirstCity": "Saat dilimlerini takip etmeye başlamak için ilk şehrinizi ekleyin"
+  },
+  "footer": {
+    "copyright": "© 2026 vClock. Tüm hakları saklıdır.",
+    "madeWith": "Verimlilik için ❤️ ile yapıldı"
+  },
+  "meta": {
+    "home": {
+      "title": "⏰ Ücretsiz Çevrimiçi Alarm | Basit ve Güvenilir Web Alarmı",
+      "description": "100% ücretsiz çevrimiçi alarm saati. ⏰ Alarmınızı saniyeler içinde ayarlayın. ⏱️ Zamanlayıcı, kronometre ve dünya saati dahil. İndirme gerekmez!"
+    },
+    "timer": {
+      "title": "⏱️ Çevrimiçi Zamanlayıcı | Ücretsiz Geri Sayım ve Pomodoro",
+      "description": "⚡ 1, 5, 25 dakika (Pomodoro) ön ayarlı ücretsiz zamanlayıcı. Yemek pişirme 🍳, egzersiz 💪, çalışma 📚 için mükemmel. İndirme gerekmez!"
+    },
+    "stopwatch": {
+      "title": "⏲️ Turlı Çevrimiçi Kronometre | Milisaniye Hassasiyeti",
+      "description": "🎯 Sınırsız tur kaydı olan profesyonel kronometre! Milisaniyeye kadar doğru. Koşu 🏃, yüzme 🏊, spor 💪, oyun 🎮 için mükemmel"
+    },
+    "clock": {
+      "title": "🌍 Dünya Saati | 50+ Şehirde Canlı Saat",
+      "description": "✨ 50+ şehirdeki güncel saati kontrol edin! Saat dilimlerini karşılaştırın: İstanbul 🇹🇷, New York 🗽, Paris 🇫🇷 Uzaktan çalışma 💼, seyahat ✈️ için mükemmel"
+    },
+    "holidays": {
+      "title": "2026-2027 Tatil Takvimi - Türkiye - vClock",
+      "description": "Geri sayımlı tam tatil takvimi. Ramazan Bayramı, Kurban Bayramı, Yılbaşı ve tüm önemli tatillere kadar olan günleri takip edin."
+    }
+  }
+}

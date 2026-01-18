@@ -1,0 +1,120 @@
+{
+  "site": {
+    "name": "vClock",
+    "description": "Alat manajemen waktu online gratis"
+  },
+  "nav": {
+    "alarm": "Alarm",
+    "timer": "Timer",
+    "stopwatch": "Stopwatch",
+    "clock": "Jam Dunia",
+    "holidays": "Hari Libur",
+    "tools": "Alat",
+    "privacy": "Privasi",
+    "terms": "Ketentuan",
+    "contact": "Kontak"
+  },
+  "common": {
+    "start": "Mulai",
+    "stop": "Berhenti",
+    "pause": "Jeda",
+    "resume": "Lanjutkan",
+    "reset": "Atur Ulang",
+    "edit": "Edit",
+    "save": "Simpan",
+    "cancel": "Batal",
+    "delete": "Hapus",
+    "add": "Tambah",
+    "test": "Tes",
+    "close": "Tutup",
+    "confirm": "Konfirmasi",
+    "yes": "Ya",
+    "no": "Tidak",
+    "loading": "Memuat...",
+    "error": "Kesalahan",
+    "success": "Berhasil"
+  },
+  "alarm": {
+    "title": "Alarm Online",
+    "description": "Jam alarm online gratis. Atur alarm Anda untuk waktu apa pun dengan suara yang dapat disesuaikan. Tidak perlu registrasi.",
+    "setAlarm": "Atur Alarm",
+    "stopAlarm": "Hentikan Alarm",
+    "testSound": "Tes Suara",
+    "hour": "Jam",
+    "minute": "Menit",
+    "sound": "Suara",
+    "repeat": "Ulangi alarm",
+    "customTitle": "Judul kustom (opsional)",
+    "recentlyUsed": "Baru Digunakan",
+    "presets": "Pengaturan Cepat",
+    "alarmSet": "Alarm diatur untuk {time}",
+    "alarmStopped": "Alarm dihentikan",
+    "alarmActive": "Alarm aktif",
+    "setAlarmFor": "Atur alarm untuk {time}"
+  },
+  "timer": {
+    "title": "Timer Online",
+    "description": "Timer online gratis. Atur timer untuk durasi apa pun. Sempurna untuk memasak, olahraga, dan produktivitas.",
+    "hours": "Jam",
+    "minutes": "Menit",
+    "seconds": "Detik",
+    "actionOnComplete": "Tindakan saat timer selesai",
+    "stopTimer": "Hentikan timer",
+    "restartTimer": "Mulai ulang otomatis",
+    "convertToStopwatch": "Ubah ke stopwatch",
+    "countdownTo": "Hitung mundur ke",
+    "presets": "Timer Cepat",
+    "timerFinished": "Timer selesai!",
+    "customTitle": "Judul kustom (opsional)"
+  },
+  "stopwatch": {
+    "title": "Stopwatch Online",
+    "description": "Stopwatch online gratis dengan timer lap. Akurat hingga milidetik. Sempurna untuk olahraga, latihan, dan pencatatan waktu.",
+    "lap": "Lap",
+    "lapNumber": "Lap #",
+    "lapTime": "Waktu Lap",
+    "totalTime": "Total Waktu",
+    "precision": "Presisi",
+    "laps": "Lap",
+    "noLaps": "Belum ada lap yang direkam"
+  },
+  "clock": {
+    "title": "Jam Dunia",
+    "description": "Tampilkan waktu di beberapa kota di seluruh dunia. Lacak beberapa zona waktu secara bersamaan.",
+    "currentTime": "Waktu Saat Ini",
+    "timezone": "Zona Waktu",
+    "offset": "Offset UTC",
+    "dayNight": "Siang/Malam",
+    "searchCities": "Cari kota...",
+    "addCity": "Tambah Kota",
+    "removeCity": "Hapus Kota",
+    "noCitiesAdded": "Belum ada kota yang ditambahkan",
+    "addFirstCity": "Tambahkan kota pertama Anda untuk mulai melacak zona waktu"
+  },
+  "footer": {
+    "copyright": "© 2026 vClock. Hak cipta dilindungi.",
+    "madeWith": "Dibuat dengan ❤️ untuk produktivitas"
+  },
+  "meta": {
+    "home": {
+      "title": "⏰ Alarm Online Gratis | Alarm Web Sederhana & Andal",
+      "description": "Jam alarm online 100% gratis. ⏰ Atur alarm Anda dalam hitungan detik. ⏱️ Termasuk timer, stopwatch, dan jam dunia. Tidak perlu unduh!"
+    },
+    "timer": {
+      "title": "⏱️ Timer Online | Hitung Mundur & Pomodoro Gratis",
+      "description": "⚡ Timer gratis dengan preset 1, 5, 25 menit (Pomodoro). Sempurna untuk memasak 🍳, olahraga 💪, belajar 📚 Tanpa unduhan!"
+    },
+    "stopwatch": {
+      "title": "⏲️ Stopwatch Online dengan Lap | Presisi Milidetik",
+      "description": "🎯 Stopwatch profesional dengan perekaman lap tak terbatas! Akurat hingga milidetik. Sempurna untuk lari 🏃, berenang 🏊, olahraga 💪, gaming 🎮"
+    },
+    "clock": {
+      "title": "🌍 Jam Dunia | Waktu Live di 50+ Kota",
+      "description": "✨ Cek waktu saat ini di 50+ kota! Bandingkan zona waktu: Jakarta 🇮🇩, New York 🗽, Paris 🇫🇷 Sempurna untuk kerja remote 💼, travel ✈️"
+    },
+    "holidays": {
+      "title": "Kalender Hari Libur 2026-2027 - Indonesia - vClock",
+      "description": "Kalender hari libur lengkap dengan hitung mundur. Lacak hari hingga Lebaran, Natal, Tahun Baru, dan semua hari libur penting."
+    }
+  }
+}

@@ -1,0 +1,120 @@
+{
+  "site": {
+    "name": "vClock",
+    "description": "Kostenlose Online-Tools für Zeitmanagement"
+  },
+  "nav": {
+    "alarm": "Wecker",
+    "timer": "Timer",
+    "stopwatch": "Stoppuhr",
+    "clock": "Weltzeituhr",
+    "holidays": "Feiertage",
+    "tools": "Werkzeuge",
+    "privacy": "Datenschutz",
+    "terms": "Bedingungen",
+    "contact": "Kontakt"
+  },
+  "common": {
+    "start": "Start",
+    "stop": "Stopp",
+    "pause": "Pause",
+    "resume": "Fortsetzen",
+    "reset": "Zurücksetzen",
+    "edit": "Bearbeiten",
+    "save": "Speichern",
+    "cancel": "Abbrechen",
+    "delete": "Löschen",
+    "add": "Hinzufügen",
+    "test": "Testen",
+    "close": "Schließen",
+    "confirm": "Bestätigen",
+    "yes": "Ja",
+    "no": "Nein",
+    "loading": "Laden...",
+    "error": "Fehler",
+    "success": "Erfolg"
+  },
+  "alarm": {
+    "title": "Online-Wecker",
+    "description": "Kostenloser Online-Wecker. Stellen Sie Ihren Wecker für jede Zeit mit anpassbaren Sounds ein. Keine Registrierung erforderlich.",
+    "setAlarm": "Wecker Stellen",
+    "stopAlarm": "Wecker Stoppen",
+    "testSound": "Sound Testen",
+    "hour": "Stunde",
+    "minute": "Minute",
+    "sound": "Sound",
+    "repeat": "Alarm wiederholen",
+    "customTitle": "Benutzerdefinierter Titel (optional)",
+    "recentlyUsed": "Kürzlich Verwendet",
+    "presets": "Schnelleinstellungen",
+    "alarmSet": "Wecker gestellt für {time}",
+    "alarmStopped": "Wecker gestoppt",
+    "alarmActive": "Wecker ist aktiv",
+    "setAlarmFor": "Wecker stellen für {time}"
+  },
+  "timer": {
+    "title": "Online-Timer",
+    "description": "Kostenloser Online-Countdown-Timer. Stellen Sie den Timer für jede Dauer ein. Perfekt zum Kochen, Training und Produktivität.",
+    "hours": "Stunden",
+    "minutes": "Minuten",
+    "seconds": "Sekunden",
+    "actionOnComplete": "Aktion beim Ende des Timers",
+    "stopTimer": "Timer stoppen",
+    "restartTimer": "Automatisch neu starten",
+    "convertToStopwatch": "In Stoppuhr umwandeln",
+    "countdownTo": "Countdown bis",
+    "presets": "Schnelle Timer",
+    "timerFinished": "Timer beendet!",
+    "customTitle": "Benutzerdefinierter Titel (optional)"
+  },
+  "stopwatch": {
+    "title": "Online-Stoppuhr",
+    "description": "Kostenlose Online-Stoppuhr mit Rundenzeitmesser. Präzise bis zur Millisekunde. Perfekt für Sport, Training und Zeitmessung.",
+    "lap": "Runde",
+    "lapNumber": "Runde #",
+    "lapTime": "Rundenzeit",
+    "totalTime": "Gesamtzeit",
+    "precision": "Präzision",
+    "laps": "Runden",
+    "noLaps": "Noch keine Runden aufgezeichnet"
+  },
+  "clock": {
+    "title": "Weltzeituhr",
+    "description": "Zeigen Sie die Zeit in mehreren Städten weltweit an. Verfolgen Sie mehrere Zeitzonen gleichzeitig.",
+    "currentTime": "Aktuelle Zeit",
+    "timezone": "Zeitzone",
+    "offset": "UTC-Versatz",
+    "dayNight": "Tag/Nacht",
+    "searchCities": "Städte suchen...",
+    "addCity": "Stadt Hinzufügen",
+    "removeCity": "Stadt Entfernen",
+    "noCitiesAdded": "Keine Städte hinzugefügt",
+    "addFirstCity": "Fügen Sie Ihre erste Stadt hinzu, um Zeitzonen zu verfolgen"
+  },
+  "footer": {
+    "copyright": "© 2026 vClock. Alle Rechte vorbehalten.",
+    "madeWith": "Mit ❤️ für Produktivität gemacht"
+  },
+  "meta": {
+    "home": {
+      "title": "⏰ Online Wecker Kostenlos | Zuverlässig & Einfach",
+      "description": "Kostenloser Online-Wecker. ⏰ Alarm in Sekunden einstellen. ⏱️ Mit Timer, Stoppuhr und Weltzeituhr. Kein Download erforderlich. 100% gratis nutzen!"
+    },
+    "timer": {
+      "title": "⏱️ Online Timer Kostenlos | Countdown & Pomodoro",
+      "description": "⚡ Kostenloser Timer mit 1, 5, 25 Minuten Voreinstellungen (Pomodoro). Perfekt zum Kochen 🍳, Training 💪, Lernen 📚 Ohne Download!"
+    },
+    "stopwatch": {
+      "title": "⏲️ Online Stoppuhr mit Runden | Millisekunden-Präzision",
+      "description": "🎯 Professionelle Stoppuhr mit unbegrenzter Rundenaufzeichnung! Präzise bis zur Millisekunde. Perfekt zum Laufen 🏃, Schwimmen 🏊, Sport 💪, Gaming 🎮"
+    },
+    "clock": {
+      "title": "🌍 Weltzeituhr | Live-Zeit in 50+ Städten Weltweit",
+      "description": "✨ Aktuelle Zeit in über 50 Städten prüfen! Zeitzonen vergleichen: Berlin 🇩🇪, New York 🗽, Tokyo 🗼 Perfekt für Remote-Arbeit 💼, Reisen ✈️"
+    },
+    "holidays": {
+      "title": "Feiertagskalender 2026-2027 - Deutschland, Österreich, Schweiz - vClock",
+      "description": "Vollständiger Feiertagskalender mit Countdown-Timern. Verfolgen Sie Tage bis Weihnachten, Neujahr, Ostern und allen wichtigen Feiertagen."
+    }
+  }
+}

@@ -1,0 +1,120 @@
+{
+  "site": {
+    "name": "vClock",
+    "description": "Gratis online tijdbeheerhulpmiddelen"
+  },
+  "nav": {
+    "alarm": "Wekker",
+    "timer": "Timer",
+    "stopwatch": "Stopwatch",
+    "clock": "Wereldklok",
+    "holidays": "Feestdagen",
+    "tools": "Hulpmiddelen",
+    "privacy": "Privacy",
+    "terms": "Voorwaarden",
+    "contact": "Contact"
+  },
+  "common": {
+    "start": "Start",
+    "stop": "Stop",
+    "pause": "Pauzeer",
+    "resume": "Hervatten",
+    "reset": "Reset",
+    "edit": "Bewerk",
+    "save": "Opslaan",
+    "cancel": "Annuleer",
+    "delete": "Verwijder",
+    "add": "Toevoegen",
+    "test": "Test",
+    "close": "Sluiten",
+    "confirm": "Bevestig",
+    "yes": "Ja",
+    "no": "Nee",
+    "loading": "Laden...",
+    "error": "Fout",
+    "success": "Gelukt"
+  },
+  "alarm": {
+    "title": "Online wekker",
+    "description": "Gratis online wekker. Stel je wekker in voor elk tijdstip met aanpasbare geluiden. Geen registratie vereist.",
+    "setAlarm": "Wekker instellen",
+    "stopAlarm": "Wekker stoppen",
+    "testSound": "Geluid testen",
+    "hour": "Uur",
+    "minute": "Minuut",
+    "sound": "Geluid",
+    "repeat": "Alarm herhalen",
+    "customTitle": "Aangepaste titel (optioneel)",
+    "recentlyUsed": "Recent gebruikt",
+    "presets": "Snelle instellingen",
+    "alarmSet": "Wekker ingesteld voor {time}",
+    "alarmStopped": "Wekker gestopt",
+    "alarmActive": "Wekker is actief",
+    "setAlarmFor": "Wekker instellen voor {time}"
+  },
+  "timer": {
+    "title": "Online timer",
+    "description": "Gratis online timer. Stel een timer in voor elke duur. Perfect voor koken, sporten en productiviteit.",
+    "hours": "Uren",
+    "minutes": "Minuten",
+    "seconds": "Seconden",
+    "actionOnComplete": "Actie bij voltooiing timer",
+    "stopTimer": "Timer stoppen",
+    "restartTimer": "Automatisch herstarten",
+    "convertToStopwatch": "Omzetten naar stopwatch",
+    "countdownTo": "Aftellen naar",
+    "presets": "Snelle timers",
+    "timerFinished": "Timer voltooid!",
+    "customTitle": "Aangepaste titel (optioneel)"
+  },
+  "stopwatch": {
+    "title": "Online stopwatch",
+    "description": "Gratis online stopwatch met rondetimer. Nauwkeurig tot de milliseconde. Perfect voor sport, training en tijdmeting.",
+    "lap": "Ronde",
+    "lapNumber": "Ronde #",
+    "lapTime": "Rondetijd",
+    "totalTime": "Totale tijd",
+    "precision": "Precisie",
+    "laps": "Rondes",
+    "noLaps": "Nog geen rondes opgenomen"
+  },
+  "clock": {
+    "title": "Wereldklok",
+    "description": "Toon de tijd in meerdere steden over de hele wereld. Volg meerdere tijdzones tegelijk.",
+    "currentTime": "Huidige tijd",
+    "timezone": "Tijdzone",
+    "offset": "UTC-offset",
+    "dayNight": "Dag/Nacht",
+    "searchCities": "Zoek steden...",
+    "addCity": "Stad toevoegen",
+    "removeCity": "Stad verwijderen",
+    "noCitiesAdded": "Nog geen steden toegevoegd",
+    "addFirstCity": "Voeg je eerste stad toe om tijdzones te volgen"
+  },
+  "footer": {
+    "copyright": "© 2026 vClock. Alle rechten voorbehouden.",
+    "madeWith": "Gemaakt met ❤️ voor productiviteit"
+  },
+  "meta": {
+    "home": {
+      "title": "⏰ Gratis online wekker | Eenvoudig en betrouwbaar webwekker",
+      "description": "100% gratis online wekker. ⏰ Stel je wekker in binnen enkele seconden. ⏱️ Inclusief timer, stopwatch en wereldklok. Geen download nodig!"
+    },
+    "timer": {
+      "title": "⏱️ Online timer | Gratis aftelling en Pomodoro",
+      "description": "⚡ Gratis timer met voorinstellingen van 1, 5, 25 minuten (Pomodoro). Perfect voor koken 🍳, sporten 💪, studeren 📚 Geen download!"
+    },
+    "stopwatch": {
+      "title": "⏲️ Online stopwatch met rondes | Milliseconde precisie",
+      "description": "🎯 Professionele stopwatch met onbeperkte ronde-opname! Nauwkeurig tot de milliseconde. Perfect voor hardlopen 🏃, zwemmen 🏊, sport 💪, gaming 🎮"
+    },
+    "clock": {
+      "title": "🌍 Wereldklok | Live tijd in 50+ steden",
+      "description": "✨ Bekijk de huidige tijd in 50+ steden! Vergelijk tijdzones: Amsterdam 🇳🇱, New York 🗽, Parijs 🇫🇷 Perfect voor thuiswerken 💼, reizen ✈️"
+    },
+    "holidays": {
+      "title": "Feestdagenkalender 2026-2027 - Nederland, België - vClock",
+      "description": "Volledige feestdagenkalender met aftelling. Volg de dagen tot Kerstmis, Nieuwjaar, Pasen en alle belangrijke feestdagen."
+    }
+  }
+}

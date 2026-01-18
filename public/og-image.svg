@@ -1,0 +1,89 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Gradient -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0" y1="0" x2="1200" y2="630" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" style="stop-color:#1e3a8a;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#3b82f6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#60a5fa;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="clockGradient" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" style="stop-color:#fbbf24;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f59e0b;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bgGradient)"/>
+
+  <!-- Decorative circles -->
+  <circle cx="100" cy="100" r="80" fill="#ffffff" opacity="0.05"/>
+  <circle cx="1100" cy="530" r="100" fill="#ffffff" opacity="0.05"/>
+  <circle cx="950" cy="100" r="60" fill="#ffffff" opacity="0.08"/>
+
+  <!-- Clock Icon -->
+  <g transform="translate(420, 150)">
+    <!-- Clock face -->
+    <circle cx="60" cy="60" r="50" fill="url(#clockGradient)" stroke="#ffffff" stroke-width="4"/>
+
+    <!-- Clock center dot -->
+    <circle cx="60" cy="60" r="4" fill="#1e3a8a"/>
+
+    <!-- Hour hand (pointing at 10) -->
+    <line x1="60" y1="60" x2="60" y2="35" stroke="#1e3a8a" stroke-width="5" stroke-linecap="round"/>
+
+    <!-- Minute hand (pointing at 2) -->
+    <line x1="60" y1="60" x2="85" y2="50" stroke="#1e3a8a" stroke-width="3" stroke-linecap="round"/>
+
+    <!-- Hour markers -->
+    <circle cx="60" cy="20" r="3" fill="#ffffff"/>
+    <circle cx="60" cy="100" r="3" fill="#ffffff"/>
+    <circle cx="20" cy="60" r="3" fill="#ffffff"/>
+    <circle cx="100" cy="60" r="3" fill="#ffffff"/>
+  </g>
+
+  <!-- vClock Text -->
+  <text x="600" y="310" font-family="Arial, sans-serif" font-size="96" font-weight="700" fill="#ffffff" text-anchor="middle">
+    vClock
+  </text>
+
+  <!-- Tagline -->
+  <text x="600" y="370" font-family="Arial, sans-serif" font-size="36" font-weight="400" fill="#e0f2fe" text-anchor="middle">
+    Free Online Time Management Tools
+  </text>
+
+  <!-- Features -->
+  <g transform="translate(300, 420)">
+    <!-- Alarm Icon + Text -->
+    <g>
+      <circle cx="20" cy="0" r="16" fill="#fbbf24" opacity="0.3"/>
+      <text x="20" y="6" font-size="24" text-anchor="middle">⏰</text>
+      <text x="50" y="6" font-family="Arial, sans-serif" font-size="24" font-weight="500" fill="#ffffff">Alarm</text>
+    </g>
+
+    <!-- Timer Icon + Text -->
+    <g transform="translate(180, 0)">
+      <circle cx="20" cy="0" r="16" fill="#fbbf24" opacity="0.3"/>
+      <text x="20" y="6" font-size="24" text-anchor="middle">⏱️</text>
+      <text x="50" y="6" font-family="Arial, sans-serif" font-size="24" font-weight="500" fill="#ffffff">Timer</text>
+    </g>
+
+    <!-- Stopwatch Icon + Text -->
+    <g transform="translate(360, 0)">
+      <circle cx="20" cy="0" r="16" fill="#fbbf24" opacity="0.3"/>
+      <text x="20" y="6" font-size="24" text-anchor="middle">⏲️</text>
+      <text x="50" y="6" font-family="Arial, sans-serif" font-size="24" font-weight="500" fill="#ffffff">Stopwatch</text>
+    </g>
+  </g>
+
+  <!-- World Clock Feature -->
+  <g transform="translate(300, 480)">
+    <circle cx="20" cy="0" r="16" fill="#fbbf24" opacity="0.3"/>
+    <text x="20" y="6" font-size="24" text-anchor="middle">🌍</text>
+    <text x="50" y="6" font-family="Arial, sans-serif" font-size="24" font-weight="500" fill="#ffffff">World Clock • 50 Languages</text>
+  </g>
+
+  <!-- Bottom URL -->
+  <text x="600" y="580" font-family="Arial, sans-serif" font-size="28" font-weight="400" fill="#bfdbfe" text-anchor="middle">
+    24-clock.com
+  </text>
+</svg>

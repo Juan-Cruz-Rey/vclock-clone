@@ -16,7 +16,16 @@ interface Props {
 const { title, description, keywords, ogImage, noindex = false, structuredData } = Astro.props;
 const locale = getLocaleFromPath(Astro.url.pathname);
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
-const siteUrl = Astro.site || 'https://24-clock.com';
+const siteUrl = Astro.site?.toString().replace(/\/$/, '') || 'https://24-clock.com';
+
+// Generate alternate language URLs based on current page (excluding current locale)
+import { getAllLocales, switchLocale } from '../scripts/i18n';
+const alternateLanguages = getAllLocales()
+  .filter(loc => loc !== locale) // Exclude current locale from alternates
+  .map(loc => ({
+    locale: loc,
+    url: `${siteUrl}${switchLocale(Astro.url.pathname, loc)}`
+  }));
 
 // Default structured data (Website)
 const defaultStructuredData = {
@@ -50,11 +59,11 @@ const defaultStructuredData = {
     <!-- Canonical URL -->
     <link rel="canonical" href={canonicalURL} />
 
-    <!-- Alternate Languages -->
-    <link rel="alternate" hreflang="en" href={`${siteUrl}/`} />
-    <link rel="alternate" hreflang="es" href={`${siteUrl}/es/`} />
-    <link rel="alternate" hreflang="it" href={`${siteUrl}/it/`} />
-    <link rel="alternate" hreflang="x-default" href={`${siteUrl}/`} />
+    <!-- Alternate Languages (Dynamic for all supported languages) -->
+    {alternateLanguages.map(alt => (
+      <link rel="alternate" hreflang={alt.locale} href={alt.url} />
+    ))}
+    <link rel="alternate" hreflang="x-default" href={`${siteUrl}${switchLocale(Astro.url.pathname, 'en')}`} />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
@@ -62,7 +71,40 @@ const defaultStructuredData = {
     <meta property="og:title" content={title} />
     {description && <meta property="og:description" content={description} />}
     <meta property="og:image" content={ogImage || `${siteUrl}/og-image.png`} />
-    <meta property="og:locale" content={locale === 'en' ? 'en_US' : locale === 'es' ? 'es_ES' : 'it_IT'} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="vClock - Free Online Time Management Tools" />
+    <meta property="og:locale" content={
+      locale === 'en' ? 'en_US' :
+      locale === 'es' ? 'es_ES' :
+      locale === 'it' ? 'it_IT' :
+      locale === 'fr' ? 'fr_FR' :
+      locale === 'de' ? 'de_DE' :
+      locale === 'pt' ? 'pt_PT' :
+      locale === 'ru' ? 'ru_RU' :
+      locale === 'ja' ? 'ja_JP' :
+      locale === 'ko' ? 'ko_KR' :
+      locale === 'zh-CN' ? 'zh_CN' :
+      locale === 'ar' ? 'ar_SA' :
+      locale === 'hi' ? 'hi_IN' :
+      locale === 'bn' ? 'bn_BD' :
+      locale === 'id' ? 'id_ID' :
+      locale === 'tr' ? 'tr_TR' :
+      locale === 'vi' ? 'vi_VN' :
+      locale === 'pl' ? 'pl_PL' :
+      locale === 'nl' ? 'nl_NL' :
+      locale === 'th' ? 'th_TH' :
+      locale === 'fa' ? 'fa_IR' :
+      locale === 'uk' ? 'uk_UA' :
+      locale === 'cs' ? 'cs_CZ' :
+      locale === 'el' ? 'el_GR' :
+      locale === 'sv' ? 'sv_SE' :
+      locale === 'hu' ? 'hu_HU' :
+      locale === 'ur' ? 'ur_PK' :
+      locale === 'he' ? 'he_IL' :
+      locale === 'ro' ? 'ro_RO' :
+      'en_US'
+    } />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />

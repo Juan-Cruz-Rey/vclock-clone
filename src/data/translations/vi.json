@@ -1,0 +1,120 @@
+{
+  "site": {
+    "name": "vClock",
+    "description": "Công cụ quản lý thời gian trực tuyến miễn phí"
+  },
+  "nav": {
+    "alarm": "Báo thức",
+    "timer": "Hẹn giờ",
+    "stopwatch": "Bấm giờ",
+    "clock": "Đồng hồ thế giới",
+    "holidays": "Ngày lễ",
+    "tools": "Công cụ",
+    "privacy": "Quyền riêng tư",
+    "terms": "Điều khoản",
+    "contact": "Liên hệ"
+  },
+  "common": {
+    "start": "Bắt đầu",
+    "stop": "Dừng",
+    "pause": "Tạm dừng",
+    "resume": "Tiếp tục",
+    "reset": "Đặt lại",
+    "edit": "Chỉnh sửa",
+    "save": "Lưu",
+    "cancel": "Hủy",
+    "delete": "Xóa",
+    "add": "Thêm",
+    "test": "Kiểm tra",
+    "close": "Đóng",
+    "confirm": "Xác nhận",
+    "yes": "Có",
+    "no": "Không",
+    "loading": "Đang tải...",
+    "error": "Lỗi",
+    "success": "Thành công"
+  },
+  "alarm": {
+    "title": "Báo thức trực tuyến",
+    "description": "Đồng hồ báo thức trực tuyến miễn phí. Đặt báo thức của bạn cho bất kỳ thời gian nào với âm thanh tùy chỉnh. Không cần đăng ký.",
+    "setAlarm": "Đặt báo thức",
+    "stopAlarm": "Dừng báo thức",
+    "testSound": "Kiểm tra âm thanh",
+    "hour": "Giờ",
+    "minute": "Phút",
+    "sound": "Âm thanh",
+    "repeat": "Lặp lại báo thức",
+    "customTitle": "Tiêu đề tùy chỉnh (tùy chọn)",
+    "recentlyUsed": "Đã sử dụng gần đây",
+    "presets": "Cài đặt nhanh",
+    "alarmSet": "Báo thức đã đặt cho {time}",
+    "alarmStopped": "Báo thức đã dừng",
+    "alarmActive": "Báo thức đang hoạt động",
+    "setAlarmFor": "Đặt báo thức cho {time}"
+  },
+  "timer": {
+    "title": "Hẹn giờ trực tuyến",
+    "description": "Hẹn giờ trực tuyến miễn phí. Đặt hẹn giờ cho bất kỳ thời lượng nào. Hoàn hảo cho nấu ăn, tập luyện và năng suất.",
+    "hours": "Giờ",
+    "minutes": "Phút",
+    "seconds": "Giây",
+    "actionOnComplete": "Hành động khi hẹn giờ hoàn thành",
+    "stopTimer": "Dừng hẹn giờ",
+    "restartTimer": "Tự động khởi động lại",
+    "convertToStopwatch": "Chuyển sang bấm giờ",
+    "countdownTo": "Đếm ngược đến",
+    "presets": "Hẹn giờ nhanh",
+    "timerFinished": "Hẹn giờ đã hoàn thành!",
+    "customTitle": "Tiêu đề tùy chỉnh (tùy chọn)"
+  },
+  "stopwatch": {
+    "title": "Bấm giờ trực tuyến",
+    "description": "Bấm giờ trực tuyến miễn phí với bộ hẹn giờ vòng. Chính xác đến mili giây. Hoàn hảo cho thể thao, huấn luyện và tính giờ.",
+    "lap": "Vòng",
+    "lapNumber": "Vòng #",
+    "lapTime": "Thời gian vòng",
+    "totalTime": "Tổng thời gian",
+    "precision": "Độ chính xác",
+    "laps": "Vòng",
+    "noLaps": "Chưa có vòng nào được ghi lại"
+  },
+  "clock": {
+    "title": "Đồng hồ thế giới",
+    "description": "Hiển thị thời gian ở nhiều thành phố trên thế giới. Theo dõi nhiều múi giờ cùng lúc.",
+    "currentTime": "Giờ hiện tại",
+    "timezone": "Múi giờ",
+    "offset": "Độ lệch UTC",
+    "dayNight": "Ngày/Đêm",
+    "searchCities": "Tìm kiếm thành phố...",
+    "addCity": "Thêm thành phố",
+    "removeCity": "Xóa thành phố",
+    "noCitiesAdded": "Chưa thêm thành phố nào",
+    "addFirstCity": "Thêm thành phố đầu tiên của bạn để bắt đầu theo dõi múi giờ"
+  },
+  "footer": {
+    "copyright": "© 2026 vClock. Tất cả quyền được bảo lưu.",
+    "madeWith": "Được tạo với ❤️ cho năng suất"
+  },
+  "meta": {
+    "home": {
+      "title": "⏰ Báo thức trực tuyến miễn phí | Báo thức web đơn giản & đáng tin cậy",
+      "description": "Đồng hồ báo thức trực tuyến 100% miễn phí. ⏰ Đặt báo thức trong vài giây. ⏱️ Bao gồm hẹn giờ, bấm giờ và đồng hồ thế giới. Không cần tải xuống!"
+    },
+    "timer": {
+      "title": "⏱️ Hẹn giờ trực tuyến | Đếm ngược & Pomodoro miễn phí",
+      "description": "⚡ Hẹn giờ miễn phí với cài đặt sẵn 1, 5, 25 phút (Pomodoro). Hoàn hảo cho nấu ăn 🍳, tập luyện 💪, học tập 📚 Không cần tải xuống!"
+    },
+    "stopwatch": {
+      "title": "⏲️ Bấm giờ trực tuyến có vòng | Độ chính xác mili giây",
+      "description": "🎯 Bấm giờ chuyên nghiệp với ghi vòng không giới hạn! Chính xác đến mili giây. Hoàn hảo cho chạy bộ 🏃, bơi lội 🏊, thể thao 💪, game 🎮"
+    },
+    "clock": {
+      "title": "🌍 Đồng hồ thế giới | Giờ trực tiếp ở 50+ thành phố",
+      "description": "✨ Xem giờ hiện tại ở 50+ thành phố! So sánh múi giờ: Hà Nội 🇻🇳, New York 🗽, Paris 🇫🇷 Hoàn hảo cho làm việc từ xa 💼, du lịch ✈️"
+    },
+    "holidays": {
+      "title": "Lịch ngày lễ 2026-2027 - Việt Nam - vClock",
+      "description": "Lịch ngày lễ đầy đủ với đếm ngược. Theo dõi số ngày đến Tết, Giỗ Tổ Hùng Vương, Quốc Khánh và tất cả các ngày lễ quan trọng."
+    }
+  }
+}

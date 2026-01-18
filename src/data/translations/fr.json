@@ -1,0 +1,120 @@
+{
+  "site": {
+    "name": "vClock",
+    "description": "Outils gratuits en ligne pour la gestion du temps"
+  },
+  "nav": {
+    "alarm": "Réveil",
+    "timer": "Minuteur",
+    "stopwatch": "Chronomètre",
+    "clock": "Horloge Mondiale",
+    "holidays": "Jours Fériés",
+    "tools": "Outils",
+    "privacy": "Confidentialité",
+    "terms": "Conditions",
+    "contact": "Contact"
+  },
+  "common": {
+    "start": "Démarrer",
+    "stop": "Arrêter",
+    "pause": "Pause",
+    "resume": "Reprendre",
+    "reset": "Réinitialiser",
+    "edit": "Modifier",
+    "save": "Enregistrer",
+    "cancel": "Annuler",
+    "delete": "Supprimer",
+    "add": "Ajouter",
+    "test": "Tester",
+    "close": "Fermer",
+    "confirm": "Confirmer",
+    "yes": "Oui",
+    "no": "Non",
+    "loading": "Chargement...",
+    "error": "Erreur",
+    "success": "Succès"
+  },
+  "alarm": {
+    "title": "Réveil en Ligne",
+    "description": "Réveil en ligne gratuit. Programmez votre réveil pour n'importe quelle heure avec des sons personnalisables. Aucune inscription requise.",
+    "setAlarm": "Programmer le Réveil",
+    "stopAlarm": "Arrêter le Réveil",
+    "testSound": "Tester le Son",
+    "hour": "Heure",
+    "minute": "Minute",
+    "sound": "Son",
+    "repeat": "Répéter l'alarme",
+    "customTitle": "Titre personnalisé (optionnel)",
+    "recentlyUsed": "Récemment Utilisés",
+    "presets": "Réglages Rapides",
+    "alarmSet": "Réveil programmé pour {time}",
+    "alarmStopped": "Réveil arrêté",
+    "alarmActive": "Le réveil est actif",
+    "setAlarmFor": "Programmer le réveil pour {time}"
+  },
+  "timer": {
+    "title": "Minuteur en Ligne",
+    "description": "Minuteur en ligne gratuit. Réglez un minuteur pour n'importe quelle durée. Parfait pour la cuisine, l'entraînement et la productivité.",
+    "hours": "Heures",
+    "minutes": "Minutes",
+    "seconds": "Secondes",
+    "actionOnComplete": "Action à la fin du minuteur",
+    "stopTimer": "Arrêter le minuteur",
+    "restartTimer": "Redémarrer automatiquement",
+    "convertToStopwatch": "Convertir en chronomètre",
+    "countdownTo": "Compte à rebours vers",
+    "presets": "Minuteurs Rapides",
+    "timerFinished": "Minuteur terminé !",
+    "customTitle": "Titre personnalisé (optionnel)"
+  },
+  "stopwatch": {
+    "title": "Chronomètre en Ligne",
+    "description": "Chronomètre en ligne gratuit avec minuteur de tour. Précis à la milliseconde. Parfait pour le sport, l'entraînement et le chronométrage.",
+    "lap": "Tour",
+    "lapNumber": "Tour #",
+    "lapTime": "Temps du Tour",
+    "totalTime": "Temps Total",
+    "precision": "Précision",
+    "laps": "Tours",
+    "noLaps": "Aucun tour enregistré pour le moment"
+  },
+  "clock": {
+    "title": "Horloge Mondiale",
+    "description": "Afficher l'heure dans plusieurs villes du monde entier. Suivez plusieurs fuseaux horaires simultanément.",
+    "currentTime": "Heure Actuelle",
+    "timezone": "Fuseau Horaire",
+    "offset": "Décalage UTC",
+    "dayNight": "Jour/Nuit",
+    "searchCities": "Rechercher des villes...",
+    "addCity": "Ajouter une Ville",
+    "removeCity": "Supprimer la Ville",
+    "noCitiesAdded": "Aucune ville ajoutée",
+    "addFirstCity": "Ajoutez votre première ville pour commencer à suivre les fuseaux horaires"
+  },
+  "footer": {
+    "copyright": "© 2026 vClock. Tous droits réservés.",
+    "madeWith": "Fait avec ❤️ pour la productivité"
+  },
+  "meta": {
+    "home": {
+      "title": "⏰ Réveil en Ligne Gratuit | Alarme Web Simple & Fiable",
+      "description": "Réveil en ligne 100% gratuit. ⏰ Programmez votre alarme en quelques secondes. ⏱️ Minuteur, chronomètre et horloge mondiale inclus. Aucun téléchargement!"
+    },
+    "timer": {
+      "title": "⏱️ Minuteur en Ligne | Compte à Rebours & Pomodoro Gratuit",
+      "description": "⚡ Minuteur gratuit avec préréglages de 1, 5, 25 minutes (Pomodoro). Parfait pour la cuisine 🍳, l'entraînement 💪, les études 📚 Sans téléchargement!"
+    },
+    "stopwatch": {
+      "title": "⏲️ Chronomètre en Ligne avec Tours | Précision Milliseconde",
+      "description": "🎯 Chronomètre professionnel avec enregistrement illimité de tours! Précis à la milliseconde. Parfait pour la course 🏃, la natation 🏊, le sport 💪, le gaming 🎮"
+    },
+    "clock": {
+      "title": "🌍 Horloge Mondiale | Heure en Direct dans 50+ Villes",
+      "description": "✨ Consultez l'heure actuelle dans plus de 50 villes! Comparez les fuseaux horaires : Paris 🇫🇷, New York 🗽, Tokyo 🗼 Parfait pour le télétravail 💼, les voyages ✈️"
+    },
+    "holidays": {
+      "title": "Calendrier des Jours Fériés 2026-2027 - France, Belgique, Suisse - vClock",
+      "description": "Calendrier complet des jours fériés avec compte à rebours. Suivez les jours jusqu'à Noël, Nouvel An, Pâques et tous les jours fériés importants."
+    }
+  }
+}

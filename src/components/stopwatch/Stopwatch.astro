@@ -3,6 +3,10 @@
  * Stopwatch Component
  * Precision stopwatch with lap timing
  */
+
+import { t, getLocaleFromPath } from '../../scripts/i18n';
+
+const locale = getLocaleFromPath(Astro.url.pathname);
 ---
 
 <div class="stopwatch-container max-w-4xl mx-auto">
@@ -14,29 +18,29 @@
   <!-- Control Buttons -->
   <div class="flex flex-wrap justify-center gap-4 mb-8">
     <button id="start-btn" class="btn-primary min-w-[120px]">
-      Start
+      {t(locale, 'common.start')}
     </button>
     <button id="pause-btn" class="btn-secondary min-w-[120px] hidden">
-      Pause
+      {t(locale, 'common.pause')}
     </button>
     <button id="resume-btn" class="btn-primary min-w-[120px] hidden">
-      Resume
+      {t(locale, 'common.resume')}
     </button>
     <button id="reset-btn" class="btn-secondary min-w-[120px]">
-      Reset
+      {t(locale, 'common.reset')}
     </button>
     <button id="lap-btn" class="btn-primary min-w-[120px]" disabled>
-      Lap
+      {t(locale, 'stopwatch.lap')}
     </button>
   </div>
 
   <!-- Precision Selector -->
   <div class="flex justify-center gap-2 mb-8">
     <label class="text-sm font-medium text-gray-700 dark:text-gray-300 mr-2 self-center">
-      Precision:
+      {t(locale, 'stopwatch.precision')}:
     </label>
     <button class="precision-btn btn-secondary px-4 py-2 text-sm" data-precision="0">
-      Seconds
+      {t(locale, 'timer.seconds')}
     </button>
     <button class="precision-btn btn-secondary px-4 py-2 text-sm bg-blue-600 text-white" data-precision="2">
       Centiseconds
@@ -50,7 +54,7 @@
   <div class="border-t border-gray-200 dark:border-gray-700 pt-8">
     <div class="flex justify-between items-center mb-4">
       <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
-        Laps (<span id="lap-count">0</span>)
+        {t(locale, 'stopwatch.laps')} (<span id="lap-count">0</span>)
       </h3>
       <div class="flex gap-2">
         <button id="export-laps-btn" class="btn-secondary text-sm px-4 py-2" disabled>
@@ -84,8 +88,8 @@
         <thead class="bg-gray-100 dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700">
           <tr>
             <th class="px-4 py-3 text-sm font-semibold text-gray-700 dark:text-gray-300">#</th>
-            <th class="px-4 py-3 text-sm font-semibold text-gray-700 dark:text-gray-300">Lap Time</th>
-            <th class="px-4 py-3 text-sm font-semibold text-gray-700 dark:text-gray-300">Total Time</th>
+            <th class="px-4 py-3 text-sm font-semibold text-gray-700 dark:text-gray-300">{t(locale, 'stopwatch.lapTime')}</th>
+            <th class="px-4 py-3 text-sm font-semibold text-gray-700 dark:text-gray-300">{t(locale, 'stopwatch.totalTime')}</th>
             <th class="px-4 py-3 text-sm font-semibold text-gray-700 dark:text-gray-300">Difference</th>
             <th class="px-4 py-3 text-sm font-semibold text-gray-700 dark:text-gray-300"></th>
           </tr>
@@ -93,7 +97,7 @@
         <tbody id="lap-tbody" class="divide-y divide-gray-200 dark:divide-gray-700">
           <tr>
             <td colspan="5" class="px-4 py-8 text-center text-gray-500 dark:text-gray-400">
-              No laps recorded yet
+              {t(locale, 'stopwatch.noLaps')}
             </td>
           </tr>
         </tbody>
@@ -102,7 +106,10 @@
   </div>
 </div>
 
-<script>
+<script define:vars={{
+  textNoLaps: t(locale, 'stopwatch.noLaps'),
+  textDelete: t(locale, 'common.delete')
+}}>
   import { Stopwatch, formatStopwatchTime, exportLapsToCSV, type Lap, type StopwatchPrecision } from '../../scripts/stopwatch-logic';
 
   // DOM Elements
@@ -178,7 +185,7 @@
       lapTbodyEl.innerHTML = `
         <tr>
           <td colspan="5" class="px-4 py-8 text-center text-gray-500 dark:text-gray-400">
-            No laps recorded yet
+            ${textNoLaps}
           </td>
         </tr>
       `;
@@ -234,7 +241,7 @@
               class="delete-lap-btn text-red-600 dark:text-red-400 hover:text-red-800 dark:hover:text-red-300 text-sm"
               data-lap-number="${lap.number}"
             >
-              Delete
+              ${textDelete}
             </button>
           </td>
         </tr>

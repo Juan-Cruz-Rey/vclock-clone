@@ -1,0 +1,24 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Timer from '../../components/timer/Timer.astro';
+import { t } from '../../scripts/i18n';
+
+const locale = 'te';
+const title = t(locale, 'meta.timer.title');
+const description = t(locale, 'meta.timer.description');
+---
+
+<BaseLayout title={title} description={description}>
+  <div class="container mx-auto px-4 py-12">
+    <div class="text-center mb-12">
+      <h1 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+        {t(locale, 'timer.title')}
+      </h1>
+      <p class="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+        {t(locale, 'timer.description')}
+      </p>
+    </div>
+
+    <Timer />
+  </div>
+</BaseLayout>

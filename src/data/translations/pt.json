@@ -1,0 +1,120 @@
+{
+  "site": {
+    "name": "vClock",
+    "description": "Ferramentas online grátis para gerenciamento de tempo"
+  },
+  "nav": {
+    "alarm": "Despertador",
+    "timer": "Temporizador",
+    "stopwatch": "Cronômetro",
+    "clock": "Relógio Mundial",
+    "holidays": "Feriados",
+    "tools": "Ferramentas",
+    "privacy": "Privacidade",
+    "terms": "Termos",
+    "contact": "Contato"
+  },
+  "common": {
+    "start": "Iniciar",
+    "stop": "Parar",
+    "pause": "Pausar",
+    "resume": "Retomar",
+    "reset": "Reiniciar",
+    "edit": "Editar",
+    "save": "Salvar",
+    "cancel": "Cancelar",
+    "delete": "Excluir",
+    "add": "Adicionar",
+    "test": "Testar",
+    "close": "Fechar",
+    "confirm": "Confirmar",
+    "yes": "Sim",
+    "no": "Não",
+    "loading": "Carregando...",
+    "error": "Erro",
+    "success": "Sucesso"
+  },
+  "alarm": {
+    "title": "Despertador Online",
+    "description": "Despertador online grátis. Configure seu alarme para qualquer hora com sons personalizáveis. Sem registro necessário.",
+    "setAlarm": "Definir Alarme",
+    "stopAlarm": "Parar Alarme",
+    "testSound": "Testar Som",
+    "hour": "Hora",
+    "minute": "Minuto",
+    "sound": "Som",
+    "repeat": "Repetir alarme",
+    "customTitle": "Título personalizado (opcional)",
+    "recentlyUsed": "Usados Recentemente",
+    "presets": "Configuração Rápida",
+    "alarmSet": "Alarme definido para {time}",
+    "alarmStopped": "Alarme parado",
+    "alarmActive": "O alarme está ativo",
+    "setAlarmFor": "Definir alarme para {time}"
+  },
+  "timer": {
+    "title": "Temporizador Online",
+    "description": "Temporizador online grátis. Defina o temporizador para qualquer duração. Perfeito para cozinhar, treinar e produtividade.",
+    "hours": "Horas",
+    "minutes": "Minutos",
+    "seconds": "Segundos",
+    "actionOnComplete": "Ação quando o temporizador terminar",
+    "stopTimer": "Parar temporizador",
+    "restartTimer": "Reiniciar automaticamente",
+    "convertToStopwatch": "Converter em cronômetro",
+    "countdownTo": "Contagem regressiva para",
+    "presets": "Temporizadores Rápidos",
+    "timerFinished": "Temporizador concluído!",
+    "customTitle": "Título personalizado (opcional)"
+  },
+  "stopwatch": {
+    "title": "Cronômetro Online",
+    "description": "Cronômetro online grátis com contador de voltas. Preciso até milissegundos. Perfeito para esportes, treino e cronometragem.",
+    "lap": "Volta",
+    "lapNumber": "Volta #",
+    "lapTime": "Tempo da Volta",
+    "totalTime": "Tempo Total",
+    "precision": "Precisão",
+    "laps": "Voltas",
+    "noLaps": "Nenhuma volta registrada ainda"
+  },
+  "clock": {
+    "title": "Relógio Mundial",
+    "description": "Exibir o horário em várias cidades ao redor do mundo. Acompanhe vários fusos horários simultaneamente.",
+    "currentTime": "Hora Atual",
+    "timezone": "Fuso Horário",
+    "offset": "Diferença UTC",
+    "dayNight": "Dia/Noite",
+    "searchCities": "Buscar cidades...",
+    "addCity": "Adicionar Cidade",
+    "removeCity": "Remover Cidade",
+    "noCitiesAdded": "Nenhuma cidade adicionada",
+    "addFirstCity": "Adicione sua primeira cidade para começar a acompanhar fusos horários"
+  },
+  "footer": {
+    "copyright": "© 2026 vClock. Todos os direitos reservados.",
+    "madeWith": "Feito com ❤️ para produtividade"
+  },
+  "meta": {
+    "home": {
+      "title": "⏰ Despertador Online Grátis | Alarme Fácil e Confiável",
+      "description": "Despertador online 100% grátis! ⏰ Configure seu alarme em segundos. ⏱️ Cronômetro, timer e relógio mundial inclusos. Não precisa baixar nada! 🌎"
+    },
+    "timer": {
+      "title": "⏱️ Temporizador Online Grátis | Contagem Regressiva & Pomodoro",
+      "description": "⚡ Timer grátis com presets de 1, 5, 25 minutos (Pomodoro). Perfeito para cozinhar 🍳, treinar 💪, estudar 📚 Sem download!"
+    },
+    "stopwatch": {
+      "title": "⏲️ Cronômetro Online com Voltas | Precisão de Milissegundos",
+      "description": "🎯 Cronômetro profissional com registro ilimitado de voltas! Preciso até milissegundos. Perfeito para corrida 🏃, natação 🏊, treino 💪, gaming 🎮"
+    },
+    "clock": {
+      "title": "🌍 Relógio Mundial | Hora ao Vivo em 50+ Cidades",
+      "description": "✨ Consulte a hora atual em mais de 50 cidades! Compare fusos horários: São Paulo 🇧🇷, Nova York 🗽, Tóquio 🗼 Perfeito para trabalho remoto 💼, viagens ✈️"
+    },
+    "holidays": {
+      "title": "Calendário de Feriados 2026-2027 - Brasil, Portugal - vClock",
+      "description": "Calendário completo de feriados com temporizadores de contagem regressiva. Acompanhe dias até Natal, Ano Novo, Páscoa e todos os feriados importantes."
+    }
+  }
+}

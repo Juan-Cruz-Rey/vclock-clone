@@ -1,0 +1,120 @@
+{
+  "site": {
+    "name": "vClock",
+    "description": "무료 온라인 시간 관리 도구"
+  },
+  "nav": {
+    "alarm": "알람",
+    "timer": "타이머",
+    "stopwatch": "스톱워치",
+    "clock": "세계 시계",
+    "holidays": "공휴일",
+    "tools": "도구",
+    "privacy": "개인정보",
+    "terms": "이용약관",
+    "contact": "문의"
+  },
+  "common": {
+    "start": "시작",
+    "stop": "정지",
+    "pause": "일시정지",
+    "resume": "재개",
+    "reset": "초기화",
+    "edit": "편집",
+    "save": "저장",
+    "cancel": "취소",
+    "delete": "삭제",
+    "add": "추가",
+    "test": "테스트",
+    "close": "닫기",
+    "confirm": "확인",
+    "yes": "예",
+    "no": "아니오",
+    "loading": "로딩 중...",
+    "error": "오류",
+    "success": "성공"
+  },
+  "alarm": {
+    "title": "온라인 알람",
+    "description": "무료 온라인 알람 시계. 사용자 지정 가능한 소리로 원하는 시간에 알람을 설정하세요. 가입 불필요.",
+    "setAlarm": "알람 설정",
+    "stopAlarm": "알람 정지",
+    "testSound": "소리 테스트",
+    "hour": "시",
+    "minute": "분",
+    "sound": "소리",
+    "repeat": "알람 반복",
+    "customTitle": "사용자 정의 제목(선택사항)",
+    "recentlyUsed": "최근 사용",
+    "presets": "빠른 설정",
+    "alarmSet": "{time}에 알람이 설정되었습니다",
+    "alarmStopped": "알람이 정지되었습니다",
+    "alarmActive": "알람이 활성화되어 있습니다",
+    "setAlarmFor": "{time}에 알람 설정"
+  },
+  "timer": {
+    "title": "온라인 타이머",
+    "description": "무료 온라인 타이머. 원하는 시간으로 타이머를 설정하세요. 요리, 운동, 생산성에 완벽합니다.",
+    "hours": "시간",
+    "minutes": "분",
+    "seconds": "초",
+    "actionOnComplete": "타이머 종료 시 동작",
+    "stopTimer": "타이머 정지",
+    "restartTimer": "자동 재시작",
+    "convertToStopwatch": "스톱워치로 변환",
+    "countdownTo": "카운트다운",
+    "presets": "빠른 타이머",
+    "timerFinished": "타이머 종료!",
+    "customTitle": "사용자 정의 제목(선택사항)"
+  },
+  "stopwatch": {
+    "title": "온라인 스톱워치",
+    "description": "랩 타이머가 있는 무료 온라인 스톱워치. 밀리초 단위로 정확합니다. 스포츠, 훈련, 시간 측정에 완벽합니다.",
+    "lap": "랩",
+    "lapNumber": "랩 #",
+    "lapTime": "랩 시간",
+    "totalTime": "총 시간",
+    "precision": "정밀도",
+    "laps": "랩",
+    "noLaps": "아직 기록된 랩이 없습니다"
+  },
+  "clock": {
+    "title": "세계 시계",
+    "description": "전 세계 여러 도시의 시간을 표시합니다. 여러 시간대를 동시에 추적하세요.",
+    "currentTime": "현재 시간",
+    "timezone": "시간대",
+    "offset": "UTC 오프셋",
+    "dayNight": "낮/밤",
+    "searchCities": "도시 검색...",
+    "addCity": "도시 추가",
+    "removeCity": "도시 제거",
+    "noCitiesAdded": "추가된 도시가 없습니다",
+    "addFirstCity": "첫 번째 도시를 추가하여 시간대 추적을 시작하세요"
+  },
+  "footer": {
+    "copyright": "© 2026 vClock. 모든 권리 보유.",
+    "madeWith": "생산성을 위해 ❤️로 제작"
+  },
+  "meta": {
+    "home": {
+      "title": "⏰ 무료 온라인 알람 | 간단하고 신뢰할 수 있는 웹 알람",
+      "description": "100% 무료 온라인 알람 시계. ⏰ 몇 초 만에 알람 설정. ⏱️ 타이머, 스톱워치, 세계 시계 포함. 다운로드 불필요!"
+    },
+    "timer": {
+      "title": "⏱️ 온라인 타이머 | 무료 카운트다운 & 포모도로",
+      "description": "⚡ 1분, 5분, 25분(포모도로) 사전 설정이 있는 무료 타이머. 요리🍳, 운동💪, 공부📚에 완벽. 다운로드 불필요!"
+    },
+    "stopwatch": {
+      "title": "⏲️ 랩 기능이 있는 온라인 스톱워치 | 밀리초 정밀도",
+      "description": "🎯 무제한 랩 기록이 가능한 전문 스톱워치! 밀리초 단위로 정확. 달리기🏃, 수영🏊, 스포츠💪, 게임🎮에 완벽"
+    },
+    "clock": {
+      "title": "🌍 세계 시계 | 50개 이상 도시의 실시간 시간",
+      "description": "✨ 50개 이상 도시의 현재 시간 확인! 시간대 비교: 서울🇰🇷, 뉴욕🗽, 파리🇫🇷 원격 근무💼, 여행✈️에 완벽"
+    },
+    "holidays": {
+      "title": "2026-2027년 공휴일 달력 - 대한민국 - vClock",
+      "description": "카운트다운이 있는 전체 공휴일 달력. 크리스마스, 설날, 추석 및 모든 중요한 공휴일까지의 일수를 추적하세요."
+    }
+  }
+}

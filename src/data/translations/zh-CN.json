@@ -1,0 +1,120 @@
+{
+  "site": {
+    "name": "vClock",
+    "description": "免费在线时间管理工具"
+  },
+  "nav": {
+    "alarm": "闹钟",
+    "timer": "计时器",
+    "stopwatch": "秒表",
+    "clock": "世界时钟",
+    "holidays": "节假日",
+    "tools": "工具",
+    "privacy": "隐私",
+    "terms": "条款",
+    "contact": "联系"
+  },
+  "common": {
+    "start": "开始",
+    "stop": "停止",
+    "pause": "暂停",
+    "resume": "继续",
+    "reset": "重置",
+    "edit": "编辑",
+    "save": "保存",
+    "cancel": "取消",
+    "delete": "删除",
+    "add": "添加",
+    "test": "测试",
+    "close": "关闭",
+    "confirm": "确认",
+    "yes": "是",
+    "no": "否",
+    "loading": "加载中...",
+    "error": "错误",
+    "success": "成功"
+  },
+  "alarm": {
+    "title": "在线闹钟",
+    "description": "免费在线闹钟。使用可自定义的声音为任何时间设置闹钟。无需注册。",
+    "setAlarm": "设置闹钟",
+    "stopAlarm": "停止闹钟",
+    "testSound": "测试声音",
+    "hour": "小时",
+    "minute": "分钟",
+    "sound": "声音",
+    "repeat": "重复闹钟",
+    "customTitle": "自定义标题（可选）",
+    "recentlyUsed": "最近使用",
+    "presets": "快速设置",
+    "alarmSet": "闹钟已设置为{time}",
+    "alarmStopped": "闹钟已停止",
+    "alarmActive": "闹钟已激活",
+    "setAlarmFor": "设置{time}的闹钟"
+  },
+  "timer": {
+    "title": "在线计时器",
+    "description": "免费在线计时器。为任何持续时间设置计时器。非常适合烹饪、锻炼和提高生产力。",
+    "hours": "小时",
+    "minutes": "分钟",
+    "seconds": "秒",
+    "actionOnComplete": "计时器完成时的操作",
+    "stopTimer": "停止计时器",
+    "restartTimer": "自动重启",
+    "convertToStopwatch": "转换为秒表",
+    "countdownTo": "倒计时到",
+    "presets": "快速计时器",
+    "timerFinished": "计时器完成！",
+    "customTitle": "自定义标题（可选）"
+  },
+  "stopwatch": {
+    "title": "在线秒表",
+    "description": "带计圈功能的免费在线秒表。精确到毫秒。非常适合运动、训练和计时。",
+    "lap": "圈",
+    "lapNumber": "圈数 #",
+    "lapTime": "圈用时",
+    "totalTime": "总时间",
+    "precision": "精度",
+    "laps": "圈数",
+    "noLaps": "尚未记录任何圈数"
+  },
+  "clock": {
+    "title": "世界时钟",
+    "description": "显示全球多个城市的时间。同时跟踪多个时区。",
+    "currentTime": "当前时间",
+    "timezone": "时区",
+    "offset": "UTC 偏移",
+    "dayNight": "白天/夜晚",
+    "searchCities": "搜索城市...",
+    "addCity": "添加城市",
+    "removeCity": "删除城市",
+    "noCitiesAdded": "未添加城市",
+    "addFirstCity": "添加您的第一个城市以开始跟踪时区"
+  },
+  "footer": {
+    "copyright": "© 2026 vClock. 版权所有。",
+    "madeWith": "用 ❤️ 为提高生产力而制作"
+  },
+  "meta": {
+    "home": {
+      "title": "⏰ 免费在线闹钟 | 简单可靠的网页闹钟",
+      "description": "100%免费在线闹钟。⏰ 几秒钟即可设置闹钟。⏱️ 包含计时器、秒表和世界时钟。无需下载！"
+    },
+    "timer": {
+      "title": "⏱️ 在线计时器 | 免费倒计时和番茄工作法",
+      "description": "⚡ 带有1分钟、5分钟、25分钟（番茄工作法）预设的免费计时器。非常适合烹饪🍳、锻炼💪、学习📚。无需下载！"
+    },
+    "stopwatch": {
+      "title": "⏲️ 带计圈功能的在线秒表 | 毫秒精度",
+      "description": "🎯 具有无限圈数记录的专业秒表！精确到毫秒。非常适合跑步🏃、游泳🏊、运动💪、游戏🎮"
+    },
+    "clock": {
+      "title": "🌍 世界时钟 | 50多个城市的实时时间",
+      "description": "✨ 查看50多个城市的当前时间！比较时区：北京🇨🇳、纽约🗽、巴黎🇫🇷 非常适合远程工作💼、旅行✈️"
+    },
+    "holidays": {
+      "title": "2026-2027年节假日日历 - 中国 - vClock",
+      "description": "带倒计时的完整节假日日历。跟踪距离春节、国庆节、中秋节和所有重要节假日的天数。"
+    }
+  }
+}
