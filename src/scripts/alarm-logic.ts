@@ -122,17 +122,14 @@ export class AlarmClock {
     const now = new Date();
     const currentHour24 = now.getHours();
     const currentMinute = now.getMinutes();
-    const currentSecond = now.getSeconds();
 
     // Convertir la hora de la alarma a formato 24h
     const alarmHour24 = convertTo24Hour(this.settings.hour, this.settings.meridian);
 
     // Verificar si coincide (solo comparar hora y minuto)
     if (currentHour24 === alarmHour24 && currentMinute === this.settings.minute) {
-      // Solo activar en el segundo 0 para evitar múltiples activaciones
-      if (currentSecond === 0) {
-        this.trigger();
-      }
+      // Activar la alarma (solo se activará una vez por alarmTriggered)
+      this.trigger();
     }
 
     // Notificar el tick actual (para actualizar UI)

@@ -152,6 +152,31 @@ const { presetHour, presetMinute, presetMeridian } = Astro.props;
     </div>
   </div>
 
+  <!-- Alarm Ringing Modal -->
+  <div id="alarm-ringing-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 backdrop-blur-sm">
+    <div class="bg-white dark:bg-gray-800 rounded-lg shadow-2xl p-8 max-w-md w-full mx-4 animate-bounce">
+      <div class="text-center">
+        <div class="mb-4">
+          <svg class="w-20 h-20 mx-auto text-red-600 dark:text-red-400 animate-pulse" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M10 2a6 6 0 00-6 6v3.586l-.707.707A1 1 0 004 14h12a1 1 0 00.707-1.707L16 11.586V8a6 6 0 00-6-6zM10 18a3 3 0 01-3-3h6a3 3 0 01-3 3z"></path>
+          </svg>
+        </div>
+        <h2 id="alarm-modal-title" class="text-3xl font-bold text-gray-900 dark:text-white mb-2">
+          Alarm!
+        </h2>
+        <p id="alarm-modal-time" class="text-xl text-gray-600 dark:text-gray-400 mb-6">
+          Time's up!
+        </p>
+        <button
+          id="dismiss-alarm-btn"
+          class="btn-danger w-full text-lg py-3"
+        >
+          Dismiss Alarm
+        </button>
+      </div>
+    </div>
+  </div>
+
   <!-- Sidebar -->
   <div class="lg:col-span-1 space-y-6">
     <AlarmPresets />
@@ -179,6 +204,14 @@ const { presetHour, presetMinute, presetMeridian } = Astro.props;
   const stopAlarmBtn = document.getElementById('stop-alarm-btn') as HTMLButtonElement;
   const alarmStatus = document.getElementById('alarm-status');
   const alarmTimeText = document.getElementById('alarm-time-text');
+  const alarmModal = document.getElementById('alarm-ringing-modal');
+  const alarmModalTitle = document.getElementById('alarm-modal-title');
+  const alarmModalTime = document.getElementById('alarm-modal-time');
+  const dismissAlarmBtn = document.getElementById('dismiss-alarm-btn');
+
+  // Get locale from URL
+  const currentLocale = window.location.pathname.startsWith('/es/') ? 'es' :
+                       window.location.pathname.startsWith('/it/') ? 'it' : 'en';
 
   // Actualizar reloj cada segundo
   function updateCurrentTime() {
@@ -186,7 +219,7 @@ const { presetHour, presetMinute, presetMeridian } = Astro.props;
 
     const timeString = alarmClock.getCurrentTimeString();
     const now = new Date();
-    const dateString = formatDate(now, 'en');
+    const dateString = formatDate(now, currentLocale);
 
     const timeElement = currentTimeDisplay.querySelector('.tabular-nums');
     const dateElement = currentTimeDisplay.querySelector('.text-sm');
@@ -216,8 +249,22 @@ const { presetHour, presetMinute, presetMeridian } = Astro.props;
 
   loadSavedSettings();
 
+  // Solicitar permisos de notificación al cargar
+  async function requestNotifications() {
+    if (typeof Notification !== 'undefined' && Notification.permission === 'default') {
+      try {
+        await Notification.requestPermission();
+      } catch (error) {
+        console.log('Notification permission denied');
+      }
+    }
+  }
+
+  // Solicitar permisos al cargar la página
+  requestNotifications();
+
   // Manejar submit del formulario
-  alarmForm?.addEventListener('submit', (e) => {
+  alarmForm?.addEventListener('submit', async (e) => {
     e.preventDefault();
 
     const hour = parseInt(hourSelect.value);
@@ -226,6 +273,9 @@ const { presetHour, presetMinute, presetMeridian } = Astro.props;
     const sound = soundSelect.value;
     const repeat = repeatCheckbox.checked;
     const title = titleInput.value;
+
+    // Solicitar permisos de notificación si aún no se han otorgado
+    await requestNotifications();
 
     // Configurar y activar alarma
     alarmClock.setAlarm(hour, minute, meridian, { sound, repeat, title });
@@ -241,6 +291,7 @@ const { presetHour, presetMinute, presetMeridian } = Astro.props;
   stopAlarmBtn?.addEventListener('click', () => {
     alarmClock.stop();
     hideAlarmActive();
+    hideAlarmModal();
   });
 
   // Mostrar estado de alarma activa
@@ -280,8 +331,53 @@ const { presetHour, presetMinute, presetMeridian } = Astro.props;
 
   // Manejar evento de alarma sonando
   alarmClock.onAlarm(() => {
-    // Mostrar notificación visual adicional si es necesario
-    console.log('Alarm triggered!');
+    // Mostrar modal visual
+    showAlarmModal();
+  });
+
+  // Mostrar modal de alarma sonando
+  function showAlarmModal() {
+    const settings = alarmClock.getSettings();
+    const alarmTime = `${settings.hour}:${settings.minute.toString().padStart(2, '0')} ${settings.meridian}`;
+
+    if (alarmModalTitle) {
+      alarmModalTitle.textContent = settings.title || 'Alarm!';
+    }
+    if (alarmModalTime) {
+      alarmModalTime.textContent = alarmTime;
+    }
+
+    alarmModal?.classList.remove('hidden');
+
+    // Hacer que el documento parpadee (cambio de título)
+    let titleFlash = true;
+    const originalTitle = document.title;
+    const flashInterval = setInterval(() => {
+      document.title = titleFlash ? '🔔 ALARM! 🔔' : originalTitle;
+      titleFlash = !titleFlash;
+    }, 1000);
+
+    // Guardar el intervalo para limpiarlo después
+    (alarmModal as any).__flashInterval = flashInterval;
+  }
+
+  // Ocultar modal de alarma
+  function hideAlarmModal() {
+    alarmModal?.classList.add('hidden');
+
+    // Restaurar título original
+    const flashInterval = (alarmModal as any).__flashInterval;
+    if (flashInterval) {
+      clearInterval(flashInterval);
+      document.title = document.title.includes('🔔') ? 'vClock' : document.title;
+    }
+  }
+
+  // Manejar dismiss de la alarma
+  dismissAlarmBtn?.addEventListener('click', () => {
+    alarmClock.stop();
+    hideAlarmModal();
+    hideAlarmActive();
   });
 
   // Cargar preset desde botones de preset
@@ -300,4 +396,13 @@ const { presetHour, presetMinute, presetMeridian } = Astro.props;
     meridianSelect.value = meridian;
     titleInput.value = title || '';
   }) as EventListener);
+
+  // Tecla Escape para cerrar el modal de alarma
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && alarmModal && !alarmModal.classList.contains('hidden')) {
+      alarmClock.stop();
+      hideAlarmModal();
+      hideAlarmActive();
+    }
+  });
 </script>

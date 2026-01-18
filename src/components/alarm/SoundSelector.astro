@@ -62,23 +62,31 @@ const sounds = [
   </div>
 </div>
 
-<script>
+<script define:vars={{ componentId: id }}>
   import { getAudioManager } from '../../scripts/audio-manager';
 
-  const soundSelector = document.querySelector('[data-sound-selector]') as HTMLSelectElement;
-  const testButton = document.querySelector('[data-test-sound]') as HTMLButtonElement;
+  // Usar el ID específico del componente para evitar conflictos
+  const soundSelector = document.getElementById(componentId) as HTMLSelectElement;
+  const testButton = document.getElementById(`${componentId}-test`) as HTMLButtonElement;
 
-  // Test sound cuando se hace click
-  testButton?.addEventListener('click', () => {
-    const selectedSound = soundSelector?.value || 'alarm-1.mp3';
-    const audioManager = getAudioManager();
-    audioManager.test(selectedSound, 3000);
-  });
+  if (soundSelector && testButton) {
+    // Test sound cuando se hace click
+    testButton.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
 
-  // También permitir test al cambiar de sonido
-  soundSelector?.addEventListener('change', () => {
-    // Auto-test cuando cambia (opcional, comentar si no se desea)
-    // const audioManager = getAudioManager();
-    // audioManager.test(soundSelector.value, 2000);
-  });
+      const selectedSound = soundSelector.value || 'alarm-1.mp3';
+      const audioManager = getAudioManager();
+
+      console.log('Testing sound:', selectedSound);
+      audioManager.test(selectedSound, 3000);
+    });
+
+    // También permitir test al cambiar de sonido
+    soundSelector.addEventListener('change', () => {
+      // Auto-test cuando cambia (opcional, comentar si no se desea)
+      // const audioManager = getAudioManager();
+      // audioManager.test(soundSelector.value, 2000);
+    });
+  }
 </script>
