@@ -198,16 +198,27 @@ const { presetDuration } = Astro.props;
   </div>
 </div>
 
-<script define:vars={{
-  textTimerFinished: t(locale, 'timer.timerFinished'),
-  textStart: t(locale, 'common.start'),
-  textRestart: t(locale, 'alarm.setAlarm'),
-  textNoRecentTimers: t(locale, 'stopwatch.noLaps'),
-  textUnnamedTimer: t(locale, 'timer.customTitle')
-}}>
+<script>
   import { Timer, formatTimerDisplay } from '../../scripts/timer-logic';
   import { Storage } from '../../scripts/storage';
   import { getAudioManager } from '../../scripts/audio-manager';
+
+  // Translations - detect language from HTML lang attribute
+  const lang = document.documentElement.lang;
+  const translations = {
+    textTimerFinished: lang.includes('es') ? '¡Temporizador terminado!' :
+                       lang.includes('it') ? 'Timer finito!' : 'Timer Finished!',
+    textStart: lang.includes('es') ? 'Iniciar' :
+               lang.includes('it') ? 'Avvia' : 'Start',
+    textRestart: lang.includes('es') ? 'Reiniciar' :
+                 lang.includes('it') ? 'Riavvia' : 'Restart',
+    textNoRecentTimers: lang.includes('es') ? 'No hay temporizadores recientes' :
+                        lang.includes('it') ? 'Nessun timer recente' : 'No recent timers',
+    textUnnamedTimer: lang.includes('es') ? 'Temporizador sin nombre' :
+                      lang.includes('it') ? 'Timer senza nome' : 'Unnamed Timer'
+  };
+
+  const { textTimerFinished, textStart, textRestart, textNoRecentTimers, textUnnamedTimer } = translations;
 
   // DOM Elements
   const displayEl = document.getElementById('timer-display') as HTMLDivElement;

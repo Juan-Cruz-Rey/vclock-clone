@@ -63,13 +63,23 @@ const { presetHour, presetMinute, presetMeridian } = Astro.props;
             <label for="alarm-minute" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
               {t(locale, 'alarm.minute')}
             </label>
-            <select id="alarm-minute" name="minute" class="select-input">
+            <input
+              type="number"
+              id="alarm-minute"
+              name="minute"
+              list="minute-options"
+              class="select-input"
+              min="0"
+              max="59"
+              step="1"
+              value={presetMinute || 0}
+              placeholder="00"
+            />
+            <datalist id="minute-options">
               {Array.from({ length: 12 }, (_, i) => i * 5).map((minute) => (
-                <option value={minute} selected={minute === (presetMinute || 0)}>
-                  {minute.toString().padStart(2, '0')}
-                </option>
+                <option value={minute}>{minute.toString().padStart(2, '0')}</option>
               ))}
-            </select>
+            </datalist>
           </div>
 
           <!-- AM/PM -->
@@ -184,26 +194,48 @@ const { presetHour, presetMinute, presetMeridian } = Astro.props;
   </div>
 </div>
 
-<script define:vars={{
-  textAlarmRinging: t(locale, 'alarm.alarmRinging'),
-  textTimesUp: t(locale, 'alarm.timesUp'),
-  textDismissAlarm: t(locale, 'alarm.dismissAlarm'),
-  textAlarmTitle: t(locale, 'alarm.alarmTitle'),
-  textAlarmSetFor: t(locale, 'alarm.alarmSetFor'),
-  textIn: t(locale, 'alarm.in')
-}}>
+<script>
   import { getAlarmClock } from '../../scripts/alarm-logic';
   import { Storage } from '../../scripts/storage';
   import { formatDate } from '../../scripts/utils';
 
   const alarmClock = getAlarmClock();
 
+  // Translations - detect language from HTML lang attribute
+  const translations = {
+    textAlarmRinging: document.documentElement.lang.includes('es') ? 'ALARMA!' :
+                       document.documentElement.lang.includes('it') ? 'SVEGLIA!' : 'ALARM!',
+    textTimesUp: document.documentElement.lang.includes('es') ? '¡Se acabó el tiempo!' :
+                  document.documentElement.lang.includes('it') ? 'Tempo scaduto!' : "Time's up!",
+    textDismissAlarm: document.documentElement.lang.includes('es') ? 'Descartar' :
+                       document.documentElement.lang.includes('it') ? 'Chiudi' : 'Dismiss Alarm',
+    textAlarmTitle: document.documentElement.lang.includes('es') ? 'ALARMA!' :
+                     document.documentElement.lang.includes('it') ? 'SVEGLIA!' : 'ALARM!',
+    textAlarmSetFor: document.documentElement.lang.includes('es') ? 'Alarma configurada para {time} (en {hours}h {minutes}m)' :
+                      document.documentElement.lang.includes('it') ? 'Sveglia impostata per {time} (tra {hours}h {minutes}m)' :
+                      'Alarm set for {time} (in {hours}h {minutes}m)',
+    textIn: document.documentElement.lang.includes('es') ? 'en' :
+             document.documentElement.lang.includes('it') ? 'tra' : 'in'
+  };
+
+  // Destructure for easier access
+  const { textAlarmRinging, textTimesUp, textDismissAlarm, textAlarmTitle, textAlarmSetFor, textIn } = translations;
+
   // Elementos del DOM
   const currentTimeDisplay = document.getElementById('current-time-display');
   const alarmForm = document.getElementById('alarm-form') as HTMLFormElement;
   const hourSelect = document.getElementById('alarm-hour') as HTMLSelectElement;
-  const minuteSelect = document.getElementById('alarm-minute') as HTMLSelectElement;
+  const minuteSelect = document.getElementById('alarm-minute') as HTMLInputElement;
   const meridianSelect = document.getElementById('alarm-meridian') as HTMLSelectElement;
+
+  // Validar y formatear input de minutos
+  if (minuteSelect) {
+    minuteSelect.addEventListener('blur', () => {
+      let value = parseInt(minuteSelect.value) || 0;
+      value = Math.max(0, Math.min(59, value)); // Clamp entre 0-59
+      minuteSelect.value = value.toString();
+    });
+  }
   const soundSelect = document.getElementById('alarm-sound') as HTMLSelectElement;
   const repeatCheckbox = document.getElementById('alarm-repeat') as HTMLInputElement;
   const titleInput = document.getElementById('alarm-title') as HTMLInputElement;
