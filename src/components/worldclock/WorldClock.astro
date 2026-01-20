@@ -10,11 +10,17 @@ const locale = getLocaleFromPath(Astro.url.pathname);
 
 // Helper to get city URL based on locale
 function getCityUrl(cityId: string): string {
+  // Only en, es, and it have dedicated city pages
   if (locale === 'es') {
     return `/es/hora/${cityId}`;
   } else if (locale === 'it') {
     return `/it/ora/${cityId}`;
+  } else if (locale === 'en') {
+    return `/time/${cityId}`;
   }
+
+  // For all other languages, fallback to English city page
+  // since they don't have individual city pages in their language
   return `/time/${cityId}`;
 }
 ---
@@ -106,11 +112,17 @@ function getCityUrl(cityId: string): string {
 
   // Helper to get city URL based on locale
   function getCityUrl(cityId: string): string {
+    // Only en, es, and it have dedicated city pages
     if (locale === 'es') {
       return `/es/hora/${cityId}`;
     } else if (locale === 'it') {
       return `/it/ora/${cityId}`;
+    } else if (locale === 'en') {
+      return `/time/${cityId}`;
     }
+
+    // For all other languages, fallback to English city page
+    // since they don't have individual city pages in their language
     return `/time/${cityId}`;
   }
 
@@ -146,6 +158,24 @@ function getCityUrl(cityId: string): string {
 
       const cityUrl = getCityUrl(city.id);
 
+      // Check if this locale has city pages
+      const hasCityPages = locale === 'en' || locale === 'es' || locale === 'it';
+
+      // Build city name HTML
+      let cityNameHtml;
+      if (hasCityPages) {
+        cityNameHtml = `<a href="${cityUrl}" class="group">
+          <h3 class="text-2xl font-bold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+            ${city.name}
+            <svg class="inline-block w-5 h-5 ml-1 opacity-0 group-hover:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+            </svg>
+          </h3>
+        </a>`;
+      } else {
+        cityNameHtml = `<h3 class="text-2xl font-bold text-gray-900 dark:text-white">${city.name}</h3>`;
+      }
+
       return `
         <div
           class="clock-card bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 transition-transform hover:scale-105 relative"
@@ -153,15 +183,8 @@ function getCityUrl(cityId: string): string {
           draggable="true"
         >
           <div class="flex justify-between items-start mb-4">
-            <div>
-              <a href="${cityUrl}" class="group">
-                <h3 class="text-2xl font-bold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
-                  ${city.name}
-                  <svg class="inline-block w-5 h-5 ml-1 opacity-0 group-hover:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                  </svg>
-                </h3>
-              </a>
+            <div class="flex-1">
+              ${cityNameHtml}
               <p class="text-sm text-gray-600 dark:text-gray-400">${city.country}</p>
             </div>
             <div class="flex gap-2">
