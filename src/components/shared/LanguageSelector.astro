@@ -1,5 +1,5 @@
 ---
-import { languages, getLocaleFromPath, switchLocale, type Locale } from '../../scripts/i18n';
+import { languages, getLocaleFromPath, switchLocale, getRoute, type Locale } from '../../scripts/i18n';
 
 const currentLocale = getLocaleFromPath(Astro.url.pathname);
 const currentPath = Astro.url.pathname;
@@ -7,12 +7,42 @@ const currentPath = Astro.url.pathname;
 // Organize languages by priority (most commonly used first)
 const priorityLanguages: Locale[] = ['en', 'es', 'fr', 'de', 'pt', 'it', 'ru', 'zh-CN', 'ja', 'ar', 'hi'];
 
-const languageList = Object.entries(languages).map(([code, info]) => ({
-  code: code as Locale,
-  ...info,
-  url: switchLocale(currentPath, code as Locale),
-  isPriority: priorityLanguages.includes(code as Locale),
-}));
+// Detectar si estamos en una página de ciudad y extraer el nombre
+const cityPageRegex = /\/(time|hora|ora)\/([^\/]+)/;
+const cityMatch = currentPath.match(cityPageRegex);
+const cityName = cityMatch ? cityMatch[2] : null;
+
+// Mapeo de slugs de páginas de ciudad por idioma
+const cityPageSlugs: Record<string, string | null> = {
+  'en': cityName ? `/time/${cityName}` : null,
+  'es': cityName ? `/es/hora/${cityName}` : null,
+  'it': cityName ? `/it/ora/${cityName}` : null,
+};
+
+const languageList = Object.entries(languages).map(([code, info]) => {
+  let url: string;
+
+  // Si estamos en una página de ciudad
+  if (cityName) {
+    // Si el idioma tiene página de ciudad, usar esa URL
+    if (cityPageSlugs[code]) {
+      url = cityPageSlugs[code]!;
+    } else {
+      // Si no tiene página de ciudad, redirigir al world-clock usando getRoute
+      url = getRoute(code as Locale, 'clock');
+    }
+  } else {
+    // Para otras páginas, usar switchLocale normal
+    url = switchLocale(currentPath, code as Locale);
+  }
+
+  return {
+    code: code as Locale,
+    ...info,
+    url,
+    isPriority: priorityLanguages.includes(code as Locale),
+  };
+});
 
 // Sort: priority languages first, then alphabetically by native name
 languageList.sort((a, b) => {
