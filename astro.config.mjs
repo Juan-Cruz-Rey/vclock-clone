@@ -27,6 +27,25 @@ export default defineConfig({
     },
   },
   vite: {
-    plugins: [tailwindcss()]
+    plugins: [tailwindcss()],
+    build: {
+      minify: 'terser',
+      terserOptions: {
+        compress: {
+          drop_console: true,
+          drop_debugger: true,
+          pure_funcs: ['console.log', 'console.info', 'console.debug'],
+        },
+        mangle: true,
+      },
+      cssMinify: true,
+      rollupOptions: {
+        output: {
+          manualChunks: {
+            'vendor': ['astro'],
+          },
+        },
+      },
+    },
   }
 });
