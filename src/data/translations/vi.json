@@ -46,6 +46,7 @@
     "repeat": "Lặp lại báo thức",
     "customTitle": "Tiêu đề tùy chỉnh (tùy chọn)",
     "recentlyUsed": "Đã sử dụng gần đây",
+    "noRecentAlarms": "Không có báo thức gần đây",
     "presets": "Cài đặt nhanh",
     "alarmSet": "Báo thức đã đặt cho {time}",
     "alarmStopped": "Báo thức đã dừng",
@@ -65,7 +66,8 @@
       "bell": "Chuông",
       "chime": "Tiếng chuông",
       "digital": "Kỹ thuật số"
-    }
+    },
+    "presetsHint": "Nhấp để nhanh chóng đặt báo thức cho các thời gian phổ biến này"
   },
   "timer": {
     "title": "Hẹn giờ trực tuyến",

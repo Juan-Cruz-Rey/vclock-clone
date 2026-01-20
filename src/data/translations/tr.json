@@ -46,6 +46,7 @@
     "repeat": "Alarmı tekrarla",
     "customTitle": "Özel başlık (isteğe bağlı)",
     "recentlyUsed": "Son Kullanılanlar",
+    "noRecentAlarms": "Son alarmlar yok",
     "presets": "Hızlı Ayarlar",
     "alarmSet": "Alarm {time} için ayarlandı",
     "alarmStopped": "Alarm durduruldu",
@@ -65,7 +66,8 @@
       "bell": "Çan",
       "chime": "Zil Sesi",
       "digital": "Dijital"
-    }
+    },
+    "presetsHint": "Bu yaygın zamanlar için hızlıca alarm ayarlamak için tıklayın"
   },
   "timer": {
     "title": "Çevrimiçi Zamanlayıcı",

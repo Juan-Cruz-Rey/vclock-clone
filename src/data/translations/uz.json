@@ -46,6 +46,7 @@
     "repeat": "Signalni takrorlash",
     "customTitle": "Maxsus sarlavha (ixtiyoriy)",
     "recentlyUsed": "Yaqinda ishlatilgan",
+    "noRecentAlarms": "No recent alarms",
     "presets": "Tez sozlamalar",
     "alarmSet": "Signal {time} uchun o'rnatildi",
     "alarmStopped": "Signal to'xtatildi",
@@ -65,7 +66,8 @@
       "bell": "Qo'ng'iroq",
       "chime": "Jaranglash",
       "digital": "Raqamli"
-    }
+    },
+    "presetsHint": "Click to quickly set an alarm for these common times"
   },
   "timer": {
     "title": "Onlayn taymer",

@@ -46,6 +46,7 @@
     "repeat": "Opakovat budík",
     "customTitle": "Vlastní název (volitelné)",
     "recentlyUsed": "Nedávno použité",
+    "noRecentAlarms": "Žádné nedávné budíky",
     "presets": "Rychlá nastavení",
     "alarmSet": "Budík nastaven na {time}",
     "alarmStopped": "Budík zastaven",
@@ -65,7 +66,8 @@
       "bell": "Zvonek",
       "chime": "Zvon",
       "digital": "Digitální"
-    }
+    },
+    "presetsHint": "Klikněte pro rychlé nastavení budíku pro tyto běžné časy"
   },
   "timer": {
     "title": "Online časovač",

@@ -46,6 +46,7 @@
     "repeat": "Ulang penggera",
     "customTitle": "Tajuk tersuai (pilihan)",
     "recentlyUsed": "Baru Digunakan",
+    "noRecentAlarms": "No recent alarms",
     "presets": "Tetapan Pantas",
     "alarmSet": "Penggera ditetapkan untuk {time}",
     "alarmStopped": "Penggera dihentikan",
@@ -65,7 +66,8 @@
       "bell": "Loceng",
       "chime": "Dentingan",
       "digital": "Digital"
-    }
+    },
+    "presetsHint": "Click to quickly set an alarm for these common times"
   },
   "timer": {
     "title": "Pemasa Dalam Talian",

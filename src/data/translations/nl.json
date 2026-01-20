@@ -46,6 +46,7 @@
     "repeat": "Alarm herhalen",
     "customTitle": "Aangepaste titel (optioneel)",
     "recentlyUsed": "Recent gebruikt",
+    "noRecentAlarms": "Geen recente alarmen",
     "presets": "Snelle instellingen",
     "alarmSet": "Wekker ingesteld voor {time}",
     "alarmStopped": "Wekker gestopt",
@@ -65,7 +66,8 @@
       "bell": "Bel",
       "chime": "Klokkenspel",
       "digital": "Digitaal"
-    }
+    },
+    "presetsHint": "Klik om snel een alarm in te stellen voor deze veelvoorkomende tijden"
   },
   "timer": {
     "title": "Online timer",

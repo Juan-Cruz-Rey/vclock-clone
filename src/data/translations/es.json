@@ -44,6 +44,7 @@
     "repeat": "Repetir alarma",
     "customTitle": "Título personalizado (opcional)",
     "recentlyUsed": "Usados Recientemente",
+    "noRecentAlarms": "No hay alarmas recientes",
     "presets": "Configuración Rápida",
     "alarmSet": "Alarma configurada para {time}",
     "alarmStopped": "Alarma detenida",
@@ -63,7 +64,8 @@
       "bell": "Campana",
       "chime": "Carillón",
       "digital": "Digital"
-    }
+    },
+    "presetsHint": "Haz clic para configurar rápidamente una alarma en estos horarios comunes"
   },
   "timer": {
     "title": "Temporizador en Línea",

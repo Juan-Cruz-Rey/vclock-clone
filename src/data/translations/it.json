@@ -44,6 +44,7 @@
     "repeat": "Ripeti sveglia",
     "customTitle": "Titolo personalizzato (opzionale)",
     "recentlyUsed": "Usati di Recente",
+    "noRecentAlarms": "Nessuna sveglia recente",
     "presets": "Impostazione Rapida",
     "alarmSet": "Sveglia impostata per {time}",
     "alarmStopped": "Sveglia fermata",
@@ -63,7 +64,8 @@
       "bell": "Campana",
       "chime": "Carillon",
       "digital": "Digitale"
-    }
+    },
+    "presetsHint": "Clicca per impostare rapidamente una sveglia per questi orari comuni"
   },
   "timer": {
     "title": "Timer Online",

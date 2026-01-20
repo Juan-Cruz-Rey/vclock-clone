@@ -46,6 +46,7 @@
     "repeat": "ማንቂያ ድገም",
     "customTitle": "ብጁ ርዕስ (አማራጭ)",
     "recentlyUsed": "በቅርብ ጊዜ ጥቅም ላይ የዋለ",
+    "noRecentAlarms": "No recent alarms",
     "presets": "ፈጣን ቅንብሮች",
     "alarmSet": "ማንቂያ ለ{time} ተዘጋጅቷል",
     "alarmStopped": "ማንቂያ ቆሟል",
@@ -65,7 +66,8 @@
       "bell": "ደወል",
       "chime": "የደወል ድምፅ",
       "digital": "ዲጂታል"
-    }
+    },
+    "presetsHint": "Click to quickly set an alarm for these common times"
   },
   "timer": {
     "title": "የመስመር ላይ ሰዓት ቆጣሪ",

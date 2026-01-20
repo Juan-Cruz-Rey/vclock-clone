@@ -46,6 +46,7 @@
     "repeat": "နှိုးစက်ထပ်",
     "customTitle": "စိတ်ကြိုက်ခေါင်းစဉ် (ရွေးချယ်နိုင်သော)",
     "recentlyUsed": "မကြာသေးမီအသုံးပြုခဲ့သည်",
+    "noRecentAlarms": "No recent alarms",
     "presets": "အမြန်ဆက်တင်များ",
     "alarmSet": "{time} အတွက် နှိုးစက်သတ်မှတ်ပြီး",
     "alarmStopped": "နှိုးစက်ရပ်ပြီး",
@@ -65,7 +66,8 @@
       "bell": "ခေါင်းလောင်း",
       "chime": "ခေါင်းလောင်းသံ",
       "digital": "ဒစ်ဂျစ်တယ်"
-    }
+    },
+    "presetsHint": "Click to quickly set an alarm for these common times"
   },
   "timer": {
     "title": "အွန်လိုင်းအချိန်တိုင်း",

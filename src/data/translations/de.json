@@ -46,6 +46,7 @@
     "repeat": "Alarm wiederholen",
     "customTitle": "Benutzerdefinierter Titel (optional)",
     "recentlyUsed": "Kürzlich Verwendet",
+    "noRecentAlarms": "Keine aktuellen Alarme",
     "presets": "Schnelleinstellungen",
     "alarmSet": "Wecker gestellt für {time}",
     "alarmStopped": "Wecker gestoppt",
@@ -65,7 +66,8 @@
       "bell": "Glocke",
       "chime": "Glockenspiel",
       "digital": "Digital"
-    }
+    },
+    "presetsHint": "Klicken Sie, um schnell einen Alarm für diese häufigen Zeiten einzustellen"
   },
   "timer": {
     "title": "Online-Timer",

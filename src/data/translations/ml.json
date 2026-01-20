@@ -46,6 +46,7 @@
     "repeat": "അലാറം ആവർത്തിക്കുക",
     "customTitle": "ഇഷ്‌ടാനുസൃത ശീർഷകം (ഓപ്ഷണൽ)",
     "recentlyUsed": "അടുത്തിടെ ഉപയോഗിച്ചത്",
+    "noRecentAlarms": "No recent alarms",
     "presets": "ദ്രുത ക്രമീകരണങ്ങൾ",
     "alarmSet": "{time}ന് അലാറം സജ്ജമാക്കി",
     "alarmStopped": "അലാറം നിർത്തി",
@@ -65,7 +66,8 @@
       "bell": "മണി",
       "chime": "മണിനാദം",
       "digital": "ഡിജിറ്റൽ"
-    }
+    },
+    "presetsHint": "Click to quickly set an alarm for these common times"
   },
   "timer": {
     "title": "ഓൺലൈൻ ടൈമർ",

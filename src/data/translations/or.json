@@ -46,6 +46,7 @@
     "repeat": "ଆଲାର୍ମ ପୁନରାବୃତ୍ତି",
     "customTitle": "କଷ୍ଟମ୍ ଶୀର୍ଷକ (ବୈକଳ୍ପିକ)",
     "recentlyUsed": "ନିକଟରେ ବ୍ୟବହୃତ",
+    "noRecentAlarms": "No recent alarms",
     "presets": "ଦ୍ରୁତ ସେଟିଂସ୍",
     "alarmSet": "{time} ପାଇଁ ଆଲାର୍ମ ସେଟ୍ ହୋଇଛି",
     "alarmStopped": "ଆଲାର୍ମ ବନ୍ଦ ହୋଇଛି",
@@ -65,7 +66,8 @@
       "bell": "ଘଣ୍ଟି",
       "chime": "ଝଙ୍କାର",
       "digital": "ଡିଜିଟାଲ୍"
-    }
+    },
+    "presetsHint": "Click to quickly set an alarm for these common times"
   },
   "timer": {
     "title": "ଅନଲାଇନ୍ ଟାଇମର୍",

@@ -46,6 +46,7 @@
     "repeat": "Tun afọwọkọ ṣe",
     "customTitle": "Akọle aṣa (aṣayan)",
     "recentlyUsed": "Ti a lo laipe",
+    "noRecentAlarms": "No recent alarms",
     "presets": "Awọn eto iyara",
     "alarmSet": "Afọwọkọ ṣeto fun {time}",
     "alarmStopped": "Afọwọkọ duro",
@@ -65,7 +66,8 @@
       "bell": "Agogo",
       "chime": "Ohun Agogo",
       "digital": "Dijitali"
-    }
+    },
+    "presetsHint": "Click to quickly set an alarm for these common times"
   },
   "timer": {
     "title": "Aṣakoko lori ayelujara",

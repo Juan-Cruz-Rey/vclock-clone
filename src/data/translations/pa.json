@@ -46,6 +46,7 @@
     "repeat": "ਅਲਾਰਮ ਦੁਹਰਾਓ",
     "customTitle": "ਕਸਟਮ ਸਿਰਲੇਖ (ਵਿਕਲਪਿਕ)",
     "recentlyUsed": "ਹਾਲ ਹੀ ਵਿੱਚ ਵਰਤਿਆ ਗਿਆ",
+    "noRecentAlarms": "No recent alarms",
     "presets": "ਤੇਜ਼ ਸੈਟਿੰਗਾਂ",
     "alarmSet": "{time} ਲਈ ਅਲਾਰਮ ਸੈਟ ਕੀਤਾ ਗਿਆ",
     "alarmStopped": "ਅਲਾਰਮ ਬੰਦ ਹੋ ਗਿਆ",
@@ -65,7 +66,8 @@
       "bell": "ਘੰਟੀ",
       "chime": "ਝੰਕਾਰ",
       "digital": "ਡਿਜੀਟਲ"
-    }
+    },
+    "presetsHint": "Click to quickly set an alarm for these common times"
   },
   "timer": {
     "title": "ਔਨਲਾਈਨ ਟਾਈਮਰ",

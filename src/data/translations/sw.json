@@ -46,6 +46,7 @@
     "repeat": "Rudia kengele",
     "customTitle": "Kichwa maalum (hiari)",
     "recentlyUsed": "Iliyotumika hivi karibuni",
+    "noRecentAlarms": "No recent alarms",
     "presets": "Mipangilio ya haraka",
     "alarmSet": "Kengele imewekwa kwa {time}",
     "alarmStopped": "Kengele imesimamishwa",
@@ -65,7 +66,8 @@
       "bell": "Kengele",
       "chime": "Sauti ya Kengele",
       "digital": "Dijitali"
-    }
+    },
+    "presetsHint": "Click to quickly set an alarm for these common times"
   },
   "timer": {
     "title": "Kipima muda cha mkondoni",

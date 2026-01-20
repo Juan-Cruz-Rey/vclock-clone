@@ -46,6 +46,7 @@
     "repeat": "Repetă alarma",
     "customTitle": "Titlu personalizat (opțional)",
     "recentlyUsed": "Folosite recent",
+    "noRecentAlarms": "Fără alarme recente",
     "presets": "Setări rapide",
     "alarmSet": "Alarma setată pentru {time}",
     "alarmStopped": "Alarma oprită",
@@ -65,7 +66,8 @@
       "bell": "Clopot",
       "chime": "Dangăt",
       "digital": "Digital"
-    }
+    },
+    "presetsHint": "Faceți clic pentru a seta rapid o alarmă pentru aceste ore comune"
   },
   "timer": {
     "title": "Temporizator online",

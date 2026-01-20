@@ -46,6 +46,7 @@
     "repeat": "Ulitin ang alarm",
     "customTitle": "Custom na pamagat (opsyonal)",
     "recentlyUsed": "Kamakailan Ginamit",
+    "noRecentAlarms": "No recent alarms",
     "presets": "Mabilis na Settings",
     "alarmSet": "Alarm ay naitakda para sa {time}",
     "alarmStopped": "Alarm ay hininto",
@@ -65,7 +66,8 @@
       "bell": "Kampana",
       "chime": "Tugtog ng Kampana",
       "digital": "Digital"
-    }
+    },
+    "presetsHint": "Click to quickly set an alarm for these common times"
   },
   "timer": {
     "title": "Online na Timer",

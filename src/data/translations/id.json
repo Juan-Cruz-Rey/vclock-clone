@@ -46,6 +46,7 @@
     "repeat": "Ulangi alarm",
     "customTitle": "Judul kustom (opsional)",
     "recentlyUsed": "Baru Digunakan",
+    "noRecentAlarms": "Tidak ada alarm terbaru",
     "presets": "Pengaturan Cepat",
     "alarmSet": "Alarm diatur untuk {time}",
     "alarmStopped": "Alarm dihentikan",
@@ -65,7 +66,8 @@
       "bell": "Lonceng",
       "chime": "Dentang",
       "digital": "Digital"
-    }
+    },
+    "presetsHint": "Klik untuk mengatur alarm dengan cepat untuk waktu-waktu umum ini"
   },
   "timer": {
     "title": "Timer Online",

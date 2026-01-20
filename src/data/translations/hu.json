@@ -46,6 +46,7 @@
     "repeat": "Ébresztő ismétlése",
     "customTitle": "Egyéni cím (opcionális)",
     "recentlyUsed": "Nemrég használt",
+    "noRecentAlarms": "Nincsenek közelmúltbeli ébresztések",
     "presets": "Gyorsbeállítások",
     "alarmSet": "Ébresztő beállítva: {time}",
     "alarmStopped": "Ébresztő leállítva",
@@ -65,7 +66,8 @@
       "bell": "Csengő",
       "chime": "Harangszó",
       "digital": "Digitális"
-    }
+    },
+    "presetsHint": "Kattintson az ébresztő gyors beállításához ezekhez a gyakori időkhöz"
   },
   "timer": {
     "title": "Online időzítő",

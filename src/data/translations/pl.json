@@ -46,6 +46,7 @@
     "repeat": "Powtarzaj alarm",
     "customTitle": "Własny tytuł (opcjonalnie)",
     "recentlyUsed": "Ostatnio używane",
+    "noRecentAlarms": "Brak ostatnich alarmów",
     "presets": "Szybkie ustawienia",
     "alarmSet": "Budzik ustawiony na {time}",
     "alarmStopped": "Budzik zatrzymany",
@@ -65,7 +66,8 @@
       "bell": "Dzwonek",
       "chime": "Dzwon",
       "digital": "Cyfrowy"
-    }
+    },
+    "presetsHint": "Kliknij, aby szybko ustawić alarm na te popularne godziny"
   },
   "timer": {
     "title": "Timer online",

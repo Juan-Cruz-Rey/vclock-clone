@@ -46,6 +46,7 @@
     "repeat": "அலாரம் மீண்டும்",
     "customTitle": "தனிப்பயன் தலைப்பு (விரும்பினால்)",
     "recentlyUsed": "சமீபத்தில் பயன்படுத்தியவை",
+    "noRecentAlarms": "No recent alarms",
     "presets": "விரைவு அமைப்புகள்",
     "alarmSet": "{time}க்கு அலாரம் அமைக்கப்பட்டது",
     "alarmStopped": "அலாரம் நிறுத்தப்பட்டது",
@@ -65,7 +66,8 @@
       "bell": "மணி",
       "chime": "சங்கு",
       "digital": "டிஜிட்டல்"
-    }
+    },
+    "presetsHint": "Click to quickly set an alarm for these common times"
   },
   "timer": {
     "title": "ஆன்லைன் டைமர்",

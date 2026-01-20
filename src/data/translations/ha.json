@@ -46,6 +46,7 @@
     "repeat": "Maimaita ƙararrawa",
     "customTitle": "Taken na musamman (zaɓi)",
     "recentlyUsed": "Da aka yi amfani da shi kwanan nan",
+    "noRecentAlarms": "No recent alarms",
     "presets": "Saiti mai sauri",
     "alarmSet": "An saita ƙararrawa don {time}",
     "alarmStopped": "An tsai da ƙararrawa",
@@ -65,7 +66,8 @@
       "bell": "Kararrawa",
       "chime": "Ƙararrawa",
       "digital": "Dijital"
-    }
+    },
+    "presetsHint": "Click to quickly set an alarm for these common times"
   },
   "timer": {
     "title": "Mai ƙidaya lokaci na kan layi",

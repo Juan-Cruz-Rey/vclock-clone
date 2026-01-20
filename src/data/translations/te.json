@@ -46,6 +46,7 @@
     "repeat": "అలారం పునరావృతం",
     "customTitle": "అనుకూల శీర్షిక (ఐచ్ఛికం)",
     "recentlyUsed": "ఇటీవల ఉపయోగించినవి",
+    "noRecentAlarms": "No recent alarms",
     "presets": "త్వరిత సెట్టింగ్‌లు",
     "alarmSet": "{time}కు అలారం సెట్ చేయబడింది",
     "alarmStopped": "అలారం ఆపివేయబడింది",
@@ -65,7 +66,8 @@
       "bell": "గంట",
       "chime": "మ్రోత",
       "digital": "డిజిటల్"
-    }
+    },
+    "presetsHint": "Click to quickly set an alarm for these common times"
   },
   "timer": {
     "title": "ఆన్‌లైన్ టైమర్",

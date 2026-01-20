@@ -46,6 +46,7 @@
     "repeat": "Ulang alarm",
     "customTitle": "Judul kustom (pilihan)",
     "recentlyUsed": "Nembe Dianggo",
+    "noRecentAlarms": "No recent alarms",
     "presets": "Setélan Gancang",
     "alarmSet": "Alarm disetel pikeun {time}",
     "alarmStopped": "Alarm dieureunkeun",
@@ -65,7 +66,8 @@
       "bell": "Lonceng",
       "chime": "Genta",
       "digital": "Digital"
-    }
+    },
+    "presetsHint": "Click to quickly set an alarm for these common times"
   },
   "timer": {
     "title": "Timer Online",

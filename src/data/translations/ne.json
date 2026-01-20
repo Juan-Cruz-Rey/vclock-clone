@@ -46,6 +46,7 @@
     "repeat": "अलार्म दोहोर्याउनुहोस्",
     "customTitle": "अनुकूलन शीर्षक (वैकल्पिक)",
     "recentlyUsed": "हालसालै प्रयोग गरिएको",
+    "noRecentAlarms": "No recent alarms",
     "presets": "द्रुत सेटिङहरू",
     "alarmSet": "{time} को लागि अलार्म सेट गरियो",
     "alarmStopped": "अलार्म रोकियो",
@@ -65,7 +66,8 @@
       "bell": "घण्टी",
       "chime": "घन्टाको आवाज",
       "digital": "डिजिटल"
-    }
+    },
+    "presetsHint": "Click to quickly set an alarm for these common times"
   },
   "timer": {
     "title": "अनलाइन टाइमर",

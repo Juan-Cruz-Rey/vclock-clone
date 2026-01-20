@@ -46,6 +46,7 @@
     "repeat": "알람 반복",
     "customTitle": "사용자 정의 제목(선택사항)",
     "recentlyUsed": "최근 사용",
+    "noRecentAlarms": "최근 알람 없음",
     "presets": "빠른 설정",
     "alarmSet": "{time}에 알람이 설정되었습니다",
     "alarmStopped": "알람이 정지되었습니다",
@@ -65,7 +66,8 @@
       "bell": "종",
       "chime": "차임벨",
       "digital": "디지털"
-    }
+    },
+    "presetsHint": "클릭하여 이러한 일반적인 시간에 알람을 빠르게 설정하세요"
   },
   "timer": {
     "title": "온라인 타이머",

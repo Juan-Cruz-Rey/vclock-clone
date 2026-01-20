@@ -46,6 +46,7 @@
     "repeat": "Upprepa alarm",
     "customTitle": "Anpassad titel (valfritt)",
     "recentlyUsed": "Nyligen använd",
+    "noRecentAlarms": "Inga nya larm",
     "presets": "Snabbinställningar",
     "alarmSet": "Alarm inställt för {time}",
     "alarmStopped": "Alarm stoppat",
@@ -65,7 +66,8 @@
       "bell": "Klocka",
       "chime": "Klockspel",
       "digital": "Digital"
-    }
+    },
+    "presetsHint": "Klicka för att snabbt ställa in ett larm för dessa vanliga tider"
   },
   "timer": {
     "title": "Online timer",

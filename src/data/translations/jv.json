@@ -46,6 +46,7 @@
     "repeat": "Baleni weker",
     "customTitle": "Judhul khusus (opsional)",
     "recentlyUsed": "Bubar Digunakake",
+    "noRecentAlarms": "No recent alarms",
     "presets": "Setelan Cepet",
     "alarmSet": "Weker wis disetel kanggo {time}",
     "alarmStopped": "Weker wis dimateni",
@@ -65,7 +66,8 @@
       "bell": "Lonceng",
       "chime": "Genta",
       "digital": "Digital"
-    }
+    },
+    "presetsHint": "Click to quickly set an alarm for these common times"
   },
   "timer": {
     "title": "Timer Online",

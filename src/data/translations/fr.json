@@ -46,6 +46,7 @@
     "repeat": "Répéter l'alarme",
     "customTitle": "Titre personnalisé (optionnel)",
     "recentlyUsed": "Récemment Utilisés",
+    "noRecentAlarms": "Aucune alarme récente",
     "presets": "Réglages Rapides",
     "alarmSet": "Réveil programmé pour {time}",
     "alarmStopped": "Réveil arrêté",
@@ -65,7 +66,8 @@
       "bell": "Cloche",
       "chime": "Carillon",
       "digital": "Numérique"
-    }
+    },
+    "presetsHint": "Cliquez pour définir rapidement une alarme pour ces heures communes"
   },
   "timer": {
     "title": "Minuteur en Ligne",

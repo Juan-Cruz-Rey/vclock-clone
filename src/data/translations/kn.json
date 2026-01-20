@@ -46,6 +46,7 @@
     "repeat": "ಅಲಾರಂ ಪುನರಾವರ್ತಿಸಿ",
     "customTitle": "ಕಸ್ಟಮ್ ಶೀರ್ಷಿಕೆ (ಐಚ್ಛಿಕ)",
     "recentlyUsed": "ಇತ್ತೀಚೆಗೆ ಬಳಸಿದವು",
+    "noRecentAlarms": "No recent alarms",
     "presets": "ತ್ವರಿತ ಸೆಟ್ಟಿಂಗ್‌ಗಳು",
     "alarmSet": "{time}ಗೆ ಅಲಾರಂ ಹೊಂದಿಸಲಾಗಿದೆ",
     "alarmStopped": "ಅಲಾರಂ ನಿಲ್ಲಿಸಲಾಗಿದೆ",
@@ -65,7 +66,8 @@
       "bell": "ಗಂಟೆ",
       "chime": "ಘಂಟಾನಾದ",
       "digital": "ಡಿಜಿಟಲ್"
-    }
+    },
+    "presetsHint": "Click to quickly set an alarm for these common times"
   },
   "timer": {
     "title": "ಆನ್‌ಲೈನ್ ಟೈಮರ್",

@@ -46,6 +46,7 @@
     "repeat": "Mee mgbịrịgba ọzọ",
     "customTitle": "Aha ahaziri iche (nhọrọ)",
     "recentlyUsed": "Ejiri n'oge na-adịbeghị anya",
+    "noRecentAlarms": "No recent alarms",
     "presets": "Ntọala ngwa ngwa",
     "alarmSet": "Tọọrọ mgbịrịgba maka {time}",
     "alarmStopped": "Kwụsịrị mgbịrịgba",
@@ -65,7 +66,8 @@
       "bell": "Mgbịrịgba",
       "chime": "Ụda Mgbịrịgba",
       "digital": "Dijitalụ"
-    }
+    },
+    "presetsHint": "Click to quickly set an alarm for these common times"
   },
   "timer": {
     "title": "Ihe nchịkwa oge ịntanetị",

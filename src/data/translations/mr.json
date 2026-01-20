@@ -46,6 +46,7 @@
     "repeat": "अलार्म पुन्हा करा",
     "customTitle": "सानुकूल शीर्षक (पर्यायी)",
     "recentlyUsed": "अलीकडे वापरलेले",
+    "noRecentAlarms": "No recent alarms",
     "presets": "द्रुत सेटिंग्ज",
     "alarmSet": "{time} साठी अलार्म सेट केला",
     "alarmStopped": "अलार्म बंद केला",
@@ -65,7 +66,8 @@
       "bell": "घंटा",
       "chime": "नाद",
       "digital": "डिजिटल"
-    }
+    },
+    "presetsHint": "Click to quickly set an alarm for these common times"
   },
   "timer": {
     "title": "ऑनलाइन टाइमर",

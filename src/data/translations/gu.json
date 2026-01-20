@@ -46,6 +46,7 @@
     "repeat": "અલાર્મ પુનરાવર્તન",
     "customTitle": "કસ્ટમ શીર્ષક (વૈકલ્પિક)",
     "recentlyUsed": "તાજેતરમાં ઉપયોગમાં લીધેલ",
+    "noRecentAlarms": "No recent alarms",
     "presets": "ઝડપી સેટિંગ્સ",
     "alarmSet": "{time} માટે અલાર્મ સેટ થયો",
     "alarmStopped": "અલાર્મ બંધ થયો",
@@ -65,7 +66,8 @@
       "bell": "ઘંટ",
       "chime": "ઘંટનાદ",
       "digital": "ડિજિટલ"
-    }
+    },
+    "presetsHint": "Click to quickly set an alarm for these common times"
   },
   "timer": {
     "title": "ઓનલાઇન ટાઈમર",

@@ -46,6 +46,7 @@
     "repeat": "重複鬧鐘",
     "customTitle": "自訂標題（可選）",
     "recentlyUsed": "最近使用",
+    "noRecentAlarms": "沒有最近的鬧鐘",
     "presets": "快速設定",
     "alarmSet": "鬧鐘已設定為{time}",
     "alarmStopped": "鬧鐘已停止",
@@ -65,7 +66,8 @@
       "bell": "鈴聲",
       "chime": "鐘聲",
       "digital": "數碼"
-    }
+    },
+    "presetsHint": "點擊快速設置這些常用時間的鬧鐘"
   },
   "timer": {
     "title": "網上計時器",

@@ -46,6 +46,7 @@
     "repeat": "الارم ورجايو",
     "customTitle": "ڪسٽم عنوان (اختياري)",
     "recentlyUsed": "تازو استعمال ٿيل",
+    "noRecentAlarms": "No recent alarms",
     "presets": "تيز سيٽنگون",
     "alarmSet": "{time} لاءِ الارم سيٽ ٿيو",
     "alarmStopped": "الارم بند ٿيو",
@@ -65,7 +66,8 @@
       "bell": "گھنٽي",
       "chime": "آواز",
       "digital": "ڊجيٽل"
-    }
+    },
+    "presetsHint": "Click to quickly set an alarm for these common times"
   },
   "timer": {
     "title": "آن لائن ٽائمر",

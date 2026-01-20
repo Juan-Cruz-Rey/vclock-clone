@@ -46,6 +46,7 @@
     "repeat": "Repetir alarme",
     "customTitle": "Título personalizado (opcional)",
     "recentlyUsed": "Usados Recentemente",
+    "noRecentAlarms": "Sem alarmes recentes",
     "presets": "Configuração Rápida",
     "alarmSet": "Alarme definido para {time}",
     "alarmStopped": "Alarme parado",
@@ -65,7 +66,8 @@
       "bell": "Sino",
       "chime": "Carrilhão",
       "digital": "Digital"
-    }
+    },
+    "presetsHint": "Clique para definir rapidamente um alarme para estes horários comuns"
   },
   "timer": {
     "title": "Temporizador Online",
