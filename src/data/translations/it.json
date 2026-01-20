@@ -82,7 +82,9 @@
     "timerFinished": "Timer terminato!",
     "customTitle": "Titolo personalizzato (opzionale)",
     "durationMode": "Modalità Durata",
-    "countdownMode": "Conto alla Rovescia a Data"
+    "countdownMode": "Conto alla Rovescia a Data",
+    "centiseconds": "Centisecondi",
+    "milliseconds": "Millisecondi"
   },
   "stopwatch": {
     "title": "Cronometro Online",
@@ -93,7 +95,13 @@
     "totalTime": "Tempo Totale",
     "precision": "Precisione",
     "laps": "Giri",
-    "noLaps": "Nessun giro registrato ancora"
+    "noLaps": "Nessun giro registrato ancora",
+    "exportCSV": "Esporta CSV",
+    "clearLaps": "Cancella Giri",
+    "fastestLap": "Giro Più Veloce",
+    "slowestLap": "Giro Più Lento",
+    "averageLap": "Media Giri",
+    "lapDifference": "Differenza"
   },
   "clock": {
     "title": "Orologio Mondiale",

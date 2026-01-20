@@ -84,7 +84,9 @@
     "timerFinished": "타이머 종료!",
     "customTitle": "사용자 정의 제목(선택사항)",
     "durationMode": "기간 모드",
-    "countdownMode": "날짜까지 카운트다운"
+    "countdownMode": "날짜까지 카운트다운",
+    "centiseconds": "센티초",
+    "milliseconds": "밀리초"
   },
   "stopwatch": {
     "title": "온라인 스톱워치",
@@ -95,7 +97,13 @@
     "totalTime": "총 시간",
     "precision": "정밀도",
     "laps": "랩",
-    "noLaps": "아직 기록된 랩이 없습니다"
+    "noLaps": "아직 기록된 랩이 없습니다",
+    "exportCSV": "CSV 내보내기",
+    "clearLaps": "랩 지우기",
+    "fastestLap": "가장 빠른 랩",
+    "slowestLap": "가장 느린 랩",
+    "averageLap": "평균 랩",
+    "lapDifference": "차이"
   },
   "clock": {
     "title": "세계 시계",

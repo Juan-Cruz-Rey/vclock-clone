@@ -84,7 +84,9 @@
     "timerFinished": "Mai ƙidaya lokaci ya ƙare!",
     "customTitle": "Taken na musamman (zaɓi)",
     "durationMode": "Yanayin Tsawon Lokaci",
-    "countdownMode": "Ƙirga zuwa Kwanan Wata"
+    "countdownMode": "Ƙirga zuwa Kwanan Wata",
+    "centiseconds": "Centiseconds",
+    "milliseconds": "Milliseconds"
   },
   "stopwatch": {
     "title": "Agogon hannun jiki na kan layi",
@@ -95,7 +97,13 @@
     "totalTime": "Jimillar lokaci",
     "precision": "Daidaito",
     "laps": "Zagaye",
-    "noLaps": "Har yanzu ba a rubuta zagaye ba"
+    "noLaps": "Har yanzu ba a rubuta zagaye ba",
+    "exportCSV": "Export CSV",
+    "clearLaps": "Clear Laps",
+    "fastestLap": "Fastest Lap",
+    "slowestLap": "Slowest Lap",
+    "averageLap": "Average Lap",
+    "lapDifference": "Difference"
   },
   "clock": {
     "title": "Agogon duniya",

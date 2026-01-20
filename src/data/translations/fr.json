@@ -84,7 +84,9 @@
     "timerFinished": "Minuteur terminé !",
     "customTitle": "Titre personnalisé (optionnel)",
     "durationMode": "Mode Durée",
-    "countdownMode": "Compte à Rebours vers Date"
+    "countdownMode": "Compte à Rebours vers Date",
+    "centiseconds": "Centisecondes",
+    "milliseconds": "Millisecondes"
   },
   "stopwatch": {
     "title": "Chronomètre en Ligne",
@@ -95,7 +97,13 @@
     "totalTime": "Temps Total",
     "precision": "Précision",
     "laps": "Tours",
-    "noLaps": "Aucun tour enregistré pour le moment"
+    "noLaps": "Aucun tour enregistré pour le moment",
+    "exportCSV": "Exporter CSV",
+    "clearLaps": "Effacer les Tours",
+    "fastestLap": "Tour le Plus Rapide",
+    "slowestLap": "Tour le Plus Lent",
+    "averageLap": "Moyenne des Tours",
+    "lapDifference": "Différence"
   },
   "clock": {
     "title": "Horloge Mondiale",

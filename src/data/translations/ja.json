@@ -84,7 +84,9 @@
     "timerFinished": "タイマー終了！",
     "customTitle": "カスタムタイトル（オプション）",
     "durationMode": "所要時間モード",
-    "countdownMode": "日付までのカウントダウン"
+    "countdownMode": "日付までのカウントダウン",
+    "centiseconds": "センチ秒",
+    "milliseconds": "ミリ秒"
   },
   "stopwatch": {
     "title": "オンラインストップウォッチ",
@@ -95,7 +97,13 @@
     "totalTime": "合計時間",
     "precision": "精度",
     "laps": "ラップ",
-    "noLaps": "まだラップが記録されていません"
+    "noLaps": "まだラップが記録されていません",
+    "exportCSV": "CSVをエクスポート",
+    "clearLaps": "ラップをクリア",
+    "fastestLap": "最速ラップ",
+    "slowestLap": "最遅ラップ",
+    "averageLap": "平均ラップ",
+    "lapDifference": "差"
   },
   "clock": {
     "title": "世界時計",

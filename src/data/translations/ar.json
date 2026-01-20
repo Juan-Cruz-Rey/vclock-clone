@@ -84,7 +84,9 @@
     "timerFinished": "انتهى المؤقت!",
     "customTitle": "عنوان مخصص (اختياري)",
     "durationMode": "وضع المدة",
-    "countdownMode": "العد التنازلي إلى التاريخ"
+    "countdownMode": "العد التنازلي إلى التاريخ",
+    "centiseconds": "السنتي ثانية",
+    "milliseconds": "الميلي ثانية"
   },
   "stopwatch": {
     "title": "ساعة إيقاف عبر الإنترنت",
@@ -95,7 +97,13 @@
     "totalTime": "الوقت الإجمالي",
     "precision": "الدقة",
     "laps": "لفات",
-    "noLaps": "لا توجد لفات مسجلة بعد"
+    "noLaps": "لا توجد لفات مسجلة بعد",
+    "exportCSV": "تصدير CSV",
+    "clearLaps": "مسح اللفات",
+    "fastestLap": "أسرع لفة",
+    "slowestLap": "أبطأ لفة",
+    "averageLap": "متوسط اللفة",
+    "lapDifference": "الفرق"
   },
   "clock": {
     "title": "الساعة العالمية",

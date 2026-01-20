@@ -84,7 +84,9 @@
     "timerFinished": "Timer beendet!",
     "customTitle": "Benutzerdefinierter Titel (optional)",
     "durationMode": "Dauer-Modus",
-    "countdownMode": "Countdown zu Datum"
+    "countdownMode": "Countdown zu Datum",
+    "centiseconds": "Zentisekunden",
+    "milliseconds": "Millisekunden"
   },
   "stopwatch": {
     "title": "Online-Stoppuhr",
@@ -95,7 +97,13 @@
     "totalTime": "Gesamtzeit",
     "precision": "Präzision",
     "laps": "Runden",
-    "noLaps": "Noch keine Runden aufgezeichnet"
+    "noLaps": "Noch keine Runden aufgezeichnet",
+    "exportCSV": "CSV Exportieren",
+    "clearLaps": "Runden Löschen",
+    "fastestLap": "Schnellste Runde",
+    "slowestLap": "Langsamste Runde",
+    "averageLap": "Durchschnittsrunde",
+    "lapDifference": "Differenz"
   },
   "clock": {
     "title": "Weltzeituhr",

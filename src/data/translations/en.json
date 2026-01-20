@@ -82,7 +82,9 @@
     "timerFinished": "Timer finished!",
     "customTitle": "Custom title (optional)",
     "durationMode": "Duration Mode",
-    "countdownMode": "Countdown to Date"
+    "countdownMode": "Countdown to Date",
+    "centiseconds": "Centiseconds",
+    "milliseconds": "Milliseconds"
   },
   "stopwatch": {
     "title": "Online Stopwatch",
@@ -93,7 +95,13 @@
     "totalTime": "Total Time",
     "precision": "Precision",
     "laps": "Laps",
-    "noLaps": "No laps recorded yet"
+    "noLaps": "No laps recorded yet",
+    "exportCSV": "Export CSV",
+    "clearLaps": "Clear Laps",
+    "fastestLap": "Fastest Lap",
+    "slowestLap": "Slowest Lap",
+    "averageLap": "Average Lap",
+    "lapDifference": "Difference"
   },
   "clock": {
     "title": "World Clock",

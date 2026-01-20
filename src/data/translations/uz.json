@@ -84,7 +84,9 @@
     "timerFinished": "Taymer tugadi!",
     "customTitle": "Maxsus sarlavha (ixtiyoriy)",
     "durationMode": "Davomiylik Rejimi",
-    "countdownMode": "Sanaga Ortga Hisoblash"
+    "countdownMode": "Sanaga Ortga Hisoblash",
+    "centiseconds": "Centiseconds",
+    "milliseconds": "Milliseconds"
   },
   "stopwatch": {
     "title": "Onlayn sekundomer",
@@ -95,7 +97,13 @@
     "totalTime": "Umumiy vaqt",
     "precision": "Aniqlik",
     "laps": "Aylanishlar",
-    "noLaps": "Hali hech qanday aylanish qayd etilmagan"
+    "noLaps": "Hali hech qanday aylanish qayd etilmagan",
+    "exportCSV": "Export CSV",
+    "clearLaps": "Clear Laps",
+    "fastestLap": "Fastest Lap",
+    "slowestLap": "Slowest Lap",
+    "averageLap": "Average Lap",
+    "lapDifference": "Difference"
   },
   "clock": {
     "title": "Dunyo soati",

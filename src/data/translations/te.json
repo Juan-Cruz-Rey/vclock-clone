@@ -84,7 +84,9 @@
     "timerFinished": "టైమర్ పూర్తయింది!",
     "customTitle": "అనుకూల శీర్షిక (ఐచ్ఛికం)",
     "durationMode": "వ్యవధి మోడ్",
-    "countdownMode": "తేదీ వరకు కౌంట్‌డౌన్"
+    "countdownMode": "తేదీ వరకు కౌంట్‌డౌన్",
+    "centiseconds": "సెంటీసెకన్లు",
+    "milliseconds": "మిల్లీసెకన్లు"
   },
   "stopwatch": {
     "title": "ఆన్‌లైన్ స్టాప్‌వాచ్",
@@ -95,7 +97,13 @@
     "totalTime": "మొత్తం సమయం",
     "precision": "ఖచ్చితత్వం",
     "laps": "ల్యాప్‌లు",
-    "noLaps": "ఇంకా ల్యాప్‌లు రికార్డ్ చేయలేదు"
+    "noLaps": "ఇంకా ల్యాప్‌లు రికార్డ్ చేయలేదు",
+    "exportCSV": "CSV ఎగుమతి",
+    "clearLaps": "ల్యాప్‌లను క్లియర్ చేయండి",
+    "fastestLap": "వేగవంతమైన ల్యాప్",
+    "slowestLap": "నెమ్మదిగా ల్యాప్",
+    "averageLap": "సగటు ల్యాప్",
+    "lapDifference": "తేడా"
   },
   "clock": {
     "title": "ప్రపంచ గడియారం",

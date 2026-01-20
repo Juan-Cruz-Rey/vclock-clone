@@ -84,7 +84,9 @@
     "timerFinished": "टाइमर समाप्त भयो!",
     "customTitle": "अनुकूलन शीर्षक (वैकल्पिक)",
     "durationMode": "अवधि मोड",
-    "countdownMode": "मिति सम्म काउन्टडाउन"
+    "countdownMode": "मिति सम्म काउन्टडाउन",
+    "centiseconds": "सेन्टिसेकेन्ड",
+    "milliseconds": "मिलिसेकेन्ड"
   },
   "stopwatch": {
     "title": "अनलाइन स्टपवाच",
@@ -95,7 +97,13 @@
     "totalTime": "कुल समय",
     "precision": "सटीकता",
     "laps": "ल्यापहरू",
-    "noLaps": "अहिलेसम्म कुनै ल्याप रेकर्ड गरिएको छैन"
+    "noLaps": "अहिलेसम्म कुनै ल्याप रेकर्ड गरिएको छैन",
+    "exportCSV": "CSV निर्यात गर्नुहोस्",
+    "clearLaps": "ल्यापहरू खाली गर्नुहोस्",
+    "fastestLap": "सबैभन्दा छिटो ल्याप",
+    "slowestLap": "सबैभन्दा ढिलो ल्याप",
+    "averageLap": "औसत ल्याप",
+    "lapDifference": "भिन्नता"
   },
   "clock": {
     "title": "विश्व घडी",

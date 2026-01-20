@@ -82,7 +82,9 @@
     "timerFinished": "¡Temporizador finalizado!",
     "customTitle": "Título personalizado (opcional)",
     "durationMode": "Modo de Duración",
-    "countdownMode": "Cuenta Regresiva a Fecha"
+    "countdownMode": "Cuenta Regresiva a Fecha",
+    "centiseconds": "Centisegundos",
+    "milliseconds": "Milisegundos"
   },
   "stopwatch": {
     "title": "Cronómetro en Línea",
@@ -93,7 +95,13 @@
     "totalTime": "Tiempo Total",
     "precision": "Precisión",
     "laps": "Vueltas",
-    "noLaps": "No hay vueltas registradas aún"
+    "noLaps": "No hay vueltas registradas aún",
+    "exportCSV": "Exportar CSV",
+    "clearLaps": "Limpiar Vueltas",
+    "fastestLap": "Vuelta Más Rápida",
+    "slowestLap": "Vuelta Más Lenta",
+    "averageLap": "Promedio de Vueltas",
+    "lapDifference": "Diferencia"
   },
   "clock": {
     "title": "Reloj Mundial",

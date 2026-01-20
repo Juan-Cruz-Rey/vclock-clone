@@ -84,7 +84,9 @@
     "timerFinished": "Timer klar!",
     "customTitle": "Anpassad titel (valfritt)",
     "durationMode": "Varaktighetsläge",
-    "countdownMode": "Nedräkning till Datum"
+    "countdownMode": "Nedräkning till Datum",
+    "centiseconds": "Centisekunder",
+    "milliseconds": "Millisekunder"
   },
   "stopwatch": {
     "title": "Online stoppur",
@@ -95,7 +97,13 @@
     "totalTime": "Total tid",
     "precision": "Precision",
     "laps": "Varv",
-    "noLaps": "Inga varv inspelade ännu"
+    "noLaps": "Inga varv inspelade ännu",
+    "exportCSV": "Exportera CSV",
+    "clearLaps": "Rensa Varv",
+    "fastestLap": "Snabbaste Varv",
+    "slowestLap": "Långsammaste Varv",
+    "averageLap": "Genomsnittligt Varv",
+    "lapDifference": "Skillnad"
   },
   "clock": {
     "title": "Världsklocka",

@@ -84,7 +84,9 @@
     "timerFinished": "ଟାଇମର୍ ସମାପ୍ତ!",
     "customTitle": "କଷ୍ଟମ୍ ଶୀର୍ଷକ (ବୈକଳ୍ପିକ)",
     "durationMode": "ଅବଧି ମୋଡ୍",
-    "countdownMode": "ତାରିଖ ପର୍ଯ୍ୟନ୍ତ କାଉଣ୍ଟଡାଉନ୍"
+    "countdownMode": "ତାରିଖ ପର୍ଯ୍ୟନ୍ତ କାଉଣ୍ଟଡାଉନ୍",
+    "centiseconds": "Centiseconds",
+    "milliseconds": "Milliseconds"
   },
   "stopwatch": {
     "title": "ଅନଲାଇନ୍ ଷ୍ଟପ୍‌ୱାଚ୍",
@@ -95,7 +97,13 @@
     "totalTime": "ସମୁଦାୟ ସମୟ",
     "precision": "ସଠିକତା",
     "laps": "ଲ୍ୟାପ୍",
-    "noLaps": "ଏପର୍ଯ୍ୟନ୍ତ କୌଣସି ଲ୍ୟାପ୍ ରେକର୍ଡ ହୋଇନାହିଁ"
+    "noLaps": "ଏପର୍ଯ୍ୟନ୍ତ କୌଣସି ଲ୍ୟାପ୍ ରେକର୍ଡ ହୋଇନାହିଁ",
+    "exportCSV": "Export CSV",
+    "clearLaps": "Clear Laps",
+    "fastestLap": "Fastest Lap",
+    "slowestLap": "Slowest Lap",
+    "averageLap": "Average Lap",
+    "lapDifference": "Difference"
   },
   "clock": {
     "title": "ବିଶ୍ୱ ଘଣ୍ଟା",

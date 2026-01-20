@@ -84,7 +84,9 @@
     "timerFinished": "Timer zakończony!",
     "customTitle": "Własny tytuł (opcjonalnie)",
     "durationMode": "Tryb Czasu Trwania",
-    "countdownMode": "Odliczanie do Daty"
+    "countdownMode": "Odliczanie do Daty",
+    "centiseconds": "Setne sekundy",
+    "milliseconds": "Milisekundy"
   },
   "stopwatch": {
     "title": "Stoper online",
@@ -95,7 +97,13 @@
     "totalTime": "Całkowity czas",
     "precision": "Precyzja",
     "laps": "Okrążenia",
-    "noLaps": "Nie zarejestrowano jeszcze żadnych okrążeń"
+    "noLaps": "Nie zarejestrowano jeszcze żadnych okrążeń",
+    "exportCSV": "Eksportuj CSV",
+    "clearLaps": "Wyczyść Okrążenia",
+    "fastestLap": "Najszybsze Okrążenie",
+    "slowestLap": "Najwolniejsze Okrążenie",
+    "averageLap": "Średnie Okrążenie",
+    "lapDifference": "Różnica"
   },
   "clock": {
     "title": "Zegar światowy",

@@ -84,7 +84,9 @@
     "timerFinished": "Pemasa selesai!",
     "customTitle": "Tajuk tersuai (pilihan)",
     "durationMode": "Mod Tempoh",
-    "countdownMode": "Kira Detik ke Tarikh"
+    "countdownMode": "Kira Detik ke Tarikh",
+    "centiseconds": "Sentisaat",
+    "milliseconds": "Milisaat"
   },
   "stopwatch": {
     "title": "Jam Randik Dalam Talian",
@@ -95,7 +97,13 @@
     "totalTime": "Jumlah Masa",
     "precision": "Ketepatan",
     "laps": "Pusingan",
-    "noLaps": "Tiada pusingan direkodkan lagi"
+    "noLaps": "Tiada pusingan direkodkan lagi",
+    "exportCSV": "Eksport CSV",
+    "clearLaps": "Kosongkan Pusingan",
+    "fastestLap": "Pusingan Terpantas",
+    "slowestLap": "Pusingan Terperlahan",
+    "averageLap": "Pusingan Purata",
+    "lapDifference": "Perbezaan"
   },
   "clock": {
     "title": "Jam Dunia",

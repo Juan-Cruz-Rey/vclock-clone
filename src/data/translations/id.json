@@ -84,7 +84,9 @@
     "timerFinished": "Timer selesai!",
     "customTitle": "Judul kustom (opsional)",
     "durationMode": "Mode Durasi",
-    "countdownMode": "Hitung Mundur ke Tanggal"
+    "countdownMode": "Hitung Mundur ke Tanggal",
+    "centiseconds": "Centidetik",
+    "milliseconds": "Milidetik"
   },
   "stopwatch": {
     "title": "Stopwatch Online",
@@ -95,7 +97,13 @@
     "totalTime": "Total Waktu",
     "precision": "Presisi",
     "laps": "Lap",
-    "noLaps": "Belum ada lap yang direkam"
+    "noLaps": "Belum ada lap yang direkam",
+    "exportCSV": "Ekspor CSV",
+    "clearLaps": "Hapus Lap",
+    "fastestLap": "Lap Tercepat",
+    "slowestLap": "Lap Terlambat",
+    "averageLap": "Lap Rata-rata",
+    "lapDifference": "Selisih"
   },
   "clock": {
     "title": "Jam Dunia",

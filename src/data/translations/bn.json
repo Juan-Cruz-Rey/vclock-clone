@@ -84,7 +84,9 @@
     "timerFinished": "টাইমার শেষ!",
     "customTitle": "কাস্টম শিরোনাম (ঐচ্ছিক)",
     "durationMode": "সময়কাল মোড",
-    "countdownMode": "তারিখ পর্যন্ত কাউন্টডাউন"
+    "countdownMode": "তারিখ পর্যন্ত কাউন্টডাউন",
+    "centiseconds": "সেন্টিসেকেন্ড",
+    "milliseconds": "মিলিসেকেন্ড"
   },
   "stopwatch": {
     "title": "অনলাইন স্টপওয়াচ",
@@ -95,7 +97,13 @@
     "totalTime": "মোট সময়",
     "precision": "নির্ভুলতা",
     "laps": "ল্যাপ",
-    "noLaps": "এখনও কোনো ল্যাপ রেকর্ড করা হয়নি"
+    "noLaps": "এখনও কোনো ল্যাপ রেকর্ড করা হয়নি",
+    "exportCSV": "CSV রপ্তানি করুন",
+    "clearLaps": "ল্যাপ মুছুন",
+    "fastestLap": "দ্রুততম ল্যাপ",
+    "slowestLap": "ধীরতম ল্যাপ",
+    "averageLap": "গড় ল্যাপ",
+    "lapDifference": "পার্থক্য"
   },
   "clock": {
     "title": "বিশ্ব ঘড়ি",

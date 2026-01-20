@@ -84,7 +84,9 @@
     "timerFinished": "Таймер завершен!",
     "customTitle": "Пользовательское название (необязательно)",
     "durationMode": "Режим Длительности",
-    "countdownMode": "Обратный Отсчет до Даты"
+    "countdownMode": "Обратный Отсчет до Даты",
+    "centiseconds": "Сотые доли секунды",
+    "milliseconds": "Миллисекунды"
   },
   "stopwatch": {
     "title": "Онлайн Секундомер",
@@ -95,7 +97,13 @@
     "totalTime": "Общее Время",
     "precision": "Точность",
     "laps": "Круги",
-    "noLaps": "Пока нет записанных кругов"
+    "noLaps": "Пока нет записанных кругов",
+    "exportCSV": "Экспорт в CSV",
+    "clearLaps": "Очистить Круги",
+    "fastestLap": "Самый Быстрый Круг",
+    "slowestLap": "Самый Медленный Круг",
+    "averageLap": "Средний Круг",
+    "lapDifference": "Разница"
   },
   "clock": {
     "title": "Мировые Часы",

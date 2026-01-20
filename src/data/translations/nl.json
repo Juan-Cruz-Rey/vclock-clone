@@ -84,7 +84,9 @@
     "timerFinished": "Timer voltooid!",
     "customTitle": "Aangepaste titel (optioneel)",
     "durationMode": "Duurmodus",
-    "countdownMode": "Aftellen naar Datum"
+    "countdownMode": "Aftellen naar Datum",
+    "centiseconds": "Centiseconden",
+    "milliseconds": "Milliseconden"
   },
   "stopwatch": {
     "title": "Online stopwatch",
@@ -95,7 +97,13 @@
     "totalTime": "Totale tijd",
     "precision": "Precisie",
     "laps": "Rondes",
-    "noLaps": "Nog geen rondes opgenomen"
+    "noLaps": "Nog geen rondes opgenomen",
+    "exportCSV": "CSV Exporteren",
+    "clearLaps": "Rondes Wissen",
+    "fastestLap": "Snelste Ronde",
+    "slowestLap": "Langzaamste Ronde",
+    "averageLap": "Gemiddelde Ronde",
+    "lapDifference": "Verschil"
   },
   "clock": {
     "title": "Wereldklok",

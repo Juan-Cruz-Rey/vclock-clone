@@ -84,7 +84,9 @@
     "timerFinished": "Temporizatorul s-a încheiat!",
     "customTitle": "Titlu personalizat (opțional)",
     "durationMode": "Mod Durată",
-    "countdownMode": "Numărătoare Inversă până la Dată"
+    "countdownMode": "Numărătoare Inversă până la Dată",
+    "centiseconds": "Centisecunde",
+    "milliseconds": "Milisecunde"
   },
   "stopwatch": {
     "title": "Cronometru online",
@@ -95,7 +97,13 @@
     "totalTime": "Timp total",
     "precision": "Precizie",
     "laps": "Tururi",
-    "noLaps": "Nicio tură înregistrată încă"
+    "noLaps": "Nicio tură înregistrată încă",
+    "exportCSV": "Exportă CSV",
+    "clearLaps": "Șterge Turele",
+    "fastestLap": "Cel Mai Rapid Tur",
+    "slowestLap": "Cel Mai Lent Tur",
+    "averageLap": "Tur Mediu",
+    "lapDifference": "Diferență"
   },
   "clock": {
     "title": "Ceas mondial",

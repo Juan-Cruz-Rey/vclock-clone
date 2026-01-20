@@ -84,7 +84,9 @@
     "timerFinished": "تایمر تمام شد!",
     "customTitle": "عنوان سفارشی (اختیاری)",
     "durationMode": "حالت مدت زمان",
-    "countdownMode": "شمارش معکوس به تاریخ"
+    "countdownMode": "شمارش معکوس به تاریخ",
+    "centiseconds": "صدم ثانیه",
+    "milliseconds": "میلی‌ثانیه"
   },
   "stopwatch": {
     "title": "کرونومتر آنلاین",
@@ -95,7 +97,13 @@
     "totalTime": "زمان کل",
     "precision": "دقت",
     "laps": "دورها",
-    "noLaps": "هنوز هیچ دوری ثبت نشده است"
+    "noLaps": "هنوز هیچ دوری ثبت نشده است",
+    "exportCSV": "خروجی CSV",
+    "clearLaps": "پاک کردن دورها",
+    "fastestLap": "سریع‌ترین دور",
+    "slowestLap": "کندترین دور",
+    "averageLap": "میانگین دور",
+    "lapDifference": "تفاوت"
   },
   "clock": {
     "title": "ساعت جهانی",

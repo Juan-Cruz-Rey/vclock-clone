@@ -84,7 +84,9 @@
     "timerFinished": "Timer réngsé!",
     "customTitle": "Judul kustom (pilihan)",
     "durationMode": "Mode Durasi",
-    "countdownMode": "Itungan Mundur ka Tanggal"
+    "countdownMode": "Itungan Mundur ka Tanggal",
+    "centiseconds": "Centiseconds",
+    "milliseconds": "Milliseconds"
   },
   "stopwatch": {
     "title": "Stopwatch Online",
@@ -95,7 +97,13 @@
     "totalTime": "Total Waktos",
     "precision": "Presisi",
     "laps": "Lap",
-    "noLaps": "Can aya lap anu dirékam"
+    "noLaps": "Can aya lap anu dirékam",
+    "exportCSV": "Export CSV",
+    "clearLaps": "Clear Laps",
+    "fastestLap": "Fastest Lap",
+    "slowestLap": "Slowest Lap",
+    "averageLap": "Average Lap",
+    "lapDifference": "Difference"
   },
   "clock": {
     "title": "Jam Dunya",

@@ -84,7 +84,9 @@
     "timerFinished": "Ihe nchịkwa oge agwụla!",
     "customTitle": "Aha ahaziri iche (nhọrọ)",
     "durationMode": "Ọnọdụ Ogologo Oge",
-    "countdownMode": "Ngụkọ ruo Ụbọchị"
+    "countdownMode": "Ngụkọ ruo Ụbọchị",
+    "centiseconds": "Centiseconds",
+    "milliseconds": "Milliseconds"
   },
   "stopwatch": {
     "title": "Elekere aka ịntanetị",
@@ -95,7 +97,13 @@
     "totalTime": "Oge niile",
     "precision": "Izi ezi",
     "laps": "Lap",
-    "noLaps": "Edebeghị lap ọ bụla"
+    "noLaps": "Edebeghị lap ọ bụla",
+    "exportCSV": "Export CSV",
+    "clearLaps": "Clear Laps",
+    "fastestLap": "Fastest Lap",
+    "slowestLap": "Slowest Lap",
+    "averageLap": "Average Lap",
+    "lapDifference": "Difference"
   },
   "clock": {
     "title": "Elekere ụwa",

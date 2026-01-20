@@ -84,7 +84,9 @@
     "timerFinished": "計時器完成！",
     "customTitle": "自訂標題（可選）",
     "durationMode": "持續時間模式",
-    "countdownMode": "倒數到日期"
+    "countdownMode": "倒數到日期",
+    "centiseconds": "Centiseconds",
+    "milliseconds": "Milliseconds"
   },
   "stopwatch": {
     "title": "網上碼錶",
@@ -95,7 +97,13 @@
     "totalTime": "總時間",
     "precision": "精度",
     "laps": "圈數",
-    "noLaps": "尚未記錄任何圈數"
+    "noLaps": "尚未記錄任何圈數",
+    "exportCSV": "Export CSV",
+    "clearLaps": "Clear Laps",
+    "fastestLap": "Fastest Lap",
+    "slowestLap": "Slowest Lap",
+    "averageLap": "Average Lap",
+    "lapDifference": "Difference"
   },
   "clock": {
     "title": "世界時鐘",

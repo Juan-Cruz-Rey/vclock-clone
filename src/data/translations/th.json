@@ -84,7 +84,9 @@
     "timerFinished": "หมดเวลา!",
     "customTitle": "ชื่อกำหนดเอง (ไม่บังคับ)",
     "durationMode": "โหมดระยเวลา",
-    "countdownMode": "นับถอยหลังถึงวันที่"
+    "countdownMode": "นับถอยหลังถึงวันที่",
+    "centiseconds": "เซนติวินาที",
+    "milliseconds": "มิลลิวินาที"
   },
   "stopwatch": {
     "title": "นาฬิกาจับเวลาออนไลน์",
@@ -95,7 +97,13 @@
     "totalTime": "เวลารวม",
     "precision": "ความแม่นยำ",
     "laps": "รอบ",
-    "noLaps": "ยังไม่มีการบันทึกรอบ"
+    "noLaps": "ยังไม่มีการบันทึกรอบ",
+    "exportCSV": "ส่งออก CSV",
+    "clearLaps": "ล้างรอบ",
+    "fastestLap": "รอบที่เร็วที่สุด",
+    "slowestLap": "รอบที่ช้าที่สุด",
+    "averageLap": "รอบเฉลี่ย",
+    "lapDifference": "ผลต่าง"
   },
   "clock": {
     "title": "นาฬิกาโลก",

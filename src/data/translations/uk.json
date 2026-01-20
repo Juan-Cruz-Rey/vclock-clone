@@ -84,7 +84,9 @@
     "timerFinished": "Таймер завершено!",
     "customTitle": "Власна назва (необов'язково)",
     "durationMode": "Режим Тривалості",
-    "countdownMode": "Зворотний Відлік до Дати"
+    "countdownMode": "Зворотний Відлік до Дати",
+    "centiseconds": "Сотисекунди",
+    "milliseconds": "Мілісекунди"
   },
   "stopwatch": {
     "title": "Онлайн секундомір",
@@ -95,7 +97,13 @@
     "totalTime": "Загальний час",
     "precision": "Точність",
     "laps": "Кола",
-    "noLaps": "Кола ще не записано"
+    "noLaps": "Кола ще не записано",
+    "exportCSV": "Експорт CSV",
+    "clearLaps": "Очистити Кола",
+    "fastestLap": "Найшвидше Коло",
+    "slowestLap": "Найповільніше Коло",
+    "averageLap": "Середнє Коло",
+    "lapDifference": "Різниця"
   },
   "clock": {
     "title": "Світовий годинник",

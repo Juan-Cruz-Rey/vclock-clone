@@ -84,7 +84,9 @@
     "timerFinished": "Zamanlayıcı bitti!",
     "customTitle": "Özel başlık (isteğe bağlı)",
     "durationMode": "Süre Modu",
-    "countdownMode": "Tarihe Geri Sayım"
+    "countdownMode": "Tarihe Geri Sayım",
+    "centiseconds": "Santisaniye",
+    "milliseconds": "Milisaniye"
   },
   "stopwatch": {
     "title": "Çevrimiçi Kronometre",
@@ -95,7 +97,13 @@
     "totalTime": "Toplam Süre",
     "precision": "Hassasiyet",
     "laps": "Turlar",
-    "noLaps": "Henüz kayıtlı tur yok"
+    "noLaps": "Henüz kayıtlı tur yok",
+    "exportCSV": "CSV Dışa Aktar",
+    "clearLaps": "Turları Temizle",
+    "fastestLap": "En Hızlı Tur",
+    "slowestLap": "En Yavaş Tur",
+    "averageLap": "Ortalama Tur",
+    "lapDifference": "Fark"
   },
   "clock": {
     "title": "Dünya Saati",

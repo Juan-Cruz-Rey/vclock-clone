@@ -84,7 +84,9 @@
     "timerFinished": "டைமர் முடிந்தது!",
     "customTitle": "தனிப்பயன் தலைப்பு (விரும்பினால்)",
     "durationMode": "காலஅளவு பயன்முறை",
-    "countdownMode": "தேதி வரை கவுண்ட்டவுன்"
+    "countdownMode": "தேதி வரை கவுண்ட்டவுன்",
+    "centiseconds": "சென்டிவினாடிகள்",
+    "milliseconds": "மில்லிவினாடிகள்"
   },
   "stopwatch": {
     "title": "ஆன்லைன் ஸ்டாப்வாட்ச்",
@@ -95,7 +97,13 @@
     "totalTime": "மொத்த நேரம்",
     "precision": "துல்லியம்",
     "laps": "மடிகள்",
-    "noLaps": "இன்னும் மடிகள் பதிவு செய்யப்படவில்லை"
+    "noLaps": "இன்னும் மடிகள் பதிவு செய்யப்படவில்லை",
+    "exportCSV": "CSV ஏற்றுமதி",
+    "clearLaps": "சுற்றுகளை அழி",
+    "fastestLap": "வேகமான சுற்று",
+    "slowestLap": "மெதுவான சுற்று",
+    "averageLap": "சராசரி சுற்று",
+    "lapDifference": "வேறுபாடு"
   },
   "clock": {
     "title": "உலக கடிகாரம்",

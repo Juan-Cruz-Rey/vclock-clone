@@ -84,7 +84,9 @@
     "timerFinished": "Časovač dokončen!",
     "customTitle": "Vlastní název (volitelné)",
     "durationMode": "Režim Trvání",
-    "countdownMode": "Odpočítávání k Datu"
+    "countdownMode": "Odpočítávání k Datu",
+    "centiseconds": "Setiny vteřin",
+    "milliseconds": "Milisekundy"
   },
   "stopwatch": {
     "title": "Online stopky",
@@ -95,7 +97,13 @@
     "totalTime": "Celkový čas",
     "precision": "Přesnost",
     "laps": "Kola",
-    "noLaps": "Zatím nebyla zaznamenána žádná kola"
+    "noLaps": "Zatím nebyla zaznamenána žádná kola",
+    "exportCSV": "Exportovat CSV",
+    "clearLaps": "Vymazat Kola",
+    "fastestLap": "Nejrychlejší Kolo",
+    "slowestLap": "Nejpomalejší Kolo",
+    "averageLap": "Průměrné Kolo",
+    "lapDifference": "Rozdíl"
   },
   "clock": {
     "title": "Světový čas",

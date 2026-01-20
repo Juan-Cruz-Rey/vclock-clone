@@ -84,7 +84,9 @@
     "timerFinished": "计时器完成！",
     "customTitle": "自定义标题（可选）",
     "durationMode": "持续时间模式",
-    "countdownMode": "倒计时到日期"
+    "countdownMode": "倒计时到日期",
+    "centiseconds": "厘秒",
+    "milliseconds": "毫秒"
   },
   "stopwatch": {
     "title": "在线秒表",
@@ -95,7 +97,13 @@
     "totalTime": "总时间",
     "precision": "精度",
     "laps": "圈数",
-    "noLaps": "尚未记录任何圈数"
+    "noLaps": "尚未记录任何圈数",
+    "exportCSV": "导出CSV",
+    "clearLaps": "清除圈数",
+    "fastestLap": "最快圈",
+    "slowestLap": "最慢圈",
+    "averageLap": "平均圈速",
+    "lapDifference": "差值"
   },
   "clock": {
     "title": "世界时钟",

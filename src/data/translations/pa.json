@@ -84,7 +84,9 @@
     "timerFinished": "ਟਾਈਮਰ ਪੂਰਾ ਹੋਇਆ!",
     "customTitle": "ਕਸਟਮ ਸਿਰਲੇਖ (ਵਿਕਲਪਿਕ)",
     "durationMode": "ਮਿਆਦ ਮੋਡ",
-    "countdownMode": "ਮਿਤੀ ਤੱਕ ਉਲਟੀ ਗਿਣਤੀ"
+    "countdownMode": "ਮਿਤੀ ਤੱਕ ਉਲਟੀ ਗਿਣਤੀ",
+    "centiseconds": "ਸੈਂਟੀਸੈਕਿੰਡ",
+    "milliseconds": "ਮਿਲੀਸੈਕਿੰਡ"
   },
   "stopwatch": {
     "title": "ਔਨਲਾਈਨ ਸਟਾਪਵਾਚ",
@@ -95,7 +97,13 @@
     "totalTime": "ਕੁੱਲ ਸਮਾਂ",
     "precision": "ਸ਼ੁੱਧਤਾ",
     "laps": "ਲੈਪਾਂ",
-    "noLaps": "ਅਜੇ ਤੱਕ ਕੋਈ ਲੈਪ ਰਿਕਾਰਡ ਨਹੀਂ ਕੀਤੀ ਗਈ"
+    "noLaps": "ਅਜੇ ਤੱਕ ਕੋਈ ਲੈਪ ਰਿਕਾਰਡ ਨਹੀਂ ਕੀਤੀ ਗਈ",
+    "exportCSV": "CSV ਨਿਰਯਾਤ ਕਰੋ",
+    "clearLaps": "ਲੈਪਾਂ ਸਾਫ਼ ਕਰੋ",
+    "fastestLap": "ਸਭ ਤੋਂ ਤੇਜ਼ ਲੈਪ",
+    "slowestLap": "ਸਭ ਤੋਂ ਹੌਲੀ ਲੈਪ",
+    "averageLap": "ਔਸਤ ਲੈਪ",
+    "lapDifference": "ਫਰਕ"
   },
   "clock": {
     "title": "ਵਿਸ਼ਵ ਘੜੀ",

@@ -84,7 +84,9 @@
     "timerFinished": "ટાઈમર પૂર્ણ થયો!",
     "customTitle": "કસ્ટમ શીર્ષક (વૈકલ્પિક)",
     "durationMode": "અવધિ મોડ",
-    "countdownMode": "તારીખ સુધી કાઉન્ટડાઉન"
+    "countdownMode": "તારીખ સુધી કાઉન્ટડાઉન",
+    "centiseconds": "સેન્ટિસેકંડ",
+    "milliseconds": "મિલિસેકંડ"
   },
   "stopwatch": {
     "title": "ઓનલાઇન સ્ટોપવોચ",
@@ -95,7 +97,13 @@
     "totalTime": "કુલ સમય",
     "precision": "ચોકસાઈ",
     "laps": "લેપ્સ",
-    "noLaps": "હજી સુધી કોઈ લેપ રેકોર્ડ થયા નથી"
+    "noLaps": "હજી સુધી કોઈ લેપ રેકોર્ડ થયા નથી",
+    "exportCSV": "CSV નિકાસ કરો",
+    "clearLaps": "લેપ્સ સાફ કરો",
+    "fastestLap": "સૌથી ઝડપી લેપ",
+    "slowestLap": "સૌથી ધીમી લેપ",
+    "averageLap": "સરેરાશ લેપ",
+    "lapDifference": "તફાવત"
   },
   "clock": {
     "title": "વિશ્વ ઘડિયાળ",

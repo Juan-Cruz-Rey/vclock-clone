@@ -84,7 +84,9 @@
     "timerFinished": "टाइमर पूर्ण झाला!",
     "customTitle": "सानुकूल शीर्षक (पर्यायी)",
     "durationMode": "कालावधी मोड",
-    "countdownMode": "तारखेपर्यंत उलटी मोजणी"
+    "countdownMode": "तारखेपर्यंत उलटी मोजणी",
+    "centiseconds": "शतांश सेकंद",
+    "milliseconds": "मिलिसेकंद"
   },
   "stopwatch": {
     "title": "ऑनलाइन स्टॉपवॉच",
@@ -95,7 +97,13 @@
     "totalTime": "एकूण वेळ",
     "precision": "अचूकता",
     "laps": "लॅप्स",
-    "noLaps": "अद्याप कोणतेही लॅप रेकॉर्ड केलेले नाहीत"
+    "noLaps": "अद्याप कोणतेही लॅप रेकॉर्ड केलेले नाहीत",
+    "exportCSV": "CSV निर्यात करा",
+    "clearLaps": "लॅप्स साफ करा",
+    "fastestLap": "सर्वात वेगवान लॅप",
+    "slowestLap": "सर्वात हळू लॅप",
+    "averageLap": "सरासरी लॅप",
+    "lapDifference": "फरक"
   },
   "clock": {
     "title": "जागतिक घड्याळ",

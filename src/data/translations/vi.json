@@ -84,7 +84,9 @@
     "timerFinished": "Hẹn giờ đã hoàn thành!",
     "customTitle": "Tiêu đề tùy chỉnh (tùy chọn)",
     "durationMode": "Chế độ Thời lượng",
-    "countdownMode": "Đếm ngược đến Ngày"
+    "countdownMode": "Đếm ngược đến Ngày",
+    "centiseconds": "Phần trăm giây",
+    "milliseconds": "Phần nghìn giây"
   },
   "stopwatch": {
     "title": "Bấm giờ trực tuyến",
@@ -95,7 +97,13 @@
     "totalTime": "Tổng thời gian",
     "precision": "Độ chính xác",
     "laps": "Vòng",
-    "noLaps": "Chưa có vòng nào được ghi lại"
+    "noLaps": "Chưa có vòng nào được ghi lại",
+    "exportCSV": "Xuất CSV",
+    "clearLaps": "Xóa Vòng",
+    "fastestLap": "Vòng Nhanh Nhất",
+    "slowestLap": "Vòng Chậm Nhất",
+    "averageLap": "Vòng Trung Bình",
+    "lapDifference": "Chênh lệch"
   },
   "clock": {
     "title": "Đồng hồ thế giới",

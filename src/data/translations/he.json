@@ -84,7 +84,9 @@
     "timerFinished": "הטיימר הסתיים!",
     "customTitle": "כותרת מותאמת אישית (אופציונלי)",
     "durationMode": "מצב משך זמן",
-    "countdownMode": "ספירה לאחור לתאריך"
+    "countdownMode": "ספירה לאחור לתאריך",
+    "centiseconds": "סנטישניות",
+    "milliseconds": "אלפיות שנייה"
   },
   "stopwatch": {
     "title": "סטופר מקוון",
@@ -95,7 +97,13 @@
     "totalTime": "זמן כולל",
     "precision": "דיוק",
     "laps": "הקפות",
-    "noLaps": "עדיין לא נרשמו הקפות"
+    "noLaps": "עדיין לא נרשמו הקפות",
+    "exportCSV": "ייצא CSV",
+    "clearLaps": "נקה הקפות",
+    "fastestLap": "ההקפה המהירה ביותר",
+    "slowestLap": "ההקפה האיטית ביותר",
+    "averageLap": "הקפה ממוצעת",
+    "lapDifference": "הבדל"
   },
   "clock": {
     "title": "שעון עולמי",

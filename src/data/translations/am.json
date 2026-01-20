@@ -84,7 +84,9 @@
     "timerFinished": "ሰዓት ቆጣሪ ጨርሷል!",
     "customTitle": "ብጁ ርዕስ (አማራጭ)",
     "durationMode": "የጊዜ ርዝመት ሁነታ",
-    "countdownMode": "ወደ ቀን ቆጠራ"
+    "countdownMode": "ወደ ቀን ቆጠራ",
+    "centiseconds": "ሴንቲሰከንዶች",
+    "milliseconds": "ሚሊሰከንዶች"
   },
   "stopwatch": {
     "title": "የመስመር ላይ ሰዓት ማቆሚያ",
@@ -95,7 +97,13 @@
     "totalTime": "ጠቅላላ ጊዜ",
     "precision": "ትክክለኛነት",
     "laps": "ክበቦች",
-    "noLaps": "እስካሁን ምንም ክበቦች አልተመዘገቡም"
+    "noLaps": "እስካሁን ምንም ክበቦች አልተመዘገቡም",
+    "exportCSV": "CSV ወደ ውጭ ላክ",
+    "clearLaps": "ዞሮችን አጽዳ",
+    "fastestLap": "በጣም ፈጣን ዞር",
+    "slowestLap": "በጣም ቀርፋፋ ዞር",
+    "averageLap": "አማካይ ዞር",
+    "lapDifference": "ልዩነት"
   },
   "clock": {
     "title": "የዓለም ሰዓት",

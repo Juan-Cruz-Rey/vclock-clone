@@ -84,7 +84,9 @@
     "timerFinished": "Időzítő lejárt!",
     "customTitle": "Egyéni cím (opcionális)",
     "durationMode": "Időtartam Mód",
-    "countdownMode": "Visszaszámlálás Dátumig"
+    "countdownMode": "Visszaszámlálás Dátumig",
+    "centiseconds": "Századmásodperc",
+    "milliseconds": "Ezredmásodperc"
   },
   "stopwatch": {
     "title": "Online stopper",
@@ -95,7 +97,13 @@
     "totalTime": "Teljes idő",
     "precision": "Pontosság",
     "laps": "Körök",
-    "noLaps": "Még nincsenek rögzített körök"
+    "noLaps": "Még nincsenek rögzített körök",
+    "exportCSV": "CSV Exportálása",
+    "clearLaps": "Körök Törlése",
+    "fastestLap": "Leggyorsabb Kör",
+    "slowestLap": "Leglassabb Kör",
+    "averageLap": "Átlagos Kör",
+    "lapDifference": "Különbség"
   },
   "clock": {
     "title": "Világóra",

@@ -84,7 +84,9 @@
     "timerFinished": "ٹائمر مکمل ہو گیا!",
     "customTitle": "حسب ضرورت عنوان (اختیاری)",
     "durationMode": "مدت موڈ",
-    "countdownMode": "تاریخ تک الٹی گنتی"
+    "countdownMode": "تاریخ تک الٹی گنتی",
+    "centiseconds": "سینٹی سیکنڈ",
+    "milliseconds": "ملی سیکنڈ"
   },
   "stopwatch": {
     "title": "آن لائن اسٹاپ واچ",
@@ -95,7 +97,13 @@
     "totalTime": "کل وقت",
     "precision": "درستگی",
     "laps": "لیپس",
-    "noLaps": "ابھی تک کوئی لیپ ریکارڈ نہیں کی گئی"
+    "noLaps": "ابھی تک کوئی لیپ ریکارڈ نہیں کی گئی",
+    "exportCSV": "CSV برآمد کریں",
+    "clearLaps": "لیپس صاف کریں",
+    "fastestLap": "سب سے تیز لیپ",
+    "slowestLap": "سب سے سست لیپ",
+    "averageLap": "اوسط لیپ",
+    "lapDifference": "فرق"
   },
   "clock": {
     "title": "عالمی گھڑی",

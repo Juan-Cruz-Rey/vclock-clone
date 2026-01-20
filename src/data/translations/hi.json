@@ -84,7 +84,9 @@
     "timerFinished": "टाइमर समाप्त!",
     "customTitle": "कस्टम शीर्षक (वैकल्पिक)",
     "durationMode": "अवधि मोड",
-    "countdownMode": "तिथि तक उलटी गिनती"
+    "countdownMode": "तिथि तक उलटी गिनती",
+    "centiseconds": "सेंटीसेकंड",
+    "milliseconds": "मिलीसेकंड"
   },
   "stopwatch": {
     "title": "ऑनलाइन स्टॉपवॉच",
@@ -95,7 +97,13 @@
     "totalTime": "कुल समय",
     "precision": "सटीकता",
     "laps": "लैप्स",
-    "noLaps": "अभी तक कोई लैप रिकॉर्ड नहीं किया गया"
+    "noLaps": "अभी तक कोई लैप रिकॉर्ड नहीं किया गया",
+    "exportCSV": "CSV निर्यात करें",
+    "clearLaps": "लैप्स साफ़ करें",
+    "fastestLap": "सबसे तेज लैप",
+    "slowestLap": "सबसे धीमी लैप",
+    "averageLap": "औसत लैप",
+    "lapDifference": "अंतर"
   },
   "clock": {
     "title": "विश्व घड़ी",

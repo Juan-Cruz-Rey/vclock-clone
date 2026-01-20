@@ -84,7 +84,9 @@
     "timerFinished": "Timer rampung!",
     "customTitle": "Judhul khusus (opsional)",
     "durationMode": "Mode Durasi",
-    "countdownMode": "Countdown menyang Tanggal"
+    "countdownMode": "Countdown menyang Tanggal",
+    "centiseconds": "Centiseconds",
+    "milliseconds": "Milliseconds"
   },
   "stopwatch": {
     "title": "Stopwatch Online",
@@ -95,7 +97,13 @@
     "totalTime": "Total Wektu",
     "precision": "Presisi",
     "laps": "Lap",
-    "noLaps": "Durung ana lap sing direkam"
+    "noLaps": "Durung ana lap sing direkam",
+    "exportCSV": "Export CSV",
+    "clearLaps": "Clear Laps",
+    "fastestLap": "Fastest Lap",
+    "slowestLap": "Slowest Lap",
+    "averageLap": "Average Lap",
+    "lapDifference": "Difference"
   },
   "clock": {
     "title": "Jam Donya",

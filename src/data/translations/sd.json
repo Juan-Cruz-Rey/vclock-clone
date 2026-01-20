@@ -84,7 +84,9 @@
     "timerFinished": "ٽائمر مڪمل!",
     "customTitle": "ڪسٽم عنوان (اختياري)",
     "durationMode": "مدت موڊ",
-    "countdownMode": "تاريخ تائين ڳڻپ"
+    "countdownMode": "تاريخ تائين ڳڻپ",
+    "centiseconds": "Centiseconds",
+    "milliseconds": "Milliseconds"
   },
   "stopwatch": {
     "title": "آن لائن اسٽاپ واچ",
@@ -95,7 +97,13 @@
     "totalTime": "ڪل وقت",
     "precision": "درستگي",
     "laps": "ليپس",
-    "noLaps": "اڃا تائين ڪا به ليپ رڪارڊ نه ڪئي وئي"
+    "noLaps": "اڃا تائين ڪا به ليپ رڪارڊ نه ڪئي وئي",
+    "exportCSV": "Export CSV",
+    "clearLaps": "Clear Laps",
+    "fastestLap": "Fastest Lap",
+    "slowestLap": "Slowest Lap",
+    "averageLap": "Average Lap",
+    "lapDifference": "Difference"
   },
   "clock": {
     "title": "عالمي گھڙي",

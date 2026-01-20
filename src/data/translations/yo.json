@@ -84,7 +84,9 @@
     "timerFinished": "Aṣakoko ti pari!",
     "customTitle": "Akọle aṣa (aṣayan)",
     "durationMode": "Ipo Akoko Gigun",
-    "countdownMode": "Kika si Ojo"
+    "countdownMode": "Kika si Ojo",
+    "centiseconds": "Centiseconds",
+    "milliseconds": "Milliseconds"
   },
   "stopwatch": {
     "title": "Agogo ọwọ lori ayelujara",
@@ -95,7 +97,13 @@
     "totalTime": "Lapapọ akoko",
     "precision": "Deede",
     "laps": "Awọn yika",
-    "noLaps": "Ko si awọn yika ti a ṣe akọsilẹ sibẹsibẹ"
+    "noLaps": "Ko si awọn yika ti a ṣe akọsilẹ sibẹsibẹ",
+    "exportCSV": "Export CSV",
+    "clearLaps": "Clear Laps",
+    "fastestLap": "Fastest Lap",
+    "slowestLap": "Slowest Lap",
+    "averageLap": "Average Lap",
+    "lapDifference": "Difference"
   },
   "clock": {
     "title": "Agogo agbaye",
