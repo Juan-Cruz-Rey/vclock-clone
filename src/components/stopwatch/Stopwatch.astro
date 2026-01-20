@@ -43,10 +43,10 @@ const locale = getLocaleFromPath(Astro.url.pathname);
       {t(locale, 'timer.seconds')}
     </button>
     <button class="precision-btn btn-secondary px-4 py-2 text-sm bg-blue-600 text-white" data-precision="2">
-      Centiseconds
+      {t(locale, 'timer.centiseconds')}
     </button>
     <button class="precision-btn btn-secondary px-4 py-2 text-sm" data-precision="3">
-      Milliseconds
+      {t(locale, 'timer.milliseconds')}
     </button>
   </div>
 
@@ -58,10 +58,10 @@ const locale = getLocaleFromPath(Astro.url.pathname);
       </h3>
       <div class="flex gap-2">
         <button id="export-laps-btn" class="btn-secondary text-sm px-4 py-2" disabled>
-          Export CSV
+          {t(locale, 'stopwatch.exportCSV')}
         </button>
         <button id="clear-laps-btn" class="btn-danger text-sm px-4 py-2" disabled>
-          Clear Laps
+          {t(locale, 'stopwatch.clearLaps')}
         </button>
       </div>
     </div>
@@ -69,15 +69,15 @@ const locale = getLocaleFromPath(Astro.url.pathname);
     <!-- Lap Statistics -->
     <div id="lap-stats" class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6 hidden">
       <div class="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg p-4">
-        <div class="text-sm font-medium text-green-800 dark:text-green-200 mb-1">Fastest Lap</div>
+        <div class="text-sm font-medium text-green-800 dark:text-green-200 mb-1">{t(locale, 'stopwatch.fastestLap')}</div>
         <div id="fastest-lap" class="text-xl font-bold text-green-900 dark:text-green-100">-</div>
       </div>
       <div class="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg p-4">
-        <div class="text-sm font-medium text-red-800 dark:text-red-200 mb-1">Slowest Lap</div>
+        <div class="text-sm font-medium text-red-800 dark:text-red-200 mb-1">{t(locale, 'stopwatch.slowestLap')}</div>
         <div id="slowest-lap" class="text-xl font-bold text-red-900 dark:text-red-100">-</div>
       </div>
       <div class="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4">
-        <div class="text-sm font-medium text-blue-800 dark:text-blue-200 mb-1">Average Lap</div>
+        <div class="text-sm font-medium text-blue-800 dark:text-blue-200 mb-1">{t(locale, 'stopwatch.averageLap')}</div>
         <div id="average-lap" class="text-xl font-bold text-blue-900 dark:text-blue-100">-</div>
       </div>
     </div>
@@ -90,7 +90,7 @@ const locale = getLocaleFromPath(Astro.url.pathname);
             <th class="px-4 py-3 text-sm font-semibold text-gray-700 dark:text-gray-300">#</th>
             <th class="px-4 py-3 text-sm font-semibold text-gray-700 dark:text-gray-300">{t(locale, 'stopwatch.lapTime')}</th>
             <th class="px-4 py-3 text-sm font-semibold text-gray-700 dark:text-gray-300">{t(locale, 'stopwatch.totalTime')}</th>
-            <th class="px-4 py-3 text-sm font-semibold text-gray-700 dark:text-gray-300">Difference</th>
+            <th class="px-4 py-3 text-sm font-semibold text-gray-700 dark:text-gray-300">{t(locale, 'stopwatch.lapDifference')}</th>
             <th class="px-4 py-3 text-sm font-semibold text-gray-700 dark:text-gray-300"></th>
           </tr>
         </thead>
@@ -106,11 +106,16 @@ const locale = getLocaleFromPath(Astro.url.pathname);
   </div>
 </div>
 
-<script define:vars={{
-  textNoLaps: t(locale, 'stopwatch.noLaps'),
-  textDelete: t(locale, 'common.delete')
-}}>
+<script>
   import { Stopwatch, formatStopwatchTime, exportLapsToCSV, type Lap, type StopwatchPrecision } from '../../scripts/stopwatch-logic';
+  import { t, getLocaleFromPath, type Locale } from '../../scripts/i18n';
+
+  // Get locale from URL
+  const locale = getLocaleFromPath(window.location.pathname) as Locale;
+
+  // Get translations using i18n system
+  const textNoLaps = t(locale, 'stopwatch.noLaps');
+  const textDelete = t(locale, 'common.delete');
 
   // DOM Elements
   const displayEl = document.getElementById('stopwatch-display') as HTMLDivElement;
