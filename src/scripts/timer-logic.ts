@@ -134,12 +134,12 @@ export class Timer {
   }
 
   addTime(seconds: number): void {
-    this.data.totalMs += seconds * 1000;
-    this.data.remainingMs += seconds * 1000;
+    const addMs = seconds * 1000;
+    this.data.totalMs += addMs;
+    this.data.remainingMs += addMs;
 
-    if (this.data.state === 'running' && this.data.startTime) {
-      this.data.startTime -= seconds * 1000;
-    }
+    // Si está corriendo, NO modificar startTime - el tick() recalculará remainingMs correctamente
+    // porque totalMs ya fue aumentado
 
     this.saveToStorage();
     if (this.onTickCallback) {
