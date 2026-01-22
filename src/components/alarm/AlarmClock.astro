@@ -279,7 +279,20 @@ const { presetHour, presetMinute, presetMeridian } = Astro.props;
     meridianSelect.value = settings.meridian;
     soundSelect.value = settings.sound;
     repeatCheckbox.checked = settings.repeat;
-    titleInput.value = settings.title;
+
+    // Solo mostrar el título si es personalizado por el usuario
+    // Si es el placeholder de cualquier idioma o está vacío, dejar el campo vacío
+    // para que se muestre el placeholder correcto del idioma actual
+    const currentPlaceholder = titleInput.placeholder;
+    const savedTitle = settings.title || '';
+
+    // Si el título guardado coincide con el placeholder actual, dejarlo vacío
+    if (savedTitle === currentPlaceholder || savedTitle === '') {
+      titleInput.value = '';
+    } else {
+      // Es un título personalizado, mostrarlo
+      titleInput.value = savedTitle;
+    }
 
     if (settings.isActive) {
       showAlarmActive();
@@ -308,7 +321,8 @@ const { presetHour, presetMinute, presetMeridian } = Astro.props;
     const meridian = meridianSelect.value as 'AM' | 'PM';
     const sound = soundSelect.value;
     const repeat = repeatCheckbox.checked;
-    const title = titleInput.value;
+    // Si el título está vacío, usar el placeholder traducido
+    const title = titleInput.value.trim() || titleInput.placeholder;
 
     // Solicitar permisos de notificación cuando el usuario configure la alarma
     await requestNotifications();
