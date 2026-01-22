@@ -159,12 +159,17 @@ export class AudioManager {
    */
   static getAvailableSounds(): Array<{ id: string; name: string; file: string }> {
     return [
-      { id: 'alarm-1', name: 'Classic Alarm', file: 'alarm-1.mp3' },
-      { id: 'alarm-2', name: 'Beep Beep', file: 'alarm-2.mp3' },
-      { id: 'alarm-3', name: 'Rooster', file: 'alarm-3.mp3' },
-      { id: 'alarm-4', name: 'Bell', file: 'alarm-4.mp3' },
-      { id: 'alarm-5', name: 'Chime', file: 'alarm-5.mp3' },
-      { id: 'alarm-6', name: 'Digital', file: 'alarm-6.mp3' },
+      { id: 'buzzer', name: 'Beep Beep', file: 'buzzer.mp3' },
+      { id: 'bell', name: 'Bell', file: 'bell.mp3' },
+      { id: 'clock', name: 'Classic Alarm', file: 'clock.mp3' },
+      { id: 'roosters', name: 'Rooster', file: 'roosters.mp3' },
+      { id: 'police-siren', name: 'Digital', file: 'police-siren.mp3' },
+      { id: 'nuclear', name: 'Chime', file: 'nuclear.mp3' },
+      { id: 'alien', name: 'Alien', file: 'alien.mp3' },
+      { id: 'rain', name: 'Rain', file: 'rain.mp3' },
+      { id: 'mystic', name: 'Mystic', file: 'mystic.mp3' },
+      { id: 'bomb-explosion', name: 'Bomb', file: 'bomb-explosion.mp3' },
+      { id: 'white-noise', name: 'White Noise', file: 'white-noise.mp3' },
     ];
   }
 }

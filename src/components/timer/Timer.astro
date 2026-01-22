@@ -129,19 +129,26 @@ const { presetDuration } = Astro.props;
       </label>
       <div class="flex gap-2">
         <select id="timer-sound" class="select-input flex-1">
-          <option value="classic-bell.mp3">Classic Bell</option>
-          <option value="digital-alarm.mp3">Digital Alarm</option>
-          <option value="gentle-chimes.mp3">Gentle Chimes</option>
-          <option value="rooster.mp3">Rooster</option>
-          <option value="marimba.mp3">Marimba</option>
-          <option value="radar.mp3">Radar</option>
+          <option value="bell.mp3">Bell</option>
+          <option value="buzzer.mp3">Buzzer</option>
+          <option value="clock.mp3">Clock</option>
+          <option value="roosters.mp3">Roosters</option>
+          <option value="police-siren.mp3">Police Siren</option>
+          <option value="nuclear.mp3">Nuclear</option>
+          <option value="alien.mp3">Alien</option>
+          <option value="rain.mp3">Rain</option>
+          <option value="mystic.mp3">Mystic</option>
+          <option value="bomb-explosion.mp3">Bomb</option>
+          <option value="white-noise.mp3">White Noise</option>
         </select>
         <button
           id="test-sound-btn"
           class="btn-secondary px-4"
+          data-playing="false"
           title={t(locale, 'alarm.testSound')}
         >
-          🔊
+          <span class="play-icon">🔊</span>
+          <span class="stop-icon hidden">⏹</span>
         </button>
       </div>
     </div>
@@ -459,7 +466,34 @@ const { presetDuration } = Astro.props;
   });
 
   testSoundBtn.addEventListener('click', () => {
-    getAudioManager().test(soundSelect.value, 2000);
+    const audioManager = getAudioManager();
+    const isPlaying = testSoundBtn.getAttribute('data-playing') === 'true';
+    const playIcon = testSoundBtn.querySelector('.play-icon') as HTMLElement;
+    const stopIcon = testSoundBtn.querySelector('.stop-icon') as HTMLElement;
+
+    if (isPlaying) {
+      // Detener el sonido
+      audioManager.stop();
+      testSoundBtn.setAttribute('data-playing', 'false');
+      playIcon?.classList.remove('hidden');
+      stopIcon?.classList.add('hidden');
+    } else {
+      // Reproducir el sonido
+      audioManager.play(soundSelect.value, { loop: false, volume: 0.7 });
+      testSoundBtn.setAttribute('data-playing', 'true');
+      playIcon?.classList.add('hidden');
+      stopIcon?.classList.remove('hidden');
+
+      // Auto-detener después de 5 segundos
+      setTimeout(() => {
+        if (testSoundBtn.getAttribute('data-playing') === 'true') {
+          audioManager.stop();
+          testSoundBtn.setAttribute('data-playing', 'false');
+          playIcon?.classList.remove('hidden');
+          stopIcon?.classList.add('hidden');
+        }
+      }, 5000);
+    }
   });
 
   startBtn.addEventListener('click', () => {

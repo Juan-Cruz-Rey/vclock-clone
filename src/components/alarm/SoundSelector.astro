@@ -13,16 +13,21 @@ interface Props {
 }
 
 const locale = getLocaleFromPath(Astro.url.pathname);
-const { id = 'sound-selector', selectedSound = 'alarm-1.mp3', onTestSound } = Astro.props;
+const { id = 'sound-selector', selectedSound = 'buzzer.mp3', onTestSound } = Astro.props;
 
 // Lista de sonidos disponibles (traducidos)
 const sounds = [
-  { id: 'alarm-1', name: t(locale, 'alarm.sounds.classicAlarm'), file: 'alarm-1.mp3' },
-  { id: 'alarm-2', name: t(locale, 'alarm.sounds.beepBeep'), file: 'alarm-2.mp3' },
-  { id: 'alarm-3', name: t(locale, 'alarm.sounds.rooster'), file: 'alarm-3.mp3' },
-  { id: 'alarm-4', name: t(locale, 'alarm.sounds.bell'), file: 'alarm-4.mp3' },
-  { id: 'alarm-5', name: t(locale, 'alarm.sounds.chime'), file: 'alarm-5.mp3' },
-  { id: 'alarm-6', name: t(locale, 'alarm.sounds.digital'), file: 'alarm-6.mp3' },
+  { id: 'buzzer', name: t(locale, 'alarm.sounds.beepBeep'), file: 'buzzer.mp3' },
+  { id: 'bell', name: t(locale, 'alarm.sounds.bell'), file: 'bell.mp3' },
+  { id: 'clock', name: t(locale, 'alarm.sounds.classicAlarm'), file: 'clock.mp3' },
+  { id: 'roosters', name: t(locale, 'alarm.sounds.rooster'), file: 'roosters.mp3' },
+  { id: 'police-siren', name: t(locale, 'alarm.sounds.digital'), file: 'police-siren.mp3' },
+  { id: 'nuclear', name: t(locale, 'alarm.sounds.chime'), file: 'nuclear.mp3' },
+  { id: 'alien', name: 'Alien', file: 'alien.mp3' },
+  { id: 'rain', name: 'Rain', file: 'rain.mp3' },
+  { id: 'mystic', name: 'Mystic', file: 'mystic.mp3' },
+  { id: 'bomb-explosion', name: 'Bomb', file: 'bomb-explosion.mp3' },
+  { id: 'white-noise', name: 'White Noise', file: 'white-noise.mp3' },
 ];
 ---
 
@@ -50,13 +55,17 @@ const sounds = [
       id={onTestSound || `${id}-test`}
       class="btn-secondary px-4 whitespace-nowrap"
       data-test-sound
+      data-playing="false"
       aria-label={t(locale, 'alarm.testSound')}
     >
       <div class="flex items-center space-x-2">
-        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+        <svg class="w-5 h-5 play-icon" fill="currentColor" viewBox="0 0 20 20">
           <path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.984 5.984 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.983 3.983 0 00-1.172-2.828 1 1 0 010-1.415z" clip-rule="evenodd"></path>
         </svg>
-        <span class="hidden sm:inline">{t(locale, 'common.test')}</span>
+        <svg class="w-5 h-5 stop-icon hidden" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8 7a1 1 0 00-1 1v4a1 1 0 001 1h4a1 1 0 001-1V8a1 1 0 00-1-1H8z" clip-rule="evenodd"></path>
+        </svg>
+        <span class="hidden sm:inline button-text">{t(locale, 'common.test')}</span>
       </div>
     </button>
   </div>
@@ -74,16 +83,51 @@ const sounds = [
       const testButton = soundSelect.parentElement?.querySelector('[data-test-sound]') as HTMLButtonElement;
 
       if (testButton) {
+        const playIcon = testButton.querySelector('.play-icon');
+        const stopIcon = testButton.querySelector('.stop-icon');
+        const buttonText = testButton.querySelector('.button-text');
+
         // Test sound cuando se hace click
         testButton.addEventListener('click', (e) => {
           e.preventDefault();
           e.stopPropagation();
 
-          const selectedSound = soundSelect.value || 'alarm-1.mp3';
           const audioManager = getAudioManager();
+          const isPlaying = testButton.getAttribute('data-playing') === 'true';
 
-          console.log('Testing sound:', selectedSound);
-          audioManager.test(selectedSound, 3000);
+          if (isPlaying) {
+            // Detener el sonido
+            audioManager.stop();
+            testButton.setAttribute('data-playing', 'false');
+            playIcon?.classList.remove('hidden');
+            stopIcon?.classList.add('hidden');
+            if (buttonText) buttonText.textContent = buttonText.getAttribute('data-original-text') || 'Test';
+          } else {
+            // Reproducir el sonido
+            const selectedSound = soundSelect.value || 'buzzer.mp3';
+
+            // Guardar texto original si no está guardado
+            if (buttonText && !buttonText.getAttribute('data-original-text')) {
+              buttonText.setAttribute('data-original-text', buttonText.textContent || 'Test');
+            }
+
+            audioManager.play(selectedSound, { loop: false, volume: 0.7 });
+            testButton.setAttribute('data-playing', 'true');
+            playIcon?.classList.add('hidden');
+            stopIcon?.classList.remove('hidden');
+            if (buttonText) buttonText.textContent = 'Stop';
+
+            // Auto-detener después de 5 segundos
+            setTimeout(() => {
+              if (testButton.getAttribute('data-playing') === 'true') {
+                audioManager.stop();
+                testButton.setAttribute('data-playing', 'false');
+                playIcon?.classList.remove('hidden');
+                stopIcon?.classList.add('hidden');
+                if (buttonText) buttonText.textContent = buttonText.getAttribute('data-original-text') || 'Test';
+              }
+            }, 5000);
+          }
         });
       }
     });

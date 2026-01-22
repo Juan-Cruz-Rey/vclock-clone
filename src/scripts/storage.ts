@@ -160,7 +160,7 @@ export class Storage {
       hour: 7,
       minute: 0,
       meridian: 'AM',
-      sound: 'alarm-1.mp3',
+      sound: 'buzzer.mp3',
       repeat: false,
       title: '',
       isActive: false,
@@ -176,7 +176,7 @@ export class Storage {
       hours: 0,
       minutes: 5,
       seconds: 0,
-      sound: 'classic-bell.mp3',
+      sound: 'bell.mp3',
       title: 'Timer',
       autoStart: false,
     };
