@@ -19,6 +19,14 @@ interface Props {
 }
 
 const { presetHour, presetMinute, presetMeridian } = Astro.props;
+
+// Generar fecha inicial traducida para el placeholder
+const initialDate = new Intl.DateTimeFormat(locale, {
+  weekday: 'long',
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+}).format(new Date());
 ---
 
 <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -31,7 +39,7 @@ const { presetHour, presetMinute, presetMeridian } = Astro.props;
         time="12:00:00 AM"
         size="lg"
         showDate={true}
-        date="Monday, January 17, 2026"
+        date={initialDate}
       />
     </div>
 
