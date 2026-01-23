@@ -127,117 +127,128 @@ languageList.sort((a, b) => {
   }
 </style>
 
-<script>
-  // Toggle dropdown
-  const button = document.getElementById('language-selector-button');
-  const menu = document.getElementById('language-selector-menu');
+<script is:inline>
+  // Evitar múltiples inicializaciones
+  if (!window.__languageSelectorInitialized) {
+    window.__languageSelectorInitialized = true;
 
-  button?.addEventListener('click', () => {
-    const isHidden = menu?.classList.contains('hidden');
-    menu?.classList.toggle('hidden');
-    button?.setAttribute('aria-expanded', isHidden ? 'true' : 'false');
-  });
+    // Toggle dropdown
+    const button = document.getElementById('language-selector-button');
+    const menu = document.getElementById('language-selector-menu');
 
-  // Close dropdown when clicking outside
-  document.addEventListener('click', (event) => {
-    const target = event.target as HTMLElement;
-    if (!button?.contains(target) && !menu?.contains(target)) {
-      menu?.classList.add('hidden');
-      button?.setAttribute('aria-expanded', 'false');
-    }
-  });
+    button?.addEventListener('click', () => {
+      const isHidden = menu?.classList.contains('hidden');
+      menu?.classList.toggle('hidden');
+      button?.setAttribute('aria-expanded', isHidden ? 'true' : 'false');
+    });
 
-  // Mapeo de idiomas a códigos de país para banderas
-  const localeToFlag: Record<string, string> = {
-    'en': 'us', 'es': 'es', 'it': 'it', 'fr': 'fr', 'de': 'de', 'pt': 'pt',
-    'ru': 'ru', 'ja': 'jp', 'ko': 'kr', 'zh-CN': 'cn', 'zh-HK': 'hk',
-    'ar': 'sa', 'hi': 'in', 'bn': 'bd', 'id': 'id', 'tr': 'tr', 'vi': 'vn',
-    'pl': 'pl', 'nl': 'nl', 'th': 'th', 'pa': 'in', 'mr': 'in', 'te': 'in',
-    'ta': 'in', 'fa': 'ir', 'ha': 'ng', 'ms': 'my', 'fil': 'ph', 'jv': 'id',
-    'gu': 'in', 'am': 'et', 'yo': 'ng', 'kn': 'in', 'uk': 'ua', 'su': 'id',
-    'ml': 'in', 'or': 'in', 'uz': 'uz', 'my': 'mm', 'ig': 'ng', 'sd': 'pk',
-    'ro': 'ro', 'sw': 'tz', 'ne': 'np', 'cs': 'cz', 'el': 'gr', 'sv': 'se',
-    'hu': 'hu', 'ur': 'pk', 'he': 'il'
-  };
-
-  let menuFlagsLoaded = false;
-
-  // Convertir un elemento emoji de bandera a imagen SVG
-  function convertFlagToImage(el: Element, locale: string) {
-    const countryCode = localeToFlag[locale];
-    if (!countryCode) return;
-
-    // Guardar emoji original si no está guardado
-    if (!el.getAttribute('data-original-emoji')) {
-      el.setAttribute('data-original-emoji', el.textContent?.trim() || '');
-    }
-
-    // Si ya tiene una imagen, no hacer nada
-    if (el.querySelector('img')) return;
-
-    // Crear imagen SVG usando assets locales
-    const img = document.createElement('img');
-    img.src = `/flags/${countryCode}.svg`;
-    img.alt = el.getAttribute('data-original-emoji') || '';
-    img.className = 'inline-block w-5 h-4';
-    img.style.verticalAlign = 'middle';
-    img.onerror = function() {
-      // Fallback: si la imagen falla, mostrar el emoji original
-      el.innerHTML = el.getAttribute('data-original-emoji') || '🏴';
-    };
-
-    el.textContent = '';
-    el.appendChild(img);
-  }
-
-  // Cargar solo la bandera del idioma actual (botón)
-  function loadCurrentLanguageFlag() {
-    const buttonFlag = button?.querySelector('.flag-emoji');
-    if (buttonFlag) {
-      const currentLocale = window.location.pathname.match(/^\/([a-z]{2}(?:-[A-Z]{2})?)\//)?.[1] || 'en';
-      convertFlagToImage(buttonFlag, currentLocale);
-    }
-  }
-
-  // Cargar banderas del menú (lazy load cuando se abre)
-  function loadMenuFlags() {
-    if (menuFlagsLoaded) return;
-    menuFlagsLoaded = true;
-
-    const menuItems = menu?.querySelectorAll('[role="menuitem"]');
-    menuItems?.forEach((item) => {
-      const flagElement = item.querySelector('.flag-emoji');
-      if (flagElement) {
-        const link = item as HTMLAnchorElement;
-        const href = link.getAttribute('href') || '';
-
-        // Extraer locale del href
-        let locale = 'en';
-        if (href === '/') {
-          locale = 'en';
-        } else {
-          const matches = href.match(/^\/([a-z]{2}(?:-[A-Z]{2})?)\//);
-          locale = matches ? matches[1] : 'en';
-        }
-
-        convertFlagToImage(flagElement, locale);
+    // Close dropdown when clicking outside
+    document.addEventListener('click', (event) => {
+      const target = event.target;
+      if (!button?.contains(target) && !menu?.contains(target)) {
+        menu?.classList.add('hidden');
+        button?.setAttribute('aria-expanded', 'false');
       }
     });
-  }
 
-  // Ejecutar cuando el DOM esté listo
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', loadCurrentLanguageFlag);
-  } else {
-    loadCurrentLanguageFlag();
-  }
+    // Mapeo de idiomas a códigos de país para banderas
+    const localeToFlag = {
+      'en': 'us', 'es': 'es', 'it': 'it', 'fr': 'fr', 'de': 'de', 'pt': 'pt',
+      'ru': 'ru', 'ja': 'jp', 'ko': 'kr', 'zh-CN': 'cn', 'zh-HK': 'hk',
+      'ar': 'sa', 'hi': 'in', 'bn': 'bd', 'id': 'id', 'tr': 'tr', 'vi': 'vn',
+      'pl': 'pl', 'nl': 'nl', 'th': 'th', 'pa': 'in', 'mr': 'in', 'te': 'in',
+      'ta': 'in', 'fa': 'ir', 'ha': 'ng', 'ms': 'my', 'fil': 'ph', 'jv': 'id',
+      'gu': 'in', 'am': 'et', 'yo': 'ng', 'kn': 'in', 'uk': 'ua', 'su': 'id',
+      'ml': 'in', 'or': 'in', 'uz': 'uz', 'my': 'mm', 'ig': 'ng', 'sd': 'pk',
+      'ro': 'ro', 'sw': 'tz', 'ne': 'np', 'cs': 'cz', 'el': 'gr', 'sv': 'se',
+      'hu': 'hu', 'ur': 'pk', 'he': 'il'
+    };
 
-  // Cargar banderas del menú cuando se abre por primera vez
-  button?.addEventListener('click', () => {
-    const isHidden = menu?.classList.contains('hidden');
-    if (isHidden) {
-      // Solo cargar si se está abriendo el menú
-      loadMenuFlags();
+    let menuFlagsLoaded = false;
+
+    // Convertir un elemento emoji de bandera a imagen SVG
+    function convertFlagToImage(el, locale) {
+      const countryCode = localeToFlag[locale];
+      if (!countryCode) return;
+
+      // Si ya tiene una imagen, no hacer nada
+      if (el.querySelector('img')) return;
+
+      // Si ya fue procesado (marca de conversión), no hacer nada
+      if (el.getAttribute('data-flag-loaded') === 'true') return;
+
+      // Guardar emoji original si no está guardado
+      if (!el.getAttribute('data-original-emoji')) {
+        el.setAttribute('data-original-emoji', el.textContent?.trim() || '');
+      }
+
+      // Marcar como procesado
+      el.setAttribute('data-flag-loaded', 'true');
+
+      // Crear imagen SVG usando assets locales
+      const img = document.createElement('img');
+      img.src = `/flags/${countryCode}.svg`;
+      img.alt = el.getAttribute('data-original-emoji') || '';
+      img.className = 'inline-block w-5 h-4';
+      img.style.verticalAlign = 'middle';
+      img.onerror = function() {
+        // Fallback: si la imagen falla, mostrar el emoji original
+        el.innerHTML = el.getAttribute('data-original-emoji') || '🏴';
+      };
+
+      el.textContent = '';
+      el.appendChild(img);
     }
-  });
+
+    // Cargar solo la bandera del idioma actual (botón)
+    function loadCurrentLanguageFlag() {
+      const buttonFlag = button?.querySelector('.flag-emoji');
+      if (buttonFlag) {
+        const currentLocale = window.location.pathname.match(/^\/([a-z]{2}(?:-[A-Z]{2})?)\//)?.[1] || 'en';
+        convertFlagToImage(buttonFlag, currentLocale);
+      }
+    }
+
+    // Cargar banderas del menú (lazy load cuando se abre)
+    function loadMenuFlags() {
+      if (menuFlagsLoaded) return;
+      menuFlagsLoaded = true;
+
+      const menuItems = menu?.querySelectorAll('[role="menuitem"]');
+      menuItems?.forEach((item) => {
+        const flagElement = item.querySelector('.flag-emoji');
+        if (flagElement) {
+          const link = item;
+          const href = link.getAttribute('href') || '';
+
+          // Extraer locale del href
+          let locale = 'en';
+          if (href === '/') {
+            locale = 'en';
+          } else {
+            const matches = href.match(/^\/([a-z]{2}(?:-[A-Z]{2})?)\//);
+            locale = matches ? matches[1] : 'en';
+          }
+
+          convertFlagToImage(flagElement, locale);
+        }
+      });
+    }
+
+    // Ejecutar cuando el DOM esté listo
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', loadCurrentLanguageFlag);
+    } else {
+      loadCurrentLanguageFlag();
+    }
+
+    // Cargar banderas del menú cuando se abre por primera vez
+    button?.addEventListener('click', () => {
+      const isHidden = menu?.classList.contains('hidden');
+      if (isHidden) {
+        // Solo cargar si se está abriendo el menú
+        loadMenuFlags();
+      }
+    });
+  }  // Cerrar el if de inicialización
 </script>
