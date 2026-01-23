@@ -36,7 +36,7 @@ const locale = getLocaleFromPath(Astro.url.pathname);
 
   <!-- Precision Selector -->
   <div class="flex justify-center gap-2 mb-8">
-    <label class="text-sm font-medium text-gray-700 dark:text-gray-300 mr-2 self-center">
+    <label class="text-sm font-medium text-gray-700 dark:text-gray-300 me-2 self-center">
       {t(locale, 'stopwatch.precision')}:
     </label>
     <button class="precision-btn btn-secondary px-4 py-2 text-sm" data-precision="0">
@@ -229,8 +229,8 @@ const locale = getLocaleFromPath(Astro.url.pathname);
         <tr class="${rowClass}">
           <td class="px-4 py-3 text-gray-900 dark:text-white font-semibold">
             ${lap.number}
-            ${isFastest ? '<span class="ml-1 text-xs text-green-600 dark:text-green-400">⚡</span>' : ''}
-            ${isSlowest ? '<span class="ml-1 text-xs text-red-600 dark:text-red-400">🐢</span>' : ''}
+            ${isFastest ? '<span class="ms-1 text-xs text-green-600 dark:text-green-400">⚡</span>' : ''}
+            ${isSlowest ? '<span class="ms-1 text-xs text-red-600 dark:text-red-400">🐢</span>' : ''}
           </td>
           <td class="px-4 py-3 text-gray-900 dark:text-white font-mono">
             ${formatStopwatchTime(lap.lapTime, currentPrecision)}
