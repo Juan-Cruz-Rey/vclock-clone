@@ -26,13 +26,13 @@ const navItems = [
 ];
 ---
 
-<ul class="flex flex-col md:flex-row md:space-x-6 space-y-2 md:space-y-0">
+<ul class="flex flex-col md:flex-row md:space-x-6 md:rtl:space-x-reverse space-y-2 md:space-y-0">
   {navItems.map(({ label, route }) => (
     <li>
       <a
         href={route}
         class={`
-          block px-3 py-2 rounded-lg text-sm font-medium transition-colors
+          block ps-3 pe-3 py-2 rounded-lg text-sm font-medium transition-colors
           ${
             isActive(route)
               ? 'bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300'
