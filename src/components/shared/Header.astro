@@ -21,7 +21,7 @@ const locale = getLocaleFromPath(Astro.url.pathname);
       </div>
 
       <!-- Navigation (Desktop) -->
-      <nav class="hidden md:block">
+      <nav class="hidden lg:block">
         <Navigation />
       </nav>
 
@@ -33,7 +33,7 @@ const locale = getLocaleFromPath(Astro.url.pathname);
         <!-- Mobile Menu Button -->
         <button
           id="mobile-menu-button"
-          class="md:hidden p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+          class="lg:hidden p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
           aria-label="Toggle menu"
         >
           <svg class="w-6 h-6 text-gray-700 dark:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -44,7 +44,7 @@ const locale = getLocaleFromPath(Astro.url.pathname);
     </div>
 
     <!-- Mobile Navigation -->
-    <div id="mobile-menu" class="hidden md:hidden pb-4">
+    <div id="mobile-menu" class="hidden lg:hidden pb-4">
       <Navigation />
     </div>
   </div>
