@@ -46,7 +46,7 @@ const locale = getLocaleFromPath(Astro.url.pathname);
 
       return `
         <button
-          class="w-full text-left px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors flex justify-between items-center group"
+          class="w-full text-start px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors flex justify-between items-center group"
           data-recent-alarm
           data-hour="${hour}"
           data-minute="${minute}"
@@ -59,7 +59,7 @@ const locale = getLocaleFromPath(Astro.url.pathname);
             </div>
             ${title ? `<div class="text-xs text-gray-500 dark:text-gray-400">${title}</div>` : ''}
           </div>
-          <svg class="w-5 h-5 text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg class="w-5 h-5 text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-400 rtl:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
           </svg>
         </button>

@@ -55,7 +55,7 @@ languageList.sort((a, b) => {
 <div class="relative inline-block text-left">
   <button
     id="language-selector-button"
-    class="flex items-center space-x-1 px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500"
+    class="flex items-center space-x-1 rtl:space-x-reverse px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500"
     aria-label="Select language"
     aria-expanded="false"
     aria-haspopup="true"
@@ -72,7 +72,7 @@ languageList.sort((a, b) => {
   <!-- Dropdown Menu (Scrollable, 50 languages) -->
   <div
     id="language-selector-menu"
-    class="hidden absolute right-0 mt-2 w-56 rounded-lg shadow-lg bg-white dark:bg-gray-800 ring-1 ring-black ring-opacity-5 z-50 max-h-96 overflow-y-auto"
+    class="hidden absolute end-0 mt-2 w-56 rounded-lg shadow-lg bg-white dark:bg-gray-800 ring-1 ring-black ring-opacity-5 z-50 max-h-96 overflow-y-auto"
     role="menu"
     aria-orientation="vertical"
   >
@@ -93,7 +93,7 @@ languageList.sort((a, b) => {
             <a
               href={lang.url}
               class={`
-                flex items-center space-x-2 px-4 py-2 text-sm transition-colors
+                flex items-center space-x-2 rtl:space-x-reverse px-4 py-2 text-sm transition-colors
                 ${
                   lang.code === currentLocale
                     ? 'bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300'
