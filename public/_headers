@@ -1,0 +1,27 @@
+# Cache para banderas SVG (inmutables - 1 año)
+/flags/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Cache para archivos de sonido (inmutables - 1 año)
+/sounds/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Cache para imágenes generales (1 mes)
+/*.png
+  Cache-Control: public, max-age=2592000
+/*.jpg
+  Cache-Control: public, max-age=2592000
+/*.jpeg
+  Cache-Control: public, max-age=2592000
+/*.svg
+  Cache-Control: public, max-age=2592000
+/*.webp
+  Cache-Control: public, max-age=2592000
+
+# Cache para favicon (1 semana)
+/favicon.svg
+  Cache-Control: public, max-age=604800
+
+# Sin cache para páginas HTML
+/*.html
+  Cache-Control: public, max-age=0, must-revalidate
