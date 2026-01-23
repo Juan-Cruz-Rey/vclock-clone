@@ -1,7 +1,7 @@
 ---
 import Header from '../components/shared/Header.astro';
 import Footer from '../components/shared/Footer.astro';
-import { getLocaleFromPath } from '../scripts/i18n';
+import { getLocaleFromPath, languages } from '../scripts/i18n';
 import '../styles/global.css';
 
 interface Props {
@@ -17,6 +17,13 @@ const { title, description, keywords, ogImage, noindex = false, structuredData }
 const locale = getLocaleFromPath(Astro.url.pathname);
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 const siteUrl = Astro.site?.toString().replace(/\/$/, '') || 'https://24-clock.com';
+
+// Determinar dirección del texto (RTL o LTR)
+// Importante para SEO: Google y otros motores de búsqueda usan el atributo dir para:
+// 1. Renderizar correctamente los snippets en resultados de búsqueda
+// 2. Mejorar la indexación de contenido RTL (árabe, hebreo, persa, urdu, sindhi)
+// 3. Optimizar la experiencia del usuario en SERPs
+const textDirection = languages[locale].rtl ? 'rtl' : 'ltr';
 
 // Generate alternate language URLs based on current page (excluding current locale)
 import { getAllLocales, switchLocale } from '../scripts/i18n';
@@ -43,7 +50,7 @@ const defaultStructuredData = {
 ---
 
 <!doctype html>
-<html lang={locale} class="scroll-smooth">
+<html lang={locale} dir={textDirection} class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
