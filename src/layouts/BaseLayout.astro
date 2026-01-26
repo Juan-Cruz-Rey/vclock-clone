@@ -61,7 +61,7 @@ const defaultStructuredData = {
     <title>{title}</title>
     {description && <meta name="description" content={description} />}
     {keywords && <meta name="keywords" content={keywords} />}
-    {noindex && <meta name="robots" content="noindex, nofollow" />}
+    {noindex && <meta name="robots" content="noindex, follow" />}
 
     <!-- Canonical URL -->
     <link rel="canonical" href={canonicalURL} />
