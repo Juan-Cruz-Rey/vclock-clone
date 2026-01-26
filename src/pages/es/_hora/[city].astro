@@ -1,8 +1,8 @@
 ---
 /**
- * SEO Pages for City Time (Italian)
+ * SEO Pages for City Time (Spanish)
  * Generates static pages for each city
- * Example: /it/ora/tokyo/, /it/ora/london/, /it/ora/new-york/
+ * Example: /es/hora/tokyo/, /es/hora/london/, /es/hora/new-york/
  */
 
 import BaseLayout from '../../../layouts/BaseLayout.astro';
@@ -20,18 +20,18 @@ const { city: cityId } = Astro.params;
 const cityData = timezonesData.find(tz => tz.id === cityId);
 
 if (!cityData) {
-  return Astro.redirect('/it/orologio-mondiale/');
+  return Astro.redirect('/es/reloj-mundial/');
 }
 
 // Calculate current time in this timezone
-const currentTime = new Date().toLocaleString('it-IT', {
+const currentTime = new Date().toLocaleString('es-ES', {
   timeZone: cityData.timezone,
   hour: 'numeric',
   minute: '2-digit',
-  hour12: false,
+  hour12: true,
 });
 
-const currentDate = new Date().toLocaleString('it-IT', {
+const currentDate = new Date().toLocaleString('es-ES', {
   timeZone: cityData.timezone,
   weekday: 'long',
   year: 'numeric',
@@ -39,29 +39,29 @@ const currentDate = new Date().toLocaleString('it-IT', {
   day: 'numeric',
 });
 
-const title = `⏰ Ora Attuale a ${cityData.name} - Orologio Live e Fuso Orario | vClock`;
-const description = `✨ Che ora è a ${cityData.name} adesso? Ottieni l'ora live di ${cityData.name}, fuso orario (${cityData.utcOffset}) e stato giorno/notte 🌙☀️ Perfetto per chiamate 📞, viaggi in ${cityData.country} ✈️ Aggiornato ogni secondo!`;
-const keywords = `ora a ${cityData.name}, ${cityData.name} ora, ora attuale ${cityData.name}, ${cityData.country} ora, ${cityData.name} fuso orario, che ora è a ${cityData.name}, orologio ${cityData.name}`;
+const title = `⏰ Hora Actual en ${cityData.name} - Reloj en Vivo y Zona Horaria | vClock`;
+const description = `✨ ¿Qué hora es en ${cityData.name} ahora? Consulta la hora en vivo de ${cityData.name}, zona horaria (${cityData.utcOffset}) y estado día/noche 🌙☀️ Ideal para llamadas 📞, viajes a ${cityData.country} ✈️ ¡Actualizado cada segundo!`;
+const keywords = `hora en ${cityData.name}, ${cityData.name} hora, hora actual ${cityData.name}, ${cityData.country} hora, ${cityData.name} zona horaria, que hora es en ${cityData.name}, reloj ${cityData.name}`;
 ---
 
-<BaseLayout title={title} description={description} keywords={keywords}>
+<BaseLayout title={title} description={description} keywords={keywords} noindex={true}>
   <div class="container mx-auto px-4 py-12">
-    <!-- Torna all'Orologio Mondiale -->
+    <!-- Volver al Reloj Mundial -->
     <div class="mb-6">
       <a
-        href="/it/orologio-mondiale"
+        href="/es/reloj-mundial"
         class="inline-flex items-center text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 transition-colors"
       >
         <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
         </svg>
-        Torna all'Orologio Mondiale
+        Volver al Reloj Mundial
       </a>
     </div>
 
     <div class="text-center mb-12">
       <h1 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
-        Ora Attuale a {cityData.name}
+        Hora Actual en {cityData.name}
       </h1>
       <p class="text-lg text-gray-600 dark:text-gray-400">
         {cityData.country}
@@ -82,11 +82,11 @@ const keywords = `ora a ${cityData.name}, ${cityData.name} ora, ora attuale ${ci
 
         <div class="grid grid-cols-2 gap-4 text-center border-t border-gray-200 dark:border-gray-700 pt-6">
           <div>
-            <div class="text-sm text-gray-600 dark:text-gray-400 mb-1">Fuso Orario</div>
+            <div class="text-sm text-gray-600 dark:text-gray-400 mb-1">Zona Horaria</div>
             <div class="font-semibold text-gray-900 dark:text-white">{cityData.timezone}</div>
           </div>
           <div>
-            <div class="text-sm text-gray-600 dark:text-gray-400 mb-1">Offset UTC</div>
+            <div class="text-sm text-gray-600 dark:text-gray-400 mb-1">Diferencia UTC</div>
             <div class="font-semibold text-gray-900 dark:text-white">{cityData.utcOffset}</div>
           </div>
         </div>
@@ -96,39 +96,39 @@ const keywords = `ora a ${cityData.name}, ${cityData.name} ora, ora attuale ${ci
     <!-- Information -->
     <div class="max-w-4xl mx-auto prose dark:prose-invert">
       <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">
-        Informazioni sull'Ora a {cityData.name}
+        Acerca de la Hora en {cityData.name}
       </h2>
 
       <div class="space-y-4 text-gray-600 dark:text-gray-400">
         <p>
-          L'ora attuale a <strong>{cityData.name}, {cityData.country}</strong> è visualizzata sopra.
-          {cityData.name} si trova nel fuso orario {cityData.timezone} con un offset UTC di {cityData.utcOffset}.
+          La hora actual en <strong>{cityData.name}, {cityData.country}</strong> se muestra arriba.
+          {cityData.name} está ubicada en la zona horaria {cityData.timezone} con una diferencia UTC de {cityData.utcOffset}.
         </p>
 
         <h3 class="text-xl font-semibold text-gray-900 dark:text-white mt-6 mb-3">
-          Informazioni sul Fuso Orario
+          Información de Zona Horaria
         </h3>
         <ul class="list-disc list-inside space-y-2">
-          <li><strong>Città:</strong> {cityData.name}</li>
-          <li><strong>Paese:</strong> {cityData.country}</li>
+          <li><strong>Ciudad:</strong> {cityData.name}</li>
+          <li><strong>País:</strong> {cityData.country}</li>
           <li><strong>Continente:</strong> {cityData.continent}</li>
-          <li><strong>Fuso Orario:</strong> {cityData.timezone}</li>
-          <li><strong>Offset UTC:</strong> {cityData.utcOffset}</li>
+          <li><strong>Zona Horaria:</strong> {cityData.timezone}</li>
+          <li><strong>Diferencia UTC:</strong> {cityData.utcOffset}</li>
         </ul>
 
         <h3 class="text-xl font-semibold text-gray-900 dark:text-white mt-6 mb-3">
-          Quando Chiamare {cityData.name}
+          Cuándo Llamar a {cityData.name}
         </h3>
         <p>
-          Se devi programmare una chiamata o riunione con qualcuno a {cityData.name}, assicurati di verificare
-          la differenza di orario attuale tra la tua posizione e {cityData.name}. Il momento migliore per chiamare è
-          tipicamente durante le ore lavorative normali (9:00 - 17:00) nel fuso orario locale.
+          Si necesitas programar una llamada o reunión con alguien en {cityData.name}, asegúrate de verificar
+          la diferencia de hora actual entre tu ubicación y {cityData.name}. El mejor momento para llamar es
+          típicamente durante las horas de oficina normales (9 AM - 5 PM) en la zona horaria local.
         </p>
 
         <div class="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4 mt-6">
           <p class="text-sm text-blue-900 dark:text-blue-100 mb-0">
-            <strong>💡 Suggerimento:</strong> Questa pagina mostra l'ora in tempo reale a {cityData.name}. L'orologio si aggiorna automaticamente
-            ogni secondo. Aggiungi questa pagina ai preferiti per accesso rapido all'ora di {cityData.name}.
+            <strong>💡 Consejo:</strong> Esta página muestra la hora en vivo en {cityData.name}. El reloj se actualiza automáticamente
+            cada segundo. Marca esta página para acceso rápido a la hora de {cityData.name}.
           </p>
         </div>
       </div>
@@ -141,15 +141,15 @@ const keywords = `ora a ${cityData.name}, ${cityData.name} ora, ora attuale ${ci
   function updateTime() {
     const now = new Date();
 
-    const timeString = now.toLocaleString('it-IT', {
+    const timeString = now.toLocaleString('es-ES', {
       timeZone: timezone,
       hour: 'numeric',
       minute: '2-digit',
       second: '2-digit',
-      hour12: false,
+      hour12: true,
     });
 
-    const dateString = now.toLocaleString('it-IT', {
+    const dateString = now.toLocaleString('es-ES', {
       timeZone: timezone,
       weekday: 'long',
       year: 'numeric',
