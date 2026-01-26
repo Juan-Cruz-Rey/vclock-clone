@@ -28,8 +28,8 @@ const languageList = Object.entries(languages).map(([code, info]) => {
     if (cityPageSlugs[code]) {
       url = cityPageSlugs[code]!;
     } else {
-      // Si no tiene página de ciudad, redirigir al world-clock usando getRoute
-      url = getRoute(code as Locale, 'clock');
+      // Si no tiene página de ciudad, redirigir al home
+      url = getRoute(code as Locale, 'home');
     }
   } else {
     // Para otras páginas, usar switchLocale normal
