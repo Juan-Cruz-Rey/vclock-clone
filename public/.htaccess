@@ -1,0 +1,159 @@
+# Forzar HTTPS
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
+
+# Redirigir www a no-www (genérico para cualquier dominio)
+RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
+
+# =====================================================
+# 410 Gone - URLs removidas de Google Search Console
+# =====================================================
+
+# URLs específicas de ciudades
+RewriteRule ^uz/time/melbourne/?$ - [G,L]
+RewriteRule ^ro/time/melbourne/?$ - [G,L]
+RewriteRule ^zh-HK/time/melbourne/?$ - [G,L]
+RewriteRule ^vi/time/melbourne/?$ - [G,L]
+RewriteRule ^ar/time/melbourne/?$ - [G,L]
+RewriteRule ^am/ora/amsterdam/?$ - [G,L]
+RewriteRule ^es/time/dubai/?$ - [G,L]
+
+# World Clock pages por idioma
+RewriteRule ^zh-HK/world-clock/?$ - [G,L]
+RewriteRule ^zh-CN/shijie-zhong/?$ - [G,L]
+RewriteRule ^yo/world-clock/?$ - [G,L]
+RewriteRule ^vi/dong-ho-the-gioi/?$ - [G,L]
+RewriteRule ^uz/world-clock/?$ - [G,L]
+RewriteRule ^ur/world-clock/?$ - [G,L]
+RewriteRule ^uk/world-clock/?$ - [G,L]
+RewriteRule ^tr/dunya-saati/?$ - [G,L]
+RewriteRule ^th/world-clock/?$ - [G,L]
+RewriteRule ^te/world-clock/?$ - [G,L]
+RewriteRule ^ta/world-clock/?$ - [G,L]
+RewriteRule ^sw/world-clock/?$ - [G,L]
+RewriteRule ^sv/world-clock/?$ - [G,L]
+RewriteRule ^su/world-clock/?$ - [G,L]
+RewriteRule ^sd/world-clock/?$ - [G,L]
+RewriteRule ^ru/mirovoje-vremja/?$ - [G,L]
+RewriteRule ^ro/world-clock/?$ - [G,L]
+RewriteRule ^pt/relogio-mundial/?$ - [G,L]
+RewriteRule ^pl/zegar-swiatowy/?$ - [G,L]
+RewriteRule ^pa/world-clock/?$ - [G,L]
+RewriteRule ^or/world-clock/?$ - [G,L]
+RewriteRule ^nl/wereldklok/?$ - [G,L]
+RewriteRule ^ne/world-clock/?$ - [G,L]
+RewriteRule ^my/world-clock/?$ - [G,L]
+RewriteRule ^ms/world-clock/?$ - [G,L]
+RewriteRule ^mr/world-clock/?$ - [G,L]
+RewriteRule ^ml/world-clock/?$ - [G,L]
+RewriteRule ^ko/segye-sigye/?$ - [G,L]
+RewriteRule ^kn/world-clock/?$ - [G,L]
+RewriteRule ^jv/world-clock/?$ - [G,L]
+RewriteRule ^ja/sekai-tokei/?$ - [G,L]
+RewriteRule ^it/orologio-mondiale/?$ - [G,L]
+RewriteRule ^ig/world-clock/?$ - [G,L]
+RewriteRule ^id/jam-dunia/?$ - [G,L]
+RewriteRule ^hu/world-clock/?$ - [G,L]
+RewriteRule ^hi/world-clock/?$ - [G,L]
+RewriteRule ^he/world-clock/?$ - [G,L]
+RewriteRule ^ha/world-clock/?$ - [G,L]
+RewriteRule ^gu/world-clock/?$ - [G,L]
+RewriteRule ^fr/horloge-mondiale/?$ - [G,L]
+RewriteRule ^fil/world-clock/?$ - [G,L]
+RewriteRule ^fa/world-clock/?$ - [G,L]
+RewriteRule ^es/reloj-mundial/?$ - [G,L]
+RewriteRule ^el/world-clock/?$ - [G,L]
+RewriteRule ^de/weltzeituhr/?$ - [G,L]
+RewriteRule ^cs/world-clock/?$ - [G,L]
+RewriteRule ^bn/world-clock/?$ - [G,L]
+RewriteRule ^ar/world-clock/?$ - [G,L]
+RewriteRule ^am/world-clock/?$ - [G,L]
+RewriteRule ^world-clock/?$ - [G,L]
+
+# Prefijos - todas las URLs que empiezan con...
+RewriteRule ^it/ora/.*$ - [G,L]
+RewriteRule ^es/hora/.*$ - [G,L]
+RewriteRule ^time/.*$ - [G,L]
+
+# =====================================================
+# Fin reglas 410
+# =====================================================
+
+# Asegurar trailing slash (Astro usa trailing slash)
+# Excluir archivos estáticos (imágenes, iconos, manifests, etc.)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_URI} !/$
+RewriteCond %{REQUEST_URI} !\.(jpg|jpeg|gif|png|svg|webp|ico|json|xml|txt|css|js|woff|woff2|ttf|eot)$ [NC]
+RewriteRule ^(.*[^/])$ /$1/ [R=301,L]
+
+# Performance: Habilitar compresión
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/json
+</IfModule>
+
+# Performance: Cache control
+<IfModule mod_expires.c>
+  ExpiresActive On
+
+  # Imágenes
+  ExpiresByType image/jpg "access plus 1 year"
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/gif "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/x-icon "access plus 1 year"
+
+  # CSS y JavaScript
+  ExpiresByType text/css "access plus 1 month"
+  ExpiresByType application/javascript "access plus 1 month"
+  ExpiresByType text/javascript "access plus 1 month"
+
+  # Fuentes
+  ExpiresByType font/woff2 "access plus 1 year"
+  ExpiresByType font/woff "access plus 1 year"
+  ExpiresByType font/ttf "access plus 1 year"
+  ExpiresByType font/eot "access plus 1 year"
+  ExpiresByType application/font-woff2 "access plus 1 year"
+
+  # Manifests y archivos de configuración
+  ExpiresByType application/manifest+json "access plus 1 year"
+  ExpiresByType application/json "access plus 1 week"
+  ExpiresByType text/xml "access plus 1 week"
+
+  # HTML (no cachear)
+  ExpiresByType text/html "access plus 0 seconds"
+</IfModule>
+
+# Cache-Control headers adicionales
+<IfModule mod_headers.c>
+  <FilesMatch "\.(ico|png|svg|webmanifest)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+
+  <FilesMatch "\.(jpg|jpeg|gif|webp)$">
+    Header set Cache-Control "public, max-age=31536000"
+  </FilesMatch>
+
+  <FilesMatch "\.(css|js)$">
+    Header set Cache-Control "public, max-age=2592000"
+  </FilesMatch>
+
+  <FilesMatch "\.(woff|woff2|ttf|eot)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+
+  <FilesMatch "\.html$">
+    Header set Cache-Control "no-cache, no-store, must-revalidate"
+    Header set Pragma "no-cache"
+    Header set Expires "0"
+  </FilesMatch>
+</IfModule>
+
+# Seguridad: Prevenir acceso a archivos sensibles
+<FilesMatch "^\.">
+  Order allow,deny
+  Deny from all
+</FilesMatch>
